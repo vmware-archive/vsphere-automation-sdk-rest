@@ -1,0 +1,24 @@
+{
+  "name": "vsphere-automation-rest-api-samples",
+  "version": "6.5.0",
+  "description": "Javascript samples for vSphere Automation REST API",
+  "author": "VMware, Inc",
+  "scripts": {
+    "vm_details": "node vm/details/vm_details.js",
+    "create_vm_with_defaults": "node vm/create/create_vm_with_defaults.js",
+    "create_vm_with_details": "node vm/create/create_vm_with_details.js",
+    "vm_power_on": "node vm/power/vm_power_on.js",
+    "vm_power_off": "node vm/power/vm_power_off.js",
+    "add_host": "node host/add/add_host.js",
+    "remove_host": "node host/remove/remove_host.js",
+    "connect_host": "node host/connect/connect_host.js",
+    "disconnect_host": "node host/disconnect/disconnect_host.js"
+  },
+  "dependencies": {
+    "async": "^2.0.0-rc.3",
+    "lodash": "^4.11.1",
+    "unirest": "^0.4.2",
+    "rootpath": "0.1.2"
+  },
+  "private": true
+}

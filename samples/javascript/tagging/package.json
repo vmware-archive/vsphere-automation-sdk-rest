@@ -1,0 +1,13 @@
+{
+	"name": "vsphere-automation-tagging-sample",
+	"version": "6.5.0",
+	"description": "Javascript samples for vSphere Automation SDK for REST",
+	"author": "VMware, Inc",
+	"scripts": {
+		"tags": "node tags.js"
+	},
+	"dependencies": {
+		"gzip-js": "*"
+	},
+	"private": true
+}
