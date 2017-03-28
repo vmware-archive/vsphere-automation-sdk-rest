@@ -4,6 +4,7 @@
 	"description": "Javascript samples for vSphere Automation SDK for REST",
 	"author": "VMware, Inc",
 	"scripts": {
+	    "test": "echo \"No tests included (yet).\" && exit 0",
 		"tags": "node tags.js"
 	},
 	"dependencies": {

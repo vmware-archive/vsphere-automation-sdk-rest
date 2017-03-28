@@ -63,6 +63,9 @@ To run the JavaScript samples you must first install the required node packages 
     cd samples/javascript/vcenter
     npm install
 
+You may also use the ./build.sh script included at the root of the SDK. This script will run npm install on both
+tagging and vcenter samples so as well as execute any tests specified in the respective package.json files.
+
 ### Running JavaScript Samples
 For a complete list of included samples refer to the "scripts" section of the javascript/vcenter/package.json file. To run a sample use npm as follows:
 
