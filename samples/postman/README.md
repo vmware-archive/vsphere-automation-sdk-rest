@@ -1,10 +1,15 @@
 # vSphere Automation REST API Postman Resources and Samples
 
-These two files provide API resources and example end to end scenarios that you
-can import in to Postman to execute. [vSphere-Automation-Rest-API-Resources.postman.json](vSphere-Automation-Rest-API-Resources.postman.json) provides the
-individual API resources. They are standalone requests that you can execute
-or use to build up an end to end workflow. The [vSphere-Automation-Rest-API-Samples.postman.json](vSphere-Automation-Rest-API-Samples.postman.json) do
+These three files provide API resources and example end to end scenarios that you
+can import in to Postman to execute.
+
+* [vSphere-Automation-Rest-API-Resources.postman.json](vSphere-Automation-Rest-API-Resources.postman.json) provides the
+individual API resources. They are standalone requests that you can execute or use to build up an end to end workflow.
+* The [vSphere-Automation-Rest-API-Samples.postman.json](vSphere-Automation-Rest-API-Samples.postman.json) do
 exactly that to show some common simple use cases.
+* The [vSphere-Automation-Rest-API-Appliance-Resources.postman.json](vSphere-Automation-Rest-API-Appliance-Resources.postman.json)
+provides individual API resources to manage vCenter Server Appliance. They are standalone requests that you can execute
+or use to build up an end to end workflow.
 
 ## Requirements
 [Postman Client](https://www.getpostman.com)
