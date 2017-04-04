@@ -10,6 +10,10 @@ exactly that to show some common simple use cases.
 * The [vSphere-Automation-Rest-API-Appliance-Resources.postman.json](vSphere-Automation-Rest-API-Appliance-Resources.postman.json)
 provides individual API resources to manage vCenter Server Appliance. They are standalone requests that you can execute
 or use to build up an end to end workflow.
+* The [vSphere-Automation-REST-resources-for-Content-Library.postman_collection.json](vSphere-Automation-REST-resources-for-Content-Library.postman_collection.json)
+provides individual API resources to manage vCenter Content Library features. They are standalone requests that you can execute
+or use to build up an end to end workflow.
+
 
 ## Requirements
 [Postman Client](https://www.getpostman.com)
@@ -39,3 +43,8 @@ Once imported, you will see something similar to:
 From here, you can expand either the resources to see the individual API surfaces
 or expand the samples and see some of the ways you can string together the
 individual resources to make a use case.
+
+Content Library samples:
+
+![Content Library Samples](images/ContentLibrary_Sample.JPG "Content Library")
+
