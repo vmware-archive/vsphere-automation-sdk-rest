@@ -36,9 +36,15 @@ dialog area where is says Drop files here or you can select the Choose files
 button to open a file chooser dialog and navigate to the location on your system
 where this directory resides, and select the JSON files.
 
+The JSON files include both the API collections and also a default "Environment" that can be altered so that each of the API collections works against your own environment.
+
 Once imported, you will see something similar to:
 
 ![imported](images/imported.png "Imported")
+
+Firstly you will need to adjust the imported environment to work with your vCenter Server, to do this click the eye icon near the top right and click the "edit" button to edit the "My vCenter" environment.  Replace the values for each item to reflect the test vCenter you will be working with.  As a minimum for most samples to work you will need to alter details for VC, User and password providing SSO credentials here.
+
+![Environment](images/environment.jpg "Environment")
 
 From here, you can expand either the resources to see the individual API surfaces
 or expand the samples and see some of the ways you can string together the
