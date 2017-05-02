@@ -36,10 +36,16 @@ async.series([
       if (null !== resp && null !== resp.body.value && resp.body.value.length > 0) {
         hostId = resp.body.value[0].host;
         console.log('found host with id ' + hostId);
+        callback();
       } else {
         console.log('cound not find a disconnected host');
+        // Can't continue so log out
+        auth.logout().then(resp => {
+          console.log('logged out');
+        }).catch(error => {
+          console.log(JSON.stringify(error, null, 2));
+        });
       }
-      callback();
     }).catch(error => {
       console.log(JSON.stringify(error, null, 2));
       callback();
@@ -61,11 +67,13 @@ async.series([
     if (settings.cleanup) {
       console.log('Cleaning up...');
       host.disconnect(hostId).then(resp => {
+        console.log('host disconnected');
+        callback();
       }).catch(error => {
         console.log(JSON.stringify(error, null, 2));
+        callback();
       })
     }
-    callback();
   },
   function logout(callback) {
     auth.logout().then(resp => {
