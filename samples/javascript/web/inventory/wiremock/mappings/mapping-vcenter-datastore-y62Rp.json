@@ -1,0 +1,17 @@
+{
+  "id" : "2e9fd01b-f358-3ff8-bad5-280f7fd24cc1",
+  "request" : {
+    "url" : "/rest/vcenter/datastore",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "body-vcenter-datastore-y62Rp.json",
+    "headers" : {
+      "Date" : "Wed, 30 Aug 2017 23:14:48 GMT",
+      "Content-Type" : "application/json",
+      "Transfer-Encoding" : "chunked"
+    }
+  },
+  "uuid" : "2e9fd01b-f358-3ff8-bad5-280f7fd24cc1"
+}

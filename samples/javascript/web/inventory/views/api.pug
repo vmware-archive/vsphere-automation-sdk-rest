@@ -1,0 +1,51 @@
+extends claritybase
+
+block sidebar
+    section(class="sidenav-content")
+        section(class="nav-group")
+            // Add a few stock vAPI calls to inspect vSphere
+            ul(class="nav-list")
+                li
+                    a(class="nav-link" href="?path=/rest/vcenter/host") Host
+                li
+                    a(class="nav-link" href="?path=/rest/vcenter/datacenter") Datacenter
+                li
+                    a(class="nav-link" href="?path=/rest/vcenter/datastore") Datastore
+                //li
+                //    a(class="nav-link" href="?path=/rest/vcenter/cluster") Clusters
+                li
+                    a(class="nav-link" href="?path=/rest/vcenter/folder") Folders
+                li
+                    a(class="nav-link" href="?path=/rest/vcenter/network") Networks
+                li
+                    a(class="nav-link" href="?path=/rest/vcenter/vm") VM
+                li
+                    a(class="nav-link" href="?path=/rest/vcenter/folder") Folders
+                li
+                    a(class="nav-link" href="/logout") Logout
+
+block content
+    // Basic table to display the results
+    h2 #{host}
+    if data
+        table(class="table table-striped")
+            tr
+                if (data.constructor == Array && data.length > 0)
+                    for key in Object.keys(data[0])
+                        th #{key}
+            for t in data
+                tr
+                    if typeof t == 'string'
+                        td #{t}
+                    else
+                        for key in Object.keys(t)
+                            // Optionally display links for ID fields to see nested data
+                            if (key == id)
+                                td
+                                    a(href=`?path=${path}\/${t[key]}`) #{t[key]}
+                            else
+                                td #{JSON.stringify(t[key])}
+
+    // Display the raw JSON response
+    h2 REST JSON Data
+    p #{JSON.stringify(data)}
