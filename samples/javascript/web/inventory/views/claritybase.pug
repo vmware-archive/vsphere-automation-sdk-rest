@@ -21,14 +21,13 @@ html
                             div(class="alert-items")
                                 div(class="alert-item")
                                     span(class="alert-text") #{error}
+                        p
 
-                    else
-                        block content
-                        hr
+                    block content
+                    hr
 
                     footer
-                            p 
-                            | &copy; 2017 VMware, Inc. &nbsp;
+                        p &copy; 2017 VMware, Inc. &nbsp;
                 nav(class="sidenav")
                     block sidebar
         block lastjavascript
