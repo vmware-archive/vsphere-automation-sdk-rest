@@ -19,7 +19,7 @@ app.set('view engine', 'pug');
 
 // Login page (home page)
 app.get('/', function (req, res) {
-  res.render('home', { data: { title: process.env.TITLE, host: process.env.HOST, user: process.env.USERID, pwd: process.env.PASS, }});
+  res.render('home', { title: process.env.TITLE, host: process.env.HOST, user: process.env.USERID, pwd: process.env.PASS, });
 });
 
 // Handle POST request for login
