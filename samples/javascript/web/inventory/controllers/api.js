@@ -20,7 +20,7 @@ exports.postLogin = function(req, res, next) {
         'Content-Type': 'application/json',
         "Authorization" : "Basic " + new Buffer(req.body.user + ":" + req.body.password).toString("base64")
     }
-  }, function(error, response, body) {
+  }, (error, response, body)=> {
     if (response && response.statusCode < 400) {
       // Save the vmware-api-session and host to cookies on the client
       if (response.headers['set-cookie'] && response.headers['set-cookie'][0].startsWith('vmware-api-session')) {
@@ -63,7 +63,7 @@ exports.getApi = async function(req, res, next) {
         'Content-Type': 'application/json',
         'Cookie': req.cookies[apiCookie]         
       }
-  }, function (error, response, body) {
+  }, (error, response, body) => {
     if (error || response.statusCode >= 400) {
       errormsg = error ? `${error.code}: ${error.message}` : `${response.statusCode}: ${response.statusMessage}`;
       res.render('inventory', { error: errormsg, path: path, data: null });

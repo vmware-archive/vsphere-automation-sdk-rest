@@ -18,7 +18,7 @@ app.set('views', './views');
 app.set('view engine', 'pug');
 
 // Login page (home page)
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.render('home', { title: process.env.TITLE, host: process.env.HOST, user: process.env.USERID, pwd: process.env.PASS, });
 });
 
