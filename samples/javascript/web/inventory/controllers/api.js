@@ -49,7 +49,7 @@ exports.getApi = async function(req, res, next) {
 
   // If there is no api-session cookie, redirect to the login page
   if (req.cookies[apiCookie] === undefined || req.cookies[hostCookie] === undefined) {
-    res.render('home', { title: process.env.TITLE, host: process.env.HOST, user: process.env.USERID, pwd: process.env.PASS, error: 'Login required.' });
+    res.redirect('/');
     return;
   }
 
