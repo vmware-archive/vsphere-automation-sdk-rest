@@ -10,7 +10,7 @@ const useSSL = false;
  */
 exports.postLogin = function(req, res, next) {
   request = require('request');
-  
+
   request({
     url : req.body.host + process.env.LOGIN_PATH,
     method: 'POST',
@@ -21,17 +21,18 @@ exports.postLogin = function(req, res, next) {
         "Authorization" : "Basic " + new Buffer(req.body.user + ":" + req.body.password).toString("base64")
     }
   }, function(error, response, body) {
-    if (response.statusCode < 400) {
+    if (response && response.statusCode < 400) {
       // Save the vmware-api-session and host to cookies on the client
       if (response.headers['set-cookie'] && response.headers['set-cookie'][0].startsWith('vmware-api-session')) {
         res.cookie(apiCookie, response.headers['set-cookie'][0], { maxAge: 900000, httpOnly: true });
         res.cookie(hostCookie, req.body.host, { maxAge: 900000, httpOnly: true });      
       }
-      // Now that we're authenticated render the API page
+      // ...now that we're authenticated render the inventory page
       res.redirect('/inventory');
-    } else {
-      res.redirect('/');
+      return;
     }
+    errormsg = error ? `${error.code}: ${error.message}` : `${response.statusCode}: ${response.statusMessage}`;
+    res.render('home', { title: process.env.TITLE, host: process.env.HOST, user: process.env.USERID, pwd: process.env.PASS, error: errormsg });
   });
 }
 
@@ -52,36 +53,28 @@ exports.getApi = async function(req, res, next) {
     return;
   }
 
-  request(
-    {
-      url : req.cookies.host + path,
-      method: 'GET',
-      strictSSL: useSSL,
-      headers : {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-          'Cookie': req.cookies[apiCookie]         
-        }
-    },
-    function (error, response, body) {
-      if (error || response.statusCode >= 400) {
-        error = response.statusMessage
-        res.render('api', { error: error });
-      } else {
-        try {
-          var data = JSON.parse(body).value;
-        } catch(exception) {
-          error = exception.message;
-        }
-        res.render('api', {
-          host: req.cookies.host,
-          error: error,
-          path: path,
-          data: data
-        });
+  request({
+    url : req.cookies.host + path,
+    method: 'GET',
+    strictSSL: useSSL,
+    json: true,
+    headers : {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Cookie': req.cookies[apiCookie]         
       }
+  }, function (error, response, body) {
+    if (error || response.statusCode >= 400) {
+      errormsg = error ? `${error.code}: ${error.message}` : `${response.statusCode}: ${response.statusMessage}`;
+      res.render('inventory', { error: errormsg, path: path, data: null });
+    } else {
+      res.render('inventory', {
+        host: req.cookies.host,
+        path: path,
+        data: body.value
+      });
     }
-  );
+  });
 }
 
 /**
