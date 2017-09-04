@@ -4,7 +4,6 @@
   "description": "Javascript samples for vSphere Automation REST API",
   "author": "VMware, Inc",
   "scripts": {
-    "test": "echo \"No tests included (yet).\" && exit 0",
     "vm_details": "node vm/details/vm_details.js",
     "create_vm_with_defaults": "node vm/create/create_vm_with_defaults.js",
     "create_vm_with_details": "node vm/create/create_vm_with_details.js",
