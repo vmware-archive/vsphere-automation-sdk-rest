@@ -7,7 +7,7 @@ Basic [nodejs](https://nodejs.org/) [Express](https://expressjs.com/) web applic
 
 ## Screenshot
 
-![Sample /host API call](/sample.png?raw=true "Optional Title")
+![Sample /host API call](/vmware/vsphere-automation-sdk-rest/raw/master/samples/javascript/web/inventory/sample.png "Host API Call")
 
 ## How it works
 This simple two-page web application illustrates how to authenticate to the vSphere REST API endpoint and make subsequent calls and render information from a vCenter server instance. The home page is a login page and upon successful authentication displays an inventory (/inventory) page which renders the results of an vSphere REST API call. By default the application displays a list of the hosts from the [/rest/vcenter/host](https://code.vmware.com/apis/191/vsphere-automation#/doc/operations/com/vmware/vcenter/host.list-operation.html) API. The inventory page also accepts a "path" query parameter to call other API's (ex. /?path=/rest/vcenter/datastore). The application as written only supports HTTP GET calls to the REST API meaning it's read-only.
