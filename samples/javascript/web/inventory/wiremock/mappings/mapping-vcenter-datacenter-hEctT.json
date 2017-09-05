@@ -1,0 +1,17 @@
+{
+  "id" : "c8435f19-b00b-3272-a29e-aa35fd172a5d",
+  "request" : {
+    "url" : "/rest/vcenter/datacenter",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "body-vcenter-datacenter-hEctT.json",
+    "headers" : {
+      "Date" : "Wed, 30 Aug 2017 23:14:46 GMT",
+      "Content-Type" : "application/json",
+      "Transfer-Encoding" : "chunked"
+    }
+  },
+  "uuid" : "c8435f19-b00b-3272-a29e-aa35fd172a5d"
+}

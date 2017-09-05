@@ -1,0 +1,1 @@
+{"value":[{"name":"VM Network","type":"STANDARD_PORTGROUP","network":"network-69"},{"name":"VM Network","type":"STANDARD_PORTGROUP","network":"network-57"},{"name":"DSwitch1-DVUplinks-74","type":"DISTRIBUTED_PORTGROUP","network":"dvportgroup-75"},{"name":"Static_Portgroup_on_DSwitch_1","type":"DISTRIBUTED_PORTGROUP","network":"dvportgroup-76"}]}

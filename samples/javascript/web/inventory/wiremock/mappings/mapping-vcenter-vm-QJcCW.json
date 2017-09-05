@@ -1,0 +1,17 @@
+{
+  "id" : "27609720-33d9-33d1-8b45-7e9e2d61d917",
+  "request" : {
+    "url" : "/rest/vcenter/vm",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "body-vcenter-vm-QJcCW.json",
+    "headers" : {
+      "Date" : "Wed, 30 Aug 2017 23:14:52 GMT",
+      "Content-Type" : "application/json",
+      "Transfer-Encoding" : "chunked"
+    }
+  },
+  "uuid" : "27609720-33d9-33d1-8b45-7e9e2d61d917"
+}

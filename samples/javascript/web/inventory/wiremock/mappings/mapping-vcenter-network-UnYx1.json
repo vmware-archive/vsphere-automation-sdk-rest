@@ -1,0 +1,17 @@
+{
+  "id" : "3cd3be7f-f135-3dbf-853d-9bc03e9d7410",
+  "request" : {
+    "url" : "/rest/vcenter/network",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "body-vcenter-network-UnYx1.json",
+    "headers" : {
+      "Date" : "Wed, 30 Aug 2017 23:14:51 GMT",
+      "Content-Type" : "application/json",
+      "Transfer-Encoding" : "chunked"
+    }
+  },
+  "uuid" : "3cd3be7f-f135-3dbf-853d-9bc03e9d7410"
+}

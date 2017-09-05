@@ -1,0 +1,13 @@
+extends claritybase
+
+block content
+    .login-wrapper
+        form(class="login" method="POST")
+            label(class="title")
+                h3(class="welcome") Welcome to #{title}
+                h5(class="hint") Use your vSphere account to sign in
+            .login-group
+                input(type="text" name="host" id="login_host" placeholder="Host" value=`${host}`)
+                input(class="username" type="email" name="user" id="login_username" placeholder="Username" value=`${user}`)
+                input(class="password" type="password" name="password" id="login_password" placeholder="Password" value=`${pwd}`)
+                button(type="submit" class="btn btn-primary") LOGIN

@@ -1,0 +1,17 @@
+{
+  "id" : "cd02f745-9cbc-3a28-9478-4d1669960bbb",
+  "request" : {
+    "url" : "/rest/vcenter/folder",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "body-vcenter-folder-cKVEp.json",
+    "headers" : {
+      "Date" : "Wed, 30 Aug 2017 23:14:50 GMT",
+      "Content-Type" : "application/json",
+      "Transfer-Encoding" : "chunked"
+    }
+  },
+  "uuid" : "cd02f745-9cbc-3a28-9478-4d1669960bbb"
+}

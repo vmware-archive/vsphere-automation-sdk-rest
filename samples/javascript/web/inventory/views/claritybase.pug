@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        block title
+        block headstyle
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="/clarity-icons/clarity-icons.min.css")
+        link(rel="stylesheet" href="/clarity-ui/clarity-ui.min.css")
+
+    body
+        div(class="main-container")
+            header(class="header header-6")
+                div(class="branding")
+                    span(class="title") vSphere REST API Demo
+            div(class="content-container")
+                div(class="content-area")
+                    block masthead
+                    if error
+                        div(class="alert alert-danger")
+                            div(class="alert-items")
+                                div(class="alert-item")
+                                    span(class="alert-text") #{error}
+                        p
+
+                    block content
+                    hr
+
+                    footer
+                        p &copy; 2017 VMware, Inc. &nbsp;
+                nav(class="sidenav")
+                    block sidebar
+        block lastjavascript

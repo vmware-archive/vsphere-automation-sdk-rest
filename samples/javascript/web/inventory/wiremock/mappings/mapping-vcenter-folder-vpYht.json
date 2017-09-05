@@ -1,0 +1,17 @@
+{
+  "id" : "e92d6def-7a5e-3204-8b5f-9de5cc6eaf91",
+  "request" : {
+    "url" : "/rest/vcenter/folder",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "body-vcenter-folder-vpYht.json",
+    "headers" : {
+      "Date" : "Wed, 30 Aug 2017 23:14:54 GMT",
+      "Content-Type" : "application/json",
+      "Transfer-Encoding" : "chunked"
+    }
+  },
+  "uuid" : "e92d6def-7a5e-3204-8b5f-9de5cc6eaf91"
+}

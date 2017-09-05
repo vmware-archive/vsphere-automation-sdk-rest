@@ -1,0 +1,17 @@
+{
+  "id" : "1b066277-b810-3226-b7a9-4b68bc90e227",
+  "request" : {
+    "url" : "/rest/vcenter/host",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "body-vcenter-host-pKfWa.json",
+    "headers" : {
+      "Date" : "Wed, 30 Aug 2017 23:14:42 GMT",
+      "Content-Type" : "application/json",
+      "Transfer-Encoding" : "chunked"
+    }
+  },
+  "uuid" : "1b066277-b810-3226-b7a9-4b68bc90e227"
+}
