@@ -28,8 +28,8 @@ Additional npm packages used in this example:
 
 ## Install
 
-    $ git clone https://github.com/strefethen/vapi-express.git
-    $ cd vapi-express
+    $ git https://github.com/vmware/vsphere-automation-sdk-rest.git
+    $ cd vsphere-automation-sdk-rest/samples/javascript/web/inventory
     $ npm install
 
 ## Setup
