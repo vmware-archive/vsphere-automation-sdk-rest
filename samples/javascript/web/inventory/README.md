@@ -28,7 +28,7 @@ Additional npm packages used in this example:
 
 ## Install
 
-    $ git https://github.com/vmware/vsphere-automation-sdk-rest.git
+    $ git clone https://github.com/vmware/vsphere-automation-sdk-rest.git
     $ cd vsphere-automation-sdk-rest/samples/javascript/web/inventory
     $ npm install
 
