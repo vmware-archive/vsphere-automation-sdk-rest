@@ -10,6 +10,8 @@ const useSSL = false;
  */
 exports.postLogin = function(req, res, next) {
   request = require('request');
+  
+  console.log(`Logging in: ${req.body.user} on ${req.body.host}`);
 
   request({
     url : req.body.host + process.env.LOGIN_PATH,
@@ -20,20 +22,39 @@ exports.postLogin = function(req, res, next) {
         'Content-Type': 'application/json',
         "Authorization" : "Basic " + new Buffer(req.body.user + ":" + req.body.password).toString("base64")
     }
-  }, (error, response, body)=> {
-    if (response && response.statusCode < 400) {
-      // Save the vmware-api-session and host to cookies on the client
-      if (response.headers['set-cookie'] && response.headers['set-cookie'][0].startsWith('vmware-api-session')) {
-        res.cookie(apiCookie, response.headers['set-cookie'][0], { maxAge: 900000, httpOnly: true });
-        res.cookie(hostCookie, req.body.host, { maxAge: 900000, httpOnly: true });      
-      }
-      // ...now that we're authenticated render the inventory page
-      res.redirect('/inventory');
+  }, function(error, response, body) {
+    if (error) {
+      res.render('home', { error: error.message });
       return;
+    } else {
+      if (response.statusCode < 400) {
+        // Save the vmware-api-session and host to cookies on the client
+        if (response.headers['set-cookie'] && response.headers['set-cookie'][0].startsWith('vmware-api-session')) {
+          res.cookie(apiCookie, response.headers['set-cookie'][0], { maxAge: 900000, httpOnly: true });
+          res.cookie(hostCookie, req.body.host, { maxAge: 900000, httpOnly: true });      
+        }
+        // Now that we're authenticated redirect to render the inventory page
+        if (req.query.redirect)
+          res.redirect(`/inventory?path=${req.query.redirect}`);
+        else
+          res.redirect('/inventory');
+      } else {
+        var msg = `Error: ${response.statusCode}: ${response.statusMessage}`
+        console.log(msg);
+        res.redirect('/', 301, { 
+          error: msg, 
+          title: process.env.TITLE, 
+          host: process.env.HOST, 
+          user: process.env.USERID, 
+          pwd: process.env.PASS
+        });
+      }
     }
-    errormsg = error ? `${error.code}: ${error.message}` : `${response.statusCode}: ${response.statusMessage}`;
-    res.render('home', { title: process.env.TITLE, host: process.env.HOST, user: process.env.USERID, pwd: process.env.PASS, error: errormsg });
   });
+}
+
+var splitPath = function (str) {
+  return str.split('\\').pop().split('/').pop();
 }
 
 /**
@@ -45,36 +66,49 @@ exports.getApi = async function(req, res, next) {
   // Use either default API request or "path" queryparam
   var path = Object.keys(req.query).length > 0 ? req.query.path : '/rest/vcenter/host';
 
+  console.log(`API request: ${path} on ${req.cookies.host}`);
+  
   request = require('request');
-
+  
   // If there is no api-session cookie, redirect to the login page
   if (req.cookies[apiCookie] === undefined || req.cookies[hostCookie] === undefined) {
-    res.redirect('/');
+    res.redirect(`/?redirect=${path}`);
     return;
   }
 
-  request({
+  request(
+    {
     url : req.cookies.host + path,
     method: 'GET',
-    strictSSL: useSSL,
-    json: true,
-    headers : {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Cookie': req.cookies[apiCookie]         
+      strictSSL: useSSL,
+      headers : {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Cookie': req.cookies[apiCookie]
+        }
+    },
+    function (error, response, body) {
+      try {
+        if(response && response.statusCode >= 400) {
+          console.log(`Error: ${response.statusCode} ${response.statusMessage}`);
+          error = `${response.statusCode}: ${response.statusMessage}`;
+        }
+        var data = JSON.parse(body).value;
+      } catch(exception) {
+        error = exception.message;
       }
-  }, (error, response, body) => {
-    if (error || response.statusCode >= 400) {
-      errormsg = error ? `${error.code}: ${error.message}` : `${response.statusCode}: ${response.statusMessage}`;
-      res.render('inventory', { error: errormsg, path: path, data: null });
-    } else {
       res.render('inventory', {
         host: req.cookies.host,
+        error: error,
         path: path,
-        data: body.value
+        // The following "id" is the key within the response that corresponds to the resource identifier.
+        // If the last portion of the id contains a "-" we convert it to "_" as resource identifier use "_".
+        id: splitPath(path).replace('-', '_'),
+        data: data,
+        raw: JSON.stringify(JSON.parse(body), null, '\t')
       });
     }
-  });
+  );
 }
 
 /**
@@ -82,7 +116,9 @@ exports.getApi = async function(req, res, next) {
  */
 exports.getLogout = function(req, res, next) {
   request = require('request');
-  
+
+  console.log(`Logging out: ${req.cookies.host}`);
+
   request({
     url : req.cookies.host + '/rest/com/vmware/cis/session',
     method: 'DELETE',
