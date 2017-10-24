@@ -19,7 +19,8 @@ app.set('view engine', 'pug');
 
 // Login page (home page)
 app.get('/', (req, res) => {
-  res.render('home', { title: process.env.TITLE, host: process.env.HOST, user: process.env.USERID, pwd: process.env.PASS, });
+  console.log('Rendering login');
+  res.render('home', { redirect: req.query.redirect, title: process.env.TITLE, host: process.env.HOST, user: process.env.USERID, pwd: process.env.PASS, });
 });
 
 // Handle POST request for login

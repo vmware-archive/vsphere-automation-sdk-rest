@@ -1,5 +1,13 @@
 extends claritybase
 
+block headstyle
+    style.
+        .language-json { font-size: 9pt; }
+
+block header
+    div(class="header-actions")
+        a(href="/logout" class="nav-link nav-text") Logout
+
 block sidebar
     section(class="sidenav-content")
         section(class="nav-group")
@@ -11,8 +19,6 @@ block sidebar
                     a(class="nav-link" href="?path=/rest/vcenter/datacenter") Datacenter
                 li
                     a(class="nav-link" href="?path=/rest/vcenter/datastore") Datastore
-                //li
-                //    a(class="nav-link" href="?path=/rest/vcenter/cluster") Clusters
                 li
                     a(class="nav-link" href="?path=/rest/vcenter/folder") Folders
                 li
@@ -22,30 +28,107 @@ block sidebar
                 li
                     a(class="nav-link" href="?path=/rest/vcenter/folder") Folders
                 li
-                    a(class="nav-link" href="/logout") Logout
+                    a(class="nav-link" href="?path=/rest/com/vmware/cis/tagging/category") Categories
+                li
+                    a(class="nav-link" href="?path=/rest/com/vmware/cis/tagging/tag") Tags
+                li
+                    a(class="nav-link" href="?path=/rest/com/vmware/vcenter/ovf/export-flag") OVF Export Flag
+                li
+                    a(class="nav-link" href="?path=/rest/vcenter/resource-pool") Resource Pool
+                li
+                    a(class="nav-link" href="?path=/rest/com/vmware/content/library") Content Library
+                li
+                    a(class="nav-link" href="?path=/rest/appliance/access/consolecli") Access Console CLI
+                li
+                    a(class="nav-link" href="?path=/rest/appliance/health/applmgmt") Appliance Health
+                li
+                    a(class="nav-link" href="?path=/rest/appliance/health/load") Appliance Health Load
+                li
+                    a(class="nav-link" href="?path=/rest/appliance/health/mem") Appliance Health Mem
+                li
+                    a(class="nav-link" href="?path=/rest/appliance/health/mem") Appliance Health System
+                li
+                    a(class="nav-link" href="?path=/rest/appliance/networking/dns/domains") DNS Domains
+                li
+                    a(class="nav-link" href="?path=/rest/appliance/networking/dns/hostname") DNS Host Name
+                li
+                    a(class="nav-link" href="?path=/rest/appliance/networking/interfaces") Networking Interfaces
+                li
+                    a(class="nav-link" href="?path=/rest/appliance/recovery/backup/job") Recovery Backup Jobs
+                li
+                    a(class="nav-link" href="?path=/rest/appliance/system/storage") System Storage
+                li
+                    a(class="nav-link" href="?path=/rest/appliance/system/time") System Time
+                li
+                    a(class="nav-link" href="?path=/rest/appliance/system/uptime") System Uptime
+                li
+                    a(class="nav-link" href="?path=/rest/appliance/system/version") System Version
+                li
+                    a(class="nav-link" href="?path=/rest/appliance/vmon/service") VMon Service
 
-block content
-    // Basic table to display the results
-    h2 #{host}
+mixin arrayTable(data)
+    if Array.isArray(data) && data.length > 0
+        if typeof data[0] === 'string'
+            div #{data[0]}
+        else
+            table(class="table table-striped")
+                tr
+                    for key in Object.keys(data[0])
+                        th(class="left") #{key}
+                    for row in data
+                        tr
+                            if Array.isArray(row)
+                                +arrayTable(data)
+                            else
+                                for key in Object.keys(row)
+                                    if typeof row[key] === 'object'
+                                        td
+                                            +verticalTable(row[key])
+                                    else
+                                        if (key == id)
+                                            td(class="left")
+                                                strong
+                                                    a(href=`?path=${path}\/${row[key]}`) #{row[key]}
+                                        else
+                                            td(class="left") #{row[key]}
+    else
+        div []
+
+
+mixin verticalTable(data)
     if data
         table(class="table table-striped")
-            tr
-                if (data.constructor == Array && data.length > 0)
-                    for key in Object.keys(data[0])
-                        th #{key}
-            for t in data
+            for key in Object.keys(data)
                 tr
-                    if typeof t == 'string'
-                        td #{t}
+                    if typeof data[key] == "object" && !Array.isArray(data[key])
+                        th(class="left") #{key}
+                        td(class="left")
+                            +verticalTable(data[key])
                     else
-                        for key in Object.keys(t)
-                            // Optionally display links for ID fields to see nested data
+                        th(class="left") #{key}
+                        if Array.isArray(data[key])
+                            td(class="left")
+                                +arrayTable(data)
+                        else
                             if (key == id)
-                                td
-                                    a(href=`?path=${path}\/${t[key]}`) #{t[key]}
+                                td(class="left")
+                                    strong
+                                        a(href=`?path=${path}\/${data[key]}`) #{data[key]}
                             else
-                                td #{JSON.stringify(t[key])}
+                                td(class="left") #{data[key]}
 
-    // Display the raw JSON response
-    h2 REST JSON Data
-    p #{JSON.stringify(data)}
+block content
+    h2 #{host}
+    div API: #{path}
+    if !error
+        if Array.isArray(data)
+            +arrayTable(data)
+        else if typeof data === 'object' && !Array.isArray(data)
+            +verticalTable(data)
+        else
+            div #{data}
+
+    h4 REST JSON Data
+    pre
+        code(class="language-json").
+            #{raw}

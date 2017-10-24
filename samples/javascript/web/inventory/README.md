@@ -1,5 +1,5 @@
 # vSphere REST API Sample Web Application
-*Originally presented at VMworld 2017 in session SER1912BU VMware Open-Source SDKs: From Getting Started to Web App in One Hour*
+*Originally presented at VMworld 2017 in session SER1912BU [VMware Open-Source SDKs: From Getting Started to Web App in One Hour](https://www.youtube.com/watch?v=k1u--w95I1k)*
 
 Basic [nodejs](https://nodejs.org/) [Express](https://expressjs.com/) web application illustrating connecting to the vSphere REST API endpoint using JavaScript.
 
