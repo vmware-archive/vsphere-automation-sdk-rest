@@ -1,4 +1,4 @@
-# vSphere Automation REST API Postman Resources and Samples
+# vSphere and VMware Cloud on AWS API Postman Resources and Samples
 
 These three files provide API resources and example end to end scenarios that you
 can import in to Postman to execute.
@@ -13,7 +13,9 @@ or use to build up an end to end workflow.
 * The [vSphere-Automation-REST-resources-for-Content-Library.postman_collection.json](vSphere-Automation-REST-resources-for-Content-Library.postman_collection.json)
 provides individual API resources to manage vCenter Content Library features. They are standalone requests that you can execute
 or use to build up an end to end workflow.
-
+* The [VMware Cloud on AWS APIs.postman_collection.json](VMware Cloud on AWS APIs.postman_collection.json)
+provides individual API resources to manage VMware Cloud on AWS features. They are standalone requests that you can execute
+or use to build up an end to end workflow.
 
 ## Requirements
 [Postman Client](https://www.getpostman.com)
@@ -54,3 +56,14 @@ Content Library samples:
 
 ![Content Library Samples](images/ContentLibrary_Sample.JPG "Content Library")
 
+VMware Cloud on AWS samples:
+
+![VMware Cloud on AWS Samples](images/VMC.JPG "VMware Cloud on AWS")
+
+To work with the VMware Cloud on AWS Samples follow these steps:
+1. Import the sample file from this repository into Postman
+2. Import the VMC Environment sample from this repository into Postman
+3. From the VMC Console click your name at the top right of the console window, click "OAuth Refresh Token", from this page, generate or copy your refresh token.
+4. Edit the "VMC Environment" in Postman and set the refresh_token value to the previously copied item.
+5. Use the samples starting with Authentication - Login action.
+* The Org and SDDC will be automatically stored as environmental variables for future API calls once the samples are run, see the Tests tab for how this is done on each call.
