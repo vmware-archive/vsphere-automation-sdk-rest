@@ -13,7 +13,7 @@ or use to build up an end to end workflow.
 * The [vSphere-Automation-REST-resources-for-Content-Library.postman_collection.json](vSphere-Automation-REST-resources-for-Content-Library.postman_collection.json)
 provides individual API resources to manage vCenter Content Library features. They are standalone requests that you can execute
 or use to build up an end to end workflow.
-* The [VMware Cloud on AWS APIs.postman_collection.json](VMware Cloud on AWS APIs.postman_collection.json)
+* The [VMware Cloud on AWS APIs.postman_collection.json](VMware%20Cloud%20on%20AWS%20APIs.postman_collection.json)
 provides individual API resources to manage VMware Cloud on AWS features. They are standalone requests that you can execute
 or use to build up an end to end workflow.
 
@@ -58,7 +58,7 @@ Content Library samples:
 
 VMware Cloud on AWS samples:
 
-![VMware Cloud on AWS Samples](images/VMC.JPG "VMware Cloud on AWS")
+![VMware Cloud on AWS Samples](images/VMC.jpg "VMware Cloud on AWS")
 
 To work with the VMware Cloud on AWS Samples follow these steps:
 1. Import the sample file from this repository into Postman

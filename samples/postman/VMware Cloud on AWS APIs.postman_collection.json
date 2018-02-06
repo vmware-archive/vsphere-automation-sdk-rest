@@ -328,7 +328,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/6446da0c-b3c0-46ea-a932-26225e3652d7",
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/12345-34324234/sddcs/123456-789676",
 							"protocol": "https",
 							"host": [
 								"vmc",
@@ -339,12 +339,12 @@
 								"vmc",
 								"api",
 								"orgs",
-								"{{orgid}}",
+								"12345-34324234",
 								"sddcs",
-								"6446da0c-b3c0-46ea-a932-26225e3652d7"
+								"123456-789676"
 							]
 						},
-						"description": ""
+						"description": "Replace the Org ID and SDDC ID to use this call"
 					},
 					"response": []
 				},
