@@ -1,0 +1,802 @@
+{
+	"info": {
+		"name": "VMware Cloud on AWS APIs",
+		"_postman_id": "66c8c755-722a-50a6-c1d9-76bf63fae7f7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "- Authentication",
+			"description": "",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"access_token\", jsonData.access_token);"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"key\":  \"{{AccessKey}}\"\n}"
+						},
+						"url": {
+							"raw": "https://console.cloud.vmware.com/csp/gateway/am/api/auth/api-tokens/authorize?refresh_token={{refresh_token}}",
+							"protocol": "https",
+							"host": [
+								"console",
+								"cloud",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"csp",
+								"gateway",
+								"am",
+								"api",
+								"auth",
+								"api-tokens",
+								"authorize"
+							],
+							"query": [
+								{
+									"key": "refresh_token",
+									"value": "{{refresh_token}}",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orgs",
+			"description": "",
+			"item": [
+				{
+					"name": "List Orgs",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"",
+									"var OrgID = jsonData[0].id;",
+									"",
+									"postman.setEnvironmentVariable(\"orgid\", OrgID);"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csp-auth-token",
+								"value": "{{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "List Tasks for an Org",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csp-auth-token",
+								"value": "{{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/tasks",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs",
+								"{{orgid}}",
+								"tasks"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "List Providers for an org",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csp-auth-token",
+								"value": "{{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/providers",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs",
+								"{{orgid}}",
+								"providers"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "List Org subscriptions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csp-auth-token",
+								"value": "{{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/subscriptions",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs",
+								"{{orgid}}",
+								"subscriptions"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "List Org reservations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csp-auth-token",
+								"value": "{{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/subscriptions",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs",
+								"{{orgid}}",
+								"subscriptions"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SDDCs",
+			"description": "",
+			"item": [
+				{
+					"name": "List SDDCs",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;",
+									"var jsonData = JSON.parse(responseBody);",
+									"",
+									"var SDDCID = jsonData[0].id;",
+									"",
+									"postman.setEnvironmentVariable(\"sddcid\", SDDCID);"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csp-auth-token",
+								"value": "{{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs",
+								"{{orgid}}",
+								"sddcs"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete SDDC",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "csp-auth-token",
+								"value": "{{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/6446da0c-b3c0-46ea-a932-26225e3652d7",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs",
+								"{{orgid}}",
+								"sddcs",
+								"6446da0c-b3c0-46ea-a932-26225e3652d7"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "List SDDC Public IPs",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csp-auth-token",
+								"value": "{{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/publicips",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs",
+								"{{orgid}}",
+								"sddcs",
+								"{{sddcid}}",
+								"publicips"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "List compute gateways",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csp-auth-token",
+								"value": "{{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/networks/4.0/edges/edge-2",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs",
+								"{{orgid}}",
+								"sddcs",
+								"{{sddcid}}",
+								"networks",
+								"4.0",
+								"edges",
+								"edge-2"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create SDDC",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "csp-auth-token",
+								"value": "{{access_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"num_hosts\": 0,\n  \"name\": \"Alan Renouf Test\",\n  \"provider\": \"ZEROCLOUD\",\n  \"region\": \"US_WEST_2\"\n}"
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs",
+								"{{orgid}}",
+								"sddcs"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Networking",
+			"description": "",
+			"item": [
+				{
+					"name": "Networks",
+					"description": "",
+					"item": [
+						{
+							"name": "List Networks",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "csp-auth-token",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/networks/4.0/sddc/networks",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										"{{orgid}}",
+										"sddcs",
+										"{{sddcid}}",
+										"networks",
+										"4.0",
+										"sddc",
+										"networks"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Firewall",
+					"description": "",
+					"item": [
+						{
+							"name": "Get MGW Firewall Rules",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "csp-auth-token",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/networks/4.0/edges/edge-1/firewall/config",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										"{{orgid}}",
+										"sddcs",
+										"{{sddcid}}",
+										"networks",
+										"4.0",
+										"edges",
+										"edge-1",
+										"firewall",
+										"config"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get MGW Firewall Statistics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "csp-auth-token",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/networks/4.0/edges/edge-1/firewall/config",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										"{{orgid}}",
+										"sddcs",
+										"{{sddcid}}",
+										"networks",
+										"4.0",
+										"edges",
+										"edge-1",
+										"firewall",
+										"config"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get Firewall Rule details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "csp-auth-token",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/networks/4.0/edges/edge-1/firewall/config/rules/131084",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										"{{orgid}}",
+										"sddcs",
+										"{{sddcid}}",
+										"networks",
+										"4.0",
+										"edges",
+										"edge-1",
+										"firewall",
+										"config",
+										"rules",
+										"131084"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "IPSec",
+					"description": "",
+					"item": [
+						{
+							"name": "Get IPSec Config",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "csp-auth-token",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/networks/4.0/edges/edge-1/ipsec/config",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										"{{orgid}}",
+										"sddcs",
+										"{{sddcid}}",
+										"networks",
+										"4.0",
+										"edges",
+										"edge-1",
+										"ipsec",
+										"config"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Edge Devices",
+					"description": "",
+					"item": [
+						{
+							"name": "List Edge Devices",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2c30ed17-4d43-4036-ac3f-88e2393a8ef3",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "csp-auth-token",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/networks/4.0/edges",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										"{{orgid}}",
+										"sddcs",
+										"{{sddcid}}",
+										"networks",
+										"4.0",
+										"edges"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "30e7a171-7024-4638-ad3b-04c8f12cc499",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "81d68e03-7a34-4300-a2dc-49dcf199526e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
