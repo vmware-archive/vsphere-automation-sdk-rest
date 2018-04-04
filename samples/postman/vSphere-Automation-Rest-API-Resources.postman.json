@@ -2012,7 +2012,7 @@
 			"dataMode": "raw",
 			"data": [],
 			"descriptionFormat": null,
-			"description": "Update the CPU related settings of a virtual machine.",
+			"description": "Update the Memory related settings of a virtual machine.",
 			"headers": "Content-Type: application/json\n",
 			"method": "PATCH",
 			"pathVariables": {},
