@@ -2022,7 +2022,7 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"collectionId": "9ce9531a-fc57-4e3e-d810-4c66f3457aaa",
-			"rawModeData": "{\n  \"spec\": {\n    \"size\": 512\n  }\n}"
+			"rawModeData": "{\n  \"spec\": {\n    \"size_MiB\": 512\n  }\n}"
 		}
 	]
 }
