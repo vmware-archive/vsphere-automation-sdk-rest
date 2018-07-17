@@ -1,14 +1,13 @@
 {
 	"info": {
+		"_postman_id": "93069afd-05ea-4c8b-841f-25fd07aa8ac9",
 		"name": "VMware Cloud on AWS APIs",
-		"_postman_id": "66c8c755-722a-50a6-c1d9-76bf63fae7f7",
-		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "- Authentication",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Login",
@@ -57,12 +56,10 @@
 							"query": [
 								{
 									"key": "refresh_token",
-									"value": "{{refresh_token}}",
-									"equals": true
+									"value": "{{refresh_token}}"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -70,7 +67,7 @@
 		},
 		{
 			"name": "Orgs",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "List Orgs",
@@ -116,8 +113,7 @@
 								"api",
 								"orgs"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -150,8 +146,7 @@
 								"{{orgid}}",
 								"tasks"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -184,8 +179,7 @@
 								"{{orgid}}",
 								"providers"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -218,8 +212,7 @@
 								"{{orgid}}",
 								"subscriptions"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -252,8 +245,7 @@
 								"{{orgid}}",
 								"subscriptions"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -261,7 +253,7 @@
 		},
 		{
 			"name": "SDDCs",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "List SDDCs",
@@ -308,8 +300,7 @@
 								"{{orgid}}",
 								"sddcs"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -391,8 +382,7 @@
 								"{{sddcid}}",
 								"publicips"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -442,8 +432,7 @@
 								"edges",
 								"edge-2"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -480,8 +469,7 @@
 								"{{orgid}}",
 								"sddcs"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -489,11 +477,11 @@
 		},
 		{
 			"name": "Networking",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Networks",
-					"description": "",
+					"description": null,
 					"item": [
 						{
 							"name": "List Networks",
@@ -529,8 +517,7 @@
 										"sddc",
 										"networks"
 									]
-								},
-								"description": ""
+								}
 							},
 							"response": []
 						}
@@ -539,7 +526,7 @@
 				},
 				{
 					"name": "Firewall",
-					"description": "",
+					"description": null,
 					"item": [
 						{
 							"name": "Get MGW Firewall Rules",
@@ -577,8 +564,7 @@
 										"firewall",
 										"config"
 									]
-								},
-								"description": ""
+								}
 							},
 							"response": []
 						},
@@ -618,8 +604,7 @@
 										"firewall",
 										"config"
 									]
-								},
-								"description": ""
+								}
 							},
 							"response": []
 						},
@@ -661,8 +646,7 @@
 										"rules",
 										"131084"
 									]
-								},
-								"description": ""
+								}
 							},
 							"response": []
 						}
@@ -671,7 +655,7 @@
 				},
 				{
 					"name": "IPSec",
-					"description": "",
+					"description": null,
 					"item": [
 						{
 							"name": "Get IPSec Config",
@@ -709,8 +693,7 @@
 										"ipsec",
 										"config"
 									]
-								},
-								"description": ""
+								}
 							},
 							"response": []
 						}
@@ -719,7 +702,7 @@
 				},
 				{
 					"name": "Edge Devices",
-					"description": "",
+					"description": null,
 					"item": [
 						{
 							"name": "List Edge Devices",
@@ -766,13 +749,170 @@
 										"4.0",
 										"edges"
 									]
-								},
-								"description": ""
+								}
 							},
 							"response": []
 						}
 					],
 					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "EDRS",
+			"description": "",
+			"item": [
+				{
+					"name": "List SDDC Cluster EDRS Policy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "81f7caee-ab5e-497c-823e-1069f50619c3",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csp-auth-token",
+								"value": "{{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/autoscaler/api/orgs/{{orgid}}/sddcs/{{sddcid}}/clusters/{{clusterid}}/edrs-policy",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"autoscaler",
+								"api",
+								"orgs",
+								"{{orgid}}",
+								"sddcs",
+								"{{sddcid}}",
+								"clusters",
+								"{{clusterid}}",
+								"edrs-policy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List SDDC EDRS Policies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a0aebb71-d8b6-4e27-8605-a926bc972d7c",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csp-auth-token",
+								"value": "{{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/autoscaler/api/orgs/{{orgid}}/sddcs/{{sddcid}}/edrs-policy",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"autoscaler",
+								"api",
+								"orgs",
+								"{{orgid}}",
+								"sddcs",
+								"{{sddcid}}",
+								"edrs-policy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set SDDC Cluster EDRS Policy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "81f7caee-ab5e-497c-823e-1069f50619c3",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "csp-auth-token",
+								"value": "{{access_token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"enable_edrs\": true,\n    \"policy_type\": \"performance\",\n    \"max_hosts\": 16,\n    \"min_hosts\": 4\n}"
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/autoscaler/api/orgs/{{orgid}}/sddcs/{{sddcid}}/clusters/{{clusterid}}/edrs-policy",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"autoscaler",
+								"api",
+								"orgs",
+								"{{orgid}}",
+								"sddcs",
+								"{{sddcid}}",
+								"clusters",
+								"{{clusterid}}",
+								"edrs-policy"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
