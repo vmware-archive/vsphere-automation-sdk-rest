@@ -1,191 +1,281 @@
 {
-	"variables": [],
 	"info": {
+		"_postman_id": "e5df81dd-9301-484e-a4d6-a20c8b8dbae0",
 		"name": "vSphere Automation REST Resources for appliance",
-		"_postman_id": "1b382706-1acf-c3be-c7a1-d6138c0d8f91",
 		"description": "The folders within this collection represent the Rest API resources and the different operations that can be performed on each. These are individual requests. In many cases, each request will require input that would come from other requests. It is left up to the user to insert the correct data into the URL, query parameters and request bodies for the requests to work correctly. Refer to the ReST API Documentation for further help.",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "Access",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Console CLI",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/access/consolecli",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/access/consolecli",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"access",
+								"consolecli"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Console CLI - disable",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/access/consolecli",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"enabled\": false\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/access/consolecli",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"access",
+								"consolecli"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Console CLI - enable",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/access/consolecli",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"enabled\": true\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/access/consolecli",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"access",
+								"consolecli"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "DCUI",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/access/dcui",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/access/dcui",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"access",
+								"dcui"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "DCUI - disable",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/access/dcui",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"enabled\": false\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/access/dcui",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"access",
+								"dcui"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "DCUI - enable",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/access/dcui",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"enabled\": true\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/access/dcui",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"access",
+								"dcui"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Shell",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/access/shell",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/access/shell",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"access",
+								"shell"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Shell - disable",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/access/shell",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"config\": {\r\n        \"enabled\": false,\r\n        \"timeout\": 1\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/access/shell",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"access",
+								"shell"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Shell - enable",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/access/shell",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"config\": {\r\n        \"enabled\": true,\r\n        \"timeout\": 3600\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/access/shell",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"access",
+								"shell"
+							]
 						},
 						"description": "With 1hour timeout"
 					},
@@ -194,60 +284,90 @@
 				{
 					"name": "SSH",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/access/ssh",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/access/ssh",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"access",
+								"ssh"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "SSH - disable",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/access/ssh",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"enabled\": false\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/access/ssh",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"access",
+								"ssh"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "SSH - enable",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/access/ssh",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"enabled\": true\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/access/ssh",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"access",
+								"ssh"
+							]
+						}
 					},
 					"response": []
 				}
@@ -255,7 +375,7 @@
 		},
 		{
 			"name": "Authentication",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Login",
@@ -273,25 +393,53 @@
 					"request": {
 						"auth": {
 							"type": "basic",
-							"basic": {
-								"username": "{{user}}",
-								"password": "{{password}}",
-								"saveHelperData": true,
-								"showPassword": false
-							}
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{user}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
 						},
-						"url": "https://{{vc}}/rest/com/vmware/cis/session",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Basic YWRtaW5pc3RyYXRvckB2c3BoZXJlLmxvY2FsOlZNd2FyZTEh",
-								"description": ""
+								"value": "Basic YWRtaW5pc3RyYXRvckB2c3BoZXJlLmxvY2FsOlZNd2FyZTEh"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/com/vmware/cis/session",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"com",
+								"vmware",
+								"cis",
+								"session"
+							]
 						},
 						"description": "Login to the specified vCenter and retrieve a session"
 					},
@@ -311,12 +459,25 @@
 						}
 					],
 					"request": {
-						"url": "https://{{vc}}/rest/com/vmware/cis/session",
 						"method": "DELETE",
 						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/com/vmware/cis/session",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"com",
+								"vmware",
+								"cis",
+								"session"
+							]
 						},
 						"description": "Logout of the specified vCenter"
 					},
@@ -326,185 +487,276 @@
 		},
 		{
 			"name": "Health",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Appliance services",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/health/applmgmt",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/health/applmgmt",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"health",
+								"applmgmt"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Database storage",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/health/database-storage",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/health/database-storage",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"health",
+								"database-storage"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Load",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/health/load",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/health/load",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"health",
+								"load"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Memory",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/health/mem",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/health/mem",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"health",
+								"mem"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Software packages updates",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/health/software-packages",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/health/software-packages",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"health",
+								"software-packages"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Storage",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/health/storage",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/health/storage",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"health",
+								"storage"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Swap",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/health/swap",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/health/swap",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"health",
+								"swap"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "System",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/health/system",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/health/system",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"health",
+								"system"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "System lastcheck",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/health/system/lastcheck",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/health/system/lastcheck",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"health",
+								"system",
+								"lastcheck"
+							]
+						}
 					},
 					"response": []
 				}
@@ -512,65 +764,120 @@
 		},
 		{
 			"name": "Monitoring",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "List",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/monitoring",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/monitoring",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"monitoring"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Details for: net RX eth0",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/monitoring/net.rx.activity.eth0",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/monitoring/net.rx.activity.eth0",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"monitoring",
+								"net.rx.activity.eth0"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Query stats for: net eth0",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/monitoring/query?item.interval=HOURS2&item.end_time=2017-02-10T22:13:05.651Z&item.names.1=net.rx.activity.eth0&item.names.2=net.tx.activity.eth0&item.start_time=2017-02-06T22:13:05.651Z&item.function=COUNT",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/monitoring/query?item.interval=HOURS2&item.end_time=2017-02-10T22:13:05.651Z&item.names.1=net.rx.activity.eth0&item.names.2=net.tx.activity.eth0&item.start_time=2017-02-06T22:13:05.651Z&item.function=COUNT",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"monitoring",
+								"query"
+							],
+							"query": [
+								{
+									"key": "item.interval",
+									"value": "HOURS2"
+								},
+								{
+									"key": "item.end_time",
+									"value": "2017-02-10T22:13:05.651Z"
+								},
+								{
+									"key": "item.names.1",
+									"value": "net.rx.activity.eth0"
+								},
+								{
+									"key": "item.names.2",
+									"value": "net.tx.activity.eth0"
+								},
+								{
+									"key": "item.start_time",
+									"value": "2017-02-06T22:13:05.651Z"
+								},
+								{
+									"key": "item.function",
+									"value": "COUNT"
+								}
+							]
+						}
 					},
 					"response": []
 				}
@@ -578,23 +885,35 @@
 		},
 		{
 			"name": "Networking",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Domains",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/networking/dns/domains",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/networking/dns/domains",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"networking",
+								"dns",
+								"domains"
+							]
 						},
 						"description": "DNS search domains"
 					},
@@ -603,18 +922,30 @@
 				{
 					"name": "Domains set",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/networking/dns/domains",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"domains\": [\r\n        \"vmware.com\"\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/networking/dns/domains",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"networking",
+								"dns",
+								"domains"
+							]
 						},
 						"description": "DNS search domains"
 					},
@@ -623,18 +954,30 @@
 				{
 					"name": "Domains add",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/networking/dns/domains",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"domain\": \"myvmware.com\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/networking/dns/domains",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"networking",
+								"dns",
+								"domains"
+							]
 						},
 						"description": "DNS search domains"
 					},
@@ -658,18 +1001,30 @@
 						}
 					],
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/networking/dns/hostname",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/networking/dns/hostname",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"networking",
+								"dns",
+								"hostname"
+							]
 						},
 						"description": "Get the Fully Qualified Doman Name."
 					},
@@ -678,18 +1033,31 @@
 				{
 					"name": "Hostname - test",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/networking/dns/hostname/test",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"{{appliance_hostname}}\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/networking/dns/hostname/test",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"networking",
+								"dns",
+								"hostname",
+								"test"
+							]
 						},
 						"description": "Test the Fully Qualified Domain Name."
 					},
@@ -698,18 +1066,30 @@
 				{
 					"name": "Hostname - set",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/networking/dns/hostname",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"{{appliance_hostname}}\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/networking/dns/hostname",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"networking",
+								"dns",
+								"hostname"
+							]
 						},
 						"description": "Set the Fully Qualified Domain Name."
 					},
@@ -733,78 +1113,124 @@
 						}
 					],
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/networking/dns/servers",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/networking/dns/servers",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"networking",
+								"dns",
+								"servers"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "DNS servers - add",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/networking/dns/servers",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"server\": \"serverB\"\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/networking/dns/servers",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"networking",
+								"dns",
+								"servers"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "DNS servers - set",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/networking/dns/servers",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"config\": {\r\n    \t\"mode\": \"is_static\",\r\n    \t\"servers\": [\r\n    \t\t\"serverA\",\r\n    \t\t\"serverB\"\r\n    \t]\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/networking/dns/servers",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"networking",
+								"dns",
+								"servers"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "DNS servers - test",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/networking/dns/servers/test",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"servers\": [\n    \t\"{{appliance_dns_a}}\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/networking/dns/servers/test",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"networking",
+								"dns",
+								"servers",
+								"test"
+							]
 						},
 						"description": "Test if dns servers are reachable."
 					},
@@ -813,38 +1239,60 @@
 				{
 					"name": "Interfaces",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/networking/interfaces",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/networking/interfaces",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"networking",
+								"interfaces"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Interface - details",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/networking/interfaces/nic0",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/networking/interfaces/nic0",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"networking",
+								"interfaces",
+								"nic0"
+							]
 						},
 						"description": "Get information about a particular network interface."
 					},
@@ -854,7 +1302,7 @@
 		},
 		{
 			"name": "Recovery",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Backup job",
@@ -874,118 +1322,220 @@
 						}
 					],
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/recovery/backup/job",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/backup/job",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"backup",
+								"job"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Backup job - validate",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/recovery/backup/validate",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"piece\": {\r\n        \"backup_password\": \"string\",\r\n        \"comment\": \"string\",\r\n        \"location\": \"https://webdavserver/location\",\r\n        \"location_password\": \"secret_string\",\r\n        \"location_type\": \"HTTPS\",\r\n        \"location_user\": \"string\",\r\n        \"parts\": [\r\n        \t\"string\",\r\n        \t\"string\"\r\n        ]\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/backup/validate",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"backup",
+								"validate"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Backup job - create",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/recovery/backup/job",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"piece\": {\r\n        \"backup_password\": \"string\",\r\n        \"comment\": \"string\",\r\n        \"location\": \"https://webdavserver/location\",\r\n        \"location_password\": \"secret_string\",\r\n        \"location_type\": \"HTTPS\",\r\n        \"location_user\": \"string\",\r\n        \"parts\": [\r\n        \t\"string\",\r\n        \t\"string\"\r\n        ]\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/backup/job",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"backup",
+								"job"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Backup job - cancel",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/recovery/backup/job/{{appliance_backupjob_id}}/cancel",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/backup/job/{{appliance_backupjob_id}}/cancel",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"backup",
+								"job",
+								"{{appliance_backupjob_id}}",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Backup job - status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/backup/job/{{appliance_backupjob_id}}",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"backup",
+								"job",
+								"{{appliance_backupjob_id}}"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Backup job - details",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/recovery/backup/job/{{appliance_backupjob_id}}",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/backup/job/details",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"backup",
+								"job",
+								"details"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Backup parts",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/recovery/backup/parts",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/backup/parts",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"backup",
+								"parts"
+							]
 						},
 						"description": "Get a list of the backup parts"
 					},
@@ -994,80 +1544,415 @@
 				{
 					"name": "Backup parts - size of specfic part",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/recovery/backup/parts/common",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/backup/parts/{{backup-parts-id}}",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"backup",
+								"parts",
+								"{{backup-parts-id}}"
+							]
 						},
 						"description": "Get size of the optional part"
 					},
 					"response": []
 				},
 				{
-					"name": "Restore job",
+					"name": "Backup schedule",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"if (undefined !== jsonData && null !== jsonData) {",
+									"    console.log(jsonData.value);",
+									"    postman.setEnvironmentVariable('appliance_backupjob_id', jsonData.value[0]);",
+									"}"
+								]
+							}
+						}
+					],
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/recovery/restore/job",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/backup/schedules",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"backup",
+								"schedules"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Backup schedule - create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"if (undefined !== jsonData && null !== jsonData) {",
+									"    console.log(jsonData.value);",
+									"    postman.setEnvironmentVariable('appliance_backupjob_id', jsonData.value[0]);",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"spec\": {\r\n    \"recurrence_info\": {\r\n      \"hour\": 0,\r\n      \"days\": [\r\n        \"MONDAY\"\r\n      ],\r\n      \"minute\": 0\r\n    },\r\n    \"backup_password\": \"string\",\r\n    \"location\": \"string\",\r\n    \"retention_info\": {\r\n      \"max_count\": 0\r\n    },\r\n    \"parts\": [\r\n      \"string\"\r\n    ],\r\n    \"enable\": true,\r\n    \"location_password\": \"string\",\r\n    \"location_user\": \"string\"\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/backup/schedules/{{backup-schedule-id}}",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"backup",
+								"schedules",
+								"{{backup-schedule-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Backup schedule - details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"if (undefined !== jsonData && null !== jsonData) {",
+									"    console.log(jsonData.value);",
+									"    postman.setEnvironmentVariable('appliance_backupjob_id', jsonData.value[0]);",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/backup/schedules/{{backup-schedule-id}}",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"backup",
+								"schedules",
+								"{{backup-schedule-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Backup schedule - remove",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"if (undefined !== jsonData && null !== jsonData) {",
+									"    console.log(jsonData.value);",
+									"    postman.setEnvironmentVariable('appliance_backupjob_id', jsonData.value[0]);",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/backup/schedules/{{backup-schedule-id}}",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"backup",
+								"schedules",
+								"{{backup-schedule-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Backup schedule - run",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"if (undefined !== jsonData && null !== jsonData) {",
+									"    console.log(jsonData.value);",
+									"    postman.setEnvironmentVariable('appliance_backupjob_id', jsonData.value[0]);",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"comment\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/backup/schedules/{{backup-schedule-id}}/?action=run",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"backup",
+								"schedules",
+								"{{backup-schedule-id}}",
+								""
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "run"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Backup schedule - update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"if (undefined !== jsonData && null !== jsonData) {",
+									"    console.log(jsonData.value);",
+									"    postman.setEnvironmentVariable('appliance_backupjob_id', jsonData.value[0]);",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"spec\": {\r\n    \"recurrence_info\": {\r\n      \"hour\": 0,\r\n      \"days\": [\r\n        \"MONDAY\"\r\n      ],\r\n      \"minute\": 0\r\n    },\r\n    \"backup_password\": \"string\",\r\n    \"location\": \"string\",\r\n    \"retention_info\": {\r\n      \"max_count\": 0\r\n    },\r\n    \"parts\": [\r\n      \"string\"\r\n    ],\r\n    \"enable\": true,\r\n    \"location_password\": \"string\",\r\n    \"location_user\": \"string\"\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/backup/schedules/{{backup-schedule-id}}",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"backup",
+								"schedules",
+								"{{backup-schedule-id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore job",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/restore/job",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"restore",
+								"job"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Restore job - cancel",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/recovery/restore/job/cancel",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/restore/job/cancel",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"restore",
+								"job",
+								"cancel"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Restore job - create",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/recovery/restore/job",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"piece\": {\r\n        \"backup_password\": \"secret string\",\r\n        \"location\": \"string\",\r\n        \"location_password\": \"secret string\",\r\n        \"location_type\": \"FTPS\",\r\n        \"location_user\": \"string\"\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/recovery/restore/job",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"recovery",
+								"restore",
+								"job"
+							]
+						}
 					},
 					"response": []
 				}
@@ -1075,43 +1960,65 @@
 		},
 		{
 			"name": "System",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Storage",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/system/storage",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/system/storage",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"system",
+								"storage"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Storage - resize",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/system/storage/resize",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/system/storage/resize",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"system",
+								"storage",
+								"resize"
+							]
 						},
 						"description": "Resize all partitions to 100 percent of disk size"
 					},
@@ -1120,60 +2027,90 @@
 				{
 					"name": "Time",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/system/time",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/system/time",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"system",
+								"time"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Uptime",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/system/uptime",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/system/uptime",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"system",
+								"uptime"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Version",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/system/version",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/system/version",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"system",
+								"version"
+							]
+						}
 					},
 					"response": []
 				}
@@ -1181,23 +2118,37 @@
 		},
 		{
 			"name": "Techpreview - Firewall",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "List inbound rules",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/firewall/addr/inbound",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/firewall/addr/inbound",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"firewall",
+								"addr",
+								"inbound"
+							]
 						},
 						"description": "Get ordered list of inbound IP addresses that are allowed or denied by firewall."
 					},
@@ -1206,60 +2157,100 @@
 				{
 					"name": "Create rule",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/firewall/addr/inbound",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"pos\": 1,\r\n    \"rule\": {\r\n        \"address\": \"string\",\r\n        \"interface_name\": \"*\",\r\n        \"policy\": \"allow\",\r\n        \"prefix\": 1\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/firewall/addr/inbound",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"firewall",
+								"addr",
+								"inbound"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Delete rule",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/firewall/addr/inbound/delete",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"config\": {\r\n        \"all\": true,\r\n        \"position\": 1\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/firewall/addr/inbound/delete",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"firewall",
+								"addr",
+								"inbound",
+								"delete"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Replace all rules",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/firewall/addr/inbound",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"rules\": [\r\n        {\r\n            \"address\": \"string\",\r\n            \"interface_name\": \"*\",\r\n            \"policy\": \"deny\",\r\n            \"prefix\": 1\r\n        },\r\n        {\r\n            \"address\": \"string\",\r\n            \"interface_name\": \"*\",\r\n            \"policy\": \"allow\",\r\n            \"prefix\": 1\r\n        }\r\n    ]\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/firewall/addr/inbound",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"firewall",
+								"addr",
+								"inbound"
+							]
+						}
 					},
 					"response": []
 				}
@@ -1267,85 +2258,131 @@
 		},
 		{
 			"name": "Techpreview - IPv4",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "IPv4",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/ipv4",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/ipv4",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"ipv4"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "IPv4 - details",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/ipv4/get",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"interfaces\": [\r\n        \"nic0\"\r\n    ]\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/ipv4/get",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"ipv4",
+								"get"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "IPv4 - renew",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/ipv4/renew",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"interfaces\": [\r\n        \"nic0\"\r\n    ]\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/ipv4/renew",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"ipv4",
+								"renew"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "IPv4 - set",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/ipv4",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"config\": [\r\n        {\r\n            \"address\": \"string\",\r\n            \"default_gateway\": \"string\",\r\n            \"interface_name\": \"string\",\r\n            \"mode\": \"dhcp\",\r\n            \"prefix\": 1\r\n        }\r\n    ]\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/ipv4",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"ipv4"
+							]
+						}
 					},
 					"response": []
 				}
@@ -1353,65 +2390,99 @@
 		},
 		{
 			"name": "Techpreview - IPv6",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "IPv6",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/ipv6",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/ipv6",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"ipv6"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "IPv6 - details",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/ipv6/get",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"interfaces\": [\r\n        \"nic0\"\r\n    ]\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/ipv6/get",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"ipv6",
+								"get"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "IPv6 - set",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/ipv6",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"config\": [\r\n        {\r\n            \"addresses\": [\r\n                {\r\n                    \"address\": \"string\",\r\n                    \"prefix\": 1\r\n                },\r\n                {\r\n                    \"address\": \"string\",\r\n                    \"prefix\": 1\r\n                }\r\n            ],\r\n            \"autoconf\": true,\r\n            \"default_gateway\": \"string\",\r\n            \"dhcp\": true,\r\n            \"interface_name\": \"string\"\r\n        }\r\n    ]\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/ipv6",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"ipv6"
+							]
+						}
 					},
 					"response": []
 				}
@@ -1419,23 +2490,35 @@
 		},
 		{
 			"name": "Techpreview - Monitoring",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "SNMP configuration",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"monitoring",
+								"snmp"
+							]
 						},
 						"description": "Return an SNMP agent configuration."
 					},
@@ -1444,18 +2527,31 @@
 				{
 					"name": "Enable SNMP",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp/enable",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp/enable",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"monitoring",
+								"snmp",
+								"enable"
+							]
 						},
 						"description": "Start a disabled SNMP agent."
 					},
@@ -1464,18 +2560,31 @@
 				{
 					"name": "Disable SNMP",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp/disable",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp/disable",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"monitoring",
+								"snmp",
+								"disable"
+							]
 						},
 						"description": "Stop an enabled SNMP agent."
 					},
@@ -1484,18 +2593,31 @@
 				{
 					"name": "SNMP Stats",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp/stats",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp/stats",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"monitoring",
+								"snmp",
+								"stats"
+							]
 						},
 						"description": "Generate diagnostics report for snmp agent."
 					},
@@ -1504,18 +2626,31 @@
 				{
 					"name": "Test SNMP",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp/test",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp/test",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"monitoring",
+								"snmp",
+								"test"
+							]
 						},
 						"description": "Send a warmStart notification to all configured traps and inform destinations (see RFC 3418)."
 					},
@@ -1524,18 +2659,31 @@
 				{
 					"name": "Generate hash",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp/hash",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": " {\r\n    \"config\": {\r\n        \"auth_hash\": \"string\",\r\n        \"priv_hash\": \"string\",\r\n        \"raw_secret\": true\r\n    }\r\n} "
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp/hash",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"monitoring",
+								"snmp",
+								"hash"
+							]
 						},
 						"description": "Generate localized keys for secure SNMPv3 communications."
 					},
@@ -1544,18 +2692,30 @@
 				{
 					"name": "Set SNMP configuration",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"config\": {\n        \"authentication\": \"none\",\n        \"communities\": [\n            \"string\",\n            \"bstring\"\n        ],\n        \"engineid\": \"string\",\n        \"loglevel\": \"string\",\n        \"notraps\": [\n            \"string\",\n            \"bstring\"\n        ],\n        \"port\": 1,\n        \"privacy\": \"AES128\",\n        \"remoteusers\": [\n            \"string\",\n            \"bstring\"\n        ],\n        \"syscontact\": \"string\",\n        \"syslocation\": \"string\",\n        \"targets\": [\n            \"string\",\n            \"bstring\"\n        ],\n        \"users\": [\n            \"string\",\n            \"bstring\"\n        ],\n        \"v3targets\": [\n            \"string\",\n            \"bstring\"\n        ]\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"monitoring",
+								"snmp"
+							]
 						},
 						"description": "Set SNMP configuration."
 					},
@@ -1564,18 +2724,31 @@
 				{
 					"name": "SNMP factory settings",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp/reset",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp/reset",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"monitoring",
+								"snmp",
+								"reset"
+							]
 						},
 						"description": "Restore settings to factory defaults."
 					},
@@ -1584,18 +2757,31 @@
 				{
 					"name": "Get SNMP limits",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp/limits",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/monitoring/snmp/limits",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"monitoring",
+								"snmp",
+								"limits"
+							]
 						},
 						"description": "Get SNMP limits information."
 					},
@@ -1605,23 +2791,34 @@
 		},
 		{
 			"name": "Techpreview - NTP",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Configuration status",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/ntp",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/ntp",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"ntp"
+							]
 						},
 						"description": "Get the NTP configuration status"
 					},
@@ -1630,80 +2827,125 @@
 				{
 					"name": "NTP - test",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/ntp/test",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"servers\": [\r\n        \"string\",\r\n        \"string\"\r\n    ]\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/ntp/test",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"ntp",
+								"test"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "NTP - add server",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/ntp/server",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"servers\": [\r\n        \"string\",\r\n        \"string\"\r\n    ]\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/ntp/server",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"ntp",
+								"server"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "NTP - delete server",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/ntp/server/delete",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"servers\": [\r\n        \"string\",\r\n        \"string\"\r\n    ]\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/ntp/server/delete",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"ntp",
+								"server",
+								"delete"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "NTP - set servers",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/ntp/server",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"servers\": [\r\n        \"string\",\r\n        \"string\"\r\n    ]\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/ntp/server",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"ntp",
+								"server"
+							]
+						}
 					},
 					"response": []
 				}
@@ -1711,85 +2953,128 @@
 		},
 		{
 			"name": "Techpreview - Power operations",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Shutdown operations",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/shutdown",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/shutdown",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"shutdown"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Shutdown",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/shutdown/poweroff",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"config\": {\r\n        \"delay\": 1,\r\n        \"reason\": \"string\"\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/shutdown/poweroff",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"shutdown",
+								"poweroff"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Shutdown - cancel",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/shutdown/cancel",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/shutdown/cancel",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"shutdown",
+								"cancel"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Restart",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/shutdown/restart",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"config\": {\r\n        \"delay\": 1,\r\n        \"reason\": \"string\"\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/shutdown/restart",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"shutdown",
+								"restart"
+							]
+						}
 					},
 					"response": []
 				}
@@ -1797,85 +3082,131 @@
 		},
 		{
 			"name": "Techpreview - Proxy",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Get proxy configurations",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/proxy",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/proxy",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"proxy"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Proxy - set",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/proxy",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"config\": {\r\n        \"configlist\": [\r\n            {\r\n                \"password\": \"secret string\",\r\n                \"port\": 1,\r\n                \"protocol\": \"ftp\",\r\n                \"server\": \"string\",\r\n                \"username\": \"string\"\r\n            },\r\n            {\r\n                \"password\": \"secret string\",\r\n                \"port\": 1,\r\n                \"protocol\": \"ftp\",\r\n                \"server\": \"string\",\r\n                \"username\": \"string\"\r\n            }\r\n        ],\r\n        \"status\": \"disabled\"\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/proxy",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"proxy"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Proxy - test",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/proxy/test",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"config\": {\r\n        \"password\": \"secret string\",\r\n        \"port\": 1,\r\n        \"protocol\": \"ftp\",\r\n        \"server\": \"string\",\r\n        \"testhost\": \"string\",\r\n        \"username\": \"string\"\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/proxy/test",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"proxy",
+								"test"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Proxy - delete",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/proxy/delete",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"protocol\": \"ftp\"\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/proxy/delete",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"proxy",
+								"delete"
+							]
+						}
 					},
 					"response": []
 				}
@@ -1883,105 +3214,162 @@
 		},
 		{
 			"name": "Techpreview - Routes",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "List",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/routes",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/routes",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"routes"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Set",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/routes",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"routes\": [\r\n        {\r\n            \"destination\": \"string\",\r\n            \"gateway\": \"string\",\r\n            \"interface_name\": \"string\",\r\n            \"prefix\": 1\r\n        },\r\n        {\r\n            \"destination\": \"string\",\r\n            \"gateway\": \"string\",\r\n            \"interface_name\": \"string\",\r\n            \"prefix\": 1\r\n        }\r\n    ]\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/routes",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"routes"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Routes - add",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/routes",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"route\": {\r\n        \"destination\": \"string\",\r\n        \"gateway\": \"string\",\r\n        \"interface_name\": \"string\",\r\n        \"prefix\": 1\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/routes",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"routes"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Routes - test",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/routes/test",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"gateways\": [\r\n        \"string\",\r\n        \"string\"\r\n    ]\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/routes/test",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"routes",
+								"test"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Routes - delete",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/networking/routes/delete",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"route\": {\r\n        \"destination\": \"string\",\r\n        \"gateway\": \"string\",\r\n        \"interface_name\": \"string\",\r\n        \"prefix\": 1\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/networking/routes/delete",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"networking",
+								"routes",
+								"delete"
+							]
+						}
 					},
 					"response": []
 				}
@@ -1989,105 +3377,160 @@
 		},
 		{
 			"name": "Techpreview - Services",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Services",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/services",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/services",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"services"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Services - get specific service details",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/services/status/get",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"string\",\r\n    \"timeout\": 0\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/services/status/get",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"services",
+								"status",
+								"get"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Services - control",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/services/control",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"args\": [\r\n        \"string\",\r\n        \"string\"\r\n    ],\r\n    \"name\": \"string\",\r\n    \"timeout\": 1\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/services/control",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"services",
+								"control"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Services - restart",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/services/restart",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"string\",\r\n    \"timeout\": 0\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/services/restart",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"services",
+								"restart"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Services - stop",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/services/stop",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"string\",\r\n    \"timeout\": 0\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/services/stop",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"services",
+								"stop"
+							]
+						}
 					},
 					"response": []
 				}
@@ -2095,23 +3538,35 @@
 		},
 		{
 			"name": "Techpreview - System updates",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "System - update",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/system/update",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/system/update",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"system",
+								"update"
+							]
 						},
 						"description": "Get update repository configuration."
 					},
@@ -2120,18 +3575,30 @@
 				{
 					"name": "System - update repository",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/system/update",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"config\": {\r\n        \"check_updates\": \"disabled\",\r\n        \"current_URL\": \"string\",\r\n        \"day\": \"Monday\",\r\n        \"password\": \"secret string\",\r\n        \"time\": \"string\",\r\n        \"username\": \"string\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/system/update",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"system",
+								"update"
+							]
 						},
 						"description": "Set update repository configuration."
 					},
@@ -2141,45 +3608,65 @@
 		},
 		{
 			"name": "Techpreview - Timesync",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Timesync",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/timesync",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/timesync",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"timesync"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Timesync - set",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/timesync",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"config\": {\r\n        \"mode\": \"host\"\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/timesync",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"timesync"
+							]
+						}
 					},
 					"response": []
 				}
@@ -2187,7 +3674,7 @@
 		},
 		{
 			"name": "Techpreview - local accounts",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Local accounts",
@@ -2207,100 +3694,157 @@
 						}
 					],
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/local-accounts/user",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/local-accounts/user",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"local-accounts",
+								"user"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Local accounts - details",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/local-accounts/user/{{appliance_local_user}}",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/local-accounts/user/{{appliance_local_user}}",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"local-accounts",
+								"user",
+								"{{appliance_local_user}}"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Local accounts - create",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/local-accounts/user",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"config\": {\r\n        \"email\": \"string@domain.com\",\r\n        \"fullname\": \"string\",\r\n        \"password\": \"secretstring\",\r\n        \"role\": \"admin\",\r\n        \"username\": \"test\"\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/local-accounts/user",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"local-accounts",
+								"user"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Local accounts - remove",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/local-accounts/user/test",
 						"method": "DELETE",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/local-accounts/user/test",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"local-accounts",
+								"user",
+								"test"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Local accounts - update",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/techpreview/local-accounts/user",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"config\": {\r\n        \"email\": \"string@domain.com\",\r\n        \"fullname\": \"new string\",\r\n        \"role\": \"admin\",\r\n        \"status\": \"enabled\",\r\n        \"username\": \"test\"\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/techpreview/local-accounts/user",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"techpreview",
+								"local-accounts",
+								"user"
+							]
+						}
 					},
 					"response": []
 				}
@@ -2308,125 +3852,193 @@
 		},
 		{
 			"name": "Vmon",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Services",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/vmon/service",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/vmon/service",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"vmon",
+								"service"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Get details about specific service",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/vmon/service/content-library",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/vmon/service/content-library",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"vmon",
+								"service",
+								"content-library"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Restart specific service",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/vmon/service/content-library/restart",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/vmon/service/content-library/restart",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"vmon",
+								"service",
+								"content-library",
+								"restart"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Start specific service",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/vmon/service/content-library/start",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/vmon/service/content-library/start",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"vmon",
+								"service",
+								"content-library",
+								"start"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Stop specific service",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/vmon/service/content-library/stop",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/vmon/service/content-library/stop",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"vmon",
+								"service",
+								"content-library",
+								"stop"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Update specific service",
 					"request": {
-						"url": "https://{{vc}}/rest/appliance/vmon/service/content-library",
 						"method": "PATCH",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"spec\": {\r\n        \"startup_type\": \"AUTOMATIC\"\r\n    }\r\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://{{vc}}/rest/appliance/vmon/service/content-library",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"appliance",
+								"vmon",
+								"service",
+								"content-library"
+							]
+						}
 					},
 					"response": []
 				}
