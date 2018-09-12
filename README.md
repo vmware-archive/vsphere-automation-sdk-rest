@@ -142,5 +142,5 @@ Items added to the repository, including items from the Board members, require 2
 * [Getting Started Blog post](https://blogs.vmware.com/code/2017/02/02/getting-started-vsphere-automation-sdk-rest/)
 * [VMware Code](https://code.vmware.com/home)
 * [VMware Developer Community](https://communities.vmware.com/community/vmtn/developer)
-* VMware vSphere [REST API Reference documentation](https://code.vmware.com/web/dp/doc/preview?id=4645).
+* VMware vSphere [REST API Reference documentation](https://code.vmware.com/apis/366/vsphere-automation).
 * [VMware REST forum](https://code.vmware.com/forums/7506/vsphere-automation-sdk-for-rest)
