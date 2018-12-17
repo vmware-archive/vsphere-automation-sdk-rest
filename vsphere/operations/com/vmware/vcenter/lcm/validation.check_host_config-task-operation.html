@@ -1,0 +1,1323 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>REST API - check_host_config-task</title>
+    <script src="../../../../../dynamic-contents.js" type="text/javascript"></script>
+    <script src="../../../../../jquery.js" language="javascript" type="text/javascript"></script>
+    <script src="../../../../../jquery-ui.js" language="javascript" type="text/javascript"></script>
+    <script src="../../../../../restdocutils.js" language="javascript" type="text/javascript"></script>
+    <link href="../../../../../jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../../restdoc.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../../left-tree.css" type="text/css" rel="stylesheet">
+    <script src="../../../../../left-tree.js"></script>
+
+</head>
+<body onLoad="menu_main('leftTree')">
+    <main>
+    <header>
+        <div class="header">
+            <div class="logo"></div>
+        </div>
+    </header>
+<nav class="components-index">
+   
+   <div id="leftTree">
+     <ul>
+        <li><a href="../../../../../index.html">Operations</a>
+            <ul><li><a href='../../../../../index.html#PKG_com.vmware.appliance'>appliance</a>
+<ul>    <li><a href='../../../../../index.html#PKG_com.vmware.appliance.access'>access</a>
+    <ul>        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.access.consolecli'>consolecli</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/access/consolecli.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/access/consolecli.set-operation.html'>set</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.access.dcui'>dcui</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/access/dcui.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/access/dcui.set-operation.html'>set</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.access.shell'>shell</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/access/shell.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/access/shell.set-operation.html'>set</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.access.ssh'>ssh</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/access/ssh.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/access/ssh.set-operation.html'>set</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.appliance.health'>health</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/appliance/health.messages-operation.html'>messages</a></li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.health.applmgmt'>applmgmt</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/health/applmgmt.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.health.databasestorage'>databasestorage</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/health/databasestorage.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.health.load'>load</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/health/load.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.health.mem'>mem</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/health/mem.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.health.softwarepackages'>softwarepackages</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/health/softwarepackages.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.health.storage'>storage</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/health/storage.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.health.swap'>swap</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/health/swap.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.health.system'>system</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/health/system.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/health/system.lastcheck-operation.html'>lastcheck</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.appliance.local_accounts'>local accounts</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/appliance/local_accounts.create-operation.html'>create</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/local_accounts.delete-operation.html'>delete</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/local_accounts.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/local_accounts.list-operation.html'>list</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/local_accounts.set-operation.html'>set</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/local_accounts.update-operation.html'>update</a></li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.local_accounts.policy'>policy</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/local_accounts/policy.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/local_accounts/policy.set-operation.html'>set</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.appliance.logging'>logging</a>
+    <ul>        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.logging.forwarding'>forwarding</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/logging/forwarding.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/logging/forwarding.set-operation.html'>set</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/logging/forwarding.test-operation.html'>test</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#SVC_com.vmware.appliance.monitoring'>monitoring</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/appliance/monitoring.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/monitoring.list-operation.html'>list</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/monitoring.query-operation.html'>query</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.appliance.networking'>networking</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/appliance/networking.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/networking.reset-operation.html'>reset</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/networking.update-operation.html'>update</a></li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.appliance.networking.dns'>dns</a>
+        <ul>            <li><a href='../../../../../index.html#SVC_com.vmware.appliance.networking.dns.domains'>domains</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/appliance/networking/dns/domains.add-operation.html'>add</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/networking/dns/domains.list-operation.html'>list</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/networking/dns/domains.set-operation.html'>set</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.appliance.networking.dns.hostname'>hostname</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/appliance/networking/dns/hostname.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/networking/dns/hostname.set-operation.html'>set</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/networking/dns/hostname.test-operation.html'>test</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.appliance.networking.dns.servers'>servers</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/appliance/networking/dns/servers.add-operation.html'>add</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/networking/dns/servers.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/networking/dns/servers.set-operation.html'>set</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/networking/dns/servers.test-operation.html'>test</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.appliance.networking.firewall'>firewall</a>
+        <ul>            <li><a href='../../../../../index.html#SVC_com.vmware.appliance.networking.firewall.inbound'>inbound</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/appliance/networking/firewall/inbound.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/networking/firewall/inbound.set-operation.html'>set</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.appliance.networking.interfaces'>interfaces</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/networking/interfaces.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/networking/interfaces.list-operation.html'>list</a></li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.appliance.networking.interfaces.ipv4'>ipv4</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/appliance/networking/interfaces/ipv4.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/networking/interfaces/ipv4.set-operation.html'>set</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.appliance.networking.interfaces.ipv6'>ipv6</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/appliance/networking/interfaces/ipv6.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/networking/interfaces/ipv6.set-operation.html'>set</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.networking.no_proxy'>no proxy</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/networking/no_proxy.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/networking/no_proxy.set-operation.html'>set</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.networking.proxy'>proxy</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/networking/proxy.delete-operation.html'>delete</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/networking/proxy.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/networking/proxy.list-operation.html'>list</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/networking/proxy.set-operation.html'>set</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/networking/proxy.test-operation.html'>test</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#SVC_com.vmware.appliance.ntp'>ntp</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/appliance/ntp.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/ntp.set-operation.html'>set</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/ntp.test-operation.html'>test</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.appliance.recovery'>recovery</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/appliance/recovery.get-operation.html'>get</a></li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.appliance.recovery.backup'>backup</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup.validate-operation.html'>validate</a></li>
+            <li><a href='../../../../../index.html#PKG_com.vmware.appliance.recovery.backup.job'>job</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/job.cancel-operation.html'>cancel</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/job.create-operation.html'>create</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/job.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/job.list-operation.html'>list</a></li>
+                <li><a href='../../../../../index.html#SVC_com.vmware.appliance.recovery.backup.job.details'>details</a>
+                <ul>                    <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/job/details.list-operation.html'>list</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.appliance.recovery.backup.parts'>parts</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/parts.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/parts.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.appliance.recovery.backup.schedules'>schedules</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/schedules.create-operation.html'>create</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/schedules.delete-operation.html'>delete</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/schedules.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/schedules.list-operation.html'>list</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/schedules.run-operation.html'>run</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/schedules.update-operation.html'>update</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#PKG_com.vmware.appliance.recovery.backup.system_name'>system name</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/system_name.list-operation.html'>list</a></li>
+                <li><a href='../../../../../index.html#SVC_com.vmware.appliance.recovery.backup.system_name.archive'>archive</a>
+                <ul>                    <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/system_name/archive.get-operation.html'>get</a></li>
+                    <li><a href='../../../../../operations/com/vmware/appliance/recovery/backup/system_name/archive.list-operation.html'>list</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.appliance.recovery.reconciliation'>reconciliation</a>
+        <ul>            <li><a href='../../../../../index.html#SVC_com.vmware.appliance.recovery.reconciliation.job'>job</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/appliance/recovery/reconciliation/job.create-operation.html'>create</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/recovery/reconciliation/job.get-operation.html'>get</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.appliance.recovery.restore'>restore</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/recovery/restore.validate-operation.html'>validate</a></li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.appliance.recovery.restore.job'>job</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/appliance/recovery/restore/job.cancel-operation.html'>cancel</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/recovery/restore/job.create-operation.html'>create</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/recovery/restore/job.get-operation.html'>get</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#SVC_com.vmware.appliance.services'>services</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/appliance/services.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/services.list-operation.html'>list</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/services.restart-operation.html'>restart</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/services.start-operation.html'>start</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/services.stop-operation.html'>stop</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#SVC_com.vmware.appliance.shutdown'>shutdown</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/appliance/shutdown.cancel-operation.html'>cancel</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/shutdown.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/shutdown.poweroff-operation.html'>poweroff</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/shutdown.reboot-operation.html'>reboot</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.appliance.system'>system</a>
+    <ul>        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.system.storage'>storage</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/system/storage.list-operation.html'>list</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/system/storage.resize-operation.html'>resize</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/system/storage.resize_ex-operation.html'>resize_ex</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.appliance.system.time'>time</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/system/time.get-operation.html'>get</a></li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.appliance.system.time.timezone'>timezone</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/appliance/system/time/timezone.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/appliance/system/time/timezone.set-operation.html'>set</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.system.uptime'>uptime</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/system/uptime.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.system.version'>version</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/system/version.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#SVC_com.vmware.appliance.timesync'>timesync</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/appliance/timesync.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/timesync.set-operation.html'>set</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.appliance.update'>update</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/appliance/update.cancel-operation.html'>cancel</a></li>
+        <li><a href='../../../../../operations/com/vmware/appliance/update.get-operation.html'>get</a></li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.update.pending'>pending</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/update/pending.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/update/pending.install-operation.html'>install</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/update/pending.list-operation.html'>list</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/update/pending.precheck-operation.html'>precheck</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/update/pending.stage-operation.html'>stage</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/update/pending.stage_and_install-operation.html'>stage_and_install</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/update/pending.validate-operation.html'>validate</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.update.policy'>policy</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/update/policy.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/update/policy.set-operation.html'>set</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.update.staged'>staged</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/update/staged.delete-operation.html'>delete</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/update/staged.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.appliance.vmon'>vmon</a>
+    <ul>        <li><a href='../../../../../index.html#SVC_com.vmware.appliance.vmon.service'>service</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/appliance/vmon/service.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/vmon/service.list_details-operation.html'>list_details</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/vmon/service.restart-operation.html'>restart</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/vmon/service.start-operation.html'>start</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/vmon/service.stop-operation.html'>stop</a></li>
+            <li><a href='../../../../../operations/com/vmware/appliance/vmon/service.update-operation.html'>update</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+<li><a href='../../../../../index.html#PKG_com.vmware.cis'>cis</a>
+<ul>    <li><a href='../../../../../index.html#SVC_com.vmware.cis.session'>session</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/cis/session.create-operation.html'>create</a></li>
+        <li><a href='../../../../../operations/com/vmware/cis/session.delete-operation.html'>delete</a></li>
+        <li><a href='../../../../../operations/com/vmware/cis/session.get-operation.html'>get</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.cis.tagging'>tagging</a>
+    <ul>        <li><a href='../../../../../index.html#PKG_com.vmware.cis.tagging.category'>category</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/cis/tagging/category.add_to_used_by-operation.html'>add_to_used_by</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/category.create-operation.html'>create</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/category.delete-operation.html'>delete</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/category.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/category.list-operation.html'>list</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/category.list_used_categories-operation.html'>list_used_categories</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/category.remove_from_used_by-operation.html'>remove_from_used_by</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/category.revoke_propagating_permissions-operation.html'>revoke_propagating_permissions</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/category.update-operation.html'>update</a></li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.cis.tagging.category.host'>host</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/cis/tagging/category/host.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.cis.tagging.category.VM'>VM</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/cis/tagging/category/vm.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.cis.tagging.tag'>tag</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag.add_to_used_by-operation.html'>add_to_used_by</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag.create-operation.html'>create</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag.delete-operation.html'>delete</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag.list-operation.html'>list</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag.list_tags_for_category-operation.html'>list_tags_for_category</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag.list_used_tags-operation.html'>list_used_tags</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag.remove_from_used_by-operation.html'>remove_from_used_by</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag.revoke_propagating_permissions-operation.html'>revoke_propagating_permissions</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag.update-operation.html'>update</a></li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.cis.tagging.tag.host'>host</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/cis/tagging/tag/host.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.cis.tagging.tag.VM'>VM</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/cis/tagging/tag/vm.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.cis.tagging.tag_association'>tag association</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag_association.attach-operation.html'>attach</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag_association.attach_multiple_tags_to_object-operation.html'>attach_multiple_tags_to_object</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag_association.attach_tag_to_multiple_objects-operation.html'>attach_tag_to_multiple_objects</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag_association.detach-operation.html'>detach</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag_association.detach_multiple_tags_from_object-operation.html'>detach_multiple_tags_from_object</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag_association.detach_tag_from_multiple_objects-operation.html'>detach_tag_from_multiple_objects</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag_association.list_attachable_tags-operation.html'>list_attachable_tags</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag_association.list_attached_objects-operation.html'>list_attached_objects</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag_association.list_attached_objects_on_tags-operation.html'>list_attached_objects_on_tags</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag_association.list_attached_tags-operation.html'>list_attached_tags</a></li>
+            <li><a href='../../../../../operations/com/vmware/cis/tagging/tag_association.list_attached_tags_on_objects-operation.html'>list_attached_tags_on_objects</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#SVC_com.vmware.cis.tasks'>tasks</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/cis/tasks.cancel-operation.html'>cancel</a></li>
+        <li><a href='../../../../../operations/com/vmware/cis/tasks.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/cis/tasks.list-operation.html'>list</a></li>
+    </ul>
+    </li>
+</ul>
+</li>
+<li><a href='../../../../../index.html#PKG_com.vmware.content'>content</a>
+<ul>    <li><a href='../../../../../index.html#SVC_com.vmware.content.configuration'>configuration</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/content/configuration.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/content/configuration.update-operation.html'>update</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.content.library'>library</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/content/library.find-operation.html'>find</a></li>
+        <li><a href='../../../../../operations/com/vmware/content/library.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/content/library.list-operation.html'>list</a></li>
+        <li><a href='../../../../../operations/com/vmware/content/library.update-operation.html'>update</a></li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.content.library.item'>item</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/content/library/item.copy-operation.html'>copy</a></li>
+            <li><a href='../../../../../operations/com/vmware/content/library/item.create-operation.html'>create</a></li>
+            <li><a href='../../../../../operations/com/vmware/content/library/item.delete-operation.html'>delete</a></li>
+            <li><a href='../../../../../operations/com/vmware/content/library/item.find-operation.html'>find</a></li>
+            <li><a href='../../../../../operations/com/vmware/content/library/item.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/content/library/item.list-operation.html'>list</a></li>
+            <li><a href='../../../../../operations/com/vmware/content/library/item.update-operation.html'>update</a></li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.content.library.item.download_session'>download session</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/content/library/item/download_session.cancel-operation.html'>cancel</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/download_session.create-operation.html'>create</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/download_session.delete-operation.html'>delete</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/download_session.fail-operation.html'>fail</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/download_session.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/download_session.keep_alive-operation.html'>keep_alive</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/download_session.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#PKG_com.vmware.content.library.item.downloadsession'>downloadsession</a>
+            <ul>                <li><a href='../../../../../index.html#SVC_com.vmware.content.library.item.downloadsession.file'>file</a>
+                <ul>                    <li><a href='../../../../../operations/com/vmware/content/library/item/downloadsession/file.get-operation.html'>get</a></li>
+                    <li><a href='../../../../../operations/com/vmware/content/library/item/downloadsession/file.list-operation.html'>list</a></li>
+                    <li><a href='../../../../../operations/com/vmware/content/library/item/downloadsession/file.prepare-operation.html'>prepare</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.content.library.item.file'>file</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/content/library/item/file.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/file.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.content.library.item.storage'>storage</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/content/library/item/storage.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/storage.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.content.library.item.update_session'>update session</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/content/library/item/update_session.cancel-operation.html'>cancel</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/update_session.complete-operation.html'>complete</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/update_session.create-operation.html'>create</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/update_session.delete-operation.html'>delete</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/update_session.fail-operation.html'>fail</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/update_session.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/update_session.keep_alive-operation.html'>keep_alive</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/update_session.list-operation.html'>list</a></li>
+                <li><a href='../../../../../operations/com/vmware/content/library/item/update_session.update-operation.html'>update</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#PKG_com.vmware.content.library.item.updatesession'>updatesession</a>
+            <ul>                <li><a href='../../../../../index.html#SVC_com.vmware.content.library.item.updatesession.file'>file</a>
+                <ul>                    <li><a href='../../../../../operations/com/vmware/content/library/item/updatesession/file.add-operation.html'>add</a></li>
+                    <li><a href='../../../../../operations/com/vmware/content/library/item/updatesession/file.get-operation.html'>get</a></li>
+                    <li><a href='../../../../../operations/com/vmware/content/library/item/updatesession/file.list-operation.html'>list</a></li>
+                    <li><a href='../../../../../operations/com/vmware/content/library/item/updatesession/file.remove-operation.html'>remove</a></li>
+                    <li><a href='../../../../../operations/com/vmware/content/library/item/updatesession/file.validate-operation.html'>validate</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.content.library.subscribed_item'>subscribed item</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/content/library/subscribed_item.evict-operation.html'>evict</a></li>
+            <li><a href='../../../../../operations/com/vmware/content/library/subscribed_item.sync-operation.html'>sync</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#SVC_com.vmware.content.local_library'>local library</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/content/local_library.create-operation.html'>create</a></li>
+        <li><a href='../../../../../operations/com/vmware/content/local_library.delete-operation.html'>delete</a></li>
+        <li><a href='../../../../../operations/com/vmware/content/local_library.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/content/local_library.list-operation.html'>list</a></li>
+        <li><a href='../../../../../operations/com/vmware/content/local_library.update-operation.html'>update</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#SVC_com.vmware.content.subscribed_library'>subscribed library</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/content/subscribed_library.create-operation.html'>create</a></li>
+        <li><a href='../../../../../operations/com/vmware/content/subscribed_library.delete-operation.html'>delete</a></li>
+        <li><a href='../../../../../operations/com/vmware/content/subscribed_library.evict-operation.html'>evict</a></li>
+        <li><a href='../../../../../operations/com/vmware/content/subscribed_library.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/content/subscribed_library.list-operation.html'>list</a></li>
+        <li><a href='../../../../../operations/com/vmware/content/subscribed_library.probe-operation.html'>probe</a></li>
+        <li><a href='../../../../../operations/com/vmware/content/subscribed_library.sync-operation.html'>sync</a></li>
+        <li><a href='../../../../../operations/com/vmware/content/subscribed_library.update-operation.html'>update</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#SVC_com.vmware.content.type'>type</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/content/type.list-operation.html'>list</a></li>
+    </ul>
+    </li>
+</ul>
+</li>
+<li><a href='../../../../../index.html#PKG_com.vmware.esx'>esx</a>
+<ul>    <li><a href='../../../../../index.html#PKG_com.vmware.esx.host_settings'>host settings</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/esx/host_settings.apply-task-operation.html'>apply-task</a></li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.esx.host_settings.config.components_partial_config'>config</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/esx/host_settings/config.get-operation.html'>get</a></li>
+            <li><a href='../../../../../index.html#PKG_com.vmware.esx.host_settings.config.components'>components</a>
+            <ul>                <li><a href='../../../../../index.html#SVC_com.vmware.esx.host_settings.config.components.keys'>keys</a>
+                <ul>                    <li><a href='../../../../../operations/com/vmware/esx/host_settings/config/components/keys.delete-operation.html'>delete</a></li>
+                    <li><a href='../../../../../operations/com/vmware/esx/host_settings/config/components/keys.get-operation.html'>get</a></li>
+                    <li><a href='../../../../../operations/com/vmware/esx/host_settings/config/components/keys.set-operation.html'>set</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.esx.host_settings.depots'>depots</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/esx/host_settings/depots.create-operation.html'>create</a></li>
+            <li><a href='../../../../../operations/com/vmware/esx/host_settings/depots.delete-operation.html'>delete</a></li>
+            <li><a href='../../../../../operations/com/vmware/esx/host_settings/depots.list-operation.html'>list</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.esx.host_settings.software'>software</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/esx/host_settings/software.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/esx/host_settings/software.set-operation.html'>set</a></li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.esx.host_settings.software.components'>components</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/esx/host_settings/software/components.delete-operation.html'>delete</a></li>
+                <li><a href='../../../../../operations/com/vmware/esx/host_settings/software/components.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/esx/host_settings/software/components.set-operation.html'>set</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.esx.host_settings.software.esx'>esx</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/esx/host_settings/software/esx.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/esx/host_settings/software/esx.set-operation.html'>set</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.esx.hosts'>hosts</a>
+    <ul>        <li><a href='../../../../../index.html#SVC_com.vmware.esx.hosts.settings'>settings</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/esx/hosts/settings.set-task-operation.html'>set-task</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.esx.hosts.software'>software</a>
+        <ul>            <li><a href='../../../../../index.html#SVC_com.vmware.esx.hosts.software.components'>components</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/esx/hosts/software/components.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/esx/hosts/software/components.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.esx.hosts.software.esx'>esx</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/esx/hosts/software/esx.get-operation.html'>get</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+<li><a href='../../../../../index.html#PKG_com.vmware.vapi.metadata.authentication_partial_vapi'>vapi</a>
+<ul>    <li><a href='../../../../../index.html#PKG_com.vmware.vapi.metadata.authentication_partial_metadata'>metadata</a>
+    <ul>        <li><a href='../../../../../index.html#PKG_com.vmware.vapi.metadata.authentication'>authentication</a>
+        <ul>            <li><a href='../../../../../index.html#SVC_com.vmware.vapi.metadata.authentication.component'>component</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vapi/metadata/authentication/component.fingerprint-operation.html'>fingerprint</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/authentication/component.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/authentication/component.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vapi.metadata.authentication.package'>package</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vapi/metadata/authentication/package.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/authentication/package.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#PKG_com.vmware.vapi.metadata.authentication.service'>service</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vapi/metadata/authentication/service.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/authentication/service.list-operation.html'>list</a></li>
+                <li><a href='../../../../../index.html#SVC_com.vmware.vapi.metadata.authentication.service.operation'>operation</a>
+                <ul>                    <li><a href='../../../../../operations/com/vmware/vapi/metadata/authentication/service/operation.get-operation.html'>get</a></li>
+                    <li><a href='../../../../../operations/com/vmware/vapi/metadata/authentication/service/operation.list-operation.html'>list</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.vapi.metadata.cli'>cli</a>
+        <ul>            <li><a href='../../../../../index.html#SVC_com.vmware.vapi.metadata.cli.command'>command</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vapi/metadata/cli/command.fingerprint-operation.html'>fingerprint</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/cli/command.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/cli/command.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vapi.metadata.cli.namespace'>namespace</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vapi/metadata/cli/namespace.fingerprint-operation.html'>fingerprint</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/cli/namespace.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/cli/namespace.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.vapi.metadata.metamodel'>metamodel</a>
+        <ul>            <li><a href='../../../../../index.html#SVC_com.vmware.vapi.metadata.metamodel.component'>component</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vapi/metadata/metamodel/component.fingerprint-operation.html'>fingerprint</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/metamodel/component.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/metamodel/component.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vapi.metadata.metamodel.enumeration'>enumeration</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vapi/metadata/metamodel/enumeration.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/metamodel/enumeration.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vapi.metadata.metamodel.package'>package</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vapi/metadata/metamodel/package.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/metamodel/package.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#PKG_com.vmware.vapi.metadata.metamodel.resource'>resource</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vapi/metadata/metamodel/resource.list-operation.html'>list</a></li>
+                <li><a href='../../../../../index.html#SVC_com.vmware.vapi.metadata.metamodel.resource.model'>model</a>
+                <ul>                    <li><a href='../../../../../operations/com/vmware/vapi/metadata/metamodel/resource/model.list-operation.html'>list</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#PKG_com.vmware.vapi.metadata.metamodel.service'>service</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vapi/metadata/metamodel/service.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/metamodel/service.list-operation.html'>list</a></li>
+                <li><a href='../../../../../index.html#SVC_com.vmware.vapi.metadata.metamodel.service.operation'>operation</a>
+                <ul>                    <li><a href='../../../../../operations/com/vmware/vapi/metadata/metamodel/service/operation.get-operation.html'>get</a></li>
+                    <li><a href='../../../../../operations/com/vmware/vapi/metadata/metamodel/service/operation.list-operation.html'>list</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vapi.metadata.metamodel.structure'>structure</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vapi/metadata/metamodel/structure.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/metamodel/structure.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.vapi.metadata.privilege'>privilege</a>
+        <ul>            <li><a href='../../../../../index.html#SVC_com.vmware.vapi.metadata.privilege.component'>component</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vapi/metadata/privilege/component.fingerprint-operation.html'>fingerprint</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/privilege/component.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/privilege/component.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vapi.metadata.privilege.package'>package</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vapi/metadata/privilege/package.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/privilege/package.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#PKG_com.vmware.vapi.metadata.privilege.service'>service</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vapi/metadata/privilege/service.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vapi/metadata/privilege/service.list-operation.html'>list</a></li>
+                <li><a href='../../../../../index.html#SVC_com.vmware.vapi.metadata.privilege.service.operation'>operation</a>
+                <ul>                    <li><a href='../../../../../operations/com/vmware/vapi/metadata/privilege/service/operation.get-operation.html'>get</a></li>
+                    <li><a href='../../../../../operations/com/vmware/vapi/metadata/privilege/service/operation.list-operation.html'>list</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+<li><a href='../../../../../index.html#PKG_com.vmware.vcenter'>vcenter</a>
+<ul>    <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.cluster'>cluster</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/vcenter/cluster.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/cluster.list-operation.html'>list</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.compute'>compute</a>
+    <ul>        <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.compute.policies'>policies</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/compute/policies.create-operation.html'>create</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/compute/policies.delete-operation.html'>delete</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/compute/policies.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/compute/policies.list-operation.html'>list</a></li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.compute.policies.capabilities'>capabilities</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/compute/policies/capabilities.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/compute/policies/capabilities.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.compute.policies.tag_usage'>tag usage</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/compute/policies/tag_usage.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.datacenter'>datacenter</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/vcenter/datacenter.create-operation.html'>create</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/datacenter.delete-operation.html'>delete</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/datacenter.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/datacenter.list-operation.html'>list</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.datastore'>datastore</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/vcenter/datastore.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/datastore.list-operation.html'>list</a></li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.datastore.default_policy'>default policy</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/datastore/default_policy.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.folder'>folder</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/vcenter/folder.list-operation.html'>list</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.guest'>guest</a>
+    <ul>        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.guest.customization_specs'>customization specs</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/guest/customization_specs.list-operation.html'>list</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.host'>host</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/vcenter/host.connect-operation.html'>connect</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/host.create-operation.html'>create</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/host.delete-operation.html'>delete</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/host.disconnect-operation.html'>disconnect</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/host.list-operation.html'>list</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.hvc'>hvc</a>
+    <ul>        <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.hvc.links'>links</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/hvc/links.create-operation.html'>create</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/hvc/links.delete-operation.html'>delete</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/hvc/links.list-operation.html'>list</a></li>
+            <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.hvc.links.sync'>sync</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/hvc/links/sync.reset-operation.html'>reset</a></li>
+                <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.hvc.links.sync.providers'>providers</a>
+                <ul>                    <li><a href='../../../../../operations/com/vmware/vcenter/hvc/links/sync/providers.get-operation.html'>get</a></li>
+                    <li><a href='../../../../../operations/com/vmware/vcenter/hvc/links/sync/providers.list-operation.html'>list</a></li>
+                    <li><a href='../../../../../operations/com/vmware/vcenter/hvc/links/sync/providers.start-operation.html'>start</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.hvc.management'>management</a>
+        <ul>            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.hvc.management.administrators'>administrators</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/hvc/management/administrators.add-operation.html'>add</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/hvc/management/administrators.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/hvc/management/administrators.remove-operation.html'>remove</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/hvc/management/administrators.set-operation.html'>set</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.identity'>identity</a>
+    <ul>        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.identity.providers'>providers</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/identity/providers.create-operation.html'>create</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/identity/providers.delete-operation.html'>delete</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/identity/providers.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/identity/providers.list-operation.html'>list</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/identity/providers.update-operation.html'>update</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.inventory'>inventory</a>
+    <ul>        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.inventory.datastore'>datastore</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/inventory/datastore.find-operation.html'>find</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.inventory.network'>network</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/inventory/network.find-operation.html'>find</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.iso'>iso</a>
+    <ul>        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.iso.image'>image</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/iso/image.mount-operation.html'>mount</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/iso/image.unmount-operation.html'>unmount</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.lcm'>lcm</a>
+    <ul>        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.lcm.install'>install</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/install.check-task-operation.html'>check-task</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/install.start-task-operation.html'>start-task</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.lcm.log'>log</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/log.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.lcm.migrate'>migrate</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/migrate.check-task-operation.html'>check-task</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/migrate.start-task-operation.html'>start-task</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.lcm.recommendation'>recommendation</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/recommendation.scan_datastore-task-operation.html'>scan_datastore-task</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/recommendation.scan_migrate_deployment_size-task-operation.html'>scan_migrate_deployment_size-task</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/recommendation.scan_upgrade_deployment_size-task-operation.html'>scan_upgrade_deployment_size-task</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.lcm.upgrade'>upgrade</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/upgrade.check-task-operation.html'>check-task</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/upgrade.start-task-operation.html'>start-task</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.lcm.validation'>validation</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/validation.check_appliance_name-task-operation.html'>check_appliance_name-task</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/validation.check_destination_location-task-operation.html'>check_destination_location-task</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/validation.check_host_config-task-operation.html'>check_host_config-task</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/validation.check_migrate_source_appliance-task-operation.html'>check_migrate_source_appliance-task</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/validation.check_network-task-operation.html'>check_network-task</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/validation.check_os_password-task-operation.html'>check_os_password-task</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/validation.check_source_vum-task-operation.html'>check_source_vum-task</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/validation.check_temporary_network-task-operation.html'>check_temporary_network-task</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/lcm/validation.check_upgrade_source_appliance-task-operation.html'>check_upgrade_source_appliance-task</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.network'>network</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/vcenter/network.list-operation.html'>list</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.ovf'>ovf</a>
+    <ul>        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.ovf.export_flag'>export flag</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/ovf/export_flag.list-operation.html'>list</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.ovf.import_flag'>import flag</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/ovf/import_flag.list-operation.html'>list</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.ovf.library_item'>library item</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/ovf/library_item.create-operation.html'>create</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/ovf/library_item.deploy-operation.html'>deploy</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/ovf/library_item.filter-operation.html'>filter</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.resource_pool'>resource pool</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/vcenter/resource_pool.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/resource_pool.list-operation.html'>list</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.storage'>storage</a>
+    <ul>        <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.storage.policies'>policies</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/storage/policies.check_compatibility-operation.html'>check_compatibility</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/storage/policies.list-operation.html'>list</a></li>
+            <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.storage.policies.compliance'>compliance</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/storage/policies/compliance.list-operation.html'>list</a></li>
+                <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.storage.policies.compliance.VM'>VM</a>
+                <ul>                    <li><a href='../../../../../operations/com/vmware/vcenter/storage/policies/compliance/vm.list-operation.html'>list</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.storage.policies.VM'>VM</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/storage/policies/vm.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.vcha'>vcha</a>
+    <ul>        <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.vcha.cluster'>cluster</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/vcha/cluster.deploy-task-operation.html'>deploy-task</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/vcha/cluster.failover-task-operation.html'>failover-task</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/vcha/cluster.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/vcha/cluster.undeploy-task-operation.html'>undeploy-task</a></li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vcha.cluster.active'>active</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vcha/cluster/active.get-operation.html'>get</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vcha.cluster.deployment_type'>deployment type</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vcha/cluster/deployment_type.get-operation.html'>get</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vcha.cluster.mode'>mode</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vcha/cluster/mode.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vcha/cluster/mode.set-task-operation.html'>set-task</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vcha.cluster.passive'>passive</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vcha/cluster/passive.check-operation.html'>check</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vcha/cluster/passive.redeploy-task-operation.html'>redeploy-task</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vcha.cluster.witness'>witness</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vcha/cluster/witness.check-operation.html'>check</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vcha/cluster/witness.redeploy-task-operation.html'>redeploy-task</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vcha.operations'>operations</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/vcha/operations.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.vm'>vm</a>
+    <ul>        <li><a href='../../../../../operations/com/vmware/vcenter/vm.create-operation.html'>create</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/vm.delete-operation.html'>delete</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/vm.get-operation.html'>get</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/vm.instant_clone-operation.html'>instant_clone</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/vm.list-operation.html'>list</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/vm.register-operation.html'>register</a></li>
+        <li><a href='../../../../../operations/com/vmware/vcenter/vm.unregister-operation.html'>unregister</a></li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.vm.compute'>compute</a>
+        <ul>            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.compute.policies'>policies</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vm/compute/policies.get-operation.html'>get</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.vm.console'>console</a>
+        <ul>            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.console.tickets'>tickets</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vm/console/tickets.create-operation.html'>create</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.vm.guest'>guest</a>
+        <ul>            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.guest.identity'>identity</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vm/guest/identity.get-operation.html'>get</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.guest.local_filesystem'>local filesystem</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vm/guest/local_filesystem.get-operation.html'>get</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.guest.power'>power</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vm/guest/power.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/guest/power.reboot-operation.html'>reboot</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/guest/power.shutdown-operation.html'>shutdown</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/guest/power.standby-operation.html'>standby</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.vm.hardware'>hardware</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware.update-operation.html'>update</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware.upgrade-operation.html'>upgrade</a></li>
+            <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.vm.hardware.adapter'>adapter</a>
+            <ul>                <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.hardware.adapter.sata'>sata</a>
+                <ul>                    <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/adapter/sata.create-operation.html'>create</a></li>
+                    <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/adapter/sata.delete-operation.html'>delete</a></li>
+                    <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/adapter/sata.get-operation.html'>get</a></li>
+                    <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/adapter/sata.list-operation.html'>list</a></li>
+                </ul>
+                </li>
+                <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.hardware.adapter.scsi'>scsi</a>
+                <ul>                    <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/adapter/scsi.create-operation.html'>create</a></li>
+                    <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/adapter/scsi.delete-operation.html'>delete</a></li>
+                    <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/adapter/scsi.get-operation.html'>get</a></li>
+                    <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/adapter/scsi.list-operation.html'>list</a></li>
+                    <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/adapter/scsi.update-operation.html'>update</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.vm.hardware.boot'>boot</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/boot.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/boot.update-operation.html'>update</a></li>
+                <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.hardware.boot.device'>device</a>
+                <ul>                    <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/boot/device.get-operation.html'>get</a></li>
+                    <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/boot/device.set-operation.html'>set</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.hardware.cdrom'>cdrom</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/cdrom.connect-operation.html'>connect</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/cdrom.create-operation.html'>create</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/cdrom.delete-operation.html'>delete</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/cdrom.disconnect-operation.html'>disconnect</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/cdrom.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/cdrom.list-operation.html'>list</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/cdrom.update-operation.html'>update</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.hardware.cpu'>cpu</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/cpu.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/cpu.update-operation.html'>update</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.hardware.disk'>disk</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/disk.create-operation.html'>create</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/disk.delete-operation.html'>delete</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/disk.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/disk.list-operation.html'>list</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/disk.update-operation.html'>update</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.hardware.ethernet'>ethernet</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/ethernet.connect-operation.html'>connect</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/ethernet.create-operation.html'>create</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/ethernet.delete-operation.html'>delete</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/ethernet.disconnect-operation.html'>disconnect</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/ethernet.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/ethernet.list-operation.html'>list</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/ethernet.update-operation.html'>update</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.hardware.floppy'>floppy</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/floppy.connect-operation.html'>connect</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/floppy.create-operation.html'>create</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/floppy.delete-operation.html'>delete</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/floppy.disconnect-operation.html'>disconnect</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/floppy.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/floppy.list-operation.html'>list</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/floppy.update-operation.html'>update</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.hardware.memory'>memory</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/memory.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/memory.update-operation.html'>update</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.hardware.parallel'>parallel</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/parallel.connect-operation.html'>connect</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/parallel.create-operation.html'>create</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/parallel.delete-operation.html'>delete</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/parallel.disconnect-operation.html'>disconnect</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/parallel.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/parallel.list-operation.html'>list</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/parallel.update-operation.html'>update</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.hardware.serial'>serial</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/serial.connect-operation.html'>connect</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/serial.create-operation.html'>create</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/serial.delete-operation.html'>delete</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/serial.disconnect-operation.html'>disconnect</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/serial.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/serial.list-operation.html'>list</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/hardware/serial.update-operation.html'>update</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.power'>power</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/vm/power.get-operation.html'>get</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/vm/power.reset-operation.html'>reset</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/vm/power.start-operation.html'>start</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/vm/power.stop-operation.html'>stop</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/vm/power.suspend-operation.html'>suspend</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.vm.storage'>storage</a>
+        <ul>            <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.vm.storage.policy'>policy</a>
+            <ul>                <li><a href='../../../../../operations/com/vmware/vcenter/vm/storage/policy.get-operation.html'>get</a></li>
+                <li><a href='../../../../../operations/com/vmware/vcenter/vm/storage/policy.update-operation.html'>update</a></li>
+                <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm.storage.policy.compliance'>compliance</a>
+                <ul>                    <li><a href='../../../../../operations/com/vmware/vcenter/vm/storage/policy/compliance.check-operation.html'>check</a></li>
+                    <li><a href='../../../../../operations/com/vmware/vcenter/vm/storage/policy/compliance.get-operation.html'>get</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.vm_template'>vm template</a>
+    <ul>        <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.vm_template.library_items'>library items</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vcenter/vm_template/library_items.create-operation.html'>create</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/vm_template/library_items.deploy-operation.html'>deploy</a></li>
+            <li><a href='../../../../../operations/com/vmware/vcenter/vm_template/library_items.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+</ul>
+</li>
+
+        </li>
+        <li><br></li>
+        <li><a href="../../../../../landing_types.html">Types</a>
+            <ul></ul>
+        </li>
+    </ul>
+   </div>
+</nav>
+
+    <section class="article-main">
+    <div class='horizontalTopNav'>
+        <ol id='horizontalnav'>
+         
+            <li><a href='../../../../../index.html'>Operations</a></li>
+         
+            <li><a href='../../../../../index.html#PKG_com.vmware.vcenter'>vcenter</a></li>
+         
+            <li><a href='../../../../../index.html#PKG_com.vmware.vcenter.lcm'>lcm</a></li>
+         
+            <li><a href='../../../../../index.html#SVC_com.vmware.vcenter.lcm.validation'>validation</a></li>
+         
+         </ol>
+    </div>
+    <h2 class="title">vcenter lcm validation: check host config-task</h2>
+    <div>
+        Validate the host configuration. <ol> <li>1. Return False if the provided appliance type, appliance size, and disk size combination is not valid.</li> <li>2. Return False if the provided deployment path does not have sufficient memory allocated.</li> <li>3. Return False if the provided deployment path does not have sufficient cpu allocated.</li> <li>3. Return False if the provided deployment path does not have sufficient datastore space.</li> </ol>
+    </div>
+
+    <h3>Request:</h3>
+    <h4>HTTP request</h4>
+    
+    <div class="httpBox">POST  https://{server}/rest/vcenter/lcm/validation?action=check-host-config&vmw-task=true</div>
+    
+    <h4>Request Body Structure:</h4>
+    <div id="tabsInputRep">
+            <div id="tabs-1">
+                <span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"spec</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"destination_appliance</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"appliance_disk_size</span>"<span class="pun">:&nbsp;</span><span class="str">"LARGE</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"appliance_name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"appliance_size</span>"<span class="pun">:&nbsp;</span><span class="str">"TINY</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"appliance_type</span>"<span class="pun">:&nbsp;</span><span class="str">"VCSA_EXTERNAL</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ova_location</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ova_location_ssl_thumbprint</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ova_location_ssl_verify</span>"<span class="pun">:&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"thin_disk_mode</span>"<span class="pun">:&nbsp;</span><span class="val">true</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"destination_location</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"connection</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"hostname</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"https_port</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"password</span>"<span class="pun">:&nbsp;</span><span class="str">"secret string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ssl_thumbprint</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ssl_verify</span>"<span class="pun">:&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"username</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"inventory</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"datastore_name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"resource_pool_path</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vcenter</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"connection</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"hostname</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"https_port</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"password</span>"<span class="pun">:&nbsp;</span><span class="str">"secret string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ssl_thumbprint</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ssl_verify</span>"<span class="pun">:&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"username</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"inventory</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"cluster_path</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"datastore_cluster_name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"datastore_name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"host_path</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"resource_pool_path</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vm_folder_path</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+<span class="pun">}</span>
+            </div>
+    </div>
+    <h4>Request Body Parameters:</h4>
+    
+    
+    <table class="params">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr class="subheader">
+            <td colspan="3">
+            <span class="required">bold </span> <span class="optional"> = required</span>
+            </td>
+        </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="required">spec</span></td>
+                <td><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.host_config_request-structure.html'>host_config_request</a></td>
+                <td> The configuration needed to validate host configuration.</td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">spec.</span><span class="required">destination_location</span></td>
+                <td><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.host_config_destination_location-structure.html'>host_config_destination_location</a></td>
+                <td>This subsection describes the ESX or VC on which to deploy the appliance.<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">spec.destination_location.</span><span class="optional">esx</span></td>
+                <td><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.host_config_esx-structure.html'>host_config_esx</a></td>
+                <td>This section describes the ESX host on which to deploy the appliance. Required if you are deploying the appliance directly on an ESX host.<p/> Optional. Mutual exclusive between <code>esx</code> and <code>vcenter</code>. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">spec.destination_location.esx.</span><span class="required">connection</span></td>
+                <td><a href='../../../../../structures/com/vmware/vcenter/lcm/connection-structure.html'>connection</a></td>
+                <td>The configuration to connect to an ESX/VC.<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">spec.destination_location.esx.connection.</span><span class="required">hostname</span></td>
+                <td>string</td>
+                <td>The IP address or DNS resolvable name of the ESX/VC host. If a DNS resolvable name is provided, it must be resolvable from the machine that is running the installer.<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">spec.destination_location.esx.connection.</span><span class="required">username</span></td>
+                <td>string</td>
+                <td>A username with administrative privileges on the ESX/VC host.<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">spec.destination_location.esx.connection.</span><span class="required">password</span></td>
+                <td>secret</td>
+                <td>The password of the 'username' on the ESX/VC host.<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">spec.destination_location.esx.connection.</span><span class="optional">https_port</span></td>
+                <td>long</td>
+                <td>The port number for the ESX/VC.<p/> Optional. If <em>unset</em>, defaults to 443. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">spec.destination_location.esx.connection.</span><span class="optional">ssl_verify</span></td>
+                <td>boolean</td>
+                <td>A flag to indicate whether the ssl verification is required.<p/> Optional. If <code>ssl_thumbprint</code> is provided, this field can be omitted If <em>unset</em>, defaults to True. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">spec.destination_location.esx.connection.</span><span class="optional">ssl_thumbprint</span></td>
+                <td>string</td>
+                <td>Thumbprint for SSL verification.<p/> Optional. If <code>ssl_verify</code> if false, this field is not required. </td>
+            </tr>
+
+    </table>
+
+    
+
+    <h3>Response:</h3>
+    <h4>HTTP Status Code: 200</h4>
+    
+    <h4>Representation:</h4>
+
+    <div id="tabsResultRep">
+        <div id="tabs2-1">
+            <span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun">:&nbsp;</span><span class="str">"obj-103</span>"<br/>
+<span class="pun">}</span>
+        </div>
+    </div>
+
+    <h4>Response Type:</h4>
+    
+    
+    <table class="params">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr class="subheader">
+            <td colspan="3">
+            <span class="required">bold </span> <span class="optional"> = required</span>
+            </td>
+        </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="required">value</span></td>
+                <td>string</td>
+                <td> True if the host configuration is valid, False otherwise.</td>
+            </tr>
+
+    </table>
+
+     
+
+    <h4>Errors:</h4>
+    
+    None
+    
+    
+    <footer>
+            <div class="footer">
+            Copyright &#169;  2015-2018 VMware, Inc. All rights reserved.<br/>
+            <a href='http://pubs.vmware.com/copyright-trademark.html'>Copyright and trademark information.</a> Any feedback you provide to VMware is subject to the terms at <a href='http://www.vmware.com/community_terms.html'>www.vmware.com/community_terms.html.</a>
+            </div>
+    </footer>
+    </section>
+
+</main>
+</body>
+</html>
