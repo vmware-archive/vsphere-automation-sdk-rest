@@ -1,0 +1,802 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>REST API - component_data</title>
+    <script src="../../../../../../dynamic-contents.js" language="javascript" type="text/javascript"></script>
+    <script src="../../../../../../jquery.js" language="javascript" type="text/javascript"></script>
+    <script src="../../../../../../jquery-ui.js" language="javascript" type="text/javascript"></script>
+    <script src="../../../../../../restdocutils.js" language="javascript" type="text/javascript"></script>
+    <link href="../../../../../../jquery-ui.css" rel="stylesheet" />
+    <link href="../../../../../../restdoc.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../../../left-tree.css" type="text/css" rel="stylesheet">
+    <script src="../../../../../../left-tree.js"></script>
+    <script>
+        $(function() {
+            var cookie = get_cookie("com.vmware.vapi.activeTab");
+            var tabs = $( "#tabsResultRep" ).tabs({
+               active: cookie, activate: function(event, ui) {
+                   set_cookie("com.vmware.vapi.activeTab", ui.newTab[0].id, 1);
+               }
+            });
+        });
+
+        $(function() {
+            var ids = ["#tabs-1", "#tabs-2"];
+            setMaxHeight(ids);
+        });
+    </script>
+</head>
+<body onLoad="menu_main('leftTree')">
+    <main>
+    <header>
+        <div class="header">
+            <div class="logo"></div>
+        </div>
+    </header>
+    <nav class="components-index">
+   
+   <div id="leftTree">
+     <ul>
+        <li><a href="../../../../../../index.html">Operations</a>
+            <ul></ul>
+        </li>
+        <li><br></li>
+        <li><a href="../../../../../../landing_types.html">Types</a>
+            <ul><li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance'>appliance</a>
+<ul>    <li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance.access'>access</a>
+    <ul>        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.access.shell'>shell</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/appliance/access/shell/svc.shell_config-structure.html'>shell_config</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.monitoring'>monitoring</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/appliance/monitoring/svc.monitored_item-structure.html'>monitored_item</a></li>
+        <li><a href='../../../../../../structures/com/vmware/appliance/monitoring/svc.monitored_item_data-structure.html'>monitored_item_data</a></li>
+        <li><a href='../../../../../../structures/com/vmware/appliance/monitoring/svc.monitored_item_data_request-structure.html'>monitored_item_data_request</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance.networking'>networking</a>
+    <ul>        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance.networking.dns'>dns</a>
+        <ul>            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.networking.dns.hostname'>hostname</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/appliance/networking/dns/hostname/svc.message-structure.html'>message</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/networking/dns/hostname/svc.test_status_info-structure.html'>test_status_info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.networking.dns.servers'>servers</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/appliance/networking/dns/servers/svc.dns_server_config-structure.html'>DNS_server_config</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/networking/dns/servers/svc.message-structure.html'>message</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/networking/dns/servers/svc.test_status_info-structure.html'>test_status_info</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.networking.interfaces'>interfaces</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/appliance/networking/interfaces/svc.interface_info-structure.html'>interface_info</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance.recovery'>recovery</a>
+    <ul>        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance.recovery.backup'>backup</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/appliance/recovery/backup/svc.backup_request-structure.html'>backup_request</a></li>
+            <li><a href='../../../../../../structures/com/vmware/appliance/recovery/backup/svc.localizable_message-structure.html'>localizable_message</a></li>
+            <li><a href='../../../../../../structures/com/vmware/appliance/recovery/backup/svc.return_result-structure.html'>return_result</a></li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.recovery.backup.job'>job</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/appliance/recovery/backup/job/svc.backup_job_status-structure.html'>backup_job_status</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/recovery/backup/job/svc.backup_request-structure.html'>backup_request</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/recovery/backup/job/svc.localizable_message-structure.html'>localizable_message</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/recovery/backup/job/svc.return_result-structure.html'>return_result</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.recovery.backup.parts'>parts</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/appliance/recovery/backup/parts/svc.localizable_message-structure.html'>localizable_message</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/recovery/backup/parts/svc.part-structure.html'>part</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance.recovery.restore'>restore</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/appliance/recovery/restore/svc.localizable_message-structure.html'>localizable_message</a></li>
+            <li><a href='../../../../../../structures/com/vmware/appliance/recovery/restore/svc.metadata-structure.html'>metadata</a></li>
+            <li><a href='../../../../../../structures/com/vmware/appliance/recovery/restore/svc.restore_request-structure.html'>restore_request</a></li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.recovery.restore.job'>job</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/appliance/recovery/restore/job/svc.localizable_message-structure.html'>localizable_message</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/recovery/restore/job/svc.restore_job_status-structure.html'>restore_job_status</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/recovery/restore/job/svc.restore_request-structure.html'>restore_request</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/recovery/restore/job/svc.return_result-structure.html'>return_result</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance.system'>system</a>
+    <ul>        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.system.storage'>storage</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/appliance/system/storage/svc.storage_mapping-structure.html'>storage_mapping</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.system.time'>time</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/appliance/system/time/svc.system_time_struct-structure.html'>system_time_struct</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.system.version'>version</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/appliance/system/version/svc.version_struct-structure.html'>version_struct</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance.techpreview'>techpreview</a>
+    <ul>        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance.techpreview.localaccounts'>localaccounts</a>
+        <ul>            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.techpreview.localaccounts.user'>user</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/localaccounts/user/svc.new_user_config-structure.html'>new_user_config</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/localaccounts/user/svc.user_config-structure.html'>user_config</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/localaccounts/user/svc.user_config_get-structure.html'>user_config_get</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance.techpreview.monitoring'>monitoring</a>
+        <ul>            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.techpreview.monitoring.snmp'>snmp</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/monitoring/snmp/svc.snm_pv1_trap_target-structure.html'>SNM_pv1_trap_target</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/monitoring/snmp/svc.snm_pv3_target-structure.html'>SNM_pv3_target</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/monitoring/snmp/svc.snmp_config-structure.html'>SNMP_config</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/monitoring/snmp/svc.snmp_config_read_only-structure.html'>SNMP_config_read_only</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/monitoring/snmp/svc.snmp_hash_config-structure.html'>SNMP_hash_config</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/monitoring/snmp/svc.snmp_hash_results-structure.html'>SNMP_hash_results</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/monitoring/snmp/svc.snmp_limits-structure.html'>SNMP_limits</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/monitoring/snmp/svc.snmp_remote_user-structure.html'>SNMP_remote_user</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/monitoring/snmp/svc.snmp_stats-structure.html'>SNMP_stats</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/monitoring/snmp/svc.snmp_test_results-structure.html'>SNMP_test_results</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/monitoring/snmp/svc.snmp_user-structure.html'>SNMP_user</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance.techpreview.networking'>networking</a>
+        <ul>            <li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance.techpreview.networking.firewall.addr_partial_firewall'>firewall</a>
+            <ul>                <li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance.techpreview.networking.firewall.addr'>addr</a>
+                <ul>                    <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.techpreview.networking.firewall.addr.inbound'>inbound</a>
+                    <ul>                        <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/firewall/addr/inbound/svc.delete_firewall_rule-structure.html'>delete_firewall_rule</a></li>
+                        <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/firewall/addr/inbound/svc.firewall_address_rule-structure.html'>firewall_address_rule</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.techpreview.networking.ipv4'>ipv4</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/ipv4/svc.i_pv4_config-structure.html'>I_pv4_config</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/ipv4/svc.i_pv4_config_read_only-structure.html'>I_pv4_config_read_only</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.techpreview.networking.ipv6'>ipv6</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/ipv6/svc.i_pv6_address-structure.html'>I_pv6_address</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/ipv6/svc.i_pv6_address_read_only-structure.html'>I_pv6_address_read_only</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/ipv6/svc.i_pv6_config-structure.html'>I_pv6_config</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/ipv6/svc.i_pv6_config_read_only-structure.html'>I_pv6_config_read_only</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.techpreview.networking.proxy'>proxy</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/proxy/svc.message-structure.html'>message</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/proxy/svc.proxy_config-structure.html'>proxy_config</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/proxy/svc.proxy_config_multiple-structure.html'>proxy_config_multiple</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/proxy/svc.proxy_config_test-structure.html'>proxy_config_test</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/proxy/svc.test_status_info-structure.html'>test_status_info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.techpreview.networking.routes'>routes</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/routes/svc.message-structure.html'>message</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/routes/svc.route-structure.html'>route</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/routes/svc.route_read_only-structure.html'>route_read_only</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/networking/routes/svc.test_status_info-structure.html'>test_status_info</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.techpreview.ntp'>ntp</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/ntp/svc.message-structure.html'>message</a></li>
+            <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/ntp/svc.ntp_config-structure.html'>NTP_config</a></li>
+            <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/ntp/svc.test_status_info-structure.html'>test_status_info</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.techpreview.services'>services</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/services/svc.service_info-structure.html'>service_info</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.techpreview.shutdown'>shutdown</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/shutdown/svc.shutdown_config-structure.html'>shutdown_config</a></li>
+            <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/shutdown/svc.shutdown_get_config-structure.html'>shutdown_get_config</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance.techpreview.system'>system</a>
+        <ul>            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.techpreview.system.update'>update</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/system/update/svc.update_struct_get-structure.html'>update_struct_get</a></li>
+                <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/system/update/svc.update_struct_set-structure.html'>update_struct_set</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.techpreview.timesync'>timesync</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/appliance/techpreview/timesync/svc.time_sync_config-structure.html'>time_sync_config</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#PKG_com.vmware.appliance.vmon'>vmon</a>
+    <ul>        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.appliance.vmon.service'>service</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/appliance/vmon/service/svc.info-structure.html'>info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/appliance/vmon/service/svc.update_spec-structure.html'>update_spec</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+<li><a href='../../../../../../landing_types.html#PKG_com.vmware.cis'>cis</a>
+<ul>    <li><a href='../../../../../../landing_types.html#SVC_com.vmware.cis.session'>session</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/cis/session/svc.info-structure.html'>info</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#PKG_com.vmware.cis.tagging'>tagging</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/cis/tagging/category_model-structure.html'>category_model</a></li>
+        <li><a href='../../../../../../structures/com/vmware/cis/tagging/tag_model-structure.html'>tag_model</a></li>
+        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.cis.tagging.category'>category</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/cis/tagging/category/svc.create_spec-structure.html'>create_spec</a></li>
+            <li><a href='../../../../../../structures/com/vmware/cis/tagging/category/svc.update_spec-structure.html'>update_spec</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.cis.tagging.tag'>tag</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/cis/tagging/tag/svc.create_spec-structure.html'>create_spec</a></li>
+            <li><a href='../../../../../../structures/com/vmware/cis/tagging/tag/svc.update_spec-structure.html'>update_spec</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.cis.tagging.tag_association'>tag association</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/cis/tagging/tagassociation/svc.batch_result-structure.html'>batch_result</a></li>
+            <li><a href='../../../../../../structures/com/vmware/cis/tagging/tagassociation/svc.object_to_tags-structure.html'>object_to_tags</a></li>
+            <li><a href='../../../../../../structures/com/vmware/cis/tagging/tagassociation/svc.tag_to_objects-structure.html'>tag_to_objects</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+<li><a href='../../../../../../landing_types.html#PKG_com.vmware.content'>content</a>
+<ul>    <li><a href='../../../../../../structures/com/vmware/content/configuration_model-structure.html'>configuration_model</a></li>
+    <li><a href='../../../../../../structures/com/vmware/content/library_model-structure.html'>library_model</a></li>
+    <li><a href='../../../../../../landing_types.html#PKG_com.vmware.content.library'>library</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/content/library/svc.find_spec-structure.html'>find_spec</a></li>
+        <li><a href='../../../../../../structures/com/vmware/content/library/item_model-structure.html'>item_model</a></li>
+        <li><a href='../../../../../../structures/com/vmware/content/library/optimization_info-structure.html'>optimization_info</a></li>
+        <li><a href='../../../../../../structures/com/vmware/content/library/publish_info-structure.html'>publish_info</a></li>
+        <li><a href='../../../../../../structures/com/vmware/content/library/storage_backing-structure.html'>storage_backing</a></li>
+        <li><a href='../../../../../../structures/com/vmware/content/library/subscription_info-structure.html'>subscription_info</a></li>
+        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.content.library.item'>item</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/content/library/item/download_session_model-structure.html'>download_session_model</a></li>
+            <li><a href='../../../../../../structures/com/vmware/content/library/item/svc.find_spec-structure.html'>find_spec</a></li>
+            <li><a href='../../../../../../structures/com/vmware/content/library/item/transfer_endpoint-structure.html'>transfer_endpoint</a></li>
+            <li><a href='../../../../../../structures/com/vmware/content/library/item/update_session_model-structure.html'>update_session_model</a></li>
+            <li><a href='../../../../../../landing_types.html#PKG_com.vmware.content.library.item.downloadsession'>downloadsession</a>
+            <ul>                <li><a href='../../../../../../landing_types.html#SVC_com.vmware.content.library.item.downloadsession.file'>file</a>
+                <ul>                    <li><a href='../../../../../../structures/com/vmware/content/library/item/downloadsession/file/svc.info-structure.html'>info</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.content.library.item.file'>file</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/content/library/item/file/svc.checksum_info-structure.html'>checksum_info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/content/library/item/file/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.content.library.item.storage'>storage</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/content/library/item/storage/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#PKG_com.vmware.content.library.item.updatesession'>updatesession</a>
+            <ul>                <li><a href='../../../../../../landing_types.html#SVC_com.vmware.content.library.item.updatesession.file'>file</a>
+                <ul>                    <li><a href='../../../../../../structures/com/vmware/content/library/item/updatesession/file/svc.add_spec-structure.html'>add_spec</a></li>
+                    <li><a href='../../../../../../structures/com/vmware/content/library/item/updatesession/file/svc.info-structure.html'>info</a></li>
+                    <li><a href='../../../../../../structures/com/vmware/content/library/item/updatesession/file/svc.validation_error-structure.html'>validation_error</a></li>
+                    <li><a href='../../../../../../structures/com/vmware/content/library/item/updatesession/file/svc.validation_result-structure.html'>validation_result</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#SVC_com.vmware.content.subscribed_library'>subscribed library</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/content/subscribedlibrary/svc.probe_result-structure.html'>probe_result</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#SVC_com.vmware.content.type'>type</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/content/type/svc.info-structure.html'>info</a></li>
+    </ul>
+    </li>
+</ul>
+</li>
+<li><a href='../../../../../../landing_types.html#PKG_com.vmware.vapi.metadata_partial_vapi'>vapi</a>
+<ul>    <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vapi.metadata'>metadata</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/vapi/metadata/source_create_spec-structure.html'>source_create_spec</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vapi/metadata/source_info-structure.html'>source_info</a></li>
+        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vapi.metadata.authentication'>authentication</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/authentication/authentication_info-structure.html'>authentication_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/authentication/component_data-structure.html'>component_data</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/authentication/component_info-structure.html'>component_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/authentication/operation_info-structure.html'>operation_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/authentication/package_info-structure.html'>package_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/authentication/service_info-structure.html'>service_info</a></li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vapi.metadata.authentication.source'>source</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/vapi/metadata/authentication/source/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vapi/metadata/authentication/source/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vapi.metadata.cli'>cli</a>
+        <ul>            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vapi.metadata.cli.command'>command</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/vapi/metadata/cli/command/svc.identity-structure.html'>identity</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vapi/metadata/cli/command/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vapi/metadata/cli/command/svc.option_info-structure.html'>option_info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vapi/metadata/cli/command/svc.output_field_info-structure.html'>output_field_info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vapi/metadata/cli/command/svc.output_info-structure.html'>output_info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vapi.metadata.cli.namespace'>namespace</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/vapi/metadata/cli/namespace/svc.identity-structure.html'>identity</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vapi/metadata/cli/namespace/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vapi.metadata.cli.source'>source</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/vapi/metadata/cli/source/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vapi/metadata/cli/source/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vapi.metadata.metamodel'>metamodel</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/component_data-structure.html'>component_data</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/component_info-structure.html'>component_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/constant_info-structure.html'>constant_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/constant_value-structure.html'>constant_value</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/element_map-structure.html'>element_map</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/element_value-structure.html'>element_value</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/enumeration_info-structure.html'>enumeration_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/enumeration_value_info-structure.html'>enumeration_value_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/error_info-structure.html'>error_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/field_info-structure.html'>field_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/generic_instantiation-structure.html'>generic_instantiation</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/operation_info-structure.html'>operation_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/operation_result_info-structure.html'>operation_result_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/package_info-structure.html'>package_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/primitive_value-structure.html'>primitive_value</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/service_info-structure.html'>service_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/structure_info-structure.html'>structure_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/type-structure.html'>type</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/user_defined_type-structure.html'>user_defined_type</a></li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vapi.metadata.metamodel.source'>source</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/source/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vapi/metadata/metamodel/source/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vapi.metadata.privilege'>privilege</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/privilege/component_data-structure.html'>component_data</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/privilege/component_info-structure.html'>component_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/privilege/operation_info-structure.html'>operation_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/privilege/package_info-structure.html'>package_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/privilege/privilege_info-structure.html'>privilege_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/metadata/privilege/service_info-structure.html'>service_info</a></li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vapi.metadata.privilege.source'>source</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/vapi/metadata/privilege/source/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vapi/metadata/privilege/source/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vapi.std'>std</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/vapi/std/authentication_scheme-structure.html'>authentication_scheme</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vapi/std/dynamic_id-structure.html'>dynamic_ID</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vapi/std/localizable_message-structure.html'>localizable_message</a></li>
+        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vapi.std.errors'>errors</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/already_exists-structure.html'>already_exists</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/already_in_desired_state-structure.html'>already_in_desired_state</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/argument_locations-structure.html'>argument_locations</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/canceled-structure.html'>canceled</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/concurrent_change-structure.html'>concurrent_change</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/error-structure.html'>error</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/feature_in_use-structure.html'>feature_in_use</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/file_locations-structure.html'>file_locations</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/internal_server_error-structure.html'>internal_server_error</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/invalid_argument-structure.html'>invalid_argument</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/invalid_element_configuration-structure.html'>invalid_element_configuration</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/invalid_element_type-structure.html'>invalid_element_type</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/invalid_request-structure.html'>invalid_request</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/not_allowed_in_current_state-structure.html'>not_allowed_in_current_state</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/not_found-structure.html'>not_found</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/operation_not_found-structure.html'>operation_not_found</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/resource_busy-structure.html'>resource_busy</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/resource_in_use-structure.html'>resource_in_use</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/resource_inaccessible-structure.html'>resource_inaccessible</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/service_unavailable-structure.html'>service_unavailable</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/timed_out-structure.html'>timed_out</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/transient_indication-structure.html'>transient_indication</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/unable_to_allocate_resource-structure.html'>unable_to_allocate_resource</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/unauthenticated-structure.html'>unauthenticated</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/unauthorized-structure.html'>unauthorized</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/unexpected_input-structure.html'>unexpected_input</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vapi/std/errors/unsupported-structure.html'>unsupported</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+<li><a href='../../../../../../landing_types.html#PKG_com.vmware.vcenter'>vcenter</a>
+<ul>    <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.cluster'>cluster</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/vcenter/cluster/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/cluster/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/cluster/svc.summary-structure.html'>summary</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.datacenter'>datacenter</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/vcenter/datacenter/svc.create_spec-structure.html'>create_spec</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/datacenter/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/datacenter/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/datacenter/svc.summary-structure.html'>summary</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.datastore'>datastore</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/vcenter/datastore/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/datastore/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/datastore/svc.summary-structure.html'>summary</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.folder'>folder</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/vcenter/folder/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/folder/svc.summary-structure.html'>summary</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.host'>host</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/vcenter/host/svc.create_spec-structure.html'>create_spec</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/host/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/host/svc.summary-structure.html'>summary</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vcenter.inventory'>inventory</a>
+    <ul>        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.inventory.datastore'>datastore</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/vcenter/inventory/datastore/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.inventory.network'>network</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/vcenter/inventory/network/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.network'>network</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/vcenter/network/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/network/svc.summary-structure.html'>summary</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vcenter.ovf'>ovf</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/certificate_params-structure.html'>certificate_params</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/deployment_option-structure.html'>deployment_option</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/deployment_option_params-structure.html'>deployment_option_params</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/extra_config-structure.html'>extra_config</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/extra_config_params-structure.html'>extra_config_params</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/ip_allocation_params-structure.html'>ip_allocation_params</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/ovf_error-structure.html'>ovf_error</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/ovf_info-structure.html'>ovf_info</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/ovf_message-structure.html'>ovf_message</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/ovf_params-structure.html'>ovf_params</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/ovf_warning-structure.html'>ovf_warning</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/parse_issue-structure.html'>parse_issue</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/property-structure.html'>property</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/property_params-structure.html'>property_params</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/scale_out_group-structure.html'>scale_out_group</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/scale_out_params-structure.html'>scale_out_params</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/size_params-structure.html'>size_params</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/unknown_section-structure.html'>unknown_section</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/unknown_section_params-structure.html'>unknown_section_params</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/vcenter_extension_params-structure.html'>vcenter_extension_params</a></li>
+        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.ovf.export_flag'>export flag</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/exportflag/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.ovf.import_flag'>import flag</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/importflag/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.ovf.library_item'>library item</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.create_result-structure.html'>create_result</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.create_spec-structure.html'>create_spec</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.create_target-structure.html'>create_target</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.deployable_identity-structure.html'>deployable_identity</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.deployment_result-structure.html'>deployment_result</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.deployment_target-structure.html'>deployment_target</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.ovf_summary-structure.html'>ovf_summary</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.resource_pool_deployment_spec-structure.html'>resource_pool_deployment_spec</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.result_info-structure.html'>result_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.storage_group_mapping-structure.html'>storage_group_mapping</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.resource_pool'>resource pool</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/vcenter/resourcepool/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/resourcepool/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/resourcepool/svc.summary-structure.html'>summary</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vcenter.vm'>vm</a>
+    <ul>        <li><a href='../../../../../../structures/com/vmware/vcenter/vm/svc.create_spec-structure.html'>create_spec</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/vm/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/vm/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/vm/svc.placement_spec-structure.html'>placement_spec</a></li>
+        <li><a href='../../../../../../structures/com/vmware/vcenter/vm/svc.summary-structure.html'>summary</a></li>
+        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vcenter.vm.hardware'>hardware</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/connection_create_spec-structure.html'>connection_create_spec</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/connection_info-structure.html'>connection_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/connection_update_spec-structure.html'>connection_update_spec</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/ide_address_info-structure.html'>ide_address_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/ide_address_spec-structure.html'>ide_address_spec</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/svc.info-structure.html'>info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/sata_address_info-structure.html'>sata_address_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/sata_address_spec-structure.html'>sata_address_spec</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/scsi_address_info-structure.html'>scsi_address_info</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/scsi_address_spec-structure.html'>scsi_address_spec</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/svc.update_spec-structure.html'>update_spec</a></li>
+            <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vcenter.vm.hardware.adapter'>adapter</a>
+            <ul>                <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.adapter.sata'>sata</a>
+                <ul>                    <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/adapter/sata/svc.create_spec-structure.html'>create_spec</a></li>
+                    <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/adapter/sata/svc.info-structure.html'>info</a></li>
+                    <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/adapter/sata/svc.summary-structure.html'>summary</a></li>
+                </ul>
+                </li>
+                <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.adapter.scsi'>scsi</a>
+                <ul>                    <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/adapter/scsi/svc.create_spec-structure.html'>create_spec</a></li>
+                    <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/adapter/scsi/svc.info-structure.html'>info</a></li>
+                    <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/adapter/scsi/svc.summary-structure.html'>summary</a></li>
+                    <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/adapter/scsi/svc.update_spec-structure.html'>update_spec</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vcenter.vm.hardware.boot'>boot</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/boot/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/boot/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/boot/svc.update_spec-structure.html'>update_spec</a></li>
+                <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.boot.device'>device</a>
+                <ul>                    <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/boot/device/svc.entry-structure.html'>entry</a></li>
+                    <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/boot/device/svc.entry_create_spec-structure.html'>entry_create_spec</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.cdrom'>cdrom</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/cdrom/svc.backing_info-structure.html'>backing_info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/cdrom/svc.backing_spec-structure.html'>backing_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/cdrom/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/cdrom/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/cdrom/svc.summary-structure.html'>summary</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/cdrom/svc.update_spec-structure.html'>update_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.cpu'>cpu</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/cpu/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/cpu/svc.update_spec-structure.html'>update_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.disk'>disk</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/disk/svc.backing_info-structure.html'>backing_info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/disk/svc.backing_spec-structure.html'>backing_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/disk/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/disk/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/disk/svc.summary-structure.html'>summary</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/disk/svc.update_spec-structure.html'>update_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/disk/svc.vmdk_create_spec-structure.html'>vmdk_create_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.ethernet'>ethernet</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/ethernet/svc.backing_info-structure.html'>backing_info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/ethernet/svc.backing_spec-structure.html'>backing_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/ethernet/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/ethernet/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/ethernet/svc.summary-structure.html'>summary</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/ethernet/svc.update_spec-structure.html'>update_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.floppy'>floppy</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/floppy/svc.backing_info-structure.html'>backing_info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/floppy/svc.backing_spec-structure.html'>backing_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/floppy/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/floppy/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/floppy/svc.summary-structure.html'>summary</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/floppy/svc.update_spec-structure.html'>update_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.memory'>memory</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/memory/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/memory/svc.update_spec-structure.html'>update_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.parallel'>parallel</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/parallel/svc.backing_info-structure.html'>backing_info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/parallel/svc.backing_spec-structure.html'>backing_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/parallel/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/parallel/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/parallel/svc.summary-structure.html'>summary</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/parallel/svc.update_spec-structure.html'>update_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.serial'>serial</a>
+            <ul>                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/serial/svc.backing_info-structure.html'>backing_info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/serial/svc.backing_spec-structure.html'>backing_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/serial/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/serial/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/serial/svc.summary-structure.html'>summary</a></li>
+                <li><a href='../../../../../../structures/com/vmware/vcenter/vm/hardware/serial/svc.update_spec-structure.html'>update_spec</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.power'>power</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/vcenter/vm/power/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+</ul>
+</li>
+
+        </li>
+    </ul>
+   </div>
+</nav>
+
+
+    <section class="article-main">
+    <div class='horizontalTopNav'>
+        <ol id='horizontalnav'>
+         
+            <li><a href='../../../../../../landing_types.html'>Types</a></li>
+         
+            <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vapi.metadata_partial_vapi'>vapi</a></li>
+         
+            <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vapi.metadata'>metadata</a></li>
+         
+            <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vapi.metadata.authentication'>authentication</a></li>
+         
+         </ol>
+    </div>
+    <h2 class="title">vapi metadata authentication: component data</h2>
+    <div>The <code>component_data</code> <em>structure</em> contains the authentication information of the component along with its fingerprint.</div>
+    
+    <h3>Representations:</h3>
+    <div id="tabsResultRep">
+        <ul>
+            <li id="0"><a href="#tabs-1">JSON</a></li>
+            <li id="1"><a href="#tabs-2">XML</a></li>
+        </ul>
+        <div id="tabs-1">
+            <span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"fingerprint</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"info</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"packages</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun">:&nbsp;</span><span class="str">"obj-103</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"schemes</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"scheme</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"scheme_type</span>"<span class="pun">:&nbsp;</span><span class="str">"SESSIONLESS</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"session_manager</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"scheme</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"scheme_type</span>"<span class="pun">:&nbsp;</span><span class="str">"SESSIONLESS</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"session_manager</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"services</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun">:&nbsp;</span><span class="str">"obj-103</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"operations</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun">:&nbsp;</span><span class="str">"obj-103</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"schemes</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"scheme</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"scheme_type</span>"<span class="pun">:&nbsp;</span><span class="str">"SESSIONLESS</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"session_manager</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"scheme</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"scheme_type</span>"<span class="pun">:&nbsp;</span><span class="str">"SESSIONLESS</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"session_manager</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"schemes</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"scheme</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"scheme_type</span>"<span class="pun">:&nbsp;</span><span class="str">"SESSIONLESS</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"session_manager</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"scheme</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"scheme_type</span>"<span class="pun">:&nbsp;</span><span class="str">"SESSIONLESS</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"session_manager</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+<span class="pun">}</span>
+        </div>
+        <div id="tabs-2">
+            &lt;?xml&nbsp;version=&quot;1.0&quot;&nbsp;?&gt;<br/>&lt;ns0:ComponentData&nbsp;xmlns:ns0=&quot;http://vmware.com/vapi/metadata/authentication&quot;&nbsp;xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;<br/>&nbsp;&nbsp;&lt;fingerprint&gt;string&lt;/fingerprint&gt;<br/>&nbsp;&nbsp;&lt;info&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;packages-array&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;services-array&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;schemes-array&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;scheme_type&gt;SESSIONLESS&lt;/scheme_type&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;scheme&gt;string&lt;/scheme&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;session_manager&gt;string&lt;/session_manager&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;scheme_type&gt;SESSIONLESS&lt;/scheme_type&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;scheme&gt;string&lt;/scheme&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;session_manager&gt;string&lt;/session_manager&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/schemes-array&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;operations-array&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;schemes-array&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;scheme_type&gt;SESSIONLESS&lt;/scheme_type&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;scheme&gt;string&lt;/scheme&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;session_manager&gt;string&lt;/session_manager&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;scheme_type&gt;SESSIONLESS&lt;/scheme_type&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;scheme&gt;string&lt;/scheme&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;session_manager&gt;string&lt;/session_manager&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/schemes-array&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/value&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;key&gt;obj-103&lt;/key&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/operations-array&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/value&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;key&gt;obj-103&lt;/key&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/services-array&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;schemes-array&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;scheme_type&gt;SESSIONLESS&lt;/scheme_type&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;scheme&gt;string&lt;/scheme&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;session_manager&gt;string&lt;/session_manager&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;scheme_type&gt;SESSIONLESS&lt;/scheme_type&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;scheme&gt;string&lt;/scheme&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;session_manager&gt;string&lt;/session_manager&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/schemes-array&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/value&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;key&gt;obj-103&lt;/key&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/array-item&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/packages-array&gt;<br/>&nbsp;&nbsp;&lt;/info&gt;<br/>&lt;/ns0:ComponentData&gt;
+        </div>
+    </div>
+
+    
+    <h4>Attributes:</h4>
+    
+    <table class="params">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+
+        <tr class="subheader">
+            <td colspan="3">
+            Required
+            </td>
+        </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="required">info</span></td>
+                <td><a href='../../../../../../structures/com/vmware/vapi/metadata/authentication/component_info-structure.html'>component_info</a></td>
+                <td>Authentication information of the component. This includes information about all the <em>API</em> in the component.<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="required">fingerprint</span></td>
+                <td>string</td>
+                <td>Fingerprint of the metadata of the component. <p> Authentication information could change when there is an infrastructure update. Since the data present in <a href="../../../../../../structures/com/vmware/vapi/metadata/authentication/component_data-structure.html">vapi.metadata.authentication.component_data.info</a> could be quite large, <code>fingerprint</code> provides a convenient way to check if the data for a particular component is updated. </p><p> You should store the fingerprint associated with a component. After an update, by invoking the <a href="../../../../../../operations/com/vmware/vapi/metadata/authentication/component.fingerprint-operation.html">fingerprint</a> <em>operation</em>, you can retrieve the new fingerprint for the component. If the new fingerprint and the previously stored fingerprint do not match, clients can then use the <a href="../../../../../../operations/com/vmware/vapi/metadata/authentication/component.get-operation.html">get</a> to retrieve the new authentication information for the component.</p><p/> </td>
+            </tr>
+
+    </table>
+
+    
+    
+    <footer>
+            <div class="footer">
+            Copyright &#169;  2015-2017 VMware, Inc. All rights reserved.<br/>
+            <a href='http://pubs.vmware.com/copyright-trademark.html'>Copyright and trademark information.</a> Any feedback you provide to VMware is subject to the terms at <a href='http://www.vmware.com/community_terms.html'>www.vmware.com/community_terms.html.</a>
+            </div>
+    </footer>
+
+    </section>
+</main>
+</body>
+</html>
