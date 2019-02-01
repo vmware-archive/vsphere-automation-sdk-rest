@@ -143,4 +143,5 @@ Items added to the repository, including items from the Board members, require 2
 * [VMware Code](https://code.vmware.com/home)
 * [VMware Developer Community](https://communities.vmware.com/community/vmtn/developer)
 * VMware vSphere [REST API Reference documentation](https://vmware.github.io/vsphere-automation-sdk-rest/vsphere/).
+* VMware VMC [REST API Reference documentation](https://vmware.github.io/vsphere-automation-sdk-rest/vmc/).
 * [VMware REST forum](https://code.vmware.com/forums/7506/vsphere-automation-sdk-for-rest)
