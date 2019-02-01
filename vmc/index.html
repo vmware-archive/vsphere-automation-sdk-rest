@@ -1,0 +1,1859 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    
+
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="left-tree.js" type="text/javascript"></script>
+    <script>
+        $(function() {
+            $('#leftTree a').click(function() {
+                menu_traverse(document.getElementById('leftTree'), this.getAttribute("href"));
+            });
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(document.getElementById(this.hash.slice(1)));
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 800);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>REST API Reference Documentation</title>
+    <link href="restdoc.css" type="text/css" rel="stylesheet">
+    <link href="left-tree.css" type="text/css" rel="stylesheet">
+</head>
+
+<body onLoad="menu_main('leftTree')">
+    <main>
+    <header>
+        <div class="header">
+            <div class="logo"></div>
+        </div>
+    </header>
+    <nav class="components-index">
+   
+   <div id="leftTree">
+     <ul>
+        <li><a href="./index.html">Operations</a>
+            <ul><li><a href='./index.html#PKG_com.vmware.vmc'>vmc</a>
+<ul>    <li><a href='./index.html#SVC_com.vmware.vmc.locale'>locale</a>
+    <ul>        <li><a href='./operations/com/vmware/vmc/locale.set-operation.html'>set</a></li>
+    </ul>
+    </li>
+    <li><a href='./index.html#PKG_com.vmware.vmc.orgs'>orgs</a>
+    <ul>        <li><a href='./operations/com/vmware/vmc/orgs.get-operation.html'>get</a></li>
+        <li><a href='./operations/com/vmware/vmc/orgs.list-operation.html'>list</a></li>
+        <li><a href='./index.html#PKG_com.vmware.vmc.orgs.account_link'>account link</a>
+        <ul>            <li><a href='./operations/com/vmware/vmc/orgs/account_link.get-operation.html'>get</a></li>
+            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.account_link.compatible_subnets'>compatible subnets</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/account_link/compatible_subnets.get-operation.html'>get</a></li>
+                <li><a href='./operations/com/vmware/vmc/orgs/account_link/compatible_subnets.post-operation.html'>post</a></li>
+            </ul>
+            </li>
+            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.account_link.compatible_subnets_async'>compatible subnets async</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/account_link/compatible_subnets_async.get-operation.html'>get</a></li>
+                <li><a href='./operations/com/vmware/vmc/orgs/account_link/compatible_subnets_async.post-operation.html'>post</a></li>
+            </ul>
+            </li>
+            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.account_link.connected_accounts'>connected accounts</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/account_link/connected_accounts.delete-operation.html'>delete</a></li>
+                <li><a href='./operations/com/vmware/vmc/orgs/account_link/connected_accounts.get-operation.html'>get</a></li>
+            </ul>
+            </li>
+            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.account_link.map_customer_zones'>map customer zones</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/account_link/map_customer_zones.post-operation.html'>post</a></li>
+            </ul>
+            </li>
+            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.account_link.sddc_connections'>sddc connections</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/account_link/sddc_connections.get-operation.html'>get</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='./index.html#SVC_com.vmware.vmc.orgs.providers'>providers</a>
+        <ul>            <li><a href='./operations/com/vmware/vmc/orgs/providers.list-operation.html'>list</a></li>
+        </ul>
+        </li>
+        <li><a href='./index.html#PKG_com.vmware.vmc.orgs.reservations'>reservations</a>
+        <ul>            <li><a href='./operations/com/vmware/vmc/orgs/reservations.list-operation.html'>list</a></li>
+            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.reservations.mw'>mw</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/reservations/mw.get-operation.html'>get</a></li>
+                <li><a href='./operations/com/vmware/vmc/orgs/reservations/mw.put-operation.html'>put</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddc_templates'>sddc templates</a>
+        <ul>            <li><a href='./operations/com/vmware/vmc/orgs/sddc_templates.delete-operation.html'>delete</a></li>
+            <li><a href='./operations/com/vmware/vmc/orgs/sddc_templates.get-operation.html'>get</a></li>
+            <li><a href='./operations/com/vmware/vmc/orgs/sddc_templates.list-operation.html'>list</a></li>
+        </ul>
+        </li>
+        <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs'>sddcs</a>
+        <ul>            <li><a href='./operations/com/vmware/vmc/orgs/sddcs.create-operation.html'>create</a></li>
+            <li><a href='./operations/com/vmware/vmc/orgs/sddcs.delete-operation.html'>delete</a></li>
+            <li><a href='./operations/com/vmware/vmc/orgs/sddcs.get-operation.html'>get</a></li>
+            <li><a href='./operations/com/vmware/vmc/orgs/sddcs.list-operation.html'>list</a></li>
+            <li><a href='./operations/com/vmware/vmc/orgs/sddcs.patch-operation.html'>patch</a></li>
+            <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.addons'>addons</a>
+            <ul>                <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.addons.credentials'>credentials</a>
+                <ul>                    <li><a href='./operations/com/vmware/vmc/orgs/sddcs/addons/credentials.create-operation.html'>create</a></li>
+                    <li><a href='./operations/com/vmware/vmc/orgs/sddcs/addons/credentials.list-operation.html'>list</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.clusters'>clusters</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/clusters.create-operation.html'>create</a></li>
+                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/clusters.delete-operation.html'>delete</a></li>
+            </ul>
+            </li>
+            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.convert'>convert</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/convert.create-operation.html'>create</a></li>
+            </ul>
+            </li>
+            <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.dns'>dns</a>
+            <ul>                <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.dns.private'>private</a>
+                <ul>                    <li><a href='./operations/com/vmware/vmc/orgs/sddcs/dns/private.update-operation.html'>update</a></li>
+                </ul>
+                </li>
+                <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.dns.public'>public</a>
+                <ul>                    <li><a href='./operations/com/vmware/vmc/orgs/sddcs/dns/public.update-operation.html'>update</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.esxs'>esxs</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/esxs.create-operation.html'>create</a></li>
+            </ul>
+            </li>
+            <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networking'>networking</a>
+            <ul>                <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networking.connectivity_tests'>connectivity tests</a>
+                <ul>                    <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networking/connectivity_tests.get-operation.html'>get</a></li>
+                    <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networking/connectivity_tests.post-operation.html'>post</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks'>networks</a>
+            <ul>                <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks.cgws.l2vpn_partial_cgws'>cgws</a>
+                <ul>                    <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks.cgws.l2vpn'>l2vpn</a>
+                    <ul>                        <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.cgws.l2vpn.config'>config</a>
+                        <ul>                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/cgws/l2vpn/config.delete-operation.html'>delete</a></li>
+                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/cgws/l2vpn/config.get-operation.html'>get</a></li>
+                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/cgws/l2vpn/config.update-operation.html'>update</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>
+                <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks.edges'>edges</a>
+                <ul>                    <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges.get-operation.html'>get</a></li>
+                    <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks.edges.dhcp'>dhcp</a>
+                    <ul>                        <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.dhcp.leaseinfo'>leaseinfo</a>
+                        <ul>                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/dhcp/leaseinfo.get-operation.html'>get</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks.edges.dns'>dns</a>
+                    <ul>                        <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.dns.config'>config</a>
+                        <ul>                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/dns/config.create-operation.html'>create</a></li>
+                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/dns/config.delete-operation.html'>delete</a></li>
+                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/dns/config.get-operation.html'>get</a></li>
+                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/dns/config.update-operation.html'>update</a></li>
+                        </ul>
+                        </li>
+                        <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.dns.statistics'>statistics</a>
+                        <ul>                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/dns/statistics.get-operation.html'>get</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks.edges.firewall'>firewall</a>
+                    <ul>                        <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks.edges.firewall.config'>config</a>
+                        <ul>                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/config.delete-operation.html'>delete</a></li>
+                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/config.get-operation.html'>get</a></li>
+                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/config.update-operation.html'>update</a></li>
+                            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.firewall.config.rules'>rules</a>
+                            <ul>                                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/config/rules.add-operation.html'>add</a></li>
+                                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/config/rules.delete-operation.html'>delete</a></li>
+                                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/config/rules.get-operation.html'>get</a></li>
+                                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/config/rules.update-operation.html'>update</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                        </li>
+                        <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.firewall.statistics'>statistics</a>
+                        <ul>                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/statistics.get-operation.html'>get</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks.edges.ipsec'>ipsec</a>
+                    <ul>                        <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.ipsec.config'>config</a>
+                        <ul>                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/ipsec/config.delete-operation.html'>delete</a></li>
+                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/ipsec/config.get-operation.html'>get</a></li>
+                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/ipsec/config.update-operation.html'>update</a></li>
+                        </ul>
+                        </li>
+                        <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.ipsec.statistics'>statistics</a>
+                        <ul>                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/ipsec/statistics.get-operation.html'>get</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks.edges.l2vpn.config_partial_l2vpn'>l2vpn</a>
+                    <ul>                        <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks.edges.l2vpn.config'>config</a>
+                        <ul>                            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.l2vpn.config.statistics'>statistics</a>
+                            <ul>                                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/l2vpn/config/statistics.get-operation.html'>get</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks.edges.nat'>nat</a>
+                    <ul>                        <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks.edges.nat.config'>config</a>
+                        <ul>                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/nat/config.delete-operation.html'>delete</a></li>
+                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/nat/config.get-operation.html'>get</a></li>
+                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/nat/config.update-operation.html'>update</a></li>
+                            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.nat.config.rules'>rules</a>
+                            <ul>                                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/nat/config/rules.add-operation.html'>add</a></li>
+                                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/nat/config/rules.delete-operation.html'>delete</a></li>
+                                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/nat/config/rules.update-operation.html'>update</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.peerconfig'>peerconfig</a>
+                    <ul>                        <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/peerconfig.get-operation.html'>get</a></li>
+                    </ul>
+                    </li>
+                    <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks.edges.statistics'>statistics</a>
+                    <ul>                        <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks.edges.statistics.dashboard'>dashboard</a>
+                        <ul>                            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.statistics.dashboard.firewall'>firewall</a>
+                            <ul>                                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/statistics/dashboard/firewall.get-operation.html'>get</a></li>
+                            </ul>
+                            </li>
+                            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.statistics.dashboard.interface'>interface</a>
+                            <ul>                                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/statistics/dashboard/interface.get-operation.html'>get</a></li>
+                            </ul>
+                            </li>
+                            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.statistics.dashboard.ipsec'>ipsec</a>
+                            <ul>                                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/statistics/dashboard/ipsec.get-operation.html'>get</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                        </li>
+                        <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.networks.edges.statistics.interfaces'>interfaces</a>
+                        <ul>                            <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/statistics/interfaces.get-operation.html'>get</a></li>
+                            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.statistics.interfaces.internal'>internal</a>
+                            <ul>                                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/statistics/interfaces/internal.get-operation.html'>get</a></li>
+                            </ul>
+                            </li>
+                            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.statistics.interfaces.uplink'>uplink</a>
+                            <ul>                                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/statistics/interfaces/uplink.get-operation.html'>get</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.status'>status</a>
+                    <ul>                        <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/status.get-operation.html'>get</a></li>
+                    </ul>
+                    </li>
+                    <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.edges.vnics'>vnics</a>
+                    <ul>                        <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/edges/vnics.get-operation.html'>get</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>
+                <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.networks.logical'>logical</a>
+                <ul>                    <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/logical.create-operation.html'>create</a></li>
+                    <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/logical.delete-operation.html'>delete</a></li>
+                    <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/logical.get-operation.html'>get</a></li>
+                    <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/logical.get_0-operation.html'>get_0</a></li>
+                    <li><a href='./operations/com/vmware/vmc/orgs/sddcs/networks/logical.update-operation.html'>update</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.publicips'>publicips</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/publicips.create-operation.html'>create</a></li>
+                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/publicips.delete-operation.html'>delete</a></li>
+                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/publicips.get-operation.html'>get</a></li>
+                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/publicips.list-operation.html'>list</a></li>
+                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/publicips.update-operation.html'>update</a></li>
+            </ul>
+            </li>
+            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.sddc_template'>sddc template</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/sddc_template.get-operation.html'>get</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='./index.html#PKG_com.vmware.vmc.orgs.storage'>storage</a>
+        <ul>            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.storage.cluster_constraints'>cluster constraints</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/storage/cluster_constraints.get-operation.html'>get</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='./index.html#PKG_com.vmware.vmc.orgs.subscriptions'>subscriptions</a>
+        <ul>            <li><a href='./operations/com/vmware/vmc/orgs/subscriptions.create-operation.html'>create</a></li>
+            <li><a href='./operations/com/vmware/vmc/orgs/subscriptions.get-operation.html'>get</a></li>
+            <li><a href='./operations/com/vmware/vmc/orgs/subscriptions.get_0-operation.html'>get_0</a></li>
+            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.subscriptions.offer_instances'>offer instances</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/subscriptions/offer_instances.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.subscriptions.products'>products</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/subscriptions/products.list-operation.html'>list</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='./index.html#SVC_com.vmware.vmc.orgs.tasks'>tasks</a>
+        <ul>            <li><a href='./operations/com/vmware/vmc/orgs/tasks.get-operation.html'>get</a></li>
+            <li><a href='./operations/com/vmware/vmc/orgs/tasks.list-operation.html'>list</a></li>
+            <li><a href='./operations/com/vmware/vmc/orgs/tasks.update-operation.html'>update</a></li>
+        </ul>
+        </li>
+        <li><a href='./index.html#PKG_com.vmware.vmc.orgs.tbrs'>tbrs</a>
+        <ul>            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.tbrs.reservation'>reservation</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/tbrs/reservation.post-operation.html'>post</a></li>
+            </ul>
+            </li>
+            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.tbrs.support_window'>support window</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/tbrs/support_window.get-operation.html'>get</a></li>
+                <li><a href='./operations/com/vmware/vmc/orgs/tbrs/support_window.put-operation.html'>put</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+</ul>
+</li>
+
+        </li>
+        <li><br></li>
+        <li><a href="./landing_types.html">Types</a>
+            <ul></ul>
+        </li>
+    </ul>
+   </div>
+</nav>
+
+    <section class="article-main">
+    <!-- List of Service Links -->
+        <h1 class="title">Operations</h1>
+
+        
+               <h1 id="PKG_com.vmware.vmc">vmc</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.locale">locale</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/locale.set-operation.html'>set</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/locale</td>
+                           <td>Sets the locale for the session which is used for translating responses.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs">vmc orgs</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs">orgs</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}</td>
+                           <td>Get details of organization</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs.list-operation.html'>list</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs</td>
+                           <td>Return a list of all organizations the calling user (based on credential) is authorized on.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.account_link">vmc orgs account link</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.account_link">account link</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/account_link.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/account-link</td>
+                           <td>Gets a link that can be used on a customer's account to start the linking process.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.account_link.compatible_subnets">compatible subnets</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/account_link/compatible_subnets.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/account-link/compatible-subnets</td>
+                           <td>Gets a customer's compatible subnets for account linking</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/account_link/compatible_subnets.post-operation.html'>post</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/account-link/compatible-subnets</td>
+                           <td>Sets which subnet to use to link accounts and finishes the linking process</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.account_link.compatible_subnets_async">compatible subnets async</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/account_link/compatible_subnets_async.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/account-link/compatible-subnets-async</td>
+                           <td>Gets a customer's compatible subnets for account linking via a task. The information is returned as a member of the task (found in task.params['subnet_list_result'] when you are notified it is complete), and it's documented under ref /definitions/AwsCompatibleSubnets</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/account_link/compatible_subnets_async.post-operation.html'>post</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/account-link/compatible-subnets-async</td>
+                           <td>Sets which subnet to use to link accounts and finishes the linking process via a task</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.account_link.connected_accounts">connected accounts</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/account_link/connected_accounts.delete-operation.html'>delete</a></td>
+                           <td>DELETE  https://{server}/rest/vmc/api/orgs/{org}/account-link/connected-accounts/{linked_account_path_id}</td>
+                           <td>Delete a particular connected (linked) account.</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/account_link/connected_accounts.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/account-link/connected-accounts</td>
+                           <td>Get a list of connected accounts</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.account_link.map_customer_zones">map customer zones</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/account_link/map_customer_zones.post-operation.html'>post</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/account-link/map-customer-zones</td>
+                           <td>Creates a task to re-map customer's datacenters across zones.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.account_link.sddc_connections">sddc connections</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/account_link/sddc_connections.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/account-link/sddc-connections</td>
+                           <td>Get a list of SDDC connections currently setup for the customer's organization.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.providers">providers</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/providers.list-operation.html'>list</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/providers</td>
+                           <td></td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.reservations">vmc orgs reservations</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.reservations">reservations</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/reservations.list-operation.html'>list</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/reservations</td>
+                           <td>Get all reservations for this org</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.reservations.mw">mw</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/reservations/mw.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/reservations/{reservation}/mw</td>
+                           <td>get the maintenance window for this SDDC</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/reservations/mw.put-operation.html'>put</a></td>
+                           <td>PUT  https://{server}/rest/vmc/api/orgs/{org}/reservations/{reservation}/mw</td>
+                           <td>update the maintenance window for this SDDC</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddc_templates">sddc templates</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddc_templates.delete-operation.html'>delete</a></td>
+                           <td>DELETE  https://{server}/rest/vmc/api/orgs/{org}/sddc-templates/{template_id}</td>
+                           <td>Delete SDDC template identified by given id.</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddc_templates.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddc-templates/{template_id}</td>
+                           <td>Get configuration template by given template id.</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddc_templates.list-operation.html'>list</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddc-templates</td>
+                           <td>List all available SDDC configuration templates in an organization</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs">vmc orgs sddcs</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs">sddcs</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs.create-operation.html'>create</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/sddcs</td>
+                           <td>Provision an SDDC in target cloud</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs.delete-operation.html'>delete</a></td>
+                           <td>DELETE  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}</td>
+                           <td>Delete SDDC</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}</td>
+                           <td>Get SDDC</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs.list-operation.html'>list</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs</td>
+                           <td>List all the SDDCs of an organization</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs.patch-operation.html'>patch</a></td>
+                           <td>PATCH  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}</td>
+                           <td>Patch SDDC</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.addons">vmc orgs sddcs addons</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.addons.credentials">credentials</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/addons/credentials.create-operation.html'>create</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc_id}/addons/{addon_type}/credentials</td>
+                           <td>Associated a new add on credentials with the SDDC such as HCX</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/addons/credentials.list-operation.html'>list</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc_id}/addons/{addon_type}/credentials</td>
+                           <td>List all the credentials assoicated with an addon type with in a SDDC</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.clusters">clusters</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/clusters.create-operation.html'>create</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/clusters</td>
+                           <td>Creates a new cluster in customers sddcs with passed clusterConfig.</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/clusters.delete-operation.html'>delete</a></td>
+                           <td>DELETE  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/clusters/{cluster}</td>
+                           <td>This is a force operation which will delete the cluster even if there can be a data loss. Before calling this operation, all the VMs should be powered off.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.convert">convert</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/convert.create-operation.html'>create</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/convert</td>
+                           <td>This API converts a one host SDDC to a four node DEFAULT SDDC. It takes care of configuring and upgrading the vCenter configurations on the SDDC for high availability and data redundancy.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.dns">vmc orgs sddcs dns</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.dns.private">private</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/dns/private.update-operation.html'>update</a></td>
+                           <td>PUT  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/dns/private</td>
+                           <td>Update the DNS records of management VMs to use private IP addresses</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.dns.public">public</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/dns/public.update-operation.html'>update</a></td>
+                           <td>PUT  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/dns/public</td>
+                           <td>Update the DNS records of management VMs to use public IP addresses</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.esxs">esxs</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/esxs.create-operation.html'>create</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/esxs</td>
+                           <td>Add/Remove one or more ESX hosts in the target cloud</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.networking">vmc orgs sddcs networking</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networking.connectivity_tests">connectivity tests</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networking/connectivity_tests.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networking/connectivity-tests</td>
+                           <td>Retrieve metadata for connectivity tests.</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networking/connectivity_tests.post-operation.html'>post</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networking/connectivity-tests</td>
+                           <td>ConnectivityValidationGroupResultWrapper will be available at task.params['test_result'].</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.networks">vmc orgs sddcs networks</h1>
+               
+        
+        <h4 id="PKG_com.vmware.vmc.orgs.sddcs.networks.cgws.l2vpn_partial_cgws" class="hidden"/>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.networks.cgws.l2vpn">vmc orgs sddcs networks cgws l2vpn</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.cgws.l2vpn.config">config</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/cgws/l2vpn/config.delete-operation.html'>delete</a></td>
+                           <td>DELETE  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/sddc/cgws/{edge_id}/l2vpn/config</td>
+                           <td>Delete SDDC L2 VPN configuration.</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/cgws/l2vpn/config.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/sddc/cgws/{edge_id}/l2vpn/config</td>
+                           <td>Retrieve SDDC L2 VPN configuration.</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/cgws/l2vpn/config.update-operation.html'>update</a></td>
+                           <td>PUT  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/sddc/cgws/{edge_id}/l2vpn/config</td>
+                           <td>Modify SDDC L2 VPN configuration</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.networks.edges">vmc orgs sddcs networks edges</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges">edges</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges</td>
+                           <td>Retrieve information about all management and compute gateways and other routers (NSX Edges).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.networks.edges.dhcp">vmc orgs sddcs networks edges dhcp</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.dhcp.leaseinfo">leaseinfo</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/dhcp/leaseinfo.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/dhcp/leaseInfo</td>
+                           <td>Retrieve DHCP leaseinfo of a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.networks.edges.dns">vmc orgs sddcs networks edges dns</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.dns.config">config</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/dns/config.create-operation.html'>create</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/dns/config</td>
+                           <td>Enable or disable DNS configuration for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/dns/config.delete-operation.html'>delete</a></td>
+                           <td>DELETE  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/dns/config</td>
+                           <td>Delete DNS server configuration for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/dns/config.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/dns/config</td>
+                           <td>Retrieve DNS server configuration for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/dns/config.update-operation.html'>update</a></td>
+                           <td>PUT  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/dns/config</td>
+                           <td>Configure DNS server configuration for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.dns.statistics">statistics</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/dns/statistics.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/dns/statistics</td>
+                           <td>Retrieve DNS server statistics for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.networks.edges.firewall">vmc orgs sddcs networks edges firewall</h1>
+               
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.networks.edges.firewall.config">vmc orgs sddcs networks edges firewall config</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.firewall.config">config</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/config.delete-operation.html'>delete</a></td>
+                           <td>DELETE  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/firewall/config</td>
+                           <td>Delete firewall configuration for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/config.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/firewall/config</td>
+                           <td>Retrieve the firewall configuration for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/config.update-operation.html'>update</a></td>
+                           <td>PUT  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/firewall/config</td>
+                           <td>Configure firewall for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.firewall.config.rules">rules</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/config/rules.add-operation.html'>add</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/firewall/config/rules</td>
+                           <td>Append firewall rules for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/config/rules.delete-operation.html'>delete</a></td>
+                           <td>DELETE  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/firewall/config/rules/{rule_id}</td>
+                           <td>Delete a specific firewall rule for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/config/rules.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/firewall/config/rules/{rule_id}</td>
+                           <td>Retrieve a specific firewall rule for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/config/rules.update-operation.html'>update</a></td>
+                           <td>PUT  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/firewall/config/rules/{rule_id}</td>
+                           <td>Modify the specified firewall rule for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.firewall.statistics">statistics</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/firewall/statistics.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/firewall/statistics/{rule_id}</td>
+                           <td>Retrieve statistics for a specific firewall rule for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.networks.edges.ipsec">vmc orgs sddcs networks edges ipsec</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.ipsec.config">config</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/ipsec/config.delete-operation.html'>delete</a></td>
+                           <td>DELETE  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/ipsec/config</td>
+                           <td>Delete IPsec VPN configuration for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/ipsec/config.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/ipsec/config</td>
+                           <td>Retrieve IPsec VPN configuration for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/ipsec/config.update-operation.html'>update</a></td>
+                           <td>PUT  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/ipsec/config</td>
+                           <td>Modify IPsec VPN configuration for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.ipsec.statistics">statistics</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/ipsec/statistics.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/ipsec/statistics</td>
+                           <td>Retrieve IPsec VPN statistics for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+        <h4 id="PKG_com.vmware.vmc.orgs.sddcs.networks.edges.l2vpn.config_partial_l2vpn" class="hidden"/>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.networks.edges.l2vpn.config">vmc orgs sddcs networks edges l2vpn config</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.l2vpn.config.statistics">statistics</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/l2vpn/config/statistics.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/l2vpn/config/statistics</td>
+                           <td>Retrieve L2 VPN statistics for a compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.networks.edges.nat">vmc orgs sddcs networks edges nat</h1>
+               
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.networks.edges.nat.config">vmc orgs sddcs networks edges nat config</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.nat.config">config</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/nat/config.delete-operation.html'>delete</a></td>
+                           <td>DELETE  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/nat/config</td>
+                           <td>Delete all NAT configuration for the specified management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/nat/config.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/nat/config</td>
+                           <td>Retrieve NAT configuration for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/nat/config.update-operation.html'>update</a></td>
+                           <td>PUT  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/nat/config</td>
+                           <td>Modify NAT configuration for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.nat.config.rules">rules</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/nat/config/rules.add-operation.html'>add</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/nat/config/rules</td>
+                           <td>Append a NAT rule for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/nat/config/rules.delete-operation.html'>delete</a></td>
+                           <td>DELETE  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/nat/config/rules/{rule_id}</td>
+                           <td>Delete the specific NAT rule for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/nat/config/rules.update-operation.html'>update</a></td>
+                           <td>PUT  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/nat/config/rules/{rule_id}</td>
+                           <td>Update the specific NAT rule for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.peerconfig">peerconfig</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/peerconfig.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/peerconfig</td>
+                           <td>Retrieve IPsec VPN peer configuration for a management or compute gateway (NSX Edge). The response output is free form text generated as per the template specified as request parameter input.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.networks.edges.statistics">vmc orgs sddcs networks edges statistics</h1>
+               
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.networks.edges.statistics.dashboard">vmc orgs sddcs networks edges statistics dashboard</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.statistics.dashboard.firewall">firewall</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/statistics/dashboard/firewall.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/statistics/dashboard/firewall</td>
+                           <td>Retrieve firewall dashboard statistics for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.statistics.dashboard.interface">interface</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/statistics/dashboard/interface.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/statistics/dashboard/interface</td>
+                           <td>Retrieve interface dashboard statistics for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.statistics.dashboard.ipsec">ipsec</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/statistics/dashboard/ipsec.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/statistics/dashboard/ipsec</td>
+                           <td>Retrieve ipsec dashboard statistics for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.networks.edges.statistics.interfaces">vmc orgs sddcs networks edges statistics interfaces</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.statistics.interfaces">interfaces</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/statistics/interfaces.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/statistics/interfaces</td>
+                           <td>Retrieve interface statistics for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.statistics.interfaces.internal">internal</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/statistics/interfaces/internal.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/statistics/interfaces/internal</td>
+                           <td>Retrieve internal interface statistics for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.statistics.interfaces.uplink">uplink</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/statistics/interfaces/uplink.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/statistics/interfaces/uplink</td>
+                           <td>Retrieve uplink interface statistics for a management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.status">status</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/status.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/status</td>
+                           <td>Retrieve the status of the specified management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.edges.vnics">vnics</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/edges/vnics.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/edges/{edge_id}/vnics</td>
+                           <td>Retrieve all interfaces for the specified management or compute gateway (NSX Edge).</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.networks.logical">logical</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/logical.create-operation.html'>create</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/sddc/networks</td>
+                           <td>Create a network in an SDDC.</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/logical.delete-operation.html'>delete</a></td>
+                           <td>DELETE  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/sddc/networks/{network_id}</td>
+                           <td>Delete a network in an SDDC.</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/logical.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/sddc/networks/{network_id}</td>
+                           <td>Retrieve information about a network in an SDDC.</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/logical.get_0-operation.html'>get_0</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/sddc/networks</td>
+                           <td>Retrieve all networks in an SDDC.</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/networks/logical.update-operation.html'>update</a></td>
+                           <td>PUT  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/sddc/networks/{network_id}</td>
+                           <td>Modify a network in an SDDC.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.publicips">publicips</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/publicips.create-operation.html'>create</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/publicips</td>
+                           <td>Allocate public IPs for a SDDC</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/publicips.delete-operation.html'>delete</a></td>
+                           <td>DELETE  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/publicips/{id}</td>
+                           <td>Free one public IP for a SDDC</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/publicips.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/publicips/{id}</td>
+                           <td>Get one public IP for a SDDC</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/publicips.list-operation.html'>list</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/publicips</td>
+                           <td>list all public IPs for a SDDC</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/publicips.update-operation.html'>update</a></td>
+                           <td>PATCH  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/publicips/{id}</td>
+                           <td>Attach or detach a public IP to workload VM for a SDDC</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.sddc_template">sddc template</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/sddc_template.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/sddc-template</td>
+                           <td>Get configuration template for an SDDC</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.storage">vmc orgs storage</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.storage.cluster_constraints">cluster constraints</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/storage/cluster_constraints.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/storage/cluster-constraints</td>
+                           <td>Get constraints on cluster storage size for EBS-backed clusters.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.subscriptions">vmc orgs subscriptions</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.subscriptions">subscriptions</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/subscriptions.create-operation.html'>create</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/subscriptions</td>
+                           <td>Initiates the creation of a subscription</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/subscriptions.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/subscriptions/{subscription}</td>
+                           <td>Get subscription details for a given subscription id</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/subscriptions.get_0-operation.html'>get_0</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/subscriptions</td>
+                           <td>Returns all subscriptions for a given org id</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.subscriptions.offer_instances">offer instances</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/subscriptions/offer_instances.list-operation.html'>list</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/subscriptions/offer-instances</td>
+                           <td>List all offers available for the specific product type in the specific region</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.subscriptions.products">products</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/subscriptions/products.list-operation.html'>list</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/subscriptions/products</td>
+                           <td>List of all the products that are available for purchase.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.tasks">tasks</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/tasks.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/tasks/{task}</td>
+                           <td>Retrieve details of a task.</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/tasks.list-operation.html'>list</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/tasks</td>
+                           <td>List all tasks with optional filtering.</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/tasks.update-operation.html'>update</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/tasks/{task}</td>
+                           <td>Request that a running task be canceled. This is advisory only, some tasks may not be cancelable, and some tasks might take an arbitrary amount of time to respond to a cancelation request. The task must be monitored to determine subsequent status.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.tbrs">vmc orgs tbrs</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.tbrs.reservation">reservation</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/tbrs/reservation.post-operation.html'>post</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/tbrs/reservation</td>
+                           <td>Retreive all reservations for all SDDCs in this org</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.tbrs.support_window">support window</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/tbrs/support_window.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/tbrs/support-window</td>
+                           <td>Get all available support windows</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/tbrs/support_window.put-operation.html'>put</a></td>
+                           <td>PUT  https://{server}/rest/vmc/api/orgs/{org}/tbrs/support-window/{id}</td>
+                           <td>Move Sddc to new support window</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+    <!-- End List of services with operations -->
+    
+    <footer>
+            <div class="footer">
+            Copyright &#169;  2015-2019 VMware, Inc. All rights reserved.<br/>
+            <a href='http://pubs.vmware.com/copyright-trademark.html'>Copyright and trademark information.</a> Any feedback you provide to VMware is subject to the terms at <a href='http://www.vmware.com/community_terms.html'>www.vmware.com/community_terms.html.</a>
+            </div>
+    </footer>
+    </section>
+    </main>
+</body>
+</html>

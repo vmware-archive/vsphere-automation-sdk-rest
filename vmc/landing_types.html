@@ -1,0 +1,1178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    
+
+    <script src="jquery.js" language="javascript" type="text/javascript"></script>
+    <script src="left-tree.js" type="text/javascript" ></script>
+    <script>
+        $(function() {
+            $('#leftTree a').click(function() {
+                menu_traverse(document.getElementById('leftTree'), this.getAttribute("href"));
+            });
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(document.getElementById(this.hash.slice(1)));
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 800);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>REST API Reference Documentation</title>
+    <link href="restdoc.css" type="text/css" rel="stylesheet">
+    <link href="left-tree.css" type="text/css" rel="stylesheet">
+</head>
+
+<body onLoad="menu_main('leftTree')">
+    <main>
+    <header>
+        <div class="header">
+            <div class="logo"></div>
+        </div>
+    </header>
+    <nav class="components-index">
+   
+   <div id="leftTree">
+     <ul>
+        <li><a href="./index.html">Operations</a>
+            <ul></ul>
+        </li>
+        <li><br></li>
+        <li><a href="./landing_types.html">Types</a>
+            <ul><li><a href='./landing_types.html#PKG_com.vmware.vmc.model_partial_vmc'>vmc</a>
+<ul>    <li><a href='./landing_types.html#PKG_com.vmware.vmc.model'>model</a>
+    <ul>        <li><a href='./structures/com/vmware/vmc/model/abstract_entity-structure.html'>abstract_entity</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/account_link_config-structure.html'>account_link_config</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/account_link_sddc_config-structure.html'>account_link_sddc_config</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/address_fw_source_destination-structure.html'>address_FW_source_destination</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/agent-structure.html'>agent</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/ami_info-structure.html'>ami_info</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/appliances_summary-structure.html'>appliances_summary</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/application-structure.html'>application</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/aws_agent-structure.html'>aws_agent</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/aws_cloud_provider-structure.html'>aws_cloud_provider</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/aws_compatible_subnets-structure.html'>aws_compatible_subnets</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/aws_customer_connected_account-structure.html'>aws_customer_connected_account</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/aws_esx_host-structure.html'>aws_esx_host</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/aws_key_pair-structure.html'>aws_key_pair</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/aws_kms_info-structure.html'>aws_kms_info</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/aws_sddc_config-structure.html'>aws_sddc_config</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/aws_sddc_connection-structure.html'>aws_sddc_connection</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/aws_sddc_resource_config-structure.html'>aws_sddc_resource_config</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/aws_subnet-structure.html'>aws_subnet</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/ca_certificates-structure.html'>ca_certificates</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/cbm_statistic-structure.html'>cbm_statistic</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/cbm_statistics-structure.html'>cbm_statistics</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/cbm_stats_data-structure.html'>cbm_stats_data</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/cloud_provider-structure.html'>cloud_provider</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/cluster-structure.html'>cluster</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/cluster_config-structure.html'>cluster_config</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/compute_gateway_template-structure.html'>compute_gateway_template</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/connectivity_agent_validation-structure.html'>connectivity_agent_validation</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/connectivity_validation_group-structure.html'>connectivity_validation_group</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/connectivity_validation_groups-structure.html'>connectivity_validation_groups</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/connectivity_validation_input-structure.html'>connectivity_validation_input</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/connectivity_validation_sub_group-structure.html'>connectivity_validation_sub_group</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/crl_certificates-structure.html'>crl_certificates</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/dashboard_data-structure.html'>dashboard_data</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/dashboard_stat-structure.html'>dashboard_stat</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/dashboard_statistics-structure.html'>dashboard_statistics</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/data_page_edge_summary-structure.html'>data_page_edge_summary</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/data_page_sddc_network-structure.html'>data_page_sddc_network</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/data_permissions-structure.html'>data_permissions</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/dhcp_lease_info-structure.html'>dhcp_lease_info</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/dhcp_leases-structure.html'>dhcp_leases</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/dns_config-structure.html'>dns_config</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/dns_forwarders-structure.html'>dns_forwarders</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/dns_listeners-structure.html'>dns_listeners</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/dns_response_stats-structure.html'>dns_response_stats</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/dns_status_and_stats-structure.html'>dns_status_and_stats</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/dns_view-structure.html'>dns_view</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/dns_view_match-structure.html'>dns_view_match</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/dns_views-structure.html'>dns_views</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/edge_job-structure.html'>edge_job</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/edge_status-structure.html'>edge_status</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/edge_summary-structure.html'>edge_summary</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/edge_vm_status-structure.html'>edge_vm_status</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/edge_vnic_address_group-structure.html'>edge_vnic_address_group</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/edge_vnic_address_groups-structure.html'>edge_vnic_address_groups</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/error_response-structure.html'>error_response</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/esx_config-structure.html'>esx_config</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/esx_host-structure.html'>esx_host</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/extended_attribute-structure.html'>extended_attribute</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/feature_capabilities-structure.html'>feature_capabilities</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/feature_capability-structure.html'>feature_capability</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/feature_status-structure.html'>feature_status</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/firewall_config-structure.html'>firewall_config</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/firewall_dashboard_stats-structure.html'>firewall_dashboard_stats</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/firewall_default_policy-structure.html'>firewall_default_policy</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/firewall_global_config-structure.html'>firewall_global_config</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/firewall_rule-structure.html'>firewall_rule</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/firewall_rule_scope-structure.html'>firewall_rule_scope</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/firewall_rule_stats-structure.html'>firewall_rule_stats</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/firewall_rules-structure.html'>firewall_rules</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/firewall_service-structure.html'>firewall_service</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/gateway_template-structure.html'>gateway_template</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/glcm_bundle-structure.html'>glcm_bundle</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/host_lease_info-structure.html'>host_lease_info</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/interaction_permissions-structure.html'>interaction_permissions</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/interfaces_dashboard_stats-structure.html'>interfaces_dashboard_stats</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/ip_addresses-structure.html'>ip_addresses</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/ipsec-structure.html'>ipsec</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/ipsec_dashboard_stats-structure.html'>ipsec_dashboard_stats</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/ipsec_global_config-structure.html'>ipsec_global_config</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/ipsec_site-structure.html'>ipsec_site</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/ipsec_site_ike_status-structure.html'>ipsec_site_IKE_status</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/ipsec_site_stats-structure.html'>ipsec_site_stats</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/ipsec_sites-structure.html'>ipsec_sites</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/ipsec_status_and_stats-structure.html'>ipsec_status_and_stats</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/ipsec_tunnel_stats-structure.html'>ipsec_tunnel_stats</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/key_value_attributes-structure.html'>key_value_attributes</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/kms_vpc_endpoint-structure.html'>kms_vpc_endpoint</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/l2_extension-structure.html'>l2_extension</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/l2_vpn-structure.html'>l2_vpn</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/l2vpn_stats-structure.html'>l2vpn_stats</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/l2vpn_status_and_stats-structure.html'>l2vpn_status_and_stats</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/licence_acl_permissions-structure.html'>licence_acl_permissions</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/load_balancer_dashboard_stats-structure.html'>load_balancer_dashboard_stats</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/logging-structure.html'>logging</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/logical_network-structure.html'>logical_network</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/logical_router_scope-structure.html'>logical_router_scope</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/logical_router_scopes-structure.html'>logical_router_scopes</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/mac_address-structure.html'>mac_address</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/maintenance_window-structure.html'>maintenance_window</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/maintenance_window_entry-structure.html'>maintenance_window_entry</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/maintenance_window_get-structure.html'>maintenance_window_get</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/management_gateway_template-structure.html'>management_gateway_template</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/map_zones_request-structure.html'>map_zones_request</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/meta_dashboard_stats-structure.html'>meta_dashboard_stats</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/metadata-structure.html'>metadata</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/nat-structure.html'>nat</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/nat_rule-structure.html'>nat_rule</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/nat_rules-structure.html'>nat_rules</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/network_template-structure.html'>network_template</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/new_credentials-structure.html'>new_credentials</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/nsxfirewallrule-structure.html'>nsxfirewallrule</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/nsxfirewallservice-structure.html'>nsxfirewallservice</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/nsxl2vpn-structure.html'>nsxl2vpn</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/nsxnatrule-structure.html'>nsxnatrule</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/nsxsite-structure.html'>nsxsite</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/object_type-structure.html'>object_type</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/offer_instances_holder-structure.html'>offer_instances_holder</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/on_demand_offer_instance-structure.html'>on_demand_offer_instance</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/org_properties-structure.html'>org_properties</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/organization-structure.html'>organization</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/paged_edge_list-structure.html'>paged_edge_list</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/paging_info-structure.html'>paging_info</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/pop_info-structure.html'>pop_info</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/pop_service_info-structure.html'>pop_service_info</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/requests-structure.html'>requests</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/reservation-structure.html'>reservation</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/reservation_in_mw-structure.html'>reservation_in_mw</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/reservation_schedule-structure.html'>reservation_schedule</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/reservation_window-structure.html'>reservation_window</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/reservation_window_maintenance_properties-structure.html'>reservation_window_maintenance_properties</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/result-structure.html'>result</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/scope_info-structure.html'>scope_info</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc-structure.html'>sddc</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc_allocate_public_ip_spec-structure.html'>sddc_allocate_public_ip_spec</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc_config-structure.html'>sddc_config</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc_id-structure.html'>sddc_id</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc_link_config-structure.html'>sddc_link_config</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc_manifest-structure.html'>sddc_manifest</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc_network-structure.html'>sddc_network</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc_network_address_group-structure.html'>sddc_network_address_group</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc_network_address_groups-structure.html'>sddc_network_address_groups</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc_network_dhcp_config-structure.html'>sddc_network_dhcp_config</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc_network_dhcp_ip_pool-structure.html'>sddc_network_dhcp_ip_pool</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc_patch_request-structure.html'>sddc_patch_request</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc_public_ip-structure.html'>sddc_public_ip</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc_resource_config-structure.html'>sddc_resource_config</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc_state_request-structure.html'>sddc_state_request</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sddc_template-structure.html'>sddc_template</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/secondary_addresses-structure.html'>secondary_addresses</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/service_error-structure.html'>service_error</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/site-structure.html'>site</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sites-structure.html'>sites</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sslvpn_dashboard_stats-structure.html'>sslvpn_dashboard_stats</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sub_interface-structure.html'>sub_interface</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/sub_interfaces-structure.html'>sub_interfaces</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/subnet_info-structure.html'>subnet_info</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/subnets-structure.html'>subnets</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/subscription_details-structure.html'>subscription_details</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/subscription_products-structure.html'>subscription_products</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/subscription_request-structure.html'>subscription_request</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/support_window-structure.html'>support_window</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/support_window_id-structure.html'>support_window_id</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/task-structure.html'>task</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/task_progress_phase-structure.html'>task_progress_phase</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/term_offer_instance-structure.html'>term_offer_instance</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/traffic_shaping_policy-structure.html'>traffic_shaping_policy</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/update_credentials-structure.html'>update_credentials</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/vmc_locale-structure.html'>vmc_locale</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/vnic-structure.html'>vnic</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/vnics-structure.html'>vnics</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/vpc_info-structure.html'>vpc_info</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/vpc_info_subnets-structure.html'>vpc_info_subnets</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/vpn-structure.html'>vpn</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/vpn_channel_status-structure.html'>vpn_channel_status</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/vpn_tunnel_status-structure.html'>vpn_tunnel_status</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/vpn_tunnel_traffic_stats-structure.html'>vpn_tunnel_traffic_stats</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/vsan_config_constraints-structure.html'>vsan_config_constraints</a></li>
+        <li><a href='./structures/com/vmware/vmc/model/vsan_encryption_config-structure.html'>vsan_encryption_config</a></li>
+    </ul>
+    </li>
+</ul>
+</li>
+</ul>
+</li>
+
+        </li>
+    </ul>
+   </div>
+</nav>
+
+    <section class="article-main">
+        <h1 class="title">Types</h1>
+        
+               <h4 id="PKG_com.vmware.vmc.model_partial_vmc" class="hidden"/>
+        
+           <h1 id="PKG_com.vmware.vmc.model">vmc model</h1>
+               
+
+                
+                <table class="reference-types" cellspacing="0" cellpadding="3" border="0"
+                    summary="Package Structures table, listing structures and an explanation">
+                    <tbody>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/abstract_entity-structure.html'>vmc.model.abstract_entity</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/account_link_config-structure.html'>vmc.model.account_link_config</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/account_link_sddc_config-structure.html'>vmc.model.account_link_sddc_config</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/address_fw_source_destination-structure.html'>vmc.model.address_FW_source_destination</a></td>
+                            <td>Source or Destination for firewall rule. Default is 'any'. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/agent-structure.html'>vmc.model.agent</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/ami_info-structure.html'>vmc.model.ami_info</a></td>
+                            <td>the AmiInfo used for deploying esx of the sddc </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/appliances_summary-structure.html'>vmc.model.appliances_summary</a></td>
+                            <td>NSX Edge appliance summary. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/application-structure.html'>vmc.model.application</a></td>
+                            <td>Application for firewall rule </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/aws_agent-structure.html'>vmc.model.aws_agent</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/aws_cloud_provider-structure.html'>vmc.model.aws_cloud_provider</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/aws_compatible_subnets-structure.html'>vmc.model.aws_compatible_subnets</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/aws_customer_connected_account-structure.html'>vmc.model.aws_customer_connected_account</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/aws_esx_host-structure.html'>vmc.model.aws_esx_host</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/aws_key_pair-structure.html'>vmc.model.aws_key_pair</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/aws_kms_info-structure.html'>vmc.model.aws_kms_info</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/aws_sddc_config-structure.html'>vmc.model.aws_sddc_config</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/aws_sddc_connection-structure.html'>vmc.model.aws_sddc_connection</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/aws_sddc_resource_config-structure.html'>vmc.model.aws_sddc_resource_config</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/aws_subnet-structure.html'>vmc.model.aws_subnet</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/ca_certificates-structure.html'>vmc.model.ca_certificates</a></td>
+                            <td>CA certificate list. Optional. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/cbm_statistic-structure.html'>vmc.model.cbm_statistic</a></td>
+                            <td>Statistics data for each vnic. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/cbm_statistics-structure.html'>vmc.model.cbm_statistics</a></td>
+                            <td>NSX Edge Interface Statistics. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/cbm_stats_data-structure.html'>vmc.model.cbm_stats_data</a></td>
+                            <td>Statistics data. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/cloud_provider-structure.html'>vmc.model.cloud_provider</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/cluster-structure.html'>vmc.model.cluster</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/cluster_config-structure.html'>vmc.model.cluster_config</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/compute_gateway_template-structure.html'>vmc.model.compute_gateway_template</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/connectivity_agent_validation-structure.html'>vmc.model.connectivity_agent_validation</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/connectivity_validation_group-structure.html'>vmc.model.connectivity_validation_group</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/connectivity_validation_groups-structure.html'>vmc.model.connectivity_validation_groups</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/connectivity_validation_input-structure.html'>vmc.model.connectivity_validation_input</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/connectivity_validation_sub_group-structure.html'>vmc.model.connectivity_validation_sub_group</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/crl_certificates-structure.html'>vmc.model.crl_certificates</a></td>
+                            <td>CRL certificate list. Optional. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/dashboard_data-structure.html'>vmc.model.dashboard_data</a></td>
+                            <td>Dashboard Statistics data. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/dashboard_stat-structure.html'>vmc.model.dashboard_stat</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/dashboard_statistics-structure.html'>vmc.model.dashboard_statistics</a></td>
+                            <td>Dashboard Statistics data. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/data_page_edge_summary-structure.html'>vmc.model.data_page_edge_summary</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/data_page_sddc_network-structure.html'>vmc.model.data_page_sddc_network</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/data_permissions-structure.html'>vmc.model.data_permissions</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/dhcp_lease_info-structure.html'>vmc.model.dhcp_lease_info</a></td>
+                            <td>DHCP lease information. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/dhcp_leases-structure.html'>vmc.model.dhcp_leases</a></td>
+                            <td>DHCP leases information </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/dns_config-structure.html'>vmc.model.dns_config</a></td>
+                            <td>DNS configuration </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/dns_forwarders-structure.html'>vmc.model.dns_forwarders</a></td>
+                            <td>DNS forwarders. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/dns_listeners-structure.html'>vmc.model.dns_listeners</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/dns_response_stats-structure.html'>vmc.model.dns_response_stats</a></td>
+                            <td>DNS response statistics. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/dns_status_and_stats-structure.html'>vmc.model.dns_status_and_stats</a></td>
+                            <td>DNS statistics. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/dns_view-structure.html'>vmc.model.dns_view</a></td>
+                            <td>DNS View </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/dns_view_match-structure.html'>vmc.model.dns_view_match</a></td>
+                            <td>Dns view match </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/dns_views-structure.html'>vmc.model.dns_views</a></td>
+                            <td>DNS views. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/edge_job-structure.html'>vmc.model.edge_job</a></td>
+                            <td>Job status information for the configuration change carried out on NSX Edge. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/edge_status-structure.html'>vmc.model.edge_status</a></td>
+                            <td>NSX Edge Appliance status. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/edge_summary-structure.html'>vmc.model.edge_summary</a></td>
+                            <td>NSX Edge summary. Read only. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/edge_vm_status-structure.html'>vmc.model.edge_vm_status</a></td>
+                            <td>Status of each of the deployed NSX Edge appliances. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/edge_vnic_address_group-structure.html'>vmc.model.edge_vnic_address_group</a></td>
+                            <td>Address group configuration of the NSX Edge vnic. An interface can have one primary and multiple secondary IP addresses. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/edge_vnic_address_groups-structure.html'>vmc.model.edge_vnic_address_groups</a></td>
+                            <td>NSX Edge vnic address group configuration details. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/error_response-structure.html'>vmc.model.error_response</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/esx_config-structure.html'>vmc.model.esx_config</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/esx_host-structure.html'>vmc.model.esx_host</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/extended_attribute-structure.html'>vmc.model.extended_attribute</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/feature_capabilities-structure.html'>vmc.model.feature_capabilities</a></td>
+                            <td>List of features and their capability details based on NSX Edge appliance form factor. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/feature_capability-structure.html'>vmc.model.feature_capability</a></td>
+                            <td>Feature capability information. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/feature_status-structure.html'>vmc.model.feature_status</a></td>
+                            <td>Individual feature status. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/firewall_config-structure.html'>vmc.model.firewall_config</a></td>
+                            <td>Firewall Configuration </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/firewall_dashboard_stats-structure.html'>vmc.model.firewall_dashboard_stats</a></td>
+                            <td>Dashboard Statistics data for Firewall. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/firewall_default_policy-structure.html'>vmc.model.firewall_default_policy</a></td>
+                            <td>Firewall default policy. Default is deny. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/firewall_global_config-structure.html'>vmc.model.firewall_global_config</a></td>
+                            <td>Global configuration applicable to all rules. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/firewall_rule-structure.html'>vmc.model.firewall_rule</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/firewall_rule_scope-structure.html'>vmc.model.firewall_rule_scope</a></td>
+                            <td>Optional for FirewallRule. If not specified, defaults to 'any'. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/firewall_rule_stats-structure.html'>vmc.model.firewall_rule_stats</a></td>
+                            <td>Statistics for firewall rule </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/firewall_rules-structure.html'>vmc.model.firewall_rules</a></td>
+                            <td>Ordered list of firewall rules. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/firewall_service-structure.html'>vmc.model.firewall_service</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/gateway_template-structure.html'>vmc.model.gateway_template</a></td>
+                            <td>Describes common properties for MGW and CGW configuration templates </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/glcm_bundle-structure.html'>vmc.model.glcm_bundle</a></td>
+                            <td>the GlcmBundle used for deploying the sddc </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/host_lease_info-structure.html'>vmc.model.host_lease_info</a></td>
+                            <td>DHCP lease information. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/interaction_permissions-structure.html'>vmc.model.interaction_permissions</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/interfaces_dashboard_stats-structure.html'>vmc.model.interfaces_dashboard_stats</a></td>
+                            <td>Dashboard Statistics data for Interfaces. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/ip_addresses-structure.html'>vmc.model.ip_addresses</a></td>
+                            <td>IP address </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/ipsec-structure.html'>vmc.model.ipsec</a></td>
+                            <td>NSX Edge IPsec configuration details. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/ipsec_dashboard_stats-structure.html'>vmc.model.ipsec_dashboard_stats</a></td>
+                            <td>Dashboard Statistics data for Ipsec. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/ipsec_global_config-structure.html'>vmc.model.ipsec_global_config</a></td>
+                            <td>IPsec Global configuration details. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/ipsec_site-structure.html'>vmc.model.ipsec_site</a></td>
+                            <td>NSX Edge IPsec Site configuration details. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/ipsec_site_ike_status-structure.html'>vmc.model.ipsec_site_IKE_status</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/ipsec_site_stats-structure.html'>vmc.model.ipsec_site_stats</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/ipsec_sites-structure.html'>vmc.model.ipsec_sites</a></td>
+                            <td>List of IPsec sites for NSX Edge. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/ipsec_status_and_stats-structure.html'>vmc.model.ipsec_status_and_stats</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/ipsec_tunnel_stats-structure.html'>vmc.model.ipsec_tunnel_stats</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/key_value_attributes-structure.html'>vmc.model.key_value_attributes</a></td>
+                            <td>Key value pair describing the feature configuration limit. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/kms_vpc_endpoint-structure.html'>vmc.model.kms_vpc_endpoint</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/l2_extension-structure.html'>vmc.model.l2_extension</a></td>
+                            <td>Layer 2 extension. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/l2_vpn-structure.html'>vmc.model.l2_vpn</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/l2vpn_stats-structure.html'>vmc.model.l2vpn_stats</a></td>
+                            <td>L2 VPN status and statistics of a single L2 VPN site. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/l2vpn_status_and_stats-structure.html'>vmc.model.l2vpn_status_and_stats</a></td>
+                            <td>L2 VPN status and statistics. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/licence_acl_permissions-structure.html'>vmc.model.licence_acl_permissions</a></td>
+                            <td>Licence and access control information for the feature. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/load_balancer_dashboard_stats-structure.html'>vmc.model.load_balancer_dashboard_stats</a></td>
+                            <td>Dashboard Statistics data for Load Balancer. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/logging-structure.html'>vmc.model.logging</a></td>
+                            <td>logging. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/logical_network-structure.html'>vmc.model.logical_network</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/logical_router_scope-structure.html'>vmc.model.logical_router_scope</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/logical_router_scopes-structure.html'>vmc.model.logical_router_scopes</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/mac_address-structure.html'>vmc.model.mac_address</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/maintenance_window-structure.html'>vmc.model.maintenance_window</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/maintenance_window_entry-structure.html'>vmc.model.maintenance_window_entry</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/maintenance_window_get-structure.html'>vmc.model.maintenance_window_get</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/management_gateway_template-structure.html'>vmc.model.management_gateway_template</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/map_zones_request-structure.html'>vmc.model.map_zones_request</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/meta_dashboard_stats-structure.html'>vmc.model.meta_dashboard_stats</a></td>
+                            <td>Start time, end time and interval details. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/metadata-structure.html'>vmc.model.metadata</a></td>
+                            <td>metadata of the sddc manifest </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/nat-structure.html'>vmc.model.nat</a></td>
+                            <td>NAT configuration </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/nat_rule-structure.html'>vmc.model.nat_rule</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/nat_rules-structure.html'>vmc.model.nat_rules</a></td>
+                            <td>Ordered list of NAT rules. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/network_template-structure.html'>vmc.model.network_template</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/new_credentials-structure.html'>vmc.model.new_credentials</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/nsxfirewallrule-structure.html'>vmc.model.nsxfirewallrule</a></td>
+                            <td>Firewall Rule </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/nsxfirewallservice-structure.html'>vmc.model.nsxfirewallservice</a></td>
+                            <td>Application (service) for firewall rule. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/nsxl2vpn-structure.html'>vmc.model.nsxl2vpn</a></td>
+                            <td>L2 VPN server configuration. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/nsxnatrule-structure.html'>vmc.model.nsxnatrule</a></td>
+                            <td>NAT rule </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/nsxsite-structure.html'>vmc.model.nsxsite</a></td>
+                            <td>L2 VPN site. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/object_type-structure.html'>vmc.model.object_type</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/offer_instances_holder-structure.html'>vmc.model.offer_instances_holder</a></td>
+                            <td>Holder for the offer instances. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/on_demand_offer_instance-structure.html'>vmc.model.on_demand_offer_instance</a></td>
+                            <td>Holder for the on-demand offer instance. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/org_properties-structure.html'>vmc.model.org_properties</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/organization-structure.html'>vmc.model.organization</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/paged_edge_list-structure.html'>vmc.model.paged_edge_list</a></td>
+                            <td>NSX Edges listed by pages. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/paging_info-structure.html'>vmc.model.paging_info</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/pop_ami_info-structure.html'>vmc.model.pop_ami_info</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/pop_info-structure.html'>vmc.model.pop_info</a></td>
+                            <td>Present a SDDC PoP information. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/pop_service_info-structure.html'>vmc.model.pop_service_info</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/requests-structure.html'>vmc.model.requests</a></td>
+                            <td>DNS request statistics. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/reservation-structure.html'>vmc.model.reservation</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/reservation_in_mw-structure.html'>vmc.model.reservation_in_mw</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/reservation_schedule-structure.html'>vmc.model.reservation_schedule</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/reservation_window-structure.html'>vmc.model.reservation_window</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/reservation_window_maintenance_properties-structure.html'>vmc.model.reservation_window_maintenance_properties</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/result-structure.html'>vmc.model.result</a></td>
+                            <td>Job result information for the configuration change carried out on NSX Edge. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/scope_info-structure.html'>vmc.model.scope_info</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc-structure.html'>vmc.model.sddc</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc_allocate_public_ip_spec-structure.html'>vmc.model.sddc_allocate_public_ip_spec</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc_config-structure.html'>vmc.model.sddc_config</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc_id-structure.html'>vmc.model.sddc_id</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc_link_config-structure.html'>vmc.model.sddc_link_config</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc_manifest-structure.html'>vmc.model.sddc_manifest</a></td>
+                            <td>Describes software components of the installed SDDC </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc_network-structure.html'>vmc.model.sddc_network</a></td>
+                            <td>Logical network. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc_network_address_group-structure.html'>vmc.model.sddc_network_address_group</a></td>
+                            <td>Logical Network address group. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc_network_address_groups-structure.html'>vmc.model.sddc_network_address_groups</a></td>
+                            <td>Logical network address groups. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc_network_dhcp_config-structure.html'>vmc.model.sddc_network_dhcp_config</a></td>
+                            <td>DHCP configuration for the logical network. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc_network_dhcp_ip_pool-structure.html'>vmc.model.sddc_network_dhcp_ip_pool</a></td>
+                            <td>DHCP IP pool for logical network. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc_patch_request-structure.html'>vmc.model.sddc_patch_request</a></td>
+                            <td>Patch request body for SDDC </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc_public_ip-structure.html'>vmc.model.sddc_public_ip</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc_resource_config-structure.html'>vmc.model.sddc_resource_config</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc_state_request-structure.html'>vmc.model.sddc_state_request</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sddc_template-structure.html'>vmc.model.sddc_template</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/secondary_addresses-structure.html'>vmc.model.secondary_addresses</a></td>
+                            <td>Secondary IP addresses of the NSX Edge vnic address group. These are used for NAT, LB, VPN etc. Optional. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/service_error-structure.html'>vmc.model.service_error</a></td>
+                            <td>Detailed service errors associated with a task. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/site-structure.html'>vmc.model.site</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sites-structure.html'>vmc.model.sites</a></td>
+                            <td>L2 VPN sites. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sslvpn_dashboard_stats-structure.html'>vmc.model.sslvpn_dashboard_stats</a></td>
+                            <td>Dashboard Statistics data for SSL VPN. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sub_interface-structure.html'>vmc.model.sub_interface</a></td>
+                            <td>NSX Edge sub interface configuration details. Sub interfaces are created on a trunk interface. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/sub_interfaces-structure.html'>vmc.model.sub_interfaces</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/subnet_info-structure.html'>vmc.model.subnet_info</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/subnets-structure.html'>vmc.model.subnets</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/subscription_details-structure.html'>vmc.model.subscription_details</a></td>
+                            <td>details of a subscription </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/subscription_products-structure.html'>vmc.model.subscription_products</a></td>
+                            <td>Details of products that are available for purchase. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/subscription_request-structure.html'>vmc.model.subscription_request</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/support_window-structure.html'>vmc.model.support_window</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/support_window_id-structure.html'>vmc.model.support_window_id</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/task-structure.html'>vmc.model.task</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/task_progress_phase-structure.html'>vmc.model.task_progress_phase</a></td>
+                            <td>A task progress can be (but does NOT have to be) divided to more meaningful progress phases. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/term_offer_instance-structure.html'>vmc.model.term_offer_instance</a></td>
+                            <td>Holder for the term offer instances. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/traffic_shaping_policy-structure.html'>vmc.model.traffic_shaping_policy</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/update_credentials-structure.html'>vmc.model.update_credentials</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/vmc_locale-structure.html'>vmc.model.vmc_locale</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/vnic-structure.html'>vmc.model.vnic</a></td>
+                            <td>NSX Edge vnic configuration details. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/vnics-structure.html'>vmc.model.vnics</a></td>
+                            <td>Ordered list of NSX Edge vnics. Until one connected vnic is configured, none of the configured features will serve the network. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/vpc_info-structure.html'>vmc.model.vpc_info</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/vpc_info_subnets-structure.html'>vmc.model.vpc_info_subnets</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/vpn-structure.html'>vmc.model.vpn</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/vpn_channel_status-structure.html'>vmc.model.vpn_channel_status</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/vpn_tunnel_status-structure.html'>vmc.model.vpn_tunnel_status</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/vpn_tunnel_traffic_stats-structure.html'>vmc.model.vpn_tunnel_traffic_stats</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/vsan_config_constraints-structure.html'>vmc.model.vsan_config_constraints</a></td>
+                            <td>This describes the possible physical storage capacity choices for use with a given VsanStorageDesigner implementation. These choices are specific to a customer-defined number of hosts per cluster. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/model/vsan_encryption_config-structure.html'>vmc.model.vsan_encryption_config</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+         
+        <!-- End List of services with structures -->
+        
+    <footer>
+            <div class="footer">
+            Copyright &#169;  2015-2019 VMware, Inc. All rights reserved.<br/>
+            <a href='http://pubs.vmware.com/copyright-trademark.html'>Copyright and trademark information.</a> Any feedback you provide to VMware is subject to the terms at <a href='http://www.vmware.com/community_terms.html'>www.vmware.com/community_terms.html.</a>
+            </div>
+    </footer>
+    </section>
+    </main>
+</body>
+</html>
