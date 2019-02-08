@@ -367,7 +367,7 @@
     <h3>Request:</h3>
     <h4>HTTP request</h4>
     
-    <div class="httpBox">GET  https://{server}/rest/vmc/api/orgs/{org}/tbrs/support-window<br/></span></div>
+    <div class="httpBox">GET  https://{server}/rest/vmc/api/orgs/{org}/tbrs/support-window<br/><span class="url-query-parameters"><br/><span class="pun">?</span><span class="key">minimum_seats_available</span><span class="pun">=</span><span class="val">1</span><br/><span class="pun">&</span><span class="key">created_by</span><span class="pun">=</span><span class="val">string</span><br/></span></div>
     
     <h4>Path Parameters</h4>
     
@@ -389,6 +389,36 @@
                 <td><span class="grey"></span><span class="required">org</span></td>
                 <td>string</td>
                 <td> Organization identifier. (required). </td>
+            </tr>
+
+    </table>
+
+    
+    <h4>Request Query Parameters:</h4>
+    
+    
+    <table class="params">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr class="subheader">
+            <td colspan="3">
+            <span class="required">bold </span> <span class="optional"> = required</span>
+            </td>
+        </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">minimum_seats_available</span></td>
+                <td>long</td>
+                <td> Optional. minimum seats available (used as a filter) (optional). </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">created_by</span></td>
+                <td>string</td>
+                <td> Optional. user name which was used to create the support window (used as a filter) (optional). </td>
             </tr>
 
     </table>
