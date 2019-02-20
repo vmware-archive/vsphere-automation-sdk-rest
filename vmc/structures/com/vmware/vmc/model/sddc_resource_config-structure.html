@@ -163,6 +163,7 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/nsxl2vpn-structure.html'>nsxl2vpn</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/nsxnatrule-structure.html'>nsxnatrule</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/nsxsite-structure.html'>nsxsite</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/nsxt_addons-structure.html'>nsxt_addons</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/object_type-structure.html'>object_type</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/offer_instances_holder-structure.html'>offer_instances_holder</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/on_demand_offer_instance-structure.html'>on_demand_offer_instance</a></li>
@@ -517,6 +518,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"nsx_mgr_management_ip</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"nsx_mgr_url</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"nsxt</span>"<span class="pun">:&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"nsxt_addons</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"enable_nsx_advanced_addon</span>"<span class="pun">:&nbsp;</span><span class="val">true</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"provider</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"psc_management_ip</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"psc_url</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
@@ -778,6 +782,12 @@
                 <td><span class="grey"></span><span class="optional">witness_availability_zone</span></td>
                 <td>string</td>
                 <td>Availability zone where the witness node is provisioned for a MultiAZ SDDC. This is null for a SingleAZ SDDC.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">nsxt_addons</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/nsxt_addons-structure.html'>nsxt_addons</a></td>
+                <td> Optional. </td>
             </tr>
 
             <tr>

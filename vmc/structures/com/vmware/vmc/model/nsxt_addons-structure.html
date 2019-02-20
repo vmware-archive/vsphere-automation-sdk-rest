@@ -4,7 +4,7 @@
 
 <head>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>REST API - abstract_entity</title>
+    <title>REST API - nsxt_addons</title>
     <script src="../../../../../dynamic-contents.js" language="javascript" type="text/javascript"></script>
     <script src="../../../../../jquery.js" language="javascript" type="text/javascript"></script>
     <script src="../../../../../jquery-ui.js" language="javascript" type="text/javascript"></script>
@@ -253,8 +253,8 @@
          
          </ol>
     </div>
-    <h2 class="title">vmc model: abstract entity</h2>
-    <div></div>
+    <h2 class="title">vmc model: nsxt addons</h2>
+    <div>Details the state of different NSX add-ons.</div>
     
     <h3>Representation:</h3>
     <div id="tabsResultRep">
@@ -263,14 +263,7 @@
         </ul>
         <div id="tabs-1">
             <span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"created</span>"<span class="pun">:&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated</span>"<span class="pun">:&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated_by_user_id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated_by_user_name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"user_id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"user_name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"version</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"enable_nsx_advanced_addon</span>"<span class="pun">:&nbsp;</span><span class="val">true</span><br/>
 <span class="pun">}</span>
         </div>
     </div>
@@ -287,62 +280,14 @@
 
         <tr class="subheader">
             <td colspan="3">
-            Required
-            </td>
-        </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="required">updated</span></td>
-                <td>date_time</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="required">user_id</span></td>
-                <td>string</td>
-                <td>User id that last updated this record<p/> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="required">updated_by_user_id</span></td>
-                <td>string</td>
-                <td>User id that last updated this record<p/> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="required">created</span></td>
-                <td>date_time</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="required">version</span></td>
-                <td>long</td>
-                <td>Version of this entity format: int32<p/> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="required">user_name</span></td>
-                <td>string</td>
-                <td>User name that last updated this record<p/> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="required">id</span></td>
-                <td>string</td>
-                <td>Unique ID for this entity<p/> </td>
-            </tr>
-
-        <tr class="subheader">
-            <td colspan="3">
             Optional
             </td>
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">updated_by_user_name</span></td>
-                <td>string</td>
-                <td>User name that last updated this record<p/> Optional. </td>
+                <td><span class="grey"></span><span class="optional">enable_nsx_advanced_addon</span></td>
+                <td>boolean</td>
+                <td>Indicates whether NSX Advanced addon is enabled or disabled.<p/> Optional. </td>
             </tr>
 
     </table>
