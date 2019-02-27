@@ -89,7 +89,9 @@
             <li><a href='../../../../../../index.html#PKG_com.vmware.vmc.orgs.sddcs.addons'>addons</a>
             <ul>                <li><a href='../../../../../../index.html#SVC_com.vmware.vmc.orgs.sddcs.addons.credentials'>credentials</a>
                 <ul>                    <li><a href='../../../../../../operations/com/vmware/vmc/orgs/sddcs/addons/credentials.create-operation.html'>create</a></li>
+                    <li><a href='../../../../../../operations/com/vmware/vmc/orgs/sddcs/addons/credentials.get-operation.html'>get</a></li>
                     <li><a href='../../../../../../operations/com/vmware/vmc/orgs/sddcs/addons/credentials.list-operation.html'>list</a></li>
+                    <li><a href='../../../../../../operations/com/vmware/vmc/orgs/sddcs/addons/credentials.update-operation.html'>update</a></li>
                 </ul>
                 </li>
             </ul>
@@ -465,7 +467,7 @@
             <tr>
                 <td><span class="grey"></span><span class="optional">action</span></td>
                 <td>string</td>
-                <td> Optional. If = 'add', will add the esx. If = 'remove', will delete the esx/esxs bound to a single cluster (Cluster Id is mandatory for non cluster 1 esx remove). If = 'force-remove', will delete the esx even if it can lead to data loss (This is an privileged operation). If = 'addToAll', will add esxs to all clusters in the SDDC (This is an privileged operation). If = 'removeFromAll', will delete the esxs from all clusters in the SDDC (This is an privileged operation). Default behaviour is 'add' (optional). </td>
+                <td> Optional. If = 'add', will add the esx. If = 'remove', will delete the esx/esxs bound to a single cluster (Cluster Id is mandatory for non cluster 1 esx remove). If = 'force-remove', will delete the esx even if it can lead to data loss (This is an privileged operation). If = 'addToAll', will add esxs to all clusters in the SDDC (This is an privileged operation). If = 'removeFromAll', will delete the esxs from all clusters in the SDDC (This is an privileged operation). If = 'attach-diskgroup', will attach the provided diskgroups to a given host (privileged). Default behaviour is 'add' (optional). </td>
             </tr>
 
     </table>
