@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    
+
+    <script src="jquery.js" language="javascript" type="text/javascript"></script>
+    <script src="left-tree.js" type="text/javascript" ></script>
+    <script>
+        $(function() {
+            $('#leftTree a').click(function() {
+                menu_traverse(document.getElementById('leftTree'), this.getAttribute("href"));
+            });
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(document.getElementById(this.hash.slice(1)));
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 800);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>REST API Reference Documentation</title>
+    <link href="restdoc.css" type="text/css" rel="stylesheet">
+    <link href="left-tree.css" type="text/css" rel="stylesheet">
+</head>
+
+<body onLoad="menu_main('leftTree')">
+    <main>
+    <header>
+        <div class="header">
+            <div class="logo"></div>
+        </div>
+    </header>
+    <nav class="components-index">
+   
+   <div id="leftTree">
+     <ul>
+        <li><a href="./index.html">Operations</a>
+            <ul></ul>
+        </li>
+        <li><br></li>
+        <li><a href="./landing_types.html">Types</a>
+            <ul><li><a href='./landing_types.html#PKG_com.vmware.model'>model</a>
+<ul>    <li><a href='./structures/com/vmware/model/advertised_route-structure.html'>advertised_route</a></li>
+    <li><a href='./structures/com/vmware/model/api_error-structure.html'>api_error</a></li>
+    <li><a href='./structures/com/vmware/model/bgp_advertised_routes-structure.html'>BGP_advertised_routes</a></li>
+    <li><a href='./structures/com/vmware/model/bgp_learned_routes-structure.html'>BGP_learned_routes</a></li>
+    <li><a href='./structures/com/vmware/model/connected_service_list_result-structure.html'>connected_service_list_result</a></li>
+    <li><a href='./structures/com/vmware/model/connected_service_status-structure.html'>connected_service_status</a></li>
+    <li><a href='./structures/com/vmware/model/direct_connect_bgp_info-structure.html'>direct_connect_bgp_info</a></li>
+    <li><a href='./structures/com/vmware/model/discovered_resource-structure.html'>discovered_resource</a></li>
+    <li><a href='./structures/com/vmware/model/embedded_resource-structure.html'>embedded_resource</a></li>
+    <li><a href='./structures/com/vmware/model/host_eni-structure.html'>host_eni</a></li>
+    <li><a href='./structures/com/vmware/model/host_status-structure.html'>host_status</a></li>
+    <li><a href='./structures/com/vmware/model/host_status_list_result-structure.html'>host_status_list_result</a></li>
+    <li><a href='./structures/com/vmware/model/host_vdr-structure.html'>host_vdr</a></li>
+    <li><a href='./structures/com/vmware/model/interface_statistics-structure.html'>interface_statistics</a></li>
+    <li><a href='./structures/com/vmware/model/ip_attachment_pair-structure.html'>ip_attachment_pair</a></li>
+    <li><a href='./structures/com/vmware/model/linked_subnet_info-structure.html'>linked_subnet_info</a></li>
+    <li><a href='./structures/com/vmware/model/linked_vpc_info-structure.html'>linked_vpc_info</a></li>
+    <li><a href='./structures/com/vmware/model/linked_vpcs_list_result-structure.html'>linked_vpcs_list_result</a></li>
+    <li><a href='./structures/com/vmware/model/list_result-structure.html'>list_result</a></li>
+    <li><a href='./structures/com/vmware/model/managed_resource-structure.html'>managed_resource</a></li>
+    <li><a href='./structures/com/vmware/model/mgmt_service_entry-structure.html'>mgmt_service_entry</a></li>
+    <li><a href='./structures/com/vmware/model/mgmt_vm_info-structure.html'>mgmt_vm_info</a></li>
+    <li><a href='./structures/com/vmware/model/mgmt_vms_list_result-structure.html'>mgmt_vms_list_result</a></li>
+    <li><a href='./structures/com/vmware/model/network_status_entry-structure.html'>network_status_entry</a></li>
+    <li><a href='./structures/com/vmware/model/network_status_key-structure.html'>network_status_key</a></li>
+    <li><a href='./structures/com/vmware/model/network_status_key_value_pair-structure.html'>network_status_key_value_pair</a></li>
+    <li><a href='./structures/com/vmware/model/network_status_list_result-structure.html'>network_status_list_result</a></li>
+    <li><a href='./structures/com/vmware/model/owner_resource_link-structure.html'>owner_resource_link</a></li>
+    <li><a href='./structures/com/vmware/model/prefix_info-structure.html'>prefix_info</a></li>
+    <li><a href='./structures/com/vmware/model/prefixes_list_result-structure.html'>prefixes_list_result</a></li>
+    <li><a href='./structures/com/vmware/model/public_ip-structure.html'>public_ip</a></li>
+    <li><a href='./structures/com/vmware/model/public_ips_list_result-structure.html'>public_ips_list_result</a></li>
+    <li><a href='./structures/com/vmware/model/related_api_error-structure.html'>related_api_error</a></li>
+    <li><a href='./structures/com/vmware/model/resource-structure.html'>resource</a></li>
+    <li><a href='./structures/com/vmware/model/resource_link-structure.html'>resource_link</a></li>
+    <li><a href='./structures/com/vmware/model/revisioned_resource-structure.html'>revisioned_resource</a></li>
+    <li><a href='./structures/com/vmware/model/sddc_user_configuration-structure.html'>sddc_user_configuration</a></li>
+    <li><a href='./structures/com/vmware/model/self_resource_link-structure.html'>self_resource_link</a></li>
+    <li><a href='./structures/com/vmware/model/tag-structure.html'>tag</a></li>
+    <li><a href='./structures/com/vmware/model/task_properties-structure.html'>task_properties</a></li>
+    <li><a href='./structures/com/vmware/model/vdr_lif-structure.html'>vdr_lif</a></li>
+    <li><a href='./structures/com/vmware/model/vdr_route-structure.html'>vdr_route</a></li>
+    <li><a href='./structures/com/vmware/model/vifs_list_result-structure.html'>vifs_list_result</a></li>
+    <li><a href='./structures/com/vmware/model/virtual_interface-structure.html'>virtual_interface</a></li>
+    <li><a href='./structures/com/vmware/model/vmc_accounts-structure.html'>VMC_accounts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+        </li>
+    </ul>
+   </div>
+</nav>
+
+    <section class="article-main">
+        <h1 class="title">Types</h1>
+        
+           <h1 id="PKG_com.vmware.model">model</h1>
+               
+
+                
+                <table class="reference-types" cellspacing="0" cellpadding="3" border="0"
+                    summary="Package Structures table, listing structures and an explanation">
+                    <tbody>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/advertised_route-structure.html'>model.advertised_route</a></td>
+                            <td>Advertised BGP route </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/api_error-structure.html'>model.api_error</a></td>
+                            <td>Detailed information about an API Error </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/bgp_advertised_routes-structure.html'>model.BGP_advertised_routes</a></td>
+                            <td>Advertised bgp routes </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/bgp_learned_routes-structure.html'>model.BGP_learned_routes</a></td>
+                            <td>Learned bgp routes </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/connected_service_list_result-structure.html'>model.connected_service_list_result</a></td>
+                            <td>A list of status of 'Enabled/Disabled' for a service connected to a linked vpc </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/connected_service_status-structure.html'>model.connected_service_status</a></td>
+                            <td>Status of 'Enabled/Disabled' for a service connected to a linked vpc </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/direct_connect_bgp_info-structure.html'>model.direct_connect_bgp_info</a></td>
+                            <td>Direct Connect BGP related information </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/discovered_resource-structure.html'>model.discovered_resource</a></td>
+                            <td>Base class for resources that are discovered and automatically updated </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/embedded_resource-structure.html'>model.embedded_resource</a></td>
+                            <td>Base class for resources that are embedded in other resources </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/host_eni-structure.html'>model.host_eni</a></td>
+                            <td>Host elastic network interface (ENI) </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/host_status-structure.html'>model.host_status</a></td>
+                            <td>Host status </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/host_status_list_result-structure.html'>model.host_status_list_result</a></td>
+                            <td>Host status list result </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/host_vdr-structure.html'>model.host_vdr</a></td>
+                            <td>Host virtual distributed router (VDR) </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/interface_statistics-structure.html'>model.interface_statistics</a></td>
+                            <td>Statistics for a network interface </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/ip_attachment_pair-structure.html'>model.ip_attachment_pair</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/linked_subnet_info-structure.html'>model.linked_subnet_info</a></td>
+                            <td>Infromation related to a subnet where linked ENIs were created. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/linked_vpc_info-structure.html'>model.linked_vpc_info</a></td>
+                            <td>Linked VPC info </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/linked_vpcs_list_result-structure.html'>model.linked_vpcs_list_result</a></td>
+                            <td>Linked VPC list query result </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/list_result-structure.html'>model.list_result</a></td>
+                            <td>Base class for list results from collections </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/managed_resource-structure.html'>model.managed_resource</a></td>
+                            <td>Base type for resources that are managed by API clients </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/mgmt_service_entry-structure.html'>model.mgmt_service_entry</a></td>
+                            <td>A service entry describes the detail of a network service. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/mgmt_vm_info-structure.html'>model.mgmt_vm_info</a></td>
+                            <td>Management VM access information </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/mgmt_vms_list_result-structure.html'>model.mgmt_vms_list_result</a></td>
+                            <td>Management VM list query result </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/network_status_entry-structure.html'>model.network_status_entry</a></td>
+                            <td>Network status entry </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/network_status_key-structure.html'>model.network_status_key</a></td>
+                            <td>Key used to group network status inquiry results. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/network_status_key_value_pair-structure.html'>model.network_status_key_value_pair</a></td>
+                            <td>List of network status </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/network_status_list_result-structure.html'>model.network_status_list_result</a></td>
+                            <td>List of network status </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/owner_resource_link-structure.html'>model.owner_resource_link</a></td>
+                            <td>The server will populate this field when returing the resource. Ignored on PUT and POST. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/prefix_info-structure.html'>model.prefix_info</a></td>
+                            <td>Service IP prefixes information </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/prefixes_list_result-structure.html'>model.prefixes_list_result</a></td>
+                            <td>Service Prefix list query result </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/public_ip-structure.html'>model.public_ip</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/public_ips_list_result-structure.html'>model.public_ips_list_result</a></td>
+                            <td>Public IP list </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/related_api_error-structure.html'>model.related_api_error</a></td>
+                            <td>Detailed information about a related API error </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/resource-structure.html'>model.resource</a></td>
+                            <td>Base class for resources </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/resource_link-structure.html'>model.resource_link</a></td>
+                            <td>A link to a related resource </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/revisioned_resource-structure.html'>model.revisioned_resource</a></td>
+                            <td>A base class for types that track revisions </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/sddc_user_configuration-structure.html'>model.sddc_user_configuration</a></td>
+                            <td>SDDC configuration parameters for users. User-level addresses/CIDRs are provided. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/self_resource_link-structure.html'>model.self_resource_link</a></td>
+                            <td>The server will populate this field when returing the resource. Ignored on PUT and POST. </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/tag-structure.html'>model.tag</a></td>
+                            <td>Arbitrary key-value pairs that may be attached to an entity </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/task_properties-structure.html'>model.task_properties</a></td>
+                            <td>Task properties </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/vdr_lif-structure.html'>model.vdr_lif</a></td>
+                            <td>Virtual distributed router (VDR) LIF </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/vdr_route-structure.html'>model.vdr_route</a></td>
+                            <td>Virtual Distributed Router (VDR) route entry </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/vifs_list_result-structure.html'>model.vifs_list_result</a></td>
+                            <td>Direct Connect VIFs (Virtual Interface) list query result </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/virtual_interface-structure.html'>model.virtual_interface</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/model/vmc_accounts-structure.html'>model.VMC_accounts</a></td>
+                            <td>Shadow account and linked VPC account </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+         
+        <!-- End List of services with structures -->
+        
+    <footer>
+            <div class="footer">
+            Copyright &#169;  2015-2019 VMware, Inc. All rights reserved.<br/>
+            <a href='http://pubs.vmware.com/copyright-trademark.html'>Copyright and trademark information.</a> Any feedback you provide to VMware is subject to the terms at <a href='http://www.vmware.com/community_terms.html'>www.vmware.com/community_terms.html.</a>
+            </div>
+    </footer>
+    </section>
+    </main>
+</body>
+</html>
