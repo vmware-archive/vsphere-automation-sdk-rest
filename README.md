@@ -144,7 +144,4 @@ Items added to the repository, including items from the Board members, require 2
 * [VMware Developer Community](https://communities.vmware.com/community/vmtn/developer)
 * VMware vSphere [REST API Reference documentation](https://vmware.github.io/vsphere-automation-sdk-rest/vsphere/).
 * VMware VMC [REST API Reference documentation](https://vmware.github.io/vsphere-automation-sdk-rest/vmc/).
-* VMware NSX-T(nsx_api) [REST API Reference documentation](https://vmware.github.io/vsphere-automation-sdk-rest/nsx-t/nsx_api/).
-* VMware NSX-T(nsx_policy_api) [REST API Reference documentation](https://vmware.github.io/vsphere-automation-sdk-rest/nsx-t/nsx_policy_api).
-* VMware NSX-T(nsx_vmc_app_api) [REST API Reference documentation](https://vmware.github.io/vsphere-automation-sdk-rest/nsx-t/nsx_vmc_app_api).
 * [VMware REST forum](https://code.vmware.com/forums/7506/vsphere-automation-sdk-for-rest)
