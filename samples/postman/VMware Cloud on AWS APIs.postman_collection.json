@@ -1,13 +1,12 @@
 {
 	"info": {
-		"_postman_id": "93069afd-05ea-4c8b-841f-25fd07aa8ac9",
+		"_postman_id": "85d190a5-6e29-4307-946b-12748451079e",
 		"name": "VMware Cloud on AWS APIs",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "- Authentication",
-			"description": null,
 			"item": [
 				{
 					"name": "Login",
@@ -67,15 +66,1480 @@
 		},
 		{
 			"name": "Orgs",
-			"description": null,
 			"item": [
 				{
-					"name": "List Orgs",
+					"name": "Reservations",
+					"item": [
+						{
+							"name": "Maintenance Window",
+							"item": [
+								{
+									"name": "Details",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/reservations/:reservation/mw",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"reservations",
+												":reservation",
+												"mw"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "reservation",
+													"value": "{{reservation}}"
+												}
+											]
+										},
+										"description": "get the maintenance window for this SDDC"
+									},
+									"response": []
+								},
+								{
+									"name": "Update",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "Maintenance Window"
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/reservations/:reservation/mw",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"reservations",
+												":reservation",
+												"mw"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "reservation",
+													"value": "{{reservation}}"
+												}
+											]
+										},
+										"description": "update the maintenance window for this SDDC"
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/reservations",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"reservations"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										}
+									]
+								},
+								"description": "Get all reservations for this org"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Tasks",
+					"item": [
+						{
+							"name": "List - Filter",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/tasks?$filter={{$filter}}",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "{{$filter}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										}
+									]
+								},
+								"description": "List all tasks with optional filtering."
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "csp-auth-token",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/tasks",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"tasks"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										}
+									]
+								},
+								"description": "List Tasks for an Org"
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/tasks/:task?action={{action}}",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"tasks",
+										":task"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "{{action}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "task",
+											"value": "{{task}}"
+										}
+									]
+								},
+								"description": "Request that a running task be canceled.\nThis is advisory only, some tasks may not be cancelable, and some tasks might take\nan arbitrary amount of time to respond to a cancelation request. The task must be monitored\nto determine subsequent status.\n"
+							},
+							"response": []
+						},
+						{
+							"name": "Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/tasks/:task",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"tasks",
+										":task"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "task",
+											"value": "{{task}}"
+										}
+									]
+								},
+								"description": "Retrieve details of a task."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Providers",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/providers",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"providers"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										}
+									]
+								},
+								"description": "Get enabled cloud providers for an organization"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "SDDC Template",
+					"item": [
+						{
+							"name": "Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddc-templates/:templateId",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddc-templates",
+										":templateId"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "templateId",
+											"value": "{{templateId}}"
+										}
+									]
+								},
+								"description": "Get configuration template by given template id."
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddc-templates/:templateId",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddc-templates",
+										":templateId"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "templateId",
+											"value": "{{templateId}}"
+										}
+									]
+								},
+								"description": "Delete SDDC template identified by given id."
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddc-templates",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddc-templates"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										}
+									]
+								},
+								"description": "List all available SDDC configuration templates in an organization"
+							},
+							"response": []
+						},
+						{
+							"name": "Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/sddc-template",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"sddc-template"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										}
+									]
+								},
+								"description": "Get configuration template for  an SDDC"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Storage",
+					"item": [
+						{
+							"name": "List Constraints",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/storage/cluster-constraints?provider={{provider}}&num_hosts={{num_hosts}}",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"storage",
+										"cluster-constraints"
+									],
+									"query": [
+										{
+											"key": "provider",
+											"value": "{{provider}}"
+										},
+										{
+											"key": "num_hosts",
+											"value": "{{num_hosts}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										}
+									]
+								},
+								"description": "Get constraints on cluster storage size for EBS-backed clusters."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Account Link",
+					"item": [
+						{
+							"name": "Connections",
+							"item": [
+								{
+									"name": "List",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/account-link/sddc-connections?sddc={{sddc}}",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"account-link",
+												"sddc-connections"
+											],
+											"query": [
+												{
+													"key": "sddc",
+													"value": "{{sddc}}"
+												}
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												}
+											]
+										},
+										"description": "Get a list of SDDC connections currently setup for the customer's organization."
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Subnets",
+							"item": [
+								{
+									"name": "Get",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/account-link/compatible-subnets-async?linkedAccountId={{linkedAccountId}}&region={{region}}&sddc={{sddc}}",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"account-link",
+												"compatible-subnets-async"
+											],
+											"query": [
+												{
+													"key": "linkedAccountId",
+													"value": "{{linkedAccountId}}"
+												},
+												{
+													"key": "region",
+													"value": "{{region}}"
+												},
+												{
+													"key": "sddc",
+													"value": "{{sddc}}"
+												}
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												}
+											]
+										},
+										"description": "Gets a customer's compatible subnets for account linking via a task. The information is returned as a member of the task (found in task.params['subnet_list_result'] when you are notified it is complete), and it's documented under ref /definitions/AwsCompatibleSubnets"
+									},
+									"response": []
+								},
+								{
+									"name": "Create - Async",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "The subnet chosen by the customer"
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/account-link/compatible-subnets-async",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"account-link",
+												"compatible-subnets-async"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												}
+											]
+										},
+										"description": "Sets which subnet to use to link accounts and finishes the linking process via a task"
+									},
+									"response": []
+								},
+								{
+									"name": "Create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/account-link/compatible-subnets",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"account-link",
+												"compatible-subnets"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												}
+											]
+										},
+										"description": "Sets which subnet to use to link accounts and finishes the linking process"
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Create Account Link URL",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/account-link",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"account-link"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										}
+									]
+								},
+								"description": "Gets a link that can be used on a customer's account to start the linking process."
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/account-link/connected-accounts/:linkedAccountPathId?forceEvenWhenSddcPresent={{forceEvenWhenSddcPresent}}",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"account-link",
+										"connected-accounts",
+										":linkedAccountPathId"
+									],
+									"query": [
+										{
+											"key": "forceEvenWhenSddcPresent",
+											"value": "{{forceEvenWhenSddcPresent}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "linkedAccountPathId",
+											"value": "{{linkedAccountPathId}}"
+										}
+									]
+								},
+								"description": "Delete a particular connected (linked) account."
+							},
+							"response": []
+						},
+						{
+							"name": "Remap",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "The zones request information about who to map and what to map."
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/account-link/map-customer-zones",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"account-link",
+										"map-customer-zones"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										}
+									]
+								},
+								"description": "Creates a task to re-map customer's datacenters across zones."
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/account-link/connected-accounts?provider={{provider}}",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"account-link",
+										"connected-accounts"
+									],
+									"query": [
+										{
+											"key": "provider",
+											"value": "{{provider}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										}
+									]
+								},
+								"description": "Get a list of connected accounts"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Subscription",
+					"item": [
+						{
+							"name": "Offers",
+							"item": [
+								{
+									"name": "List",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/subscriptions/offer-instances?region={{region}}&product_type={{product_type}}&product={{product}}&type={{type}}",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"subscriptions",
+												"offer-instances"
+											],
+											"query": [
+												{
+													"key": "region",
+													"value": "{{region}}"
+												},
+												{
+													"key": "product_type",
+													"value": "{{product_type}}"
+												},
+												{
+													"key": "product",
+													"value": "{{product}}"
+												},
+												{
+													"key": "type",
+													"value": "{{type}}"
+												}
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												}
+											]
+										},
+										"description": "List all offers available for the specific product type in the specific region"
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "subscriptionRequest"
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/subscriptions",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"subscriptions"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										}
+									]
+								},
+								"description": "Initiates the creation of a subscription"
+							},
+							"response": []
+						},
+						{
+							"name": "Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/subscriptions/:subscription",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"subscriptions",
+										":subscription"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "subscription",
+											"value": "{{subscription}}"
+										}
+									]
+								},
+								"description": "Get subscription details for a given subscription id"
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/subscriptions/products",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"subscriptions",
+										"products"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										}
+									]
+								},
+								"description": "List of all the products that are available for purchase.\n"
+							},
+							"response": []
+						},
+						{
+							"name": "List Available by Region",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/subscriptions/offer-instances?region={{region}}&product_type={{product_type}}&product={{product}}&type={{type}}",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"subscriptions",
+										"offer-instances"
+									],
+									"query": [
+										{
+											"key": "region",
+											"value": "{{region}}"
+										},
+										{
+											"key": "product_type",
+											"value": "{{product_type}}"
+										},
+										{
+											"key": "product",
+											"value": "{{product}}"
+										},
+										{
+											"key": "type",
+											"value": "{{type}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										}
+									]
+								},
+								"description": "List all offers available for the specific product type in the specific region"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Support Window",
+					"item": [
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "SDDC to move"
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/tbrs/support-window/:id",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"tbrs",
+										"support-window",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "id",
+											"value": "{{id}}"
+										}
+									]
+								},
+								"description": "Move Sddc to new support window"
+							},
+							"response": []
+						},
+						{
+							"name": "",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/tbrs/support-window?minimumSeatsAvailable={{minimumSeatsAvailable}}&createdBy={{createdBy}}",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"tbrs",
+										"support-window"
+									],
+									"query": [
+										{
+											"key": "minimumSeatsAvailable",
+											"value": "{{minimumSeatsAvailable}}"
+										},
+										{
+											"key": "createdBy",
+											"value": "{{createdBy}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										}
+									]
+								},
+								"description": "Get all available support windows"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Details",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
+								"id": "1871c285-52f7-40f9-b545-a7c944592b5a",
 								"exec": [
 									"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;",
 									"",
@@ -84,7 +1548,8 @@
 									"var OrgID = jsonData[0].id;",
 									"",
 									"postman.setEnvironmentVariable(\"orgid\", OrgID);"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -98,7 +1563,49 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/:org",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs",
+								":org"
+							],
+							"variable": [
+								{
+									"key": "org",
+									"value": "{{org}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
 						},
 						"url": {
 							"raw": "https://vmc.vmware.com/vmc/api/orgs",
@@ -113,139 +1620,8 @@
 								"api",
 								"orgs"
 							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "List Tasks for an Org",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "csp-auth-token",
-								"value": "{{access_token}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
 						},
-						"url": {
-							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/tasks",
-							"protocol": "https",
-							"host": [
-								"vmc",
-								"vmware",
-								"com"
-							],
-							"path": [
-								"vmc",
-								"api",
-								"orgs",
-								"{{orgid}}",
-								"tasks"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "List Providers for an org",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "csp-auth-token",
-								"value": "{{access_token}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
-						},
-						"url": {
-							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/providers",
-							"protocol": "https",
-							"host": [
-								"vmc",
-								"vmware",
-								"com"
-							],
-							"path": [
-								"vmc",
-								"api",
-								"orgs",
-								"{{orgid}}",
-								"providers"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "List Org subscriptions",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "csp-auth-token",
-								"value": "{{access_token}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
-						},
-						"url": {
-							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/subscriptions",
-							"protocol": "https",
-							"host": [
-								"vmc",
-								"vmware",
-								"com"
-							],
-							"path": [
-								"vmc",
-								"api",
-								"orgs",
-								"{{orgid}}",
-								"subscriptions"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "List Org reservations",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "csp-auth-token",
-								"value": "{{access_token}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
-						},
-						"url": {
-							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/subscriptions",
-							"protocol": "https",
-							"host": [
-								"vmc",
-								"vmware",
-								"com"
-							],
-							"path": [
-								"vmc",
-								"api",
-								"orgs",
-								"{{orgid}}",
-								"subscriptions"
-							]
-						}
+						"description": "Return a list of all organizations the calling user (based on credential) is authorized on.\n"
 					},
 					"response": []
 				}
@@ -253,59 +1629,980 @@
 		},
 		{
 			"name": "SDDCs",
-			"description": null,
 			"item": [
 				{
-					"name": "List SDDCs",
-					"event": [
+					"name": "Cluster",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;",
-									"var jsonData = JSON.parse(responseBody);",
-									"",
-									"var SDDCID = jsonData[0].id;",
-									"",
-									"postman.setEnvironmentVariable(\"sddcid\", SDDCID);"
-								]
-							}
+							"name": "EDRS",
+							"item": [
+								{
+									"name": "List SDDC Cluster EDRS Policy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "81f7caee-ab5e-497c-823e-1069f50619c3",
+												"type": "text/javascript",
+												"exec": [
+													"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "csp-auth-token",
+												"value": "{{access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/autoscaler/api/orgs/{{orgid}}/sddcs/{{sddcid}}/clusters/{{clusterid}}/edrs-policy",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"autoscaler",
+												"api",
+												"orgs",
+												"{{orgid}}",
+												"sddcs",
+												"{{sddcid}}",
+												"clusters",
+												"{{clusterid}}",
+												"edrs-policy"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "List SDDC EDRS Policies",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a0aebb71-d8b6-4e27-8605-a926bc972d7c",
+												"type": "text/javascript",
+												"exec": [
+													"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "csp-auth-token",
+												"value": "{{access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/autoscaler/api/orgs/{{orgid}}/sddcs/{{sddcid}}/edrs-policy",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"autoscaler",
+												"api",
+												"orgs",
+												"{{orgid}}",
+												"sddcs",
+												"{{sddcid}}",
+												"edrs-policy"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Set SDDC Cluster EDRS Policy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "81f7caee-ab5e-497c-823e-1069f50619c3",
+												"type": "text/javascript",
+												"exec": [
+													"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "csp-auth-token",
+												"value": "{{access_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"enable_edrs\": true,\n    \"policy_type\": \"performance\",\n    \"max_hosts\": 16,\n    \"min_hosts\": 4\n}"
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/autoscaler/api/orgs/{{orgid}}/sddcs/{{sddcid}}/clusters/{{clusterid}}/edrs-policy",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"autoscaler",
+												"api",
+												"orgs",
+												"{{orgid}}",
+												"sddcs",
+												"{{sddcid}}",
+												"clusters",
+												"{{clusterid}}",
+												"edrs-policy"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/clusters/:cluster",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"clusters",
+										":cluster"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "cluster",
+											"value": "{{cluster}}"
+										}
+									]
+								},
+								"description": "This is a force operation which will delete the cluster even if there can be a data loss. Before calling this operation, all the VMs should be powered off."
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "clusterConfig"
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/clusters",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"clusters"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										}
+									]
+								},
+								"description": "Creates a new cluster in customers sddcs with passed clusterConfig."
+							},
+							"response": []
 						}
 					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "csp-auth-token",
-								"value": "{{access_token}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
-						},
-						"url": {
-							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs",
-							"protocol": "https",
-							"host": [
-								"vmc",
-								"vmware",
-								"com"
-							],
-							"path": [
-								"vmc",
-								"api",
-								"orgs",
-								"{{orgid}}",
-								"sddcs"
-							]
-						}
-					},
-					"response": []
+					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Delete SDDC",
+					"name": "Hosts",
+					"item": [
+						{
+							"name": "Add/Remove",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "esxConfig"
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/esxs?action={{action}}",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"esxs"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "{{action}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										}
+									]
+								},
+								"description": "Add/Remove one or more ESX hosts in the target cloud"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "DNS",
+					"item": [
+						{
+							"name": "Update Public",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/dns/public",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"dns",
+										"public"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										}
+									]
+								},
+								"description": "Update the DNS records of management VMs to use public IP addresses"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Private",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/dns/private",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"dns",
+										"private"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										}
+									]
+								},
+								"description": "Update the DNS records of management VMs to use private IP addresses"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Public IPs",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "allocation spec"
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/publicips",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"publicips"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										}
+									]
+								},
+								"description": "Allocate public IPs for a SDDC"
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "82bc0840-1be6-4255-85f6-52a5f8068a3b",
+										"exec": [
+											"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/publicips",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"publicips"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										}
+									]
+								},
+								"description": "list all public IPs for a SDDC"
+							},
+							"response": []
+						},
+						{
+							"name": "Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/publicips/:id",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"publicips",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "id",
+											"value": "{{id}}"
+										}
+									]
+								},
+								"description": "Get one public IP for a SDDC"
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "SddcPublicIp object to update"
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/publicips/:id?action={{action}}",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"publicips",
+										":id"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "{{action}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "id",
+											"value": "{{id}}"
+										}
+									]
+								},
+								"description": "Attach or detach a public IP to workload VM for a SDDC"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/publicips/:id",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"publicips",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "id",
+											"value": "{{id}}"
+										}
+									]
+								},
+								"description": "Free one public IP for a SDDC"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Addon",
+					"item": [
+						{
+							"name": "Credential",
+							"item": [
+								{
+									"name": "List",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddcId/addons/:addonType/credentials",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddcId",
+												"addons",
+												":addonType",
+												"credentials"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddcId",
+													"value": "{{sddcId}}"
+												},
+												{
+													"key": "addonType",
+													"value": "{{addonType}}"
+												}
+											]
+										},
+										"description": "List all the credentials assoicated with an addon type with in a SDDC"
+									},
+									"response": []
+								},
+								{
+									"name": "Create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "Credentials creation payload"
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddcId/addons/:addonType/credentials",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddcId",
+												"addons",
+												":addonType",
+												"credentials"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddcId",
+													"value": "{{sddcId}}"
+												},
+												{
+													"key": "addonType",
+													"value": "{{addonType}}"
+												}
+											]
+										},
+										"description": "Associated a new add on credentials with the SDDC such as HCX"
+									},
+									"response": []
+								},
+								{
+									"name": "Details",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddcId/addons/:addonType/credentials/:name",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddcId",
+												"addons",
+												":addonType",
+												"credentials",
+												":name"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddcId",
+													"value": "{{sddcId}}"
+												},
+												{
+													"key": "addonType",
+													"value": "{{addonType}}"
+												},
+												{
+													"key": "name",
+													"value": "{{name}}"
+												}
+											]
+										},
+										"description": "Get credential details by name"
+									},
+									"response": []
+								},
+								{
+									"name": "Update",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "Credentials update payload"
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddcId/addons/:addonType/credentials/:name",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddcId",
+												"addons",
+												":addonType",
+												"credentials",
+												":name"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddcId",
+													"value": "{{sddcId}}"
+												},
+												{
+													"key": "addonType",
+													"value": "{{addonType}}"
+												},
+												{
+													"key": "name",
+													"value": "{{name}}"
+												}
+											]
+										},
+										"description": "Update credential details"
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Delete",
 					"request": {
 						"method": "DELETE",
 						"header": [
@@ -319,7 +2616,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://vmc.vmware.com/vmc/api/orgs/12345-34324234/sddcs/123456-789676",
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc",
 							"protocol": "https",
 							"host": [
 								"vmc",
@@ -330,9 +2627,19 @@
 								"vmc",
 								"api",
 								"orgs",
-								"12345-34324234",
+								":org",
 								"sddcs",
-								"123456-789676"
+								":sddc"
+							],
+							"variable": [
+								{
+									"key": "org",
+									"value": "{{org}}"
+								},
+								{
+									"key": "sddc",
+									"value": "{{sddc}}"
+								}
 							]
 						},
 						"description": "Replace the Org ID and SDDC ID to use this call"
@@ -340,104 +2647,7 @@
 					"response": []
 				},
 				{
-					"name": "List SDDC Public IPs",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "csp-auth-token",
-								"value": "{{access_token}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
-						},
-						"url": {
-							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/publicips",
-							"protocol": "https",
-							"host": [
-								"vmc",
-								"vmware",
-								"com"
-							],
-							"path": [
-								"vmc",
-								"api",
-								"orgs",
-								"{{orgid}}",
-								"sddcs",
-								"{{sddcid}}",
-								"publicips"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "List compute gateways",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "csp-auth-token",
-								"value": "{{access_token}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
-						},
-						"url": {
-							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/networks/4.0/edges/edge-2",
-							"protocol": "https",
-							"host": [
-								"vmc",
-								"vmware",
-								"com"
-							],
-							"path": [
-								"vmc",
-								"api",
-								"orgs",
-								"{{orgid}}",
-								"sddcs",
-								"{{sddcid}}",
-								"networks",
-								"4.0",
-								"edges",
-								"edge-2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Create SDDC",
+					"name": "Create",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -452,10 +2662,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"num_hosts\": 0,\n  \"name\": \"Alan Renouf Test\",\n  \"provider\": \"ZEROCLOUD\",\n  \"region\": \"US_WEST_2\"\n}"
+							"raw": "{\n  \"num_hosts\": 1,\n  \"name\": \"Postman Sourced SDDC\",\n  \"provider\": \"AWS\",\n  \"region\": \"US_WEST_2\"\n}"
 						},
 						"url": {
-							"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs",
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs",
 							"protocol": "https",
 							"host": [
 								"vmc",
@@ -466,10 +2676,225 @@
 								"vmc",
 								"api",
 								"orgs",
-								"{{orgid}}",
+								":org",
 								"sddcs"
+							],
+							"variable": [
+								{
+									"key": "org",
+									"value": "{{org}}"
+								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "Convert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/convert",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs",
+								":org",
+								"sddcs",
+								":sddc",
+								"convert"
+							],
+							"variable": [
+								{
+									"key": "org",
+									"value": "{{org}}"
+								},
+								{
+									"key": "sddc",
+									"value": "{{sddc}}"
+								}
+							]
+						},
+						"description": "This API converts a one host SDDC to a three node DEFAULT SDDC. It takes care of configuring and upgrading the vCenter configurations on the SDDC for high availability and data redundancy."
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "dc88f06a-b75a-4591-aac7-05d63e50fb21",
+								"exec": [
+									"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;",
+									"var jsonData = JSON.parse(responseBody);",
+									"",
+									"var SDDCID = jsonData[0].id;",
+									"",
+									"postman.setEnvironmentVariable(\"sddcid\", SDDCID);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs",
+								":org",
+								"sddcs"
+							],
+							"variable": [
+								{
+									"key": "org",
+									"value": "{{org}}"
+								}
+							]
+						},
+						"description": "List all the SDDCs of an organization"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "Patch request for the SDDC"
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs",
+								":org",
+								"sddcs",
+								":sddc"
+							],
+							"variable": [
+								{
+									"key": "org",
+									"value": "{{org}}"
+								},
+								{
+									"key": "sddc",
+									"value": "{{sddc}}"
+								}
+							]
+						},
+						"description": "Patch SDDC"
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs",
+								":org",
+								"sddcs",
+								":sddc"
+							],
+							"variable": [
+								{
+									"key": "org",
+									"value": "{{org}}"
+								},
+								{
+									"key": "sddc",
+									"value": "{{sddc}}"
+								}
+							]
+						},
+						"description": "Get SDDC"
 					},
 					"response": []
 				}
@@ -477,14 +2902,12 @@
 		},
 		{
 			"name": "Networking",
-			"description": null,
 			"item": [
 				{
 					"name": "Networks",
-					"description": null,
 					"item": [
 						{
-							"name": "List Networks",
+							"name": "List",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -495,10 +2918,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+									"raw": ""
 								},
 								"url": {
-									"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/networks/4.0/sddc/networks",
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/sddc/networks/",
 									"protocol": "https",
 									"host": [
 										"vmc",
@@ -509,15 +2932,253 @@
 										"vmc",
 										"api",
 										"orgs",
-										"{{orgid}}",
+										":org",
 										"sddcs",
-										"{{sddcid}}",
+										":sddc",
+										"networks",
+										"4.0",
+										"sddc",
+										"networks",
+										""
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/sddc/networks/:networkId",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"sddc",
+										"networks",
+										":networkId"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "networkId",
+											"value": "{{networkId}}"
+										}
+									]
+								},
+								"description": "Retrieve information about a network in an SDDC."
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/sddc/networks/:networkId",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"sddc",
+										"networks",
+										":networkId"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "networkId",
+											"value": "{{networkId}}"
+										}
+									]
+								},
+								"description": "Modify a network in an SDDC."
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/sddc/networks/:networkId",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"sddc",
+										"networks",
+										":networkId"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "networkId",
+											"value": "{{networkId}}"
+										}
+									]
+								},
+								"description": "Delete a network in an SDDC."
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/sddc/networks",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
 										"networks",
 										"4.0",
 										"sddc",
 										"networks"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										}
 									]
-								}
+								},
+								"description": "Create a network in an SDDC."
 							},
 							"response": []
 						}
@@ -526,24 +3187,347 @@
 				},
 				{
 					"name": "Firewall",
-					"description": null,
 					"item": [
 						{
-							"name": "Get MGW Firewall Rules",
+							"name": "Rule",
+							"item": [
+								{
+									"name": "Update",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/firewall/config/rules/:ruleId",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddc",
+												"networks",
+												"4.0",
+												"edges",
+												":edgeId",
+												"firewall",
+												"config",
+												"rules",
+												":ruleId"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddc",
+													"value": "{{sddc}}"
+												},
+												{
+													"key": "edgeId",
+													"value": "{{edgeId}}"
+												},
+												{
+													"key": "ruleId",
+													"value": "{{ruleId}}"
+												}
+											]
+										},
+										"description": "Modify the specified firewall rule for a management or compute gateway (NSX Edge)."
+									},
+									"response": []
+								},
+								{
+									"name": "Delete",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/firewall/config/rules/:ruleId",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddc",
+												"networks",
+												"4.0",
+												"edges",
+												":edgeId",
+												"firewall",
+												"config",
+												"rules",
+												":ruleId"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddc",
+													"value": "{{sddc}}"
+												},
+												{
+													"key": "edgeId",
+													"value": "{{edgeId}}"
+												},
+												{
+													"key": "ruleId",
+													"value": "{{ruleId}}"
+												}
+											]
+										},
+										"description": "Delete a specific firewall rule for a management or compute gateway (NSX Edge)."
+									},
+									"response": []
+								},
+								{
+									"name": "Details",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "csp-auth-token",
+												"value": "{{access_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/firewall/config/rules/:ruleId",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddc",
+												"networks",
+												"4.0",
+												"edges",
+												":edgeId",
+												"firewall",
+												"config",
+												"rules",
+												":ruleId"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddc",
+													"value": "{{sddc}}"
+												},
+												{
+													"key": "edgeId",
+													"value": "{{edge-id}}"
+												},
+												{
+													"key": "ruleId",
+													"value": "{{rule-id}}"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/firewall/config/rules",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddc",
+												"networks",
+												"4.0",
+												"edges",
+												":edgeId",
+												"firewall",
+												"config",
+												"rules"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddc",
+													"value": "{{sddc}}"
+												},
+												{
+													"key": "edgeId",
+													"value": "{{edgeId}}"
+												}
+											]
+										},
+										"description": "Append firewall rules for a management or compute gateway (NSX Edge)."
+									},
+									"response": []
+								},
+								{
+									"name": "Stats",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/firewall/statistics/:ruleId",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddc",
+												"networks",
+												"4.0",
+												"edges",
+												":edgeId",
+												"firewall",
+												"statistics",
+												":ruleId"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddc",
+													"value": "{{sddc}}"
+												},
+												{
+													"key": "edgeId",
+													"value": "{{edgeId}}"
+												},
+												{
+													"key": "ruleId",
+													"value": "{{ruleId}}"
+												}
+											]
+										},
+										"description": "Retrieve statistics for a specific firewall rule for a management or compute gateway (NSX Edge)."
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "List",
 							"request": {
 								"method": "GET",
 								"header": [
 									{
-										"key": "csp-auth-token",
-										"value": "{{access_token}}"
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+									"raw": ""
 								},
 								"url": {
-									"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/networks/4.0/edges/edge-1/firewall/config",
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/firewall/config",
 									"protocol": "https",
 									"host": [
 										"vmc",
@@ -554,36 +3538,55 @@
 										"vmc",
 										"api",
 										"orgs",
-										"{{orgid}}",
+										":org",
 										"sddcs",
-										"{{sddcid}}",
+										":sddc",
 										"networks",
 										"4.0",
 										"edges",
-										"edge-1",
+										":edgeId",
 										"firewall",
 										"config"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
 									]
-								}
+								},
+								"description": "Retrieve the firewall configuration for a management or compute gateway (NSX Edge)."
 							},
 							"response": []
 						},
 						{
-							"name": "Get MGW Firewall Statistics",
+							"name": "Update",
 							"request": {
-								"method": "GET",
+								"method": "PUT",
 								"header": [
 									{
-										"key": "csp-auth-token",
-										"value": "{{access_token}}"
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+									"raw": ""
 								},
 								"url": {
-									"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/networks/4.0/edges/edge-1/firewall/config",
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/firewall/config",
 									"protocol": "https",
 									"host": [
 										"vmc",
@@ -594,36 +3597,55 @@
 										"vmc",
 										"api",
 										"orgs",
-										"{{orgid}}",
+										":org",
 										"sddcs",
-										"{{sddcid}}",
+										":sddc",
 										"networks",
 										"4.0",
 										"edges",
-										"edge-1",
+										":edgeId",
 										"firewall",
 										"config"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
 									]
-								}
+								},
+								"description": "Configure firewall for a management or compute gateway (NSX Edge)."
 							},
 							"response": []
 						},
 						{
-							"name": "Get Firewall Rule details",
+							"name": "Delete",
 							"request": {
-								"method": "GET",
+								"method": "DELETE",
 								"header": [
 									{
-										"key": "csp-auth-token",
-										"value": "{{access_token}}"
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+									"raw": ""
 								},
 								"url": {
-									"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/networks/4.0/edges/edge-1/firewall/config/rules/131084",
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/firewall/config",
 									"protocol": "https",
 									"host": [
 										"vmc",
@@ -634,19 +3656,32 @@
 										"vmc",
 										"api",
 										"orgs",
-										"{{orgid}}",
+										":org",
 										"sddcs",
-										"{{sddcid}}",
+										":sddc",
 										"networks",
 										"4.0",
 										"edges",
-										"edge-1",
+										":edgeId",
 										"firewall",
-										"config",
-										"rules",
-										"131084"
+										"config"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
 									]
-								}
+								},
+								"description": "Delete firewall configuration for a management or compute gateway (NSX Edge)."
 							},
 							"response": []
 						}
@@ -655,10 +3690,9 @@
 				},
 				{
 					"name": "IPSec",
-					"description": null,
 					"item": [
 						{
-							"name": "Get IPSec Config",
+							"name": "Details",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -669,10 +3703,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+									"raw": ""
 								},
 								"url": {
-									"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/networks/4.0/edges/edge-1/ipsec/config",
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/ipsec/config?showSensitiveData={{showSensitiveData}}",
 									"protocol": "https",
 									"host": [
 										"vmc",
@@ -683,17 +3717,214 @@
 										"vmc",
 										"api",
 										"orgs",
-										"{{orgid}}",
+										":org",
 										"sddcs",
-										"{{sddcid}}",
+										":sddc",
 										"networks",
 										"4.0",
 										"edges",
-										"edge-1",
+										":edgeId",
 										"ipsec",
 										"config"
+									],
+									"query": [
+										{
+											"key": "showSensitiveData",
+											"value": "{{showSensitiveData}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edge-id}}"
+										}
 									]
 								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "IPsec Configuration dto object."
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/ipsec/config",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"ipsec",
+										"config"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Modify IPsec VPN configuration for a management or compute gateway (NSX Edge)."
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/ipsec/config",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"ipsec",
+										"config"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Delete IPsec VPN configuration for a management or compute gateway (NSX Edge)."
+							},
+							"response": []
+						},
+						{
+							"name": "Get Stats",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/ipsec/statistics",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"ipsec",
+										"statistics"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Retrieve IPsec VPN statistics for a management or compute gateway (NSX Edge)."
 							},
 							"response": []
 						}
@@ -702,10 +3933,151 @@
 				},
 				{
 					"name": "Edge Devices",
-					"description": null,
 					"item": [
 						{
-							"name": "List Edge Devices",
+							"name": "vNICs",
+							"item": [
+								{
+									"name": "List",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/vnics",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddc",
+												"networks",
+												"4.0",
+												"edges",
+												":edgeId",
+												"vnics"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddc",
+													"value": "{{sddc}}"
+												},
+												{
+													"key": "edgeId",
+													"value": "{{edgeId}}"
+												}
+											]
+										},
+										"description": "Retrieve all interfaces for the specified management or compute gateway (NSX Edge)."
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Peer Config",
+							"item": [
+								{
+									"name": "List",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/peerconfig?objecttype={{objecttype}}&objectid={{objectid}}&templateid={{templateid}}",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddc",
+												"networks",
+												"4.0",
+												"edges",
+												":edgeId",
+												"peerconfig"
+											],
+											"query": [
+												{
+													"key": "objecttype",
+													"value": "{{objecttype}}"
+												},
+												{
+													"key": "objectid",
+													"value": "{{objectid}}"
+												},
+												{
+													"key": "templateid",
+													"value": "{{templateid}}"
+												}
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddc",
+													"value": "{{sddc}}"
+												},
+												{
+													"key": "edgeId",
+													"value": "{{edgeId}}"
+												}
+											]
+										},
+										"description": "Retrieve IPsec VPN peer configuration for a management or compute gateway (NSX Edge). The response output is free form text generated as per the template specified as request parameter input."
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "List",
 							"event": [
 								{
 									"listen": "test",
@@ -728,7 +4100,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
+									"raw": ""
 								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/networks/4.0/edges",
@@ -752,134 +4124,1498 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Get Status",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/status?getlatest={{getlatest}}&detailed={{detailed}}",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"status"
+									],
+									"query": [
+										{
+											"key": "getlatest",
+											"value": "{{getlatest}}"
+										},
+										{
+											"key": "detailed",
+											"value": "{{detailed}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Retrieve the status of the specified management or compute gateway (NSX Edge)."
+							},
+							"response": []
 						}
 					],
 					"_postman_isSubFolder": true
-				}
-			]
-		},
-		{
-			"name": "EDRS",
-			"description": "",
-			"item": [
-				{
-					"name": "List SDDC Cluster EDRS Policy",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "81f7caee-ab5e-497c-823e-1069f50619c3",
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;"
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "csp-auth-token",
-								"value": "{{access_token}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
-						},
-						"url": {
-							"raw": "https://vmc.vmware.com/vmc/autoscaler/api/orgs/{{orgid}}/sddcs/{{sddcid}}/clusters/{{clusterid}}/edrs-policy",
-							"protocol": "https",
-							"host": [
-								"vmc",
-								"vmware",
-								"com"
-							],
-							"path": [
-								"vmc",
-								"autoscaler",
-								"api",
-								"orgs",
-								"{{orgid}}",
-								"sddcs",
-								"{{sddcid}}",
-								"clusters",
-								"{{clusterid}}",
-								"edrs-policy"
-							]
-						}
-					},
-					"response": []
 				},
 				{
-					"name": "List SDDC EDRS Policies",
-					"event": [
+					"name": "DHCP",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"id": "a0aebb71-d8b6-4e27-8605-a926bc972d7c",
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;"
-								]
-							}
+							"name": "List DHCP Lease",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/dhcp/leaseInfo",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"dhcp",
+										"leaseInfo"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Retrieve DHCP leaseinfo of a management or compute gateway (NSX Edge)."
+							},
+							"response": []
 						}
 					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "csp-auth-token",
-								"value": "{{access_token}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{ \n  \"username\": \"product@vmware.com\", \n  \"password\": \"VMware@123\"\n}"
-						},
-						"url": {
-							"raw": "https://vmc.vmware.com/vmc/autoscaler/api/orgs/{{orgid}}/sddcs/{{sddcid}}/edrs-policy",
-							"protocol": "https",
-							"host": [
-								"vmc",
-								"vmware",
-								"com"
-							],
-							"path": [
-								"vmc",
-								"autoscaler",
-								"api",
-								"orgs",
-								"{{orgid}}",
-								"sddcs",
-								"{{sddcid}}",
-								"edrs-policy"
-							]
-						}
-					},
-					"response": []
+					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Set SDDC Cluster EDRS Policy",
-					"event": [
+					"name": "DNS",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"id": "81f7caee-ab5e-497c-823e-1069f50619c3",
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Response time is less than 1000ms\"] = responseTime < 10000;"
-								]
-							}
+							"name": "Stats",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/dns/statistics",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"dns",
+										"statistics"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Retrieve DNS server statistics for a management or compute gateway (NSX Edge)."
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/dns/config",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"dns",
+										"config"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Retrieve DNS server configuration for a management or compute gateway (NSX Edge)."
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/dns/config",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"dns",
+										"config"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Configure DNS server configuration for a management or compute gateway (NSX Edge)."
+							},
+							"response": []
+						},
+						{
+							"name": "Set Status",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/dns/config?enable={{enable}}",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"dns",
+										"config"
+									],
+									"query": [
+										{
+											"key": "enable",
+											"value": "{{enable}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Enable or disable DNS configuration for a management or compute gateway (NSX Edge)."
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/dns/config",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"dns",
+										"config"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Delete DNS server configuration for a management or compute gateway (NSX Edge)."
+							},
+							"response": []
 						}
 					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "NAT",
+					"item": [
+						{
+							"name": "Rules",
+							"item": [
+								{
+									"name": "Update",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/nat/config/rules/:ruleId",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddc",
+												"networks",
+												"4.0",
+												"edges",
+												":edgeId",
+												"nat",
+												"config",
+												"rules",
+												":ruleId"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddc",
+													"value": "{{sddc}}"
+												},
+												{
+													"key": "edgeId",
+													"value": "{{edgeId}}"
+												},
+												{
+													"key": "ruleId",
+													"value": "{{ruleId}}"
+												}
+											]
+										},
+										"description": "Update the specific NAT rule for a management or compute gateway (NSX Edge)."
+									},
+									"response": []
+								},
+								{
+									"name": "Delete",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/nat/config/rules/:ruleId",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddc",
+												"networks",
+												"4.0",
+												"edges",
+												":edgeId",
+												"nat",
+												"config",
+												"rules",
+												":ruleId"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddc",
+													"value": "{{sddc}}"
+												},
+												{
+													"key": "edgeId",
+													"value": "{{edgeId}}"
+												},
+												{
+													"key": "ruleId",
+													"value": "{{ruleId}}"
+												}
+											]
+										},
+										"description": "Delete the specific NAT rule for a management or compute gateway (NSX Edge)."
+									},
+									"response": []
+								},
+								{
+									"name": "Create",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/nat/config/rules",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddc",
+												"networks",
+												"4.0",
+												"edges",
+												":edgeId",
+												"nat",
+												"config",
+												"rules"
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddc",
+													"value": "{{sddc}}"
+												},
+												{
+													"key": "edgeId",
+													"value": "{{edgeId}}"
+												}
+											]
+										},
+										"description": "Append a NAT rule for a management or compute gateway (NSX Edge)."
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/nat/config",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"nat",
+										"config"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Retrieve NAT configuration for a management or compute gateway (NSX Edge)."
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/nat/config",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"nat",
+										"config"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Modify NAT configuration for a management or compute gateway (NSX Edge)."
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/nat/config",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"nat",
+										"config"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Delete all NAT configuration for the specified management or compute gateway (NSX Edge)."
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/nat/config/rules",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"nat",
+										"config",
+										"rules"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Append a NAT rule for a management or compute gateway (NSX Edge)."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "L2VPN",
+					"item": [
+						{
+							"name": "Details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/sddc/cgws/:edgeId/l2vpn/config?showSensitiveData={{showSensitiveData}}",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"sddc",
+										"cgws",
+										":edgeId",
+										"l2vpn",
+										"config"
+									],
+									"query": [
+										{
+											"key": "showSensitiveData",
+											"value": "{{showSensitiveData}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Retrieve SDDC L2 VPN configuration."
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/sddc/cgws/:edgeId/l2vpn/config",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"sddc",
+										"cgws",
+										":edgeId",
+										"l2vpn",
+										"config"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Modify SDDC L2 VPN configuration"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/sddc/cgws/:edgeId/l2vpn/config",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"sddc",
+										"cgws",
+										":edgeId",
+										"l2vpn",
+										"config"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Delete SDDC L2 VPN configuration."
+							},
+							"response": []
+						},
+						{
+							"name": "Stats",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/l2vpn/config/statistics",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"l2vpn",
+										"config",
+										"statistics"
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Retrieve L2 VPN statistics for a compute gateway (NSX Edge)."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Statistics",
+					"item": [
+						{
+							"name": "Dashboard",
+							"item": [
+								{
+									"name": "Interface",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/statistics/dashboard/interface?interval={{interval}}",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddc",
+												"networks",
+												"4.0",
+												"edges",
+												":edgeId",
+												"statistics",
+												"dashboard",
+												"interface"
+											],
+											"query": [
+												{
+													"key": "interval",
+													"value": "{{interval}}"
+												}
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddc",
+													"value": "{{sddc}}"
+												},
+												{
+													"key": "edgeId",
+													"value": "{{edgeId}}"
+												}
+											]
+										},
+										"description": "Retrieve interface dashboard statistics for a management or compute gateway (NSX Edge)."
+									},
+									"response": []
+								},
+								{
+									"name": "Firewall",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/statistics/dashboard/firewall?interval={{interval}}",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddc",
+												"networks",
+												"4.0",
+												"edges",
+												":edgeId",
+												"statistics",
+												"dashboard",
+												"firewall"
+											],
+											"query": [
+												{
+													"key": "interval",
+													"value": "{{interval}}"
+												}
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddc",
+													"value": "{{sddc}}"
+												},
+												{
+													"key": "edgeId",
+													"value": "{{edgeId}}"
+												}
+											]
+										},
+										"description": "Retrieve firewall dashboard statistics for a management or compute gateway (NSX Edge)."
+									},
+									"response": []
+								},
+								{
+									"name": "IPSec",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/statistics/dashboard/ipsec?interval={{interval}}",
+											"protocol": "https",
+											"host": [
+												"vmc",
+												"vmware",
+												"com"
+											],
+											"path": [
+												"vmc",
+												"api",
+												"orgs",
+												":org",
+												"sddcs",
+												":sddc",
+												"networks",
+												"4.0",
+												"edges",
+												":edgeId",
+												"statistics",
+												"dashboard",
+												"ipsec"
+											],
+											"query": [
+												{
+													"key": "interval",
+													"value": "{{interval}}"
+												}
+											],
+											"variable": [
+												{
+													"key": "org",
+													"value": "{{org}}"
+												},
+												{
+													"key": "sddc",
+													"value": "{{sddc}}"
+												},
+												{
+													"key": "edgeId",
+													"value": "{{edgeId}}"
+												}
+											]
+										},
+										"description": "Retrieve ipsec dashboard statistics for a management or compute gateway (NSX Edge)."
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Interface",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/statistics/interfaces?startTime={{startTime}}&endTime={{endTime}}",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"statistics",
+										"interfaces"
+									],
+									"query": [
+										{
+											"key": "startTime",
+											"value": "{{startTime}}"
+										},
+										{
+											"key": "endTime",
+											"value": "{{endTime}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Retrieve interface statistics for a management or compute gateway (NSX Edge)."
+							},
+							"response": []
+						},
+						{
+							"name": "Uplink",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/statistics/interfaces/uplink?startTime={{startTime}}&endTime={{endTime}}",
+									"protocol": "https",
+									"host": [
+										"vmc",
+										"vmware",
+										"com"
+									],
+									"path": [
+										"vmc",
+										"api",
+										"orgs",
+										":org",
+										"sddcs",
+										":sddc",
+										"networks",
+										"4.0",
+										"edges",
+										":edgeId",
+										"statistics",
+										"interfaces",
+										"uplink"
+									],
+									"query": [
+										{
+											"key": "startTime",
+											"value": "{{startTime}}"
+										},
+										{
+											"key": "endTime",
+											"value": "{{endTime}}"
+										}
+									],
+									"variable": [
+										{
+											"key": "org",
+											"value": "{{org}}"
+										},
+										{
+											"key": "sddc",
+											"value": "{{sddc}}"
+										},
+										{
+											"key": "edgeId",
+											"value": "{{edgeId}}"
+										}
+									]
+								},
+								"description": "Retrieve uplink interface statistics for a management or compute gateway (NSX Edge)."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Test Connectivity",
 					"request": {
 						"method": "POST",
 						"header": [
 							{
-								"key": "csp-auth-token",
-								"value": "{{access_token}}"
+								"key": "Accept",
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
@@ -888,10 +5624,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"enable_edrs\": true,\n    \"policy_type\": \"performance\",\n    \"max_hosts\": 16,\n    \"min_hosts\": 4\n}"
+							"raw": "request information"
 						},
 						"url": {
-							"raw": "https://vmc.vmware.com/vmc/autoscaler/api/orgs/{{orgid}}/sddcs/{{sddcid}}/clusters/{{clusterid}}/edrs-policy",
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networking/connectivity-tests?action={{action}}",
 							"protocol": "https",
 							"host": [
 								"vmc",
@@ -900,17 +5636,83 @@
 							],
 							"path": [
 								"vmc",
-								"autoscaler",
 								"api",
 								"orgs",
-								"{{orgid}}",
+								":org",
 								"sddcs",
-								"{{sddcid}}",
-								"clusters",
-								"{{clusterid}}",
-								"edrs-policy"
+								":sddc",
+								"networking",
+								"connectivity-tests"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "{{action}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "org",
+									"value": "{{org}}"
+								},
+								{
+									"key": "sddc",
+									"value": "{{sddc}}"
+								}
 							]
-						}
+						},
+						"description": "ConnectivityValidationGroupResultWrapper will be  available at task.params['test_result']."
+					},
+					"response": []
+				},
+				{
+					"name": "List Connectivity Tests",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networking/connectivity-tests",
+							"protocol": "https",
+							"host": [
+								"vmc",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"vmc",
+								"api",
+								"orgs",
+								":org",
+								"sddcs",
+								":sddc",
+								"networking",
+								"connectivity-tests"
+							],
+							"variable": [
+								{
+									"key": "org",
+									"value": "{{org}}"
+								},
+								{
+									"key": "sddc",
+									"value": "{{sddc}}"
+								}
+							]
+						},
+						"description": "Retrieve metadata for connectivity tests."
 					},
 					"response": []
 				}
