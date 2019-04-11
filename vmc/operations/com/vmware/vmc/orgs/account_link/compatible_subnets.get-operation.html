@@ -369,7 +369,7 @@
     <h3>Request:</h3>
     <h4>HTTP request</h4>
     
-    <div class="httpBox">GET  https://{server}/rest/vmc/api/orgs/{org}/account-link/compatible-subnets<br/><span class="url-query-parameters"><br/><span class="pun">?</span><span class="key">sddc</span><span class="pun">=</span><span class="val">string</span><br/><span class="pun">&</span><span class="key">linked_account_id</span><span class="pun">=</span><span class="val">string</span><br/><span class="pun">&</span><span class="key">region</span><span class="pun">=</span><span class="val">string</span><br/><span class="pun">&</span><span class="key">force_refresh</span><span class="pun">=</span><span class="val">true</span><br/></span></div>
+    <div class="httpBox">GET  https://{server}/rest/vmc/api/orgs/{org}/account-link/compatible-subnets<br/><span class="url-query-parameters"><br/><span class="pun">?</span><span class="key">sddc</span><span class="pun">=</span><span class="val">string</span><br/><span class="pun">&</span><span class="key">linked_account_id</span><span class="pun">=</span><span class="val">string</span><br/><span class="pun">&</span><span class="key">region</span><span class="pun">=</span><span class="val">string</span><br/><span class="pun">&</span><span class="key">force_refresh</span><span class="pun">=</span><span class="val">true</span><br/><span class="pun">&</span><span class="key">instance_type</span><span class="pun">=</span><span class="val">string</span><br/></span></div>
     
     <h4>Path Parameters</h4>
     
@@ -433,6 +433,12 @@
                 <td><span class="grey"></span><span class="optional">force_refresh</span></td>
                 <td>boolean</td>
                 <td> Optional. When true, forces the mappings for datacenters to be refreshed for the connected account. (optional). </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">instance_type</span></td>
+                <td>string</td>
+                <td> Optional. The server instance type to be used. (optional). </td>
             </tr>
 
     </table>
