@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -21,11 +20,6 @@
                    set_cookie("com.vmware.vapi.activeTab", ui.newTab[0].id, 1);
                }
             });
-        });
-
-        $(function() {
-            var ids = ["#tabs-1", "#tabs-2"];
-            setMaxHeight(ids);
         });
     </script>
 </head>
@@ -257,6 +251,7 @@
          </ol>
     </div>
     <h2 class="title">vmc model: edge status</h2>
+    
     <div>NSX Edge Appliance status.</div>
     
     <h3>Representation:</h3>
@@ -266,53 +261,52 @@
         </ul>
         <div id="tabs-1">
             <span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"active_vse_ha_index</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_status</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_vm_status</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"pre_rules_exists</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"feature_statuses</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_VM_status</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ha_state</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"index</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"pre_rules_generation_number</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"configured</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"service</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"server_status</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"publish_status</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"status</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_VM_status</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ha_state</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"index</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"pre_rules_generation_number</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"configured</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"service</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"server_status</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"publish_status</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"status</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"feature_statuses</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_status</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_vm_status</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"configured</span>"<span class="pun">:&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"publish_status</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"server_status</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"service</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"status</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_VM_status</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"pre_rules_generation_number</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ha_state</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"index</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"configured</span>"<span class="pun">:&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"publish_status</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"server_status</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"service</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"status</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_VM_status</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"pre_rules_generation_number</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ha_state</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"index</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ha_vnic_in_use</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"last_published_pre_rules_generation_number</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"pre_rules_exists</span>"<span class="pun">:&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"publish_status</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"system_status</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"timestamp</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"version</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"system_status</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ha_vnic_in_use</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"active_vse_ha_index</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"last_published_pre_rules_generation_number</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"version</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"publish_status</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"timestamp</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><br/>
 <span class="pun">}</span>
         </div>
     </div>
-
     
     <h4>Attributes:</h4>
     
@@ -339,6 +333,36 @@
                 <td><span class="grey"></span><span class="optional">feature_statuses</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/feature_status-structure.html'>feature_status</a>[]</td>
                 <td>Individual feature status.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">feature_statuses[].</span><span class="optional">status</span></td>
+                <td>string</td>
+                <td>Status of the feature or service.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">feature_statuses[].</span><span class="optional">configured</span></td>
+                <td>boolean</td>
+                <td>Value is true if feature is configured.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">feature_statuses[].</span><span class="optional">server_status</span></td>
+                <td>string</td>
+                <td>Server status of the feature or service. Values are up and down.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">feature_statuses[].</span><span class="optional">publish_status</span></td>
+                <td>string</td>
+                <td>Publish status of the feature, whether APPLIED or PERSISTED.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">feature_statuses[].</span><span class="optional">service</span></td>
+                <td>string</td>
+                <td>Name of the feature or service.<p/> Optional. </td>
             </tr>
 
             <tr>
@@ -372,6 +396,42 @@
             </tr>
 
             <tr>
+                <td><span class="grey">edge_vm_status[].</span><span class="optional">index</span></td>
+                <td>long</td>
+                <td>High Availability index of the appliance. Values are 0 and 1. format: int32<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">edge_vm_status[].</span><span class="optional">ha_state</span></td>
+                <td>string</td>
+                <td>High Availability state of the appliance. Values are active and standby.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">edge_vm_status[].</span><span class="optional">name</span></td>
+                <td>string</td>
+                <td>Name of the NSX Edge appliance.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">edge_vm_status[].</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>vCenter MOID of the NSX Edge appliance.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">edge_vm_status[].</span><span class="optional">edge_VM_status</span></td>
+                <td>string</td>
+                <td>NSX Edge appliance health status identified by GREY (unknown status), GREEN (health checks are successful), YELLOW (intermittent health check failure), RED (appliance not in serving state).<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">edge_vm_status[].</span><span class="optional">pre_rules_generation_number</span></td>
+                <td>long</td>
+                <td>Value of the last published pre rules generation number. format: int64<p/> Optional. </td>
+            </tr>
+
+            <tr>
                 <td><span class="grey"></span><span class="optional">active_vse_ha_index</span></td>
                 <td>long</td>
                 <td>Index of the active NSX Edge appliance. Values are 0 and 1. format: int32<p/> Optional. </td>
@@ -399,6 +459,8 @@
 
     
     
+
+    
     <footer>
             <div class="footer">
             Copyright &#169;  2015-2019 VMware, Inc. All rights reserved.<br/>
@@ -409,3 +471,4 @@
 </main>
 </body>
 </html>
+

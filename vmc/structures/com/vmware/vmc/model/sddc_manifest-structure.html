@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -21,11 +20,6 @@
                    set_cookie("com.vmware.vapi.activeTab", ui.newTab[0].id, 1);
                }
             });
-        });
-
-        $(function() {
-            var ids = ["#tabs-1", "#tabs-2"];
-            setMaxHeight(ids);
         });
     </script>
 </head>
@@ -257,6 +251,7 @@
          </ol>
     </div>
     <h2 class="title">vmc model: sddc manifest</h2>
+    
     <div>Describes software components of the installed SDDC</div>
     
     <h3>Representation:</h3>
@@ -266,56 +261,55 @@
         </ul>
         <div id="tabs-1">
             <span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_ami</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_ami</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_nsxt_ami</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"metadata</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"cycle_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"timestamp</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"glcm_bundle</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"s3_bucket</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_nsxt_ami</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"metadata</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"cycle_id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"timestamp</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vmc_internal_version</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"glcm_bundle</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"s3_bucket</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"pop_info</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ami_infos</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vmc_version</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"pop_info</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ami_infos</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"type</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"created_at</span>"<span class="pun">:&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"service_infos</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"created_at</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"service_infos</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"build</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"cln</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"service</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"version</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"cln</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"build</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"service</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"version</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vmc_internal_version</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vmc_version</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 <span class="pun">}</span>
         </div>
     </div>
-
     
     <h4>Attributes:</h4>
     
@@ -325,6 +319,30 @@
             <th>Type</th>
             <th>Description</th>
         </tr>
+
+        <tr class="subheader">
+            <td colspan="3">
+            Required
+            </td>
+        </tr>
+
+            <tr>
+                <td><span class="grey">pop_info.</span><span class="required">ami_infos</span></td>
+                <td>list</td>
+                <td>A map of [region name of PoP / PoP-AMI]:[PopAmiInfo].<p/> List of {"key": string, "value": <a href='../../../../../structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a>}</td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">pop_info.ami_infos[].</span><span class="required">key</span></td>
+                <td>string</td>
+                <td> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">pop_info.ami_infos[].</span><span class="required">value</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a></td>
+                <td> </td>
+            </tr>
 
         <tr class="subheader">
             <td colspan="3">
@@ -345,9 +363,27 @@
             </tr>
 
             <tr>
+                <td><span class="grey">glcm_bundle.</span><span class="optional">s3_bucket</span></td>
+                <td>string</td>
+                <td>the glcmbundle's s3 bucket<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">glcm_bundle.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>the glcmbundle's id<p/> Optional. </td>
+            </tr>
+
+            <tr>
                 <td><span class="grey"></span><span class="optional">pop_info</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/pop_info-structure.html'>pop_info</a></td>
                 <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">pop_info.ami_infos[].value.</span><span class="optional">region</span></td>
+                <td>string</td>
+                <td>the region of the esx ami<p/> Optional. </td>
             </tr>
 
             <tr>
@@ -378,6 +414,8 @@
 
     
     
+
+    
     <footer>
             <div class="footer">
             Copyright &#169;  2015-2019 VMware, Inc. All rights reserved.<br/>
@@ -388,3 +426,4 @@
 </main>
 </body>
 </html>
+

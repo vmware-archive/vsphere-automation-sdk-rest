@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -21,11 +20,6 @@
                    set_cookie("com.vmware.vapi.activeTab", ui.newTab[0].id, 1);
                }
             });
-        });
-
-        $(function() {
-            var ids = ["#tabs-1", "#tabs-2"];
-            setMaxHeight(ids);
         });
     </script>
 </head>
@@ -257,6 +251,7 @@
          </ol>
     </div>
     <h2 class="title">vmc model: vpn tunnel traffic stats</h2>
+    
     <div></div>
     
     <h3>Representation:</h3>
@@ -266,21 +261,20 @@
         </ul>
         <div id="tabs-1">
             <span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"decryption_failures</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"encryption_failures</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"integrity_errors</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"packet_received_errors</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"packet_sent_errors</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"packets_in</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"packets_out</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"replay_errors</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"rx_bytes_on_local_subnet</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"sequence_number_over_flow_errors</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"tx_bytes_from_local_subnet</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"packets_out</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"packet_received_errors</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"encryption_failures</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"replay_errors</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"packets_in</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"sequence_number_over_flow_errors</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"rx_bytes_on_local_subnet</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"integrity_errors</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"packet_sent_errors</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"tx_bytes_from_local_subnet</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"decryption_failures</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 <span class="pun">}</span>
         </div>
     </div>
-
     
     <h4>Attributes:</h4>
     
@@ -367,6 +361,8 @@
 
     
     
+
+    
     <footer>
             <div class="footer">
             Copyright &#169;  2015-2019 VMware, Inc. All rights reserved.<br/>
@@ -377,3 +373,4 @@
 </main>
 </body>
 </html>
+

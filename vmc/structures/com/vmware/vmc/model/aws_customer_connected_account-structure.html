@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -21,11 +20,6 @@
                    set_cookie("com.vmware.vapi.activeTab", ui.newTab[0].id, 1);
                }
             });
-        });
-
-        $(function() {
-            var ids = ["#tabs-1", "#tabs-2"];
-            setMaxHeight(ids);
         });
     </script>
 </head>
@@ -257,47 +251,205 @@
          </ol>
     </div>
     <h2 class="title">vmc model: aws customer connected account</h2>
+    
     <div></div>
     
     <h3>Representation:</h3>
     <div id="tabsResultRep">
         <ul>
-            <li id="0"><a href="#tabs-1">JSON</a></li>
+            <li id="0"><a id="newMap" href="#tabs-1" onclick="showFields()">JSON</a></li>
+            <li id="1"><a id="oldMap" href="#tabs-2" onclick="showLegacyFields()">LEGACY JSON</a></li>
         </ul>
         <div id="tabs-1">
             <span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"account_number</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"cf_stack_name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"created</span>"<span class="pun">:&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"org_id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"policy_external_id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"policy_payer_arn</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"policy_payer_linked_arn</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"policy_service_arn</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region_to_az_to_shadow_mapping</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated_by_user_name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"account_number</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated_by_user_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"policy_external_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"created</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"user_name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"version</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"cf_stack_name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"policy_service_arn</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"policy_payer_linked_arn</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"user_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"policy_payer_arn</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"org_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region_to_az_to_shadow_mapping</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"&lt;string&gt;</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"&lt;string&gt;</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"state</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<br/>
+<span class="pun">}</span>
+        </div>
+        <div id="tabs-2">
+            <span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated_by_user_name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"account_number</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated_by_user_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"policy_external_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"created</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"user_name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"version</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"cf_stack_name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"policy_service_arn</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"policy_payer_linked_arn</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"user_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"policy_payer_arn</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"org_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region_to_az_to_shadow_mapping</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"state</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated</span>"<span class="pun">:&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated_by_user_id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated_by_user_name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"user_id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"user_name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"version</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"state</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<br/>
 <span class="pun">}</span>
         </div>
     </div>
 
     
+    
+    
+    <div id="fields1">
+    <h4>Attributes:</h4>
+    
+    <table class="params">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+
+        <tr class="subheader">
+            <td colspan="3">
+            Required
+            </td>
+        </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="required">updated</span></td>
+                <td>date_time</td>
+                <td> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="required">user_id</span></td>
+                <td>string</td>
+                <td>User id that last updated this record<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="required">updated_by_user_id</span></td>
+                <td>string</td>
+                <td>User id that last updated this record<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="required">created</span></td>
+                <td>date_time</td>
+                <td> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="required">version</span></td>
+                <td>long</td>
+                <td>Version of this entity format: int32<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="required">user_name</span></td>
+                <td>string</td>
+                <td>User name that last updated this record<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="required">id</span></td>
+                <td>string</td>
+                <td>Unique ID for this entity<p/> </td>
+            </tr>
+
+        <tr class="subheader">
+            <td colspan="3">
+            Optional
+            </td>
+        </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">updated_by_user_name</span></td>
+                <td>string</td>
+                <td>User name that last updated this record<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">policy_payer_arn</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">region_to_az_to_shadow_mapping</span></td>
+                <td>object</td>
+                <td>Provides a map of regions to availability zones from the shadow account's perspective<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">org_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">cf_stack_name</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">state</span></td>
+                <td>string</td>
+                <td>Possible values are: <ul> <li> STATE_ACTIVE</li>, <li> STATE_BROKEN</li>, <li> STATE_DELETED</li>, </ul><p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">account_number</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">policy_service_arn</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">policy_external_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">policy_payer_linked_arn</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+    </table>
+
+    </div>
+    
+    <div id="fields2" class="hidden">
     <h4>Attributes:</h4>
     
     <table class="params">
@@ -423,7 +575,10 @@
 
     </table>
 
+    </div>
     
+    
+
     
     <footer>
             <div class="footer">
@@ -435,3 +590,4 @@
 </main>
 </body>
 </html>
+

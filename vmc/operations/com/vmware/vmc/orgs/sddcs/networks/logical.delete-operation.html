@@ -1,5 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<body>
 
 <head>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -367,14 +368,15 @@
     <div>
         Delete a network in an SDDC.
     </div>
+</body>
+    
 
-    <h3>Request:</h3>
-    <h4>HTTP request</h4>
+<h3>Request:</h3>
+<h4>HTTP request</h4>
     
-    <div class="httpBox">DELETE  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/sddc/networks/{network_id}<br/></span></div>
+<div class="httpBox">DELETE  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/networks/4.0/sddc/networks/{network_id}<br/><span class="header-parameters"></span></span></div>
     
-    <h4>Path Parameters</h4>
-    
+<h4>Path Parameters</h4>
     
     <table class="params">
         <tr>
@@ -410,37 +412,40 @@
     </table>
 
     
-
-    <h3>Response:</h3>
-    <h4>HTTP Status Code: 200</h4>
+<h3>Response:</h3>
+<h4>HTTP Status Code: 200</h4>
     
         None
-        
+    
+<h4>Errors:</h4>
+    
+<table class="errors">
+    <tr>
+        <th>HTTP Status Code</th>
+        <th>Type</th>
+        <th>Description</th>
+    </tr>
+    
+    <tr>
+        <td>400</td>
+        <td>com.vmware.vapi.std.errors.InvalidRequest</td>
+        <td> Bad request. Request object passed is invalid.</td>
+    </tr>
+    
+    <tr>
+        <td>403</td>
+        <td>com.vmware.vapi.std.errors.Unauthorized</td>
+        <td> Forbidden. Authorization header not provided.</td>
+    </tr>
+    
+    <tr>
+        <td>404</td>
+        <td>com.vmware.vapi.std.errors.NotFound</td>
+        <td> Not found. Requested object not found.</td>
+    </tr>
+    
+</table>
 
-    <h4>Errors:</h4>
-    
-    <table class="errors">
-        <tr>
-            <th>HTTP Status Code</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr><tr>
-            <td>400</td>
-            <td>com.vmware.vapi.std.errors.InvalidRequest</td>
-            <td> Bad request. Request object passed is invalid.</td>
-        </tr>
-    <tr>
-            <td>403</td>
-            <td>com.vmware.vapi.std.errors.Unauthorized</td>
-            <td> Forbidden. Authorization header not provided.</td>
-        </tr>
-    <tr>
-            <td>404</td>
-            <td>com.vmware.vapi.std.errors.NotFound</td>
-            <td> Not found. Requested object not found.</td>
-        </tr>
-    
-    </table>
     
     
     <footer>
@@ -450,7 +455,5 @@
             </div>
     </footer>
     </section>
-
-</main>
 </body>
 </html>
