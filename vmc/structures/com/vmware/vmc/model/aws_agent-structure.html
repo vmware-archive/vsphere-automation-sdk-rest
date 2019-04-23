@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -20,6 +21,11 @@
                    set_cookie("com.vmware.vapi.activeTab", ui.newTab[0].id, 1);
                }
             });
+        });
+
+        $(function() {
+            var ids = ["#tabs-1", "#tabs-2"];
+            setMaxHeight(ids);
         });
     </script>
 </head>
@@ -251,7 +257,6 @@
          </ol>
     </div>
     <h2 class="title">vmc model: aws agent</h2>
-    
     <div></div>
     
     <h3>Representation:</h3>
@@ -261,24 +266,25 @@
         </ul>
         <div id="tabs-1">
             <span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"internal_ip</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"is_master</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"instance_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"agent_url</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"cert_enabled</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"hostname_verifier_enabled</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"provider</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key_pair</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key_name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key_fingerprint</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key_material</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"agent_state</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"agent_url</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"cert_enabled</span>"<span class="pun">:&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"hostname_verifier_enabled</span>"<span class="pun">:&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"instance_id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"internal_ip</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"is_master</span>"<span class="pun">:&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key_pair</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key_fingerprint</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key_material</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key_name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"network_netmask</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"agent_state</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"network_gateway</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"network_gateway</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"network_netmask</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"provider</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
 <span class="pun">}</span>
         </div>
     </div>
+
     
     <h4>Attributes:</h4>
     
@@ -294,12 +300,6 @@
             Required
             </td>
         </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="required">provider</span></td>
-                <td>string</td>
-                <td>The cloud provider<p/> </td>
-            </tr>
 
             <tr>
                 <td><span class="grey"></span><span class="required">provider</span></td>
@@ -323,72 +323,6 @@
                 <td><span class="grey"></span><span class="optional">key_pair</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/aws_key_pair-structure.html'>aws_key_pair</a></td>
                 <td> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">key_pair.</span><span class="optional">key_name</span></td>
-                <td>string</td>
-                <td> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">key_pair.</span><span class="optional">key_fingerprint</span></td>
-                <td>string</td>
-                <td> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">key_pair.</span><span class="optional">key_material</span></td>
-                <td>string</td>
-                <td> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">cert_enabled</span></td>
-                <td>boolean</td>
-                <td>Boolean flag to indicate if the agent is using CA signed certificate<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">internal_ip</span></td>
-                <td>string</td>
-                <td>Internal IP address of the agent<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">hostname_verifier_enabled</span></td>
-                <td>boolean</td>
-                <td>Boolean flag to indicate if the agent is using FQDN in the certificate<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">network_netmask</span></td>
-                <td>string</td>
-                <td>Network netmask of the agent<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">network_gateway</span></td>
-                <td>string</td>
-                <td>Network gateway of the agent<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">is_master</span></td>
-                <td>boolean</td>
-                <td>Boolean flag to indicate if the agent is the master, only the master Agent is accessible<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">agent_state</span></td>
-                <td>string</td>
-                <td>Possible values are: <ul> <li> AGENT_STATE_NOT_READY</li>, <li> AGENT_STATE_DEPLOYING</li>, <li> AGENT_STATE_CUSTOMIZING</li>, <li> AGENT_STATE_READY</li>, <li> AGENT_STATE_DELETING</li>, <li> AGENT_STATE_DELETED</li>, <li> AGENT_STATE_FAILED</li>, </ul> Agent state<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">agent_url</span></td>
-                <td>string</td>
-                <td>The accessible URL of the agent service, it is resolved to public IP address from the Internet and private IP address within SDDC<p/> Optional. </td>
             </tr>
 
             <tr>
@@ -443,8 +377,6 @@
 
     
     
-
-    
     <footer>
             <div class="footer">
             Copyright &#169;  2015-2019 VMware, Inc. All rights reserved.<br/>
@@ -455,4 +387,3 @@
 </main>
 </body>
 </html>
-

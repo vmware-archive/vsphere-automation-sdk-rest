@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -20,6 +21,11 @@
                    set_cookie("com.vmware.vapi.activeTab", ui.newTab[0].id, 1);
                }
             });
+        });
+
+        $(function() {
+            var ids = ["#tabs-1", "#tabs-2"];
+            setMaxHeight(ids);
         });
     </script>
 </head>
@@ -251,46 +257,30 @@
          </ol>
     </div>
     <h2 class="title">vmc model: reservation</h2>
-    
     <div></div>
     
     <h3>Representation:</h3>
     <div id="tabsResultRep">
         <ul>
-            <li id="0"><a id="newMap" href="#tabs-1" onclick="showFields()">JSON</a></li>
-            <li id="1"><a id="oldMap" href="#tabs-2" onclick="showLegacyFields()">LEGACY JSON</a></li>
+            <li id="0"><a href="#tabs-1">JSON</a></li>
         </ul>
         <div id="tabs-1">
             <span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"duration</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"start_time</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"metadata</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"&lt;string&gt;</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"create_time</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"rid</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
-<span class="pun">}</span>
-        </div>
-        <div id="tabs-2">
-            <span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"duration</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"start_time</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"metadata</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"create_time</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"duration</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"metadata</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"create_time</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"rid</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"rid</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"start_time</span>"<span class="pun">:&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<br/>
 <span class="pun">}</span>
         </div>
     </div>
 
     
-    
-    
-    <div id="fields1">
     <h4>Attributes:</h4>
     
     <table class="params">
@@ -299,86 +289,6 @@
             <th>Type</th>
             <th>Description</th>
         </tr>
-
-        <tr class="subheader">
-            <td colspan="3">
-            Required
-            </td>
-        </tr>
-
-            <tr>
-                <td><span class="grey">-.metadata</span><span class="required">.*</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-        <tr class="subheader">
-            <td colspan="3">
-            Optional
-            </td>
-        </tr>
-
-            <tr>
-                <td><span class="grey">-.</span><span class="optional">duration</span></td>
-                <td>long</td>
-                <td>Duration - required for reservation in maintenance window format: int64<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">-.</span><span class="optional">rid</span></td>
-                <td>string</td>
-                <td>Reservation ID format: uuid<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">-.</span><span class="optional">create_time</span></td>
-                <td>string</td>
-                <td>Optional<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">-.</span><span class="optional">start_time</span></td>
-                <td>date_time</td>
-                <td>Start time of a reservation format: date-time<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">-.</span><span class="optional">metadata</span></td>
-                <td>object</td>
-                <td>Optional<p/> Optional. </td>
-            </tr>
-
-    </table>
-
-    </div>
-    
-    <div id="fields2" class="hidden">
-    <h4>Attributes:</h4>
-    
-    <table class="params">
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-
-        <tr class="subheader">
-            <td colspan="3">
-            Required
-            </td>
-        </tr>
-
-            <tr>
-                <td><span class="grey">metadata[].</span><span class="required">key</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">metadata[].</span><span class="required">value</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
 
         <tr class="subheader">
             <td colspan="3">
@@ -418,10 +328,7 @@
 
     </table>
 
-    </div>
     
-    
-
     
     <footer>
             <div class="footer">
@@ -433,4 +340,3 @@
 </main>
 </body>
 </html>
-

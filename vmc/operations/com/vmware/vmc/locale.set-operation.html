@@ -1,6 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<body>
 
 <head>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -362,25 +361,23 @@
     <div>
         Sets the locale for the session which is used for translating responses.
     </div>
-</body>
-    
 
-<h3>Request:</h3>
-<h4>HTTP request</h4>
+    <h3>Request:</h3>
+    <h4>HTTP request</h4>
     
-<div class="httpBox">POST  https://{server}/rest/vmc/api/locale</div>
+    <div class="httpBox">POST  https://{server}/rest/vmc/api/locale</div>
     
-<h4>Request Body Structure:</h4>
-<div id="tabsInputRep">
-    <div id="tabs-1">
-        <span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vmc_locale</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"locale</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+    <h4>Request Body Structure:</h4>
+    <div id="tabsInputRep">
+            <div id="tabs-1">
+                <span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vmc_locale</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"locale</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 <span class="pun">}</span>
+            </div>
     </div>
-</div>
-<h4>Request Body Parameters:</h4>
+    <h4>Request Body Parameters:</h4>
     
     
     <table class="params">
@@ -410,20 +407,23 @@
     </table>
 
     
-<h3>Response:</h3>
-<h4>HTTP Status Code: 200</h4>
+
+    <h3>Response:</h3>
+    <h4>HTTP Status Code: 200</h4>
     
-<h4>Representation:</h4>
-<div id="tabsResultRep">
-	<div id="tabs2-1">
+    <h4>Representation:</h4>
+
+    <div id="tabsResultRep">
+        <div id="tabs2-1">
             <span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"locale</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"locale</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 <span class="pun">}</span>
         </div>
-</div>
-<h4>Response Type:</h4>
+    </div>
+
+    <h4>Response Type:</h4>
     
     
     <table class="params">
@@ -453,29 +453,26 @@
     </table>
 
      
-<h4>Errors:</h4>
-    
-<table class="errors">
-    <tr>
-        <th>HTTP Status Code</th>
-        <th>Type</th>
-        <th>Description</th>
-    </tr>
-    
-    <tr>
-        <td>401</td>
-        <td>com.vmware.vapi.std.errors.Unauthenticated</td>
-        <td> Unauthorized</td>
-    </tr>
-    
-    <tr>
-        <td>403</td>
-        <td>com.vmware.vapi.std.errors.Unauthorized</td>
-        <td> Forbidden</td>
-    </tr>
-    
-</table>
 
+    <h4>Errors:</h4>
+    
+    <table class="errors">
+        <tr>
+            <th>HTTP Status Code</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr><tr>
+            <td>401</td>
+            <td>com.vmware.vapi.std.errors.Unauthenticated</td>
+            <td> Unauthorized</td>
+        </tr>
+    <tr>
+            <td>403</td>
+            <td>com.vmware.vapi.std.errors.Unauthorized</td>
+            <td> Forbidden</td>
+        </tr>
+    
+    </table>
     
     
     <footer>
@@ -485,5 +482,7 @@
             </div>
     </footer>
     </section>
+
+</main>
 </body>
 </html>
