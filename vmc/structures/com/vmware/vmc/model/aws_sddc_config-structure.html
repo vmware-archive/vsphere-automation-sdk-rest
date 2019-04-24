@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -21,11 +20,6 @@
                    set_cookie("com.vmware.vapi.activeTab", ui.newTab[0].id, 1);
                }
             });
-        });
-
-        $(function() {
-            var ids = ["#tabs-1", "#tabs-2"];
-            setMaxHeight(ids);
         });
     </script>
 </head>
@@ -257,6 +251,7 @@
          </ol>
     </div>
     <h2 class="title">vmc model: aws sddc config</h2>
+    
     <div></div>
     
     <h3>Representation:</h3>
@@ -266,41 +261,40 @@
         </ul>
         <div id="tabs-1">
             <span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"account_link_config</span>"<span class="pun">:&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"delay_account_link</span>"<span class="pun">:&nbsp;</span><span class="val">true</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"sddc_template_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"storage_capacity</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vxlan_subnet</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"skip_creating_vxlan</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"sddc_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"account_link_config</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"delay_account_link</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"account_link_sddc_config</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"account_link_sddc_config</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"connected_account_id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"customer_subnet_ids</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"customer_subnet_ids</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"connected_account_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"connected_account_id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"customer_subnet_ids</span>"<span class="pun">:&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"customer_subnet_ids</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"connected_account_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"deployment_type</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"num_hosts</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"provider</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"sddc_template_id</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"sddc_type</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"skip_creating_vxlan</span>"<span class="pun">:&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"sso_domain</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"storage_capacity</span>"<span class="pun">:&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vpc_cidr</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vxlan_subnet</span>"<span class="pun">:&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"num_hosts</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"deployment_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"provider</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"sso_domain</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vpc_cidr</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 <span class="pun">}</span>
         </div>
     </div>
-
     
     <h4>Attributes:</h4>
     
@@ -341,11 +335,95 @@
                 <td>Possible values are: <ul> <li> PROVIDER_AWS</li>, </ul> Determines what additional properties are available based on cloud provider.<p/> </td>
             </tr>
 
+            <tr>
+                <td><span class="grey"></span><span class="required">name</span></td>
+                <td>string</td>
+                <td> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="required">num_hosts</span></td>
+                <td>long</td>
+                <td> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="required">provider</span></td>
+                <td>string</td>
+                <td>Possible values are: <ul> <li> PROVIDER_AWS</li>, </ul> Determines what additional properties are available based on cloud provider.<p/> </td>
+            </tr>
+
         <tr class="subheader">
             <td colspan="3">
             Optional
             </td>
         </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">storage_capacity</span></td>
+                <td>long</td>
+                <td>The storage capacity value to be requested for the sddc primary cluster, in GiBs. If provided, instead of using the direct-attached storage, a capacity value amount of seperable storage will be used. format: int64<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">account_link_sddc_config</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/account_link_sddc_config-structure.html'>account_link_sddc_config</a>[]</td>
+                <td>A list of the SDDC linking configurations to use.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">account_link_sddc_config[].</span><span class="optional">customer_subnet_ids</span></td>
+                <td>string[]</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">vpc_cidr</span></td>
+                <td>string</td>
+                <td>AWS VPC IP range. Only prefix of 16 or 20 is currently supported.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">sddc_type</span></td>
+                <td>string</td>
+                <td>Denotes the sddc type , if the value is null or empty, the type is considered as default.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">vxlan_subnet</span></td>
+                <td>string</td>
+                <td>VXLAN IP subnet in CIDR for compute gateway<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">account_link_config</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/account_link_config-structure.html'>account_link_config</a></td>
+                <td>The account linking configuration, we will keep this one and remove accountLinkSddcConfig finally.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">skip_creating_vxlan</span></td>
+                <td>boolean</td>
+                <td>skip creating vxlan for compute gateway for SDDC provisioning<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">sso_domain</span></td>
+                <td>string</td>
+                <td>The SSO domain name to use for vSphere users. If not specified, vmc.local will be used.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">sddc_template_id</span></td>
+                <td>string</td>
+                <td>If provided, configuration from the template will applied to the provisioned SDDC. format: UUID<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">deployment_type</span></td>
+                <td>string</td>
+                <td>Possible values are: <ul> <li> DEPLOYMENT_TYPE_SINGLEAZ</li>, <li> DEPLOYMENT_TYPE_MULTIAZ</li>, </ul> Denotes if request is for a SingleAZ or a MultiAZ SDDC. Default is SingleAZ.<p/> Optional. </td>
+            </tr>
 
             <tr>
                 <td><span class="grey"></span><span class="optional">storage_capacity</span></td>
@@ -411,6 +489,8 @@
 
     
     
+
+    
     <footer>
             <div class="footer">
             Copyright &#169;  2015-2019 VMware, Inc. All rights reserved.<br/>
@@ -421,3 +501,4 @@
 </main>
 </body>
 </html>
+

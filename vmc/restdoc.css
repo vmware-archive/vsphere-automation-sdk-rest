@@ -284,11 +284,11 @@ span.optional {
   font-weight: normal;
 }
 
-span.url-query-parameters {
+.url-query-parameters, .header-parameters, #tabsInputRep {
     font-family: 'Consolas', monospace, Verdana;
     font-weight: normal;
-    font-size:14px;
-    padding:30px;
+    font-size: 14px;
+    margin-top: 1em;
 }
 
 span.pun {
@@ -335,4 +335,8 @@ table.errors td:nth-child(2) {
 /* Overriding default jquery fonts */
 .ui-widget-content {
     font-family: 'Consolas', monospace, Verdana;
+}
+
+.hidden {
+    display: none;
 }
