@@ -5013,7 +5013,7 @@
 						{
 							"name": "Details",
 							"request": {
-								"method": "GET",
+								"method": "PUT",
 								"header": [
 									{
 										"key": "Accept",
