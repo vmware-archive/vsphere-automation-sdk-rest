@@ -1,0 +1,727 @@
+{
+	"info": {
+		"_postman_id": "9a81d196-898b-41dc-93b7-2b2f3138ef3b",
+		"name": "vCenter Server 6.7 -  Appliance Topology",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Appliance - Authentication",
+			"item": [
+				{
+					"name": "Login to vCenter Server - First",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b2f2ccf2-ba36-4df4-8ca1-c8564b5709a7",
+								"exec": [
+									"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{user}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5pc3RyYXRvckB2c3BoZXJlLmxvY2FsOlZNd2FyZTEh"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/com/vmware/cis/session",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"com",
+								"vmware",
+								"cis",
+								"session"
+							]
+						},
+						"description": "Login to the specified vCenter and retrieve a session"
+					},
+					"response": []
+				},
+				{
+					"name": "Login to vCenter Server - Additional",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b2f2ccf2-ba36-4df4-8ca1-c8564b5709a7",
+								"exec": [
+									"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{user}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5pc3RyYXRvckB2c3BoZXJlLmxvY2FsOlZNd2FyZTEh"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc2}}/rest/com/vmware/cis/session",
+							"protocol": "https",
+							"host": [
+								"{{vc2}}"
+							],
+							"path": [
+								"rest",
+								"com",
+								"vmware",
+								"cis",
+								"session"
+							]
+						},
+						"description": "Login to the specified vCenter and retrieve a session"
+					},
+					"response": []
+				},
+				{
+					"name": "Logout from vCenter Server - First",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/com/vmware/cis/session",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"com",
+								"vmware",
+								"cis",
+								"session"
+							]
+						},
+						"description": "Logout of the specified vCenter"
+					},
+					"response": []
+				},
+				{
+					"name": "Logout from vCenter Server - Additional",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1f6d4f42-8a79-49d6-8d0e-95ef6d148ddf",
+								"exec": [
+									"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc2}}/rest/com/vmware/cis/session",
+							"protocol": "https",
+							"host": [
+								"{{vc2}}"
+							],
+							"path": [
+								"rest",
+								"com",
+								"vmware",
+								"cis",
+								"session"
+							]
+						},
+						"description": "Logout of the specified vCenter"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appliance - Topology",
+			"item": [
+				{
+					"name": "Get Topology - First",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/topology/nodes",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"topology",
+								"nodes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Topology - Additional",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc2}}/rest/vcenter/topology/nodes",
+							"protocol": "https",
+							"host": [
+								"{{vc2}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"topology",
+								"nodes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appliance - Status",
+			"item": [
+				{
+					"name": "Get Status - First",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/cis/tasks/{{taskid}}",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"cis",
+								"tasks",
+								"{{taskid}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Status - Additional",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc2}}/rest/cis/tasks/{{taskid}}",
+							"protocol": "https",
+							"host": [
+								"{{vc2}}"
+							],
+							"path": [
+								"rest",
+								"cis",
+								"tasks",
+								"{{taskid}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appliance - Converge",
+			"item": [
+				{
+					"name": "Precheck - Converge vCenter Server Appliance - First",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"spec\": {\n    \"only_precheck\": true,\n    \"psc\": {\n      \"skip_ad_domain_join\": true,\n      \"sso_admin_password\": \"{{ssopassword}}\",\n      \"sso_admin_username\": \"{{ssouser}}\",\n      \"ad_domain\": {\n        \"ad_domain_admin_password\": \"string\",\n        \"ad_domain_admin_username\": \"string\",\n        \"dns_server\": \"string\",\n        \"ad_domain_name\": \"string\"\n      }\n    }\n  }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/system-config/deployment-type?action=convert-to-vcsa-embedded&vmw-task=true",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"system-config",
+								"deployment-type"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "convert-to-vcsa-embedded"
+								},
+								{
+									"key": "vmw-task",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Execute - Converge vCenter Server Appliance - First",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"spec\": {\n    \"only_precheck\": false,\n    \"psc\": {\n      \"skip_ad_domain_join\": true,\n      \"sso_admin_password\": \"{{ssopassword}}\",\n      \"sso_admin_username\": \"{{ssouser}}\",\n      \"ad_domain\": {\n        \"ad_domain_admin_password\": \"string\",\n        \"ad_domain_admin_username\": \"string\",\n        \"dns_server\": \"string\",\n        \"ad_domain_name\": \"string\"\n      }\n    }\n  }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/system-config/deployment-type?action=convert-to-vcsa-embedded&vmw-task=true",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"system-config",
+								"deployment-type"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "convert-to-vcsa-embedded"
+								},
+								{
+									"key": "vmw-task",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Precheck - Converge vCenter Server Appliance - Additional",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"spec\": {\n    \"replication_partner_hostname\": \"{{vc}}\",\n    \"only_precheck\": true,\n    \"psc\": {\n      \"skip_ad_domain_join\": true,\n      \"sso_admin_password\": \"{{ssopassword}}\",\n      \"sso_admin_username\": \"{{ssouser}}\",\n      \"ad_domain\": {\n        \"ad_domain_admin_password\": \"string\",\n        \"ad_domain_admin_username\": \"string\",\n        \"dns_server\": \"string\",\n        \"ad_domain_name\": \"string\"\n      }\n    }\n  }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc2}}/rest/vcenter/system-config/deployment-type?action=convert-to-vcsa-embedded&vmw-task=true",
+							"protocol": "https",
+							"host": [
+								"{{vc2}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"system-config",
+								"deployment-type"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "convert-to-vcsa-embedded"
+								},
+								{
+									"key": "vmw-task",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Execute - Converge vCenter Server Appliance - Additional",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"spec\": {\n    \"replication_partner_hostname\": \"{{vc}}\",\n    \"only_precheck\": false,\n    \"psc\": {\n      \"skip_ad_domain_join\": true,\n      \"sso_admin_password\": \"{{ssopassword}}\",\n      \"sso_admin_username\": \"{{ssouser}}\",\n      \"ad_domain\": {\n        \"ad_domain_admin_password\": \"string\",\n        \"ad_domain_admin_username\": \"string\",\n        \"dns_server\": \"string\",\n        \"ad_domain_name\": \"string\"\n      }\n    }\n  }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc2}}/rest/vcenter/system-config/deployment-type?action=convert-to-vcsa-embedded&vmw-task=true",
+							"protocol": "https",
+							"host": [
+								"{{vc2}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"system-config",
+								"deployment-type"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "convert-to-vcsa-embedded"
+								},
+								{
+									"key": "vmw-task",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appliance - Decommission",
+			"item": [
+				{
+					"name": "Precheck - Decommission External PSC Appliance - First",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"only_precheck\": true,\n    \"spec\": {\n        \"ssl_thumbprint\": \"\",\n        \"ssl_verify\": false,\n        \"sso_admin_password\": \"{{ssopassword}}\",\n        \"sso_admin_username\": \"{{ssouser}}\"\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/topology/pscs/{{extpsc}}?action=decommission&vmw-task=true",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"topology",
+								"pscs",
+								"{{extpsc}}"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "decommission"
+								},
+								{
+									"key": "vmw-task",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Execute - Decommission External PSC Appliance - First",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"only_precheck\": false,\n    \"spec\": {\n        \"ssl_thumbprint\": \"\",\n        \"ssl_verify\": false,\n        \"sso_admin_password\": \"{{ssopassword}}\",\n        \"sso_admin_username\": \"{{ssouser}}\"\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/topology/pscs/{{extpsc}}?action=decommission&vmw-task=true",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"topology",
+								"pscs",
+								"{{extpsc}}"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "decommission"
+								},
+								{
+									"key": "vmw-task",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Precheck - Decommission External PSC Appliance - Additional",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"only_precheck\": true,\n    \"spec\": {\n        \"ssl_thumbprint\": \"\",\n        \"ssl_verify\": false,\n        \"sso_admin_password\": \"{{ssopassword}}\",\n        \"sso_admin_username\": \"{{ssouser}}\"\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/topology/pscs/{{extpsc2}}?action=decommission&vmw-task=true",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"topology",
+								"pscs",
+								"{{extpsc2}}"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "decommission"
+								},
+								{
+									"key": "vmw-task",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Execute - Decommission External PSC Appliance - Additional",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"only_precheck\": false,\n    \"spec\": {\n        \"ssl_thumbprint\": \"\",\n        \"ssl_verify\": false,\n        \"sso_admin_password\": \"{{ssopassword}}\",\n        \"sso_admin_username\": \"{{ssouser}}\"\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/topology/pscs/{{extpsc2}}?action=decommission&vmw-task=true",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"topology",
+								"pscs",
+								"{{extpsc2}}"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "decommission"
+								},
+								{
+									"key": "vmw-task",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5a18ae16-34c0-4514-9999-5dd5df4d9f02",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6390a37b-5a46-4755-a664-0207dea0f441",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
