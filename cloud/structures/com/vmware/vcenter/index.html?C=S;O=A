@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /build/storage61/release/bora-13837440/publish/sdk-bindings/apidocs/restdoc/structures/com/vmware/vcenter</title>
+ </head>
+ <body>
+<h1>Index of /build/storage61/release/bora-13837440/publish/sdk-bindings/apidocs/restdoc/structures/com/vmware/vcenter</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=D">Size</a></th><th><a href="?C=D;O=A">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/build/storage61/release/bora-13837440/publish/sdk-bindings/apidocs/restdoc/structures/com/vmware/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="certificate_management/">certificate_management/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="cluster/">cluster/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="compute/">compute/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="datacenter/">datacenter/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="datastore/">datastore/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="deployment/">deployment/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="folder/">folder/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="guest/">guest/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="host/">host/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="hvc/">hvc/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="identity/">identity/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="inventory/">inventory/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="lcm/">lcm/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="network/">network/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="ovf/">ovf/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="resourcepool/">resourcepool/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="services/">services/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="storage/">storage/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="system/">system/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="system_config/">system_config/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="tokenservice/">tokenservice/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="topology/">topology/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="vcha/">vcha/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="vm/">vm/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/folder.gif" alt="[DIR]"></td><td><a href="vm_template/">vm_template/</a></td><td align="right">2019-05-27 04:46  </td><td align="right">  - </td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<DIV>
+<A HREF="/isilon-admin">Isilon Administration</A>
+</DIV>
+</body></html>

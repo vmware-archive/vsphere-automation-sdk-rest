@@ -1,0 +1,1395 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>REST API - filter_spec</title>
+    <script src="../../../../../dynamic-contents.js" language="javascript" type="text/javascript"></script>
+    <script src="../../../../../jquery.js" language="javascript" type="text/javascript"></script>
+    <script src="../../../../../jquery-ui.js" language="javascript" type="text/javascript"></script>
+    <script src="../../../../../restdocutils.js" language="javascript" type="text/javascript"></script>
+    <link href="../../../../../jquery-ui.css" rel="stylesheet" />
+    <link href="../../../../../restdoc.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../../left-tree.css" type="text/css" rel="stylesheet">
+    <script src="../../../../../left-tree.js"></script>
+    <script>
+        $(function() {
+            var cookie = get_cookie("com.vmware.vapi.activeTab");
+            var tabs = $( "#tabsResultRep" ).tabs({
+               active: cookie, activate: function(event, ui) {
+                   set_cookie("com.vmware.vapi.activeTab", ui.newTab[0].id, 1);
+               }
+            });
+        });
+    </script>
+</head>
+<body onLoad="menu_main('leftTree')">
+    <main>
+    <header>
+        <div class="header">
+            <div class="logo"></div>
+        </div>
+    </header>
+    <nav class="components-index">
+   
+   <div id="leftTree">
+     <ul>
+        <li><a href="../../../../../index.html">Operations</a>
+            <ul></ul>
+        </li>
+        <li><br></li>
+        <li><a href="../../../../../landing_types.html">Types</a>
+            <ul><li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance'>appliance</a>
+<ul>    <li><a href='../../../../../structures/com/vmware/appliance/notification-structure.html'>notification</a></li>
+    <li><a href='../../../../../structures/com/vmware/appliance/notifications-structure.html'>notifications</a></li>
+    <li><a href='../../../../../structures/com/vmware/appliance/subtask_info-structure.html'>subtask_info</a></li>
+    <li><a href='../../../../../structures/com/vmware/appliance/task_info-structure.html'>task_info</a></li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.access'>access</a>
+    <ul>        <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.access.shell'>shell</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/appliance/access/shell/svc.shell_config-structure.html'>shell_config</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.local_accounts'>local accounts</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/appliance/localaccounts/svc.config-structure.html'>config</a></li>
+        <li><a href='../../../../../structures/com/vmware/appliance/localaccounts/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../structures/com/vmware/appliance/localaccounts/svc.update_config-structure.html'>update_config</a></li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.local_accounts.policy'>policy</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/appliance/local_accounts/policy/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.logging'>logging</a>
+    <ul>        <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.logging.forwarding'>forwarding</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/appliance/logging/forwarding/svc.config-structure.html'>config</a></li>
+            <li><a href='../../../../../structures/com/vmware/appliance/logging/forwarding/svc.connection_status-structure.html'>connection_status</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.monitoring'>monitoring</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/appliance/monitoring/svc.monitored_item-structure.html'>monitored_item</a></li>
+        <li><a href='../../../../../structures/com/vmware/appliance/monitoring/svc.monitored_item_data-structure.html'>monitored_item_data</a></li>
+        <li><a href='../../../../../structures/com/vmware/appliance/monitoring/svc.monitored_item_data_request-structure.html'>monitored_item_data_request</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.networking'>networking</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/appliance/networking/svc.change_spec-structure.html'>change_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/appliance/networking/svc.dns_info-structure.html'>DNS_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/appliance/networking/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../structures/com/vmware/appliance/networking/svc.update_spec-structure.html'>update_spec</a></li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.networking.dns'>dns</a>
+        <ul>            <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.networking.dns.hostname'>hostname</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/appliance/networking/dns/hostname/svc.message-structure.html'>message</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/networking/dns/hostname/svc.test_status_info-structure.html'>test_status_info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.networking.dns.servers'>servers</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/appliance/networking/dns/servers/svc.dns_server_config-structure.html'>DNS_server_config</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/networking/dns/servers/svc.message-structure.html'>message</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/networking/dns/servers/svc.test_status_info-structure.html'>test_status_info</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.networking.firewall'>firewall</a>
+        <ul>            <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.networking.firewall.inbound'>inbound</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/appliance/networking/firewall/inbound/svc.rule-structure.html'>rule</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.networking.interfaces'>interfaces</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/appliance/networking/interfaces/svc.interface_info-structure.html'>interface_info</a></li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.networking.interfaces.ipv4'>ipv4</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/appliance/networking/interfaces/ipv4/svc.config-structure.html'>config</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/networking/interfaces/ipv4/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.networking.interfaces.ipv6'>ipv6</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/appliance/networking/interfaces/ipv6/svc.address-structure.html'>address</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/networking/interfaces/ipv6/svc.address_info-structure.html'>address_info</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/networking/interfaces/ipv6/svc.config-structure.html'>config</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/networking/interfaces/ipv6/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.networking.proxy'>proxy</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/appliance/networking/proxy/svc.config-structure.html'>config</a></li>
+            <li><a href='../../../../../structures/com/vmware/appliance/networking/proxy/svc.test_result-structure.html'>test_result</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.ntp'>ntp</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/appliance/ntp/svc.localizable_message-structure.html'>localizable_message</a></li>
+        <li><a href='../../../../../structures/com/vmware/appliance/ntp/svc.test_run_status-structure.html'>test_run_status</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.recovery'>recovery</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/appliance/recovery/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.recovery.backup'>backup</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/svc.backup_request-structure.html'>backup_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/svc.localizable_message-structure.html'>localizable_message</a></li>
+            <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/location_spec-structure.html'>location_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/svc.return_result-structure.html'>return_result</a></li>
+            <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.recovery.backup.job'>job</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/job/svc.backup_job_status-structure.html'>backup_job_status</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/job/svc.backup_request-structure.html'>backup_request</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/job/svc.localizable_message-structure.html'>localizable_message</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/job/svc.return_result-structure.html'>return_result</a></li>
+                <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.recovery.backup.job.details'>details</a>
+                <ul>                    <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/job/details/svc.build_info-structure.html'>build_info</a></li>
+                    <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/job/details/svc.filter_spec-structure.html'>filter_spec</a></li>
+                    <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/job/details/svc.info-structure.html'>info</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.recovery.backup.parts'>parts</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/parts/svc.localizable_message-structure.html'>localizable_message</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/parts/svc.part-structure.html'>part</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.recovery.backup.schedules'>schedules</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/schedules/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/schedules/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/schedules/svc.recurrence_info-structure.html'>recurrence_info</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/schedules/svc.retention_info-structure.html'>retention_info</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/schedules/svc.update_spec-structure.html'>update_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.recovery.backup.system_name'>system name</a>
+            <ul>                <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.recovery.backup.system_name.archive'>archive</a>
+                <ul>                    <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/system_name/archive/svc.filter_spec-structure.html'>filter_spec</a></li>
+                    <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/system_name/archive/svc.info-structure.html'>info</a></li>
+                    <li><a href='../../../../../structures/com/vmware/appliance/recovery/backup/system_name/archive/svc.summary-structure.html'>summary</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.recovery.reconciliation'>reconciliation</a>
+        <ul>            <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.recovery.reconciliation.job'>job</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/appliance/recovery/reconciliation/job/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/recovery/reconciliation/job/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.recovery.restore'>restore</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/appliance/recovery/restore/svc.localizable_message-structure.html'>localizable_message</a></li>
+            <li><a href='../../../../../structures/com/vmware/appliance/recovery/restore/svc.metadata-structure.html'>metadata</a></li>
+            <li><a href='../../../../../structures/com/vmware/appliance/recovery/restore/svc.restore_request-structure.html'>restore_request</a></li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.recovery.restore.job'>job</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/appliance/recovery/restore/job/svc.localizable_message-structure.html'>localizable_message</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/recovery/restore/job/svc.restore_job_status-structure.html'>restore_job_status</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/recovery/restore/job/svc.restore_request-structure.html'>restore_request</a></li>
+                <li><a href='../../../../../structures/com/vmware/appliance/recovery/restore/job/svc.return_result-structure.html'>return_result</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.services'>services</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/appliance/services/svc.info-structure.html'>info</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.shutdown'>shutdown</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/appliance/shutdown/svc.shutdown_config-structure.html'>shutdown_config</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.system'>system</a>
+    <ul>        <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.system.storage'>storage</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/appliance/system/storage/svc.storage_change-structure.html'>storage_change</a></li>
+            <li><a href='../../../../../structures/com/vmware/appliance/system/storage/svc.storage_mapping-structure.html'>storage_mapping</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.system.time'>time</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/appliance/system/time/svc.system_time_struct-structure.html'>system_time_struct</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.system.version'>version</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/appliance/system/version/svc.version_struct-structure.html'>version_struct</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.update'>update</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/appliance/update/common_info-structure.html'>common_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/appliance/update/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../structures/com/vmware/appliance/update/service_info-structure.html'>service_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/appliance/update/summary-structure.html'>summary</a></li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.update.pending'>pending</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/appliance/update/pending/svc.info-structure.html'>info</a></li>
+            <li><a href='../../../../../structures/com/vmware/appliance/update/pending/svc.precheck_result-structure.html'>precheck_result</a></li>
+            <li><a href='../../../../../structures/com/vmware/appliance/update/pending/svc.question-structure.html'>question</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.update.policy'>policy</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/appliance/update/policy/svc.config-structure.html'>config</a></li>
+            <li><a href='../../../../../structures/com/vmware/appliance/update/policy/svc.info-structure.html'>info</a></li>
+            <li><a href='../../../../../structures/com/vmware/appliance/update/policy/svc.time-structure.html'>time</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.update.staged'>staged</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/appliance/update/staged/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.appliance.vmon'>vmon</a>
+    <ul>        <li><a href='../../../../../landing_types.html#SVC_com.vmware.appliance.vmon.service'>service</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/appliance/vmon/service/svc.info-structure.html'>info</a></li>
+            <li><a href='../../../../../structures/com/vmware/appliance/vmon/service/svc.update_spec-structure.html'>update_spec</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+<li><a href='../../../../../landing_types.html#PKG_com.vmware.cis'>cis</a>
+<ul>    <li><a href='../../../../../landing_types.html#SVC_com.vmware.cis.session'>session</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/cis/session/svc.info-structure.html'>info</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.cis.tagging'>tagging</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/cis/tagging/category_model-structure.html'>category_model</a></li>
+        <li><a href='../../../../../structures/com/vmware/cis/tagging/tag_model-structure.html'>tag_model</a></li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.cis.tagging.category'>category</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/cis/tagging/category/svc.create_spec-structure.html'>create_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/cis/tagging/category/svc.update_spec-structure.html'>update_spec</a></li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.cis.tagging.category.host'>host</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/cis/tagging/category/host/svc.summary-structure.html'>summary</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.cis.tagging.category.VM'>VM</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/cis/tagging/category/vm/svc.summary-structure.html'>summary</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.cis.tagging.tag'>tag</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/cis/tagging/tag/svc.create_spec-structure.html'>create_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/cis/tagging/tag/svc.update_spec-structure.html'>update_spec</a></li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.cis.tagging.tag.host'>host</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/cis/tagging/tag/host/svc.summary-structure.html'>summary</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.cis.tagging.tag.VM'>VM</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/cis/tagging/tag/vm/svc.summary-structure.html'>summary</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.cis.tagging.tag_association'>tag association</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/cis/tagging/tagassociation/svc.batch_result-structure.html'>batch_result</a></li>
+            <li><a href='../../../../../structures/com/vmware/cis/tagging/tagassociation/svc.object_to_tags-structure.html'>object_to_tags</a></li>
+            <li><a href='../../../../../structures/com/vmware/cis/tagging/tagassociation/svc.tag_to_objects-structure.html'>tag_to_objects</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.cis.task'>task</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/cis/task/common_info-structure.html'>common_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/cis/task/info-structure.html'>info</a></li>
+        <li><a href='../../../../../structures/com/vmware/cis/task/progress-structure.html'>progress</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#SVC_com.vmware.cis.tasks'>tasks</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/cis/tasks/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/cis/tasks/svc.get_spec-structure.html'>get_spec</a></li>
+    </ul>
+    </li>
+</ul>
+</li>
+<li><a href='../../../../../landing_types.html#PKG_com.vmware.content'>content</a>
+<ul>    <li><a href='../../../../../structures/com/vmware/content/configuration_model-structure.html'>configuration_model</a></li>
+    <li><a href='../../../../../structures/com/vmware/content/library_model-structure.html'>library_model</a></li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.content.library'>library</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/content/library/svc.find_spec-structure.html'>find_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/content/library/item_model-structure.html'>item_model</a></li>
+        <li><a href='../../../../../structures/com/vmware/content/library/optimization_info-structure.html'>optimization_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/content/library/publish_info-structure.html'>publish_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/content/library/source_info-structure.html'>source_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/content/library/storage_backing-structure.html'>storage_backing</a></li>
+        <li><a href='../../../../../structures/com/vmware/content/library/subscription_info-structure.html'>subscription_info</a></li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.content.library.item'>item</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/content/library/item/svc.destination_spec-structure.html'>destination_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/library/item/download_session_model-structure.html'>download_session_model</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/library/item/svc.find_spec-structure.html'>find_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/library/item/transfer_endpoint-structure.html'>transfer_endpoint</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/library/item/update_session_model-structure.html'>update_session_model</a></li>
+            <li><a href='../../../../../landing_types.html#PKG_com.vmware.content.library.item.downloadsession'>downloadsession</a>
+            <ul>                <li><a href='../../../../../landing_types.html#SVC_com.vmware.content.library.item.downloadsession.file'>file</a>
+                <ul>                    <li><a href='../../../../../structures/com/vmware/content/library/item/downloadsession/file/svc.info-structure.html'>info</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.content.library.item.file'>file</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/content/library/item/file/svc.checksum_info-structure.html'>checksum_info</a></li>
+                <li><a href='../../../../../structures/com/vmware/content/library/item/file/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.content.library.item.storage'>storage</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/content/library/item/storage/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#PKG_com.vmware.content.library.item.updatesession'>updatesession</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/content/library/item/updatesession/certificate_info-structure.html'>certificate_info</a></li>
+                <li><a href='../../../../../structures/com/vmware/content/library/item/updatesession/preview_info-structure.html'>preview_info</a></li>
+                <li><a href='../../../../../structures/com/vmware/content/library/item/updatesession/preview_warning_info-structure.html'>preview_warning_info</a></li>
+                <li><a href='../../../../../structures/com/vmware/content/library/item/updatesession/warning_behavior-structure.html'>warning_behavior</a></li>
+                <li><a href='../../../../../landing_types.html#SVC_com.vmware.content.library.item.updatesession.file'>file</a>
+                <ul>                    <li><a href='../../../../../structures/com/vmware/content/library/item/updatesession/file/svc.add_spec-structure.html'>add_spec</a></li>
+                    <li><a href='../../../../../structures/com/vmware/content/library/item/updatesession/file/svc.info-structure.html'>info</a></li>
+                    <li><a href='../../../../../structures/com/vmware/content/library/item/updatesession/file/svc.validation_error-structure.html'>validation_error</a></li>
+                    <li><a href='../../../../../structures/com/vmware/content/library/item/updatesession/file/svc.validation_result-structure.html'>validation_result</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.content.library.subscriptions'>subscriptions</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/content/library/subscriptions/svc.create_spec-structure.html'>create_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/library/subscriptions/svc.create_spec_new_subscribed_library-structure.html'>create_spec_new_subscribed_library</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/library/subscriptions/svc.create_spec_placement-structure.html'>create_spec_placement</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/library/subscriptions/svc.create_spec_subscribed_library-structure.html'>create_spec_subscribed_library</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/library/subscriptions/svc.create_spec_vcenter-structure.html'>create_spec_vcenter</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/library/subscriptions/svc.info-structure.html'>info</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/library/subscriptions/svc.placement_info-structure.html'>placement_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/library/subscriptions/svc.summary-structure.html'>summary</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/library/subscriptions/svc.update_spec-structure.html'>update_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/library/subscriptions/svc.update_spec_placement-structure.html'>update_spec_placement</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/library/subscriptions/svc.update_spec_vcenter-structure.html'>update_spec_vcenter</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/library/subscriptions/svc.vcenter_info-structure.html'>vcenter_info</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#SVC_com.vmware.content.local_library'>local library</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/content/locallibrary/svc.destination_spec-structure.html'>destination_spec</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#SVC_com.vmware.content.subscribed_library'>subscribed library</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/content/subscribedlibrary/svc.probe_result-structure.html'>probe_result</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.content.type.ovf_partial_type'>type</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/content/type/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.content.type.ovf'>ovf</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/content/type/ovf/cpu-structure.html'>cpu</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/type/ovf/disk-structure.html'>disk</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/type/ovf/disk_controller-structure.html'>disk_controller</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/type/ovf/drive-structure.html'>drive</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/type/ovf/floppy-structure.html'>floppy</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/type/ovf/memory-structure.html'>memory</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/type/ovf/network-structure.html'>network</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/type/ovf/nic-structure.html'>nic</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/type/ovf/ovf_template-structure.html'>ovf_template</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/type/ovf/usb_controller-structure.html'>USB_controller</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/type/ovf/v_app_template-structure.html'>V_app_template</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/type/ovf/video_card-structure.html'>video_card</a></li>
+            <li><a href='../../../../../structures/com/vmware/content/type/ovf/vm_template-structure.html'>vm_template</a></li>
+            <li><a href='../../../../../landing_types.html#PKG_com.vmware.content.type.ovf.policy'>policy</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/content/type/ovf/policy/storage_policy-structure.html'>storage_policy</a></li>
+                <li><a href='../../../../../structures/com/vmware/content/type/ovf/policy/storage_policy_group-structure.html'>storage_policy_group</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+<li><a href='../../../../../landing_types.html#PKG_com.vmware.vapi.metadata.authentication_partial_vapi'>vapi</a>
+<ul>    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vapi.metadata'>metadata</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vapi/metadata/source_create_spec-structure.html'>source_create_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vapi/metadata/source_info-structure.html'>source_info</a></li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vapi.metadata.authentication'>authentication</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vapi/metadata/authentication/authentication_info-structure.html'>authentication_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/authentication/component_data-structure.html'>component_data</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/authentication/component_info-structure.html'>component_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/authentication/operation_info-structure.html'>operation_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/authentication/package_info-structure.html'>package_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/authentication/service_info-structure.html'>service_info</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vapi.metadata.cli'>cli</a>
+        <ul>            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vapi.metadata.cli.command'>command</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vapi/metadata/cli/command/svc.identity-structure.html'>identity</a></li>
+                <li><a href='../../../../../structures/com/vmware/vapi/metadata/cli/command/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vapi/metadata/cli/command/svc.option_info-structure.html'>option_info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vapi/metadata/cli/command/svc.output_field_info-structure.html'>output_field_info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vapi/metadata/cli/command/svc.output_info-structure.html'>output_info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vapi.metadata.cli.namespace'>namespace</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vapi/metadata/cli/namespace/svc.identity-structure.html'>identity</a></li>
+                <li><a href='../../../../../structures/com/vmware/vapi/metadata/cli/namespace/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vapi.metadata.metamodel'>metamodel</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/component_data-structure.html'>component_data</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/component_info-structure.html'>component_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/constant_info-structure.html'>constant_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/constant_value-structure.html'>constant_value</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/element_map-structure.html'>element_map</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/element_value-structure.html'>element_value</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/enumeration_info-structure.html'>enumeration_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/enumeration_value_info-structure.html'>enumeration_value_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/error_info-structure.html'>error_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/field_info-structure.html'>field_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/generic_instantiation-structure.html'>generic_instantiation</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/operation_info-structure.html'>operation_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/operation_result_info-structure.html'>operation_result_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/package_info-structure.html'>package_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/primitive_value-structure.html'>primitive_value</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/service_info-structure.html'>service_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/structure_info-structure.html'>structure_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/type-structure.html'>type</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/metamodel/user_defined_type-structure.html'>user_defined_type</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vapi.metadata.privilege'>privilege</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vapi/metadata/privilege/component_data-structure.html'>component_data</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/privilege/component_info-structure.html'>component_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/privilege/operation_info-structure.html'>operation_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/privilege/package_info-structure.html'>package_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/privilege/privilege_info-structure.html'>privilege_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/metadata/privilege/service_info-structure.html'>service_info</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vapi.std'>std</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vapi/std/authentication_scheme-structure.html'>authentication_scheme</a></li>
+        <li><a href='../../../../../structures/com/vmware/vapi/std/dynamic_id-structure.html'>dynamic_ID</a></li>
+        <li><a href='../../../../../structures/com/vmware/vapi/std/localizable_message-structure.html'>localizable_message</a></li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vapi.std.errors'>errors</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/already_exists-structure.html'>already_exists</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/already_in_desired_state-structure.html'>already_in_desired_state</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/argument_locations-structure.html'>argument_locations</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/canceled-structure.html'>canceled</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/concurrent_change-structure.html'>concurrent_change</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/error-structure.html'>error</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/feature_in_use-structure.html'>feature_in_use</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/file_locations-structure.html'>file_locations</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/internal_server_error-structure.html'>internal_server_error</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/invalid_argument-structure.html'>invalid_argument</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/invalid_element_configuration-structure.html'>invalid_element_configuration</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/invalid_element_type-structure.html'>invalid_element_type</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/invalid_request-structure.html'>invalid_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/not_allowed_in_current_state-structure.html'>not_allowed_in_current_state</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/not_found-structure.html'>not_found</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/operation_not_found-structure.html'>operation_not_found</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/resource_busy-structure.html'>resource_busy</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/resource_in_use-structure.html'>resource_in_use</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/resource_inaccessible-structure.html'>resource_inaccessible</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/service_unavailable-structure.html'>service_unavailable</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/timed_out-structure.html'>timed_out</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/transient_indication-structure.html'>transient_indication</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/unable_to_allocate_resource-structure.html'>unable_to_allocate_resource</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/unauthenticated-structure.html'>unauthenticated</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/unauthorized-structure.html'>unauthorized</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/unexpected_input-structure.html'>unexpected_input</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/unsupported-structure.html'>unsupported</a></li>
+            <li><a href='../../../../../structures/com/vmware/vapi/std/errors/unverified_peer-structure.html'>unverified_peer</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+<li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter'>vcenter</a>
+<ul>    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.certificate_management'>certificate management</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vcenter/certificate_management/x509_cert_chain-structure.html'>x509_cert_chain</a></li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.certificate_management.vcenter'>vcenter</a>
+        <ul>            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.certificate_management.vcenter.tls'>tls</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/certificate_management/vcenter/tls/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/certificate_management/vcenter/tls/svc.replace_spec-structure.html'>replace_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/certificate_management/vcenter/tls/svc.spec-structure.html'>spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.certificate_management.vcenter.tls_csr'>tls csr</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/certificate_management/vcenter/tlscsr/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/certificate_management/vcenter/tlscsr/svc.spec-structure.html'>spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.certificate_management.vcenter.trusted_root_chains'>trusted root chains</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/certificate_management/vcenter/trustedrootchains/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/certificate_management/vcenter/trustedrootchains/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/certificate_management/vcenter/trustedrootchains/svc.summary-structure.html'>summary</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.cluster'>cluster</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vcenter/cluster/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/cluster/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/cluster/svc.summary-structure.html'>summary</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.compute'>compute</a>
+    <ul>        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.compute.policies'>policies</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/create_spec-structure.html'>create_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/info-structure.html'>info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/status-structure.html'>status</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/svc.summary-structure.html'>summary</a></li>
+            <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.compute.policies.capabilities.disable_drs_vmotion_partial_capabilities'>capabilities</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/capabilities/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/capabilities/svc.summary-structure.html'>summary</a></li>
+                <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.compute.policies.capabilities.disable_drs_vmotion'>disable drs vmotion</a>
+                <ul>                    <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/capabilities/disable_drs_vmotion/create_spec-structure.html'>create_spec</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/capabilities/disable_drs_vmotion/info-structure.html'>info</a></li>
+                </ul>
+                </li>
+                <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.compute.policies.capabilities.vm_host_affinity'>vm host affinity</a>
+                <ul>                    <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/capabilities/vm_host_affinity/create_spec-structure.html'>create_spec</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/capabilities/vm_host_affinity/info-structure.html'>info</a></li>
+                </ul>
+                </li>
+                <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.compute.policies.capabilities.vm_host_anti_affinity'>vm host anti affinity</a>
+                <ul>                    <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/capabilities/vm_host_anti_affinity/create_spec-structure.html'>create_spec</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/capabilities/vm_host_anti_affinity/info-structure.html'>info</a></li>
+                </ul>
+                </li>
+                <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.compute.policies.capabilities.vm_vm_affinity'>vm vm affinity</a>
+                <ul>                    <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/capabilities/vm_vm_affinity/create_spec-structure.html'>create_spec</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/capabilities/vm_vm_affinity/info-structure.html'>info</a></li>
+                </ul>
+                </li>
+                <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.compute.policies.capabilities.vm_vm_anti_affinity'>vm vm anti affinity</a>
+                <ul>                    <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/capabilities/vm_vm_anti_affinity/create_spec-structure.html'>create_spec</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/capabilities/vm_vm_anti_affinity/info-structure.html'>info</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.compute.policies.tag_usage'>tag usage</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/tagusage/svc.filter_spec-structure.html'>filter_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/compute/policies/tagusage/svc.summary-structure.html'>summary</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.datacenter'>datacenter</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vcenter/datacenter/svc.create_spec-structure.html'>create_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/datacenter/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/datacenter/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/datacenter/svc.summary-structure.html'>summary</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.datastore'>datastore</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vcenter/datastore/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/datastore/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/datastore/svc.summary-structure.html'>summary</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.deployment'>deployment</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vcenter/deployment/check_info-structure.html'>check_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/deployment/history_migration_spec-structure.html'>history_migration_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/deployment/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/deployment/location_spec-structure.html'>location_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/deployment/notification-structure.html'>notification</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/deployment/notifications-structure.html'>notifications</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/deployment/remote_psc_spec-structure.html'>remote_psc_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/deployment/replicated_psc_spec-structure.html'>replicated_psc_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/deployment/replicated_spec-structure.html'>replicated_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/deployment/standalone_psc_spec-structure.html'>standalone_psc_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/deployment/standalone_spec-structure.html'>standalone_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/deployment/svc.task-structure.html'>task</a></li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.deployment.import_history'>import history</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/deployment/importhistory/svc.create_spec-structure.html'>create_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/deployment/importhistory/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.deployment.install.initial_config.remote_psc_partial_install'>install</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/deployment/install/svc.install_spec-structure.html'>install_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/deployment/install/svc.vcsa_embedded_spec-structure.html'>vcsa_embedded_spec</a></li>
+            <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.deployment.install.initial_config.remote_psc_partial_initial config'>initial config</a>
+            <ul>                <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.deployment.install.initial_config.remote_psc'>remote psc</a>
+                <ul>                    <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.deployment.install.initial_config.remote_psc.thumbprint'>thumbprint</a>
+                    <ul>                        <li><a href='../../../../../structures/com/vmware/vcenter/deployment/install/initial_config/remote_psc/thumbprint/svc.remote_spec-structure.html'>remote_spec</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.deployment.question'>question</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/deployment/question/svc.answer_spec-structure.html'>answer_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/deployment/question/svc.info-structure.html'>info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/deployment/question/svc.question-structure.html'>question</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.deployment.upgrade'>upgrade</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/deployment/upgrade/svc.psc_spec-structure.html'>psc_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/deployment/upgrade/svc.source_appliance_spec-structure.html'>source_appliance_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/deployment/upgrade/svc.upgrade_spec-structure.html'>upgrade_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/deployment/upgrade/svc.vcsa_embedded_spec-structure.html'>vcsa_embedded_spec</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.folder'>folder</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vcenter/folder/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/folder/svc.summary-structure.html'>summary</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.guest'>guest</a>
+    <ul>        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.guest.customization_specs'>customization specs</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/guest/customizationspecs/svc.filter_spec-structure.html'>filter_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/guest/customizationspecs/svc.summary-structure.html'>summary</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.host'>host</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vcenter/host/svc.create_spec-structure.html'>create_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/host/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/host/svc.summary-structure.html'>summary</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.hvc'>hvc</a>
+    <ul>        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.hvc.links'>links</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/hvc/links/svc.certificate_info-structure.html'>certificate_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/hvc/links/svc.create_spec-structure.html'>create_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/hvc/links/svc.credentials-structure.html'>credentials</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/hvc/links/svc.summary-structure.html'>summary</a></li>
+            <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.hvc.links.sync'>sync</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/hvc/links/sync/svc.credentials-structure.html'>credentials</a></li>
+                <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.hvc.links.sync.providers'>providers</a>
+                <ul>                    <li><a href='../../../../../structures/com/vmware/vcenter/hvc/links/sync/providers/svc.credentials-structure.html'>credentials</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/hvc/links/sync/providers/svc.info-structure.html'>info</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/hvc/links/sync/providers/svc.session_info-structure.html'>session_info</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/hvc/links/sync/providers/svc.summary-structure.html'>summary</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.identity'>identity</a>
+    <ul>        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.identity.providers'>providers</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/identity/providers/svc.create_spec-structure.html'>create_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/identity/providers/svc.identity_management_endpoint-structure.html'>identity_management_endpoint</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/identity/providers/svc.info-structure.html'>info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/identity/providers/svc.oauth2_create_spec-structure.html'>oauth2_create_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/identity/providers/svc.oauth2_info-structure.html'>oauth2_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/identity/providers/svc.oauth2_summary-structure.html'>oauth2_summary</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/identity/providers/svc.oauth2_update_spec-structure.html'>oauth2_update_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/identity/providers/svc.oidc_create_spec-structure.html'>oidc_create_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/identity/providers/svc.oidc_info-structure.html'>oidc_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/identity/providers/svc.oidc_summary-structure.html'>oidc_summary</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/identity/providers/svc.oidc_update_spec-structure.html'>oidc_update_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/identity/providers/svc.summary-structure.html'>summary</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/identity/providers/svc.update_spec-structure.html'>update_spec</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.inventory'>inventory</a>
+    <ul>        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.inventory.datastore'>datastore</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/inventory/datastore/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.inventory.network'>network</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/inventory/network/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.lcm'>lcm</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/ceip_only_sso-structure.html'>ceip_only_sso</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/connection-structure.html'>connection</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/deployment_info-structure.html'>deployment_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/deployment_option-structure.html'>deployment_option</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/destination_location-structure.html'>destination_location</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/embedded_replicated_vcsa-structure.html'>embedded_replicated_vcsa</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/embedded_standalone_vcsa-structure.html'>embedded_standalone_vcsa</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/esx-structure.html'>esx</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/esx_inventory-structure.html'>esx_inventory</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/existing_migration_assistant-structure.html'>existing_migration_assistant</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/external_tool-structure.html'>external_tool</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/external_vcsa-structure.html'>external_vcsa</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/guest_credential-structure.html'>guest_credential</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/history-structure.html'>history</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/migration_assistant-structure.html'>migration_assistant</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/migration_assistant_setting-structure.html'>migration_assistant_setting</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/network-structure.html'>network</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/notification-structure.html'>notification</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/psc_replicated-structure.html'>psc_replicated</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/psc_standalone-structure.html'>psc_standalone</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/result-structure.html'>result</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/source_vc_windows-structure.html'>source_vc_windows</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/source_vum-structure.html'>source_vum</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/source_vum_migration_assistant-structure.html'>source_vum_migration_assistant</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/ssh-structure.html'>ssh</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/sub_task_info-structure.html'>sub_task_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/task_info-structure.html'>task_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/temporary_network-structure.html'>temporary_network</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/time-structure.html'>time</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/upgrade_destination_appliance_service-structure.html'>upgrade_destination_appliance_service</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/upgrade_source_appliance-structure.html'>upgrade_source_appliance</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/vc-structure.html'>vc</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/lcm/vc_inventory-structure.html'>vc_inventory</a></li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.lcm.install'>install</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/install/svc.destination_appliance-structure.html'>destination_appliance</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/install/svc.destination_appliance_service-structure.html'>destination_appliance_service</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/install/svc.psc-structure.html'>psc</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/install/svc.reverse_proxy-structure.html'>reverse_proxy</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/install/svc.spec-structure.html'>spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/install/svc.vcsa_embedded-structure.html'>vcsa_embedded</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.lcm.migrate'>migrate</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/migrate/svc.migrate_destination_appliance-structure.html'>migrate_destination_appliance</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/migrate/svc.spec-structure.html'>spec</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.lcm.recommendation'>recommendation</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/recommendation/svc.datastore_destination_appliance-structure.html'>datastore_destination_appliance</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/recommendation/svc.datastore_destination_location-structure.html'>datastore_destination_location</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/recommendation/svc.datastore_esx-structure.html'>datastore_esx</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/recommendation/svc.datastore_info-structure.html'>datastore_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/recommendation/svc.datastore_request-structure.html'>datastore_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/recommendation/svc.datastore_vc-structure.html'>datastore_vc</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/recommendation/svc.datastore_vc_inventory-structure.html'>datastore_vc_inventory</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/recommendation/svc.deployment_size_destination_appliance-structure.html'>deployment_size_destination_appliance</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/recommendation/svc.migrate_deployment_size_request-structure.html'>migrate_deployment_size_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/recommendation/svc.upgrade_deployment_size_request-structure.html'>upgrade_deployment_size_request</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.lcm.upgrade'>upgrade</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/upgrade/svc.spec-structure.html'>spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/upgrade/svc.upgrade_destination_appliance-structure.html'>upgrade_destination_appliance</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.lcm.validation'>validation</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.appliance_name_destination_appliance-structure.html'>appliance_name_destination_appliance</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.appliance_name_destination_location-structure.html'>appliance_name_destination_location</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.appliance_name_esx-structure.html'>appliance_name_esx</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.appliance_name_esx_inventory-structure.html'>appliance_name_esx_inventory</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.appliance_name_request-structure.html'>appliance_name_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.appliance_name_vc-structure.html'>appliance_name_vc</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.appliance_name_vc_inventory-structure.html'>appliance_name_vc_inventory</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.container_without_inventory-structure.html'>container_without_inventory</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.destination_location_esx-structure.html'>destination_location_esx</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.destination_location_request-structure.html'>destination_location_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.destination_location_vc-structure.html'>destination_location_vc</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.esx_destination_location-structure.html'>esx_destination_location</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.esx_request-structure.html'>esx_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.host_config_destination_appliance-structure.html'>host_config_destination_appliance</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.host_config_destination_location-structure.html'>host_config_destination_location</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.host_config_esx-structure.html'>host_config_esx</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.host_config_esx_inventory-structure.html'>host_config_esx_inventory</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.host_config_request-structure.html'>host_config_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.host_config_vc-structure.html'>host_config_vc</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.host_config_vc_inventory-structure.html'>host_config_vc_inventory</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.migrate_source_appliance_request-structure.html'>migrate_source_appliance_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.network_destination_appliance-structure.html'>network_destination_appliance</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.network_request-structure.html'>network_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.ntp_server_destination_appliance-structure.html'>ntp_server_destination_appliance</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.ntp_server_request-structure.html'>ntp_server_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.os_password_destination_appliance-structure.html'>os_password_destination_appliance</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.os_password_request-structure.html'>os_password_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.source_location_request-structure.html'>source_location_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.source_vum_request-structure.html'>source_vum_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.source_vum_source_vc_windows-structure.html'>source_vum_source_vc_windows</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.source_vum_upgrade_source_appliance-structure.html'>source_vum_upgrade_source_appliance</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.sso_configuration_destination_appliance-structure.html'>sso_configuration_destination_appliance</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.sso_configuration_psc-structure.html'>sso_configuration_psc</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.sso_configuration_request-structure.html'>sso_configuration_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.sso_configuration_vcsa_embedded-structure.html'>sso_configuration_vcsa_embedded</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.temporary_network_destination_appliance-structure.html'>temporary_network_destination_appliance</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.temporary_network_request-structure.html'>temporary_network_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.upgrade_source_appliance_destination_appliance-structure.html'>upgrade_source_appliance_destination_appliance</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.upgrade_source_appliance_request-structure.html'>upgrade_source_appliance_request</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/lcm/validation/svc.validation_destination_location-structure.html'>validation_destination_location</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.network'>network</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vcenter/network/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/network/svc.summary-structure.html'>summary</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.ovf'>ovf</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/certificate_params-structure.html'>certificate_params</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/deployment_option-structure.html'>deployment_option</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/deployment_option_params-structure.html'>deployment_option_params</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/extra_config-structure.html'>extra_config</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/extra_config_params-structure.html'>extra_config_params</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/ip_allocation_params-structure.html'>ip_allocation_params</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/ovf_error-structure.html'>ovf_error</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/ovf_info-structure.html'>ovf_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/ovf_message-structure.html'>ovf_message</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/ovf_params-structure.html'>ovf_params</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/ovf_warning-structure.html'>ovf_warning</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/parse_issue-structure.html'>parse_issue</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/property-structure.html'>property</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/property_params-structure.html'>property_params</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/scale_out_group-structure.html'>scale_out_group</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/scale_out_params-structure.html'>scale_out_params</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/size_params-structure.html'>size_params</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/unknown_section-structure.html'>unknown_section</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/unknown_section_params-structure.html'>unknown_section_params</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/ovf/vcenter_extension_params-structure.html'>vcenter_extension_params</a></li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.ovf.export_flag'>export flag</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/ovf/exportflag/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.ovf.import_flag'>import flag</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/ovf/importflag/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.ovf.library_item'>library item</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.create_result-structure.html'>create_result</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.create_spec-structure.html'>create_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.create_target-structure.html'>create_target</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.deployable_identity-structure.html'>deployable_identity</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.deployment_result-structure.html'>deployment_result</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.deployment_target-structure.html'>deployment_target</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.ovf_summary-structure.html'>ovf_summary</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.resource_pool_deployment_spec-structure.html'>resource_pool_deployment_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.result_info-structure.html'>result_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/ovf/libraryitem/svc.storage_group_mapping-structure.html'>storage_group_mapping</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.resource_pool'>resource pool</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vcenter/resourcepool/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/resourcepool/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/resourcepool/svc.summary-structure.html'>summary</a></li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.services'>services</a>
+    <ul>        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.services.service'>service</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/services/service/svc.info-structure.html'>info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/services/service/svc.update_spec-structure.html'>update_spec</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.storage'>storage</a>
+    <ul>        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.storage.policies'>policies</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/storage/policies/svc.compatibility_info-structure.html'>compatibility_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/storage/policies/svc.compatible_datastore_info-structure.html'>compatible_datastore_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/storage/policies/svc.filter_spec-structure.html'>filter_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/storage/policies/svc.summary-structure.html'>summary</a></li>
+            <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.storage.policies.compliance'>compliance</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/storage/policies/compliance/svc.filter_spec-structure.html'>filter_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/storage/policies/compliance/svc.summary-structure.html'>summary</a></li>
+                <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.storage.policies.compliance.VM'>VM</a>
+                <ul>                    <li><a href='../../../../../structures/com/vmware/vcenter/storage/policies/compliance/vm/svc.filter_spec-structure.html'>filter_spec</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/storage/policies/compliance/vm/svc.info-structure.html'>info</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.storage.policies.VM'>VM</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/storage/policies/vm/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.system'>system</a>
+    <ul>        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.system.announcements'>announcements</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/system/announcements/svc.info-structure.html'>info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/system/announcements/svc.spec-structure.html'>spec</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.system_config'>system config</a>
+    <ul>        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.system_config.deployment_type'>deployment type</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/system_config/deploymenttype/svc.convergence_spec-structure.html'>convergence_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/system_config/deploymenttype/svc.domain_info-structure.html'>domain_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/system_config/deploymenttype/svc.info-structure.html'>info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/system_config/deploymenttype/svc.psc_info-structure.html'>psc_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/system_config/deploymenttype/svc.reconfigure_spec-structure.html'>reconfigure_spec</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.system_config.psc_registration'>psc registration</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/system_config/pscregistration/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.tokenservice'>tokenservice</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vcenter/tokenservice/error-structure.html'>error</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/tokenservice/invalid_grant-structure.html'>invalid_grant</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/tokenservice/invalid_request-structure.html'>invalid_request</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/tokenservice/invalid_scope-structure.html'>invalid_scope</a></li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.tokenservice.token_exchange'>token exchange</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/tokenservice/tokenexchange/svc.exchange_spec-structure.html'>exchange_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/tokenservice/tokenexchange/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.topology'>topology</a>
+    <ul>        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.topology.nodes'>nodes</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/topology/nodes/svc.filter_spec-structure.html'>filter_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/topology/nodes/svc.info-structure.html'>info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/topology/nodes/svc.summary-structure.html'>summary</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.topology.pscs'>pscs</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/topology/pscs/svc.decommission_spec-structure.html'>decommission_spec</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.topology.replication_status'>replication status</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/topology/replicationstatus/svc.filter_spec-structure.html'>filter_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/topology/replicationstatus/svc.summary-structure.html'>summary</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.vcha'>vcha</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vcenter/vcha/certificate_info-structure.html'>certificate_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vcha/connection_spec-structure.html'>connection_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vcha/credentials_spec-structure.html'>credentials_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vcha/disk_info-structure.html'>disk_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vcha/disk_spec-structure.html'>disk_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vcha/ip_spec-structure.html'>ip_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vcha/ipv4_spec-structure.html'>ipv4_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vcha/ipv6_spec-structure.html'>ipv6_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vcha/placement_info-structure.html'>placement_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vcha/placement_spec-structure.html'>placement_spec</a></li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.vcha.cluster'>cluster</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/svc.active_spec-structure.html'>active_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/svc.deploy_spec-structure.html'>deploy_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/svc.error_condition-structure.html'>error_condition</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/svc.info-structure.html'>info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/svc.ip_info-structure.html'>ip_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/svc.ipv4_info-structure.html'>ipv4_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/svc.ipv6_info-structure.html'>ipv6_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/svc.node_info-structure.html'>node_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/svc.node_runtime_info-structure.html'>node_runtime_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/svc.node_vm_info-structure.html'>node_vm_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/svc.passive_spec-structure.html'>passive_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/svc.undeploy_spec-structure.html'>undeploy_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/svc.vm_info-structure.html'>vm_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/svc.witness_info-structure.html'>witness_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/svc.witness_spec-structure.html'>witness_spec</a></li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vcha.cluster.active'>active</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/active/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vcha.cluster.deployment_type'>deployment type</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/deploymenttype/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vcha.cluster.mode'>mode</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/mode/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vcha.cluster.passive'>passive</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/passive/svc.check_result-structure.html'>check_result</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/passive/svc.check_spec-structure.html'>check_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/passive/svc.redeploy_spec-structure.html'>redeploy_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vcha.cluster.witness'>witness</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/witness/svc.check_result-structure.html'>check_result</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/witness/svc.check_spec-structure.html'>check_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vcha/cluster/witness/svc.redeploy_spec-structure.html'>redeploy_spec</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vcha.operations'>operations</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/vcha/operations/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.vm'>vm</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vcenter/vm/svc.compute_placement_spec-structure.html'>compute_placement_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vm/svc.create_spec-structure.html'>create_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vm/svc.filter_spec-structure.html'>filter_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vm/svc.info-structure.html'>info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vm/svc.instant_clone_placement_spec-structure.html'>instant_clone_placement_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vm/svc.instant_clone_spec-structure.html'>instant_clone_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vm/svc.inventory_placement_spec-structure.html'>inventory_placement_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vm/svc.placement_spec-structure.html'>placement_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vm/svc.register_placement_spec-structure.html'>register_placement_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vm/svc.register_spec-structure.html'>register_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vm/svc.storage_placement_spec-structure.html'>storage_placement_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vm/svc.storage_policy_spec-structure.html'>storage_policy_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vcenter/vm/svc.summary-structure.html'>summary</a></li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.vm.compute'>compute</a>
+        <ul>            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.compute.policies'>policies</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vm/compute/policies/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.vm.console'>console</a>
+        <ul>            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.console.tickets'>tickets</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vm/console/tickets/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/console/tickets/svc.summary-structure.html'>summary</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.vm.guest'>guest</a>
+        <ul>            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.guest.identity'>identity</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vm/guest/identity/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.guest.local_filesystem'>local filesystem</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vm/guest/localfilesystem/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.guest.power'>power</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vm/guest/power/svc.info-structure.html'>info</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.vm.hardware'>hardware</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/connection_create_spec-structure.html'>connection_create_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/connection_info-structure.html'>connection_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/connection_update_spec-structure.html'>connection_update_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/ide_address_info-structure.html'>ide_address_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/ide_address_spec-structure.html'>ide_address_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/svc.info-structure.html'>info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/sata_address_info-structure.html'>sata_address_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/sata_address_spec-structure.html'>sata_address_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/scsi_address_info-structure.html'>scsi_address_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/scsi_address_spec-structure.html'>scsi_address_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/svc.update_spec-structure.html'>update_spec</a></li>
+            <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.vm.hardware.adapter'>adapter</a>
+            <ul>                <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.adapter.sata'>sata</a>
+                <ul>                    <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/adapter/sata/svc.create_spec-structure.html'>create_spec</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/adapter/sata/svc.info-structure.html'>info</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/adapter/sata/svc.summary-structure.html'>summary</a></li>
+                </ul>
+                </li>
+                <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.adapter.scsi'>scsi</a>
+                <ul>                    <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/adapter/scsi/svc.create_spec-structure.html'>create_spec</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/adapter/scsi/svc.info-structure.html'>info</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/adapter/scsi/svc.summary-structure.html'>summary</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/adapter/scsi/svc.update_spec-structure.html'>update_spec</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.vm.hardware.boot'>boot</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/boot/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/boot/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/boot/svc.update_spec-structure.html'>update_spec</a></li>
+                <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.boot.device'>device</a>
+                <ul>                    <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/boot/device/svc.entry-structure.html'>entry</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/boot/device/svc.entry_create_spec-structure.html'>entry_create_spec</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.cdrom'>cdrom</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/cdrom/svc.backing_info-structure.html'>backing_info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/cdrom/svc.backing_spec-structure.html'>backing_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/cdrom/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/cdrom/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/cdrom/svc.summary-structure.html'>summary</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/cdrom/svc.update_spec-structure.html'>update_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.cpu'>cpu</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/cpu/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/cpu/svc.update_spec-structure.html'>update_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.disk'>disk</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/disk/svc.backing_info-structure.html'>backing_info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/disk/svc.backing_spec-structure.html'>backing_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/disk/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/disk/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/disk/svc.storage_policy_spec-structure.html'>storage_policy_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/disk/svc.summary-structure.html'>summary</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/disk/svc.update_spec-structure.html'>update_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/disk/svc.vmdk_create_spec-structure.html'>vmdk_create_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.ethernet'>ethernet</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/ethernet/svc.backing_info-structure.html'>backing_info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/ethernet/svc.backing_spec-structure.html'>backing_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/ethernet/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/ethernet/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/ethernet/svc.summary-structure.html'>summary</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/ethernet/svc.update_spec-structure.html'>update_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.floppy'>floppy</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/floppy/svc.backing_info-structure.html'>backing_info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/floppy/svc.backing_spec-structure.html'>backing_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/floppy/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/floppy/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/floppy/svc.summary-structure.html'>summary</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/floppy/svc.update_spec-structure.html'>update_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.memory'>memory</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/memory/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/memory/svc.update_spec-structure.html'>update_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.parallel'>parallel</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/parallel/svc.backing_info-structure.html'>backing_info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/parallel/svc.backing_spec-structure.html'>backing_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/parallel/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/parallel/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/parallel/svc.summary-structure.html'>summary</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/parallel/svc.update_spec-structure.html'>update_spec</a></li>
+            </ul>
+            </li>
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.hardware.serial'>serial</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/serial/svc.backing_info-structure.html'>backing_info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/serial/svc.backing_spec-structure.html'>backing_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/serial/svc.create_spec-structure.html'>create_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/serial/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/serial/svc.summary-structure.html'>summary</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/hardware/serial/svc.update_spec-structure.html'>update_spec</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.identity'>identity</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/vm/identity/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.power'>power</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/vm/power/svc.info-structure.html'>info</a></li>
+        </ul>
+        </li>
+        <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.vm.storage'>storage</a>
+        <ul>            <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.vm.storage.policy'>policy</a>
+            <ul>                <li><a href='../../../../../structures/com/vmware/vcenter/vm/storage/policy/svc.disk_policy_spec-structure.html'>disk_policy_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/storage/policy/svc.info-structure.html'>info</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/storage/policy/svc.update_spec-structure.html'>update_spec</a></li>
+                <li><a href='../../../../../structures/com/vmware/vcenter/vm/storage/policy/svc.vm_home_policy_spec-structure.html'>vm_home_policy_spec</a></li>
+                <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm.storage.policy.compliance'>compliance</a>
+                <ul>                    <li><a href='../../../../../structures/com/vmware/vcenter/vm/storage/policy/compliance/svc.check_spec-structure.html'>check_spec</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/vm/storage/policy/compliance/svc.info-structure.html'>info</a></li>
+                    <li><a href='../../../../../structures/com/vmware/vcenter/vm/storage/policy/compliance/svc.vm_compliance_info-structure.html'>vm_compliance_info</a></li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter.vm_template'>vm template</a>
+    <ul>        <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.vm_template.library_items'>library items</a>
+        <ul>            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.cpu_info-structure.html'>cpu_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.cpu_update_spec-structure.html'>cpu_update_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.create_placement_spec-structure.html'>create_placement_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.create_spec-structure.html'>create_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.create_spec_disk_storage-structure.html'>create_spec_disk_storage</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.create_spec_disk_storage_policy-structure.html'>create_spec_disk_storage_policy</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.create_spec_vm_home_storage-structure.html'>create_spec_vm_home_storage</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.create_spec_vm_home_storage_policy-structure.html'>create_spec_vm_home_storage_policy</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.deploy_placement_spec-structure.html'>deploy_placement_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.deploy_spec-structure.html'>deploy_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.deploy_spec_disk_storage-structure.html'>deploy_spec_disk_storage</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.deploy_spec_disk_storage_policy-structure.html'>deploy_spec_disk_storage_policy</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.deploy_spec_vm_home_storage-structure.html'>deploy_spec_vm_home_storage</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.deploy_spec_vm_home_storage_policy-structure.html'>deploy_spec_vm_home_storage_policy</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.disk_info-structure.html'>disk_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.disk_storage_info-structure.html'>disk_storage_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.disk_update_spec-structure.html'>disk_update_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.ethernet_info-structure.html'>ethernet_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.ethernet_update_spec-structure.html'>ethernet_update_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.guest_customization_spec-structure.html'>guest_customization_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.hardware_customization_spec-structure.html'>hardware_customization_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.info-structure.html'>info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.memory_info-structure.html'>memory_info</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.memory_update_spec-structure.html'>memory_update_spec</a></li>
+            <li><a href='../../../../../structures/com/vmware/vcenter/vm_template/libraryitems/svc.vm_home_storage_info-structure.html'>vm_home_storage_info</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+<li><a href='../../../../../landing_types.html#PKG_com.vmware.vstats.model_partial_vstats'>vstats</a>
+<ul>    <li><a href='../../../../../landing_types.html#PKG_com.vmware.vstats.model'>model</a>
+    <ul>        <li><a href='../../../../../structures/com/vmware/vstats/model/acq_spec-structure.html'>acq_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/cid_mid-structure.html'>cid_mid</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/counter-structure.html'>counter</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/counter_metadata-structure.html'>counter_metadata</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/counter_set-structure.html'>counter_set</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/counter_spec-structure.html'>counter_spec</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/data_point-structure.html'>data_point</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/dbs_config-structure.html'>dbs_config</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/dbs_configs-structure.html'>dbs_configs</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/error-structure.html'>error</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/full_telemetry-structure.html'>full_telemetry</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/global_health-structure.html'>global_health</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/localizable_message-structure.html'>localizable_message</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/max_ages-structure.html'>max_ages</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/metric_info-structure.html'>metric_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/new_id-structure.html'>new_ID</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/provider-structure.html'>provider</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/resource_ids-structure.html'>resource_ids</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/retention_plan-structure.html'>retention_plan</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/rsrc_addr-structure.html'>rsrc_addr</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/rsrc_addr_schema-structure.html'>rsrc_addr_schema</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/rsrc_id-structure.html'>rsrc_id</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/rsrc_id_def-structure.html'>rsrc_id_def</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/rsrc_type_info-structure.html'>rsrc_type_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/telemetry_counter-structure.html'>telemetry_counter</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/telemetry_gauge-structure.html'>telemetry_gauge</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/telemetry_histogram-structure.html'>telemetry_histogram</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/telemetry_meter-structure.html'>telemetry_meter</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/telemetry_timer-structure.html'>telemetry_timer</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/time_series-structure.html'>time_series</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/tsdb_size-structure.html'>tsdb_size</a></li>
+        <li><a href='../../../../../structures/com/vmware/vstats/model/user_info-structure.html'>user_info</a></li>
+    </ul>
+    </li>
+</ul>
+</li>
+</ul>
+</li>
+
+        </li>
+    </ul>
+   </div>
+</nav>
+
+
+    <section class="article-main">
+    <div class='horizontalTopNav'>
+        <ol id='horizontalnav'>
+         
+            <li><a href='../../../../../landing_types.html'>Types</a></li>
+         
+            <li><a href='../../../../../landing_types.html#PKG_com.vmware.vcenter'>vcenter</a></li>
+         
+            <li><a href='../../../../../landing_types.html#SVC_com.vmware.vcenter.datastore'>datastore</a></li>
+         
+         </ol>
+    </div>
+    <h2 class="title">vcenter datastore: filter spec</h2>
+    
+    <div>The <code>filter_spec</code> <em>structure</em> contains <em>fields</em> used to filter the results when listing datastores (see <a href="../../../../../operations/com/vmware/vcenter/datastore.list-operation.html">list</a>). If multiple <em>fields</em> are specified, only datastores matching all of the <em>fields</em> match the filter.</div>
+    
+    <h3>Representation:</h3>
+    <div id="tabsResultRep">
+        <ul>
+            <li id="0"><a href="#tabs-1">JSON</a></li>
+        </ul>
+        <div id="tabs-1">
+            <span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"datacenters</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"obj-103</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"obj-103</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"names</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"folders</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"obj-103</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"obj-103</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"types</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"VMFS</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"VMFS</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"datastores</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"obj-103</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"obj-103</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
+<span class="pun">}</span>
+        </div>
+    </div>
+    
+    <h4>Attributes:</h4>
+    
+    <table class="params">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+
+        <tr class="subheader">
+            <td colspan="3">
+            Optional
+            </td>
+        </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">datastores</span></td>
+                <td>string[]</td>
+                <td>Identifiers of datastores that can match the filter.<p/> Optional. If <em>unset</em> or empty, datastores with any identifier match the filter.When clients pass a value of this <em>structure</em> as a <em>parameter</em>, the <em>field</em> must contain identifiers for the resource type: <code>Datastore</code>. When <em>operations</em> return a value of this <em>structure</em> as a <em>result</em>, the <em>field</em> will contain identifiers for the resource type: <code>Datastore</code>.</td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">names</span></td>
+                <td>string[]</td>
+                <td>Names that datastores must have to match the filter (see <a href="../../../../../structures/com/vmware/vcenter/datastore/svc.info-structure.html">vcenter.datastore.info.name</a>).<p/> Optional. If <em>unset</em> or empty, datastores with any name match the filter.</td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">types</span></td>
+                <td>string[]</td>
+                <td>Types that datastores must have to match the filter (see <a href="../../../../../structures/com/vmware/vcenter/datastore/svc.summary-structure.html">vcenter.datastore.summary.type</a>).<p/> Optional. If <em>unset</em> or empty, datastores with any type match the filter.</td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">folders</span></td>
+                <td>string[]</td>
+                <td>Folders that must contain the datastore for the datastore to match the filter.<p/> Optional. If <em>unset</em> or empty, datastores in any folder match the filter.When clients pass a value of this <em>structure</em> as a <em>parameter</em>, the <em>field</em> must contain identifiers for the resource type: <code>Folder</code>. When <em>operations</em> return a value of this <em>structure</em> as a <em>result</em>, the <em>field</em> will contain identifiers for the resource type: <code>Folder</code>.</td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">datacenters</span></td>
+                <td>string[]</td>
+                <td>Datacenters that must contain the datastore for the datastore to match the filter.<p/> Optional. If <em>unset</em> or empty, datastores in any datacenter match the filter.When clients pass a value of this <em>structure</em> as a <em>parameter</em>, the <em>field</em> must contain identifiers for the resource type: <code>Datacenter</code>. When <em>operations</em> return a value of this <em>structure</em> as a <em>result</em>, the <em>field</em> will contain identifiers for the resource type: <code>Datacenter</code>.</td>
+            </tr>
+
+    </table>
+
+    
+    
+
+    
+    <footer>
+            <div class="footer">
+            Copyright &#169;  2015-2019 VMware, Inc. All rights reserved.<br/>
+            <a href='http://pubs.vmware.com/copyright-trademark.html'>Copyright and trademark information.</a> Any feedback you provide to VMware is subject to the terms at <a href='http://www.vmware.com/community_terms.html'>www.vmware.com/community_terms.html.</a>
+            </div>
+    </footer>
+    </section>
+</main>
+</body>
+</html>
