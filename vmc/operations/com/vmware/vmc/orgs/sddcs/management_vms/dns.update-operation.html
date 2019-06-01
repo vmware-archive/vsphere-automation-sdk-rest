@@ -4,7 +4,7 @@
 
 <head>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>REST API - create</title>
+    <title>REST API - update</title>
     <script src="../../../../../../../dynamic-contents.js" type="text/javascript"></script>
     <script src="../../../../../../../jquery.js" language="javascript" type="text/javascript"></script>
     <script src="../../../../../../../jquery-ui.js" language="javascript" type="text/javascript"></script>
@@ -365,15 +365,15 @@
          
             <li><a href='../../../../../../../index.html#PKG_com.vmware.vmc.orgs.sddcs'>sddcs</a></li>
          
-            <li><a href='../../../../../../../index.html#PKG_com.vmware.vmc.orgs.sddcs.addons'>addons</a></li>
+            <li><a href='../../../../../../../index.html#PKG_com.vmware.vmc.orgs.sddcs.management_vms'>management vms</a></li>
          
-            <li><a href='../../../../../../../index.html#SVC_com.vmware.vmc.orgs.sddcs.addons.credentials'>credentials</a></li>
+            <li><a href='../../../../../../../index.html#SVC_com.vmware.vmc.orgs.sddcs.management_vms.dns'>dns</a></li>
          
          </ol>
     </div>
-    <h2 class="title">vmc orgs sddcs addons credentials: create</h2>
+    <h2 class="title">vmc orgs sddcs management vms dns: update</h2>
     <div>
-        Associated a new add on credentials with the SDDC such as HCX
+        Update the DNS records of management VMs to use public or private IP addresses
     </div>
 </body>
     
@@ -381,7 +381,7 @@
 <h3>Request:</h3>
 <h4>HTTP request</h4>
     
-<div class="httpBox">POST  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc_id}/addons/{addon_type}/credentials</div>
+<div class="httpBox">PUT  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/management-vms/{management_vm_id}/dns/{ip_type}</div>
     
 <h4>Path Parameters</h4>
     
@@ -401,73 +401,25 @@
             <tr>
                 <td><span class="grey"></span><span class="required">org</span></td>
                 <td>string</td>
-                <td> Org id of the associated SDDC (required). </td>
+                <td> Organization identifier. (required). </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">sddc_id</span></td>
+                <td><span class="grey"></span><span class="required">sddc</span></td>
                 <td>string</td>
-                <td> Id of the SDDC (required). </td>
+                <td> Sddc Identifier. (required). </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">addon_type</span></td>
+                <td><span class="grey"></span><span class="required">management_vm_id</span></td>
                 <td>string</td>
-                <td> Add on type (required). </td>
-            </tr>
-
-    </table>
-
-    
-<h4>Request Body Structure:</h4>
-<div id="tabsInputRep">
-    <div id="tabs-1">
-        <span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"credentials</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"password</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"username</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
-<span class="pun">}</span>
-    </div>
-</div>
-<h4>Request Body Parameters:</h4>
-    
-    
-    <table class="params">
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-        <tr class="subheader">
-            <td colspan="3">
-            <span class="required">bold </span> <span class="optional"> = required</span>
-            </td>
-        </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="required">credentials</span></td>
-                <td><a href='../../../../../../../structures/com/vmware/vmc/model/new_credentials-structure.html'>new_credentials</a></td>
-                <td> Credentials creation payload (required). </td>
+                <td> the management VM ID (required). </td>
             </tr>
 
             <tr>
-                <td><span class="grey">credentials.</span><span class="required">username</span></td>
+                <td><span class="grey"></span><span class="required">ip_type</span></td>
                 <td>string</td>
-                <td>Username of the credentials<p/> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">credentials.</span><span class="required">password</span></td>
-                <td>string</td>
-                <td>Password associated with the credentials<p/> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">credentials.</span><span class="required">name</span></td>
-                <td>string</td>
-                <td>Name of the credentials<p/> </td>
+                <td> the ip type to associate with FQDN in DNS (required). </td>
             </tr>
 
     </table>
@@ -481,9 +433,62 @@
 	<div id="tabs2-1">
             <span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"password</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"username</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated_by_user_name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"localized_error_message</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"parent_task_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"user_name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"phase_in_progress</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"task_version</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"error_message</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"progress_percent</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated_by_user_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"sub_status</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"created</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"org_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"resource_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"end_time</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"params</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"@class</span>"<span class="pun"> :&nbsp;</span><span class="str">"dynamic_structure</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"version</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"end_resource_entity_version</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"start_time</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"user_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"task_progress_phases</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"progress_percent</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"progress_percent</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"org_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"start_resource_entity_version</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"resource_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"correlation_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"task_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"service_errors</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"original_service_error_code</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"default_message</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"original_service</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"localized_message</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"original_service_error_code</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"default_message</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"original_service</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"localized_message</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"estimated_remaining_minutes</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"status</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 <span class="pun">}</span>
         </div>
@@ -505,26 +510,44 @@
 
             <tr>
                 <td><span class="grey"></span><span class="required">value</span></td>
-                <td><a href='../../../../../../../structures/com/vmware/vmc/model/new_credentials-structure.html'>new_credentials</a></td>
-                <td> com.vmware.vmc.model.NewCredentials. </td>
+                <td><a href='../../../../../../../structures/com/vmware/vmc/model/task-structure.html'>task</a></td>
+                <td> com.vmware.vmc.model.Task. </td>
             </tr>
 
             <tr>
-                <td><span class="grey">value.</span><span class="required">username</span></td>
-                <td>string</td>
-                <td>Username of the credentials<p/> </td>
+                <td><span class="grey">value.</span><span class="required">updated</span></td>
+                <td>date_time</td>
+                <td> </td>
             </tr>
 
             <tr>
-                <td><span class="grey">value.</span><span class="required">password</span></td>
+                <td><span class="grey">value.</span><span class="required">user_id</span></td>
                 <td>string</td>
-                <td>Password associated with the credentials<p/> </td>
+                <td>User id that last updated this record<p/> </td>
             </tr>
 
             <tr>
-                <td><span class="grey">value.</span><span class="required">name</span></td>
+                <td><span class="grey">value.</span><span class="required">updated_by_user_id</span></td>
                 <td>string</td>
-                <td>Name of the credentials<p/> </td>
+                <td>User id that last updated this record<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="required">created</span></td>
+                <td>date_time</td>
+                <td> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="required">version</span></td>
+                <td>long</td>
+                <td>Version of this entity format: int32<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">updated_by_user_name</span></td>
+                <td>string</td>
+                <td>User name that last updated this record<p/> Optional. </td>
             </tr>
 
     </table>
@@ -540,15 +563,15 @@
     </tr>
     
     <tr>
-        <td>500</td>
-        <td>com.vmware.vapi.std.errors.ConcurrentChange</td>
-        <td> Credentials with same name exists with in the scope of addOnType</td>
+        <td>401</td>
+        <td>com.vmware.vapi.std.errors.Unauthenticated</td>
+        <td> Unauthorized</td>
     </tr>
     
     <tr>
         <td>400</td>
         <td>com.vmware.vapi.std.errors.InvalidRequest</td>
-        <td> Invalid input</td>
+        <td> The sddc is not in a state that's valid for updates or invalid body</td>
     </tr>
     
     <tr>
