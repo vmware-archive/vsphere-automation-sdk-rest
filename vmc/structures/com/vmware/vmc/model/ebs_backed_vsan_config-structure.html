@@ -3,7 +3,7 @@
 
 <head>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>REST API - aws_subnet</title>
+    <title>REST API - ebs_backed_vsan_config</title>
     <script src="../../../../../dynamic-contents.js" language="javascript" type="text/javascript"></script>
     <script src="../../../../../jquery.js" language="javascript" type="text/javascript"></script>
     <script src="../../../../../jquery-ui.js" language="javascript" type="text/javascript"></script>
@@ -251,9 +251,9 @@
          
          </ol>
     </div>
-    <h2 class="title">vmc model: aws subnet</h2>
+    <h2 class="title">vmc model: ebs backed vsan config</h2>
     
-    <div></div>
+    <div>information for EBS-backed VSAN configuration</div>
     
     <h3>Representation:</h3>
     <div id="tabsResultRep">
@@ -262,15 +262,7 @@
         </ul>
         <div id="tabs-1">
             <span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"availability_zone</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vpc_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"connected_account_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"is_compatible</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region_name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"subnet_cidr_block</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vpc_cidr_block</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"instance_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 <span class="pun">}</span>
         </div>
     </div>
@@ -291,57 +283,9 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">connected_account_id</span></td>
+                <td><span class="grey"></span><span class="optional">instance_type</span></td>
                 <td>string</td>
-                <td>The connected account ID this subnet is accessible through. This is an internal ID formatted as a UUID specific to Skyscraper.<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">region_name</span></td>
-                <td>string</td>
-                <td>The region this subnet is in, usually in the form of country code, general location, and a number (ex. us-west-2).<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">availability_zone</span></td>
-                <td>string</td>
-                <td>The availability zone this subnet is in, which should be the region name plus one extra letter (ex. us-west-2a).<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">subnet_id</span></td>
-                <td>string</td>
-                <td>The subnet ID in AWS, provided in the form 'subnet-######'.<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">subnet_cidr_block</span></td>
-                <td>string</td>
-                <td>The CIDR block of the subnet, in the form of '#.#.#.#/#'.<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">is_compatible</span></td>
-                <td>boolean</td>
-                <td>Flag indicating whether this subnet is compatible. If true, this is a valid choice for the customer to deploy a SDDC in.<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">vpc_id</span></td>
-                <td>string</td>
-                <td>The VPC ID the subnet resides in within AWS. Tends to be 'vpc-#######'.<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">vpc_cidr_block</span></td>
-                <td>string</td>
-                <td>The CIDR block of the VPC, in the form of '#.#.#.#/#'.<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">name</span></td>
-                <td>string</td>
-                <td>Optional field (may not be provided by AWS), indicates the found name tag for the subnet.<p/> Optional. </td>
+                <td>instance type for EBS-backed VSAN configuration<p/> Optional. </td>
             </tr>
 
     </table>
