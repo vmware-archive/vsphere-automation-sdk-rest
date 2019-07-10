@@ -258,46 +258,22 @@
     <h3>Representation:</h3>
     <div id="tabsResultRep">
         <ul>
-            <li id="0"><a id="newMap" href="#tabs-1" onclick="showFields()">JSON</a></li>
-            <li id="1"><a id="oldMap" href="#tabs-2" onclick="showLegacyFields()">LEGACY JSON</a></li>
+            <li id="0"><a href="#tabs-1">JSON</a></li>
         </ul>
         <div id="tabs-1">
             <span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"eni_info</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"&lt;string&gt;</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"mac_address</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"private_ip</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"mac_address</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"private_ip</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"default_subnet_route</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 <span class="pun">}</span>
         </div>
-        <div id="tabs-2">
-            <span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"eni_info</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"mac_address</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"private_ip</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"default_subnet_route</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
-<span class="pun">}</span>
-        </div>
     </div>
-
     
-    
-    
-    <div id="fields1">
     <h4>Attributes:</h4>
     
     <table class="params">
@@ -306,98 +282,6 @@
             <th>Type</th>
             <th>Description</th>
         </tr>
-
-        <tr class="subheader">
-            <td colspan="3">
-            Required
-            </td>
-        </tr>
-
-            <tr>
-                <td><span class="grey">-.eni_info</span><span class="required">.*</span></td>
-                <td><a href='../../../../../structures/com/vmware/vmc/model/eni_info-structure.html'>eni_info</a></td>
-                <td> </td>
-            </tr>
-
-        <tr class="subheader">
-            <td colspan="3">
-            Optional
-            </td>
-        </tr>
-
-            <tr>
-                <td><span class="grey">-.</span><span class="optional">default_subnet_route</span></td>
-                <td>string</td>
-                <td>The gateway route ip fo the subnet.<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">-.</span><span class="optional">eni_info</span></td>
-                <td>object</td>
-                <td>Information of the x-eni created.<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">-.eni_info.*.</span><span class="optional">subnet_id</span></td>
-                <td>string</td>
-                <td>Subnet it belongs to.<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">-.eni_info.*.</span><span class="optional">id</span></td>
-                <td>string</td>
-                <td>Interface ID.<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">-.eni_info.*.</span><span class="optional">security_group_id</span></td>
-                <td>string</td>
-                <td>Security Group of Eni.<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">-.eni_info.*.</span><span class="optional">private_ip</span></td>
-                <td>string</td>
-                <td>Private ip of eni.<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">-.eni_info.*.</span><span class="optional">mac_address</span></td>
-                <td>string</td>
-                <td>Mac address of nic.<p/> Optional. </td>
-            </tr>
-
-    </table>
-
-    </div>
-    
-    <div id="fields2" class="hidden">
-    <h4>Attributes:</h4>
-    
-    <table class="params">
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-
-        <tr class="subheader">
-            <td colspan="3">
-            Required
-            </td>
-        </tr>
-
-            <tr>
-                <td><span class="grey">eni_info[].</span><span class="required">key</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">eni_info[].</span><span class="required">value</span></td>
-                <td><a href='../../../../../structures/com/vmware/vmc/model/eni_info-structure.html'>eni_info</a></td>
-                <td> </td>
-            </tr>
 
         <tr class="subheader">
             <td colspan="3">
@@ -413,19 +297,42 @@
 
             <tr>
                 <td><span class="grey"></span><span class="optional">eni_info</span></td>
-                <td>list</td>
-                <td>Information of the x-eni created.<p/> Optional. </td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/eni_info-structure.html'>eni_info</a></td>
+                <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey">eni_info[].value.</span><span class="optional">subnet_id</span></td>
+                <td><span class="grey">eni_info.</span><span class="optional">subnet_id</span></td>
                 <td>string</td>
                 <td>Subnet it belongs to.<p/> Optional. </td>
             </tr>
 
+            <tr>
+                <td><span class="grey">eni_info.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>Interface ID.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">eni_info.</span><span class="optional">security_group_id</span></td>
+                <td>string</td>
+                <td>Security Group of Eni.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">eni_info.</span><span class="optional">private_ip</span></td>
+                <td>string</td>
+                <td>Private ip of eni.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">eni_info.</span><span class="optional">mac_address</span></td>
+                <td>string</td>
+                <td>Mac address of nic.<p/> Optional. </td>
+            </tr>
+
     </table>
 
-    </div>
     
     
 
