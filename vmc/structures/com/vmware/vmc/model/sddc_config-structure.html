@@ -263,6 +263,7 @@
         <div id="tabs-1">
             <span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"sddc_template_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"one_node_reduced_capacity</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"storage_capacity</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vxlan_subnet</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"skip_creating_vxlan</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
@@ -288,6 +289,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"num_hosts</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"deployment_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"size</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"provider</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"sso_domain</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vpc_cidr</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
@@ -326,7 +328,7 @@
             <tr>
                 <td><span class="grey"></span><span class="required">provider</span></td>
                 <td>string</td>
-                <td>Possible values are: <ul> <li> PROVIDER_AWS</li>, </ul> Determines what additional properties are available based on cloud provider.<p/> </td>
+                <td>Possible values are: <ul> <li> PROVIDER_AWS</li>, <li> PROVIDER_ZEROCLOUD</li>, </ul> Determines what additional properties are available based on cloud provider.<p/> </td>
             </tr>
 
         <tr class="subheader">
@@ -334,6 +336,36 @@
             Optional
             </td>
         </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">one_node_reduced_capacity</span></td>
+                <td>boolean</td>
+                <td>Whether this sddc is reduced capacity 1NODE.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">vpc_cidr</span></td>
+                <td>string</td>
+                <td>AWS VPC IP range. Only prefix of 16 or 20 is currently supported.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">skip_creating_vxlan</span></td>
+                <td>boolean</td>
+                <td>skip creating vxlan for compute gateway for SDDC provisioning<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">vxlan_subnet</span></td>
+                <td>string</td>
+                <td>VXLAN IP subnet in CIDR for compute gateway<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">size</span></td>
+                <td>string</td>
+                <td>The size of the vCenter and NSX appliances. xlarge sddcSize corresponds to an 'extra_large' vCenter appliance and 'large' NSX appliance. 'medium' sddcSize corresponds to 'medium' vCenter appliance and 'medium' NSX appliance. Value defaults to 'medium'.<p/> Optional. </td>
+            </tr>
 
             <tr>
                 <td><span class="grey"></span><span class="optional">storage_capacity</span></td>
@@ -354,33 +386,15 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">vpc_cidr</span></td>
-                <td>string</td>
-                <td>AWS VPC IP range. Only prefix of 16 or 20 is currently supported.<p/> Optional. </td>
-            </tr>
-
-            <tr>
                 <td><span class="grey"></span><span class="optional">sddc_type</span></td>
                 <td>string</td>
                 <td>Denotes the sddc type , if the value is null or empty, the type is considered as default.<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">vxlan_subnet</span></td>
-                <td>string</td>
-                <td>VXLAN IP subnet in CIDR for compute gateway<p/> Optional. </td>
-            </tr>
-
-            <tr>
                 <td><span class="grey"></span><span class="optional">account_link_config</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/account_link_config-structure.html'>account_link_config</a></td>
                 <td>The account linking configuration, we will keep this one and remove accountLinkSddcConfig finally.<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">skip_creating_vxlan</span></td>
-                <td>boolean</td>
-                <td>skip creating vxlan for compute gateway for SDDC provisioning<p/> Optional. </td>
             </tr>
 
             <tr>
