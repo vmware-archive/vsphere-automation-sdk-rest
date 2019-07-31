@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "85d190a5-6e29-4307-946b-12748451079e",
+		"_postman_id": "29b62cde-d389-4239-8f3a-2a6b02fcc8ee",
 		"name": "VMware Cloud on AWS APIs",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -61,6 +61,81 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get Access Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "74253644-c049-4377-9d68-431487871e9b",
+								"exec": [
+									"pm.test(\"Access token is received\", function () {",
+									"    pm.expect(pm.response.json().access_token).to.not.eql(null);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{client_secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{client_id}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"description": "The OAuth2 grant type to use",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://console.cloud.vmware.com/csp/gateway/am/api/auth/authorize",
+							"protocol": "https",
+							"host": [
+								"console",
+								"cloud",
+								"vmware",
+								"com"
+							],
+							"path": [
+								"csp",
+								"gateway",
+								"am",
+								"api",
+								"auth",
+								"authorize"
+							]
+						},
+						"description": "This request demonstrates getting an access token using the OAuth2 client credentials grant type. While this is using basic auth, it is using a client ID and client secret generated on a per-app basis rather than a username and password."
+					},
+					"response": []
 				}
 			]
 		},
@@ -87,10 +162,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/reservations/:reservation/mw",
 											"protocol": "https",
@@ -190,10 +261,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/reservations",
 									"protocol": "https",
@@ -240,10 +307,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/tasks?$filter={{$filter}}",
 									"protocol": "https",
@@ -286,10 +349,6 @@
 										"value": "{{access_token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/tasks",
 									"protocol": "https",
@@ -385,10 +444,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/tasks/:task",
 									"protocol": "https",
@@ -440,10 +495,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/providers",
 									"protocol": "https",
@@ -490,10 +541,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddc-templates/:templateId",
 									"protocol": "https",
@@ -588,10 +635,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddc-templates",
 									"protocol": "https",
@@ -632,10 +675,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/sddc-template",
 									"protocol": "https",
@@ -688,10 +727,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/storage/cluster-constraints?provider={{provider}}&num_hosts={{num_hosts}}",
 									"protocol": "https",
@@ -752,10 +787,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/account-link/sddc-connections?sddc={{sddc}}",
 											"protocol": "https",
@@ -809,10 +840,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/account-link/compatible-subnets-async?linkedAccountId={{linkedAccountId}}&region={{region}}&sddc={{sddc}}",
 											"protocol": "https",
@@ -961,10 +988,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/account-link",
 									"protocol": "https",
@@ -1106,10 +1129,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/account-link/connected-accounts?provider={{provider}}",
 									"protocol": "https",
@@ -1166,10 +1185,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/subscriptions/offer-instances?region={{region}}&product_type={{product_type}}&product={{product}}&type={{type}}",
 											"protocol": "https",
@@ -1276,10 +1291,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/subscriptions/:subscription",
 									"protocol": "https",
@@ -1325,10 +1336,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/subscriptions/products",
 									"protocol": "https",
@@ -1370,10 +1377,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/subscriptions/offer-instances?region={{region}}&product_type={{product_type}}&product={{product}}&type={{type}}",
 									"protocol": "https",
@@ -1489,10 +1492,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/tbrs/support-window?minimumSeatsAvailable={{minimumSeatsAvailable}}&createdBy={{createdBy}}",
 									"protocol": "https",
@@ -1561,10 +1560,6 @@
 								"value": "{{access_token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://vmc.vmware.com/vmc/api/orgs/:org",
 							"protocol": "https",
@@ -1603,10 +1598,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://vmc.vmware.com/vmc/api/orgs",
 							"protocol": "https",
@@ -1658,10 +1649,6 @@
 												"value": "{{access_token}}"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://vmc.vmware.com/vmc/autoscaler/api/orgs/{{orgid}}/sddcs/{{sddcid}}/clusters/{{clusterid}}/edrs-policy",
 											"protocol": "https",
@@ -1708,10 +1695,6 @@
 												"value": "{{access_token}}"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://vmc.vmware.com/vmc/autoscaler/api/orgs/{{orgid}}/sddcs/{{sddcid}}/edrs-policy",
 											"protocol": "https",
@@ -2148,10 +2131,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/publicips",
 									"protocol": "https",
@@ -2198,10 +2177,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/publicips/:id",
 									"protocol": "https",
@@ -2314,7 +2289,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/publicips/:id",
 									"protocol": "https",
@@ -2375,10 +2349,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddcId/addons/:addonType/credentials",
 											"protocol": "https",
@@ -2487,10 +2457,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddcId/addons/:addonType/credentials/:name",
 											"protocol": "https",
@@ -2770,10 +2736,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs",
 							"protocol": "https",
@@ -2863,10 +2825,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc",
 							"protocol": "https",
@@ -2916,10 +2874,6 @@
 										"value": "{{access_token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/sddc/networks/",
 									"protocol": "https",
@@ -2969,10 +2923,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/sddc/networks/:networkId",
 									"protocol": "https",
@@ -3331,10 +3281,6 @@
 												"value": "{{access_token}}"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/firewall/config/rules/:ruleId",
 											"protocol": "https",
@@ -3455,10 +3401,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/firewall/statistics/:ruleId",
 											"protocol": "https",
@@ -3522,10 +3464,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/firewall/config",
 									"protocol": "https",
@@ -3701,10 +3639,6 @@
 										"value": "{{access_token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/ipsec/config?showSensitiveData={{showSensitiveData}}",
 									"protocol": "https",
@@ -3883,10 +3817,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/ipsec/statistics",
 									"protocol": "https",
@@ -3951,10 +3881,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/vnics",
 											"protocol": "https",
@@ -4015,10 +3941,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/peerconfig?objecttype={{objecttype}}&objectid={{objectid}}&templateid={{templateid}}",
 											"protocol": "https",
@@ -4098,10 +4020,6 @@
 										"value": "{{access_token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/{{orgid}}/sddcs/{{sddcid}}/networks/4.0/edges",
 									"protocol": "https",
@@ -4139,10 +4057,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/status?getlatest={{getlatest}}&detailed={{detailed}}",
 									"protocol": "https",
@@ -4213,10 +4127,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/dhcp/leaseInfo",
 									"protocol": "https",
@@ -4278,10 +4188,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/dns/statistics",
 									"protocol": "https",
@@ -4337,10 +4243,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/dns/config",
 									"protocol": "https",
@@ -4781,10 +4683,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/nat/config",
 									"protocol": "https",
@@ -5210,10 +5108,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/l2vpn/config/statistics",
 									"protocol": "https",
@@ -5279,10 +5173,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/statistics/dashboard/interface?interval={{interval}}",
 											"protocol": "https",
@@ -5345,10 +5235,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/statistics/dashboard/firewall?interval={{interval}}",
 											"protocol": "https",
@@ -5411,10 +5297,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/statistics/dashboard/ipsec?interval={{interval}}",
 											"protocol": "https",
@@ -5480,10 +5362,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/statistics/interfaces?startTime={{startTime}}&endTime={{endTime}}",
 									"protocol": "https",
@@ -5549,10 +5427,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networks/4.0/edges/:edgeId/statistics/interfaces/uplink?startTime={{startTime}}&endTime={{endTime}}",
 									"protocol": "https",
@@ -5679,10 +5553,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "https://vmc.vmware.com/vmc/api/orgs/:org/sddcs/:sddc/networking/connectivity-tests",
 							"protocol": "https",
