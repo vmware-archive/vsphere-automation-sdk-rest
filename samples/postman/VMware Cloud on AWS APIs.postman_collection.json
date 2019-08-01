@@ -85,12 +85,12 @@
 							"basic": [
 								{
 									"key": "password",
-									"value": "{{client_secret}}",
+									"value": "{{app_secret}}",
 									"type": "string"
 								},
 								{
 									"key": "username",
-									"value": "{{client_id}}",
+									"value": "{{app_id}}",
 									"type": "string"
 								}
 							]
