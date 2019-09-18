@@ -1,0 +1,2786 @@
+{
+	"info": {
+		"_postman_id": "0e09998c-6380-4079-847d-d1f894ec0128",
+		"name": "vSphere Automation REST Resources",
+		"description": "The folders within this collection represent the Rest API resources and the different operations that can be performed on each. These are individual requests. In many cases, each request will require input that would come from other requests. It is left up to the user to insert the correct data into the URL, query parameters and request bodies for the requests to work correctly. Refer to the ReST API Documentation for further help.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{user}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5pc3RyYXRvckB2c3BoZXJlLmxvY2FsOkFkbWluITIz"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/com/vmware/cis/session",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"com",
+								"vmware",
+								"cis",
+								"session"
+							]
+						},
+						"description": "Login to the specified vCenter and retrieve a session"
+					},
+					"response": []
+				},
+				{
+					"name": "Login with SAML bearer token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ad93d02b-7d34-494c-b581-5df0eeaf67ff",
+								"exec": [
+									"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "SIGN token=\"{{saml_bearer_token}}\"",
+								"description": "The SAML bearer token must be gzipped and base64 encoded before using it.",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{vc}}/rest/com/vmware/cis/session",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"com",
+								"vmware",
+								"cis",
+								"session"
+							]
+						},
+						"description": "Login to the specified vCenter and retrieve a session using a SAML bearer token. The SAML bearer token _must_ be gzipped and base64 encoded before being used."
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/com/vmware/cis/session",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"com",
+								"vmware",
+								"cis",
+								"session"
+							]
+						},
+						"description": "Logout of the specified vCenter"
+					},
+					"response": []
+				}
+			],
+			"description": "This collection of requests shows how to log in and log out."
+		},
+		{
+			"name": "Datacenters",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/datacenter",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"datacenter"
+							]
+						},
+						"description": "This request will list all the datacenters. "
+					},
+					"response": []
+				},
+				{
+					"name": "Find",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/datacenter?filter.names.1=Testbed-DC",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"datacenter"
+							],
+							"query": [
+								{
+									"key": "filter.names.1",
+									"value": "Testbed-DC"
+								}
+							]
+						},
+						"description": "This call will find the Testbed-DC datacenter created in the setup sample"
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/datacenter/datacenter-87",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"datacenter",
+								"datacenter-87"
+							]
+						},
+						"description": "List the details of the specified datacenter. "
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/datacenter/datacenter-34",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"datacenter",
+								"datacenter-34"
+							]
+						},
+						"description": "Delete the specified datacenter. "
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"spec\": {\r\n        \"name\": \"DC01\",\r\n        \"folder\": \"group-d1\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/datacenter",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"datacenter"
+							]
+						},
+						"description": "Create a new datacenter. Specify the name and the folder for the datacenter to be created in as part of the request body."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Datastores",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/datastore",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"datastore"
+							]
+						},
+						"description": "List Datastores"
+					},
+					"response": []
+				},
+				{
+					"name": "Find",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/datastore?filter.names.1=datastore1",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"datastore"
+							],
+							"query": [
+								{
+									"key": "filter.names.1",
+									"value": "datastore1"
+								}
+							]
+						},
+						"description": "Find Datastores with given filter details"
+					},
+					"response": []
+				},
+				{
+					"name": "List details for a single datastore",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/datastore/datastore-26",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"datastore",
+								"datastore-26"
+							]
+						},
+						"description": "List details for a datastore"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Folders",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/folder",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"folder"
+							]
+						},
+						"description": "List Folder IDs"
+					},
+					"response": []
+				},
+				{
+					"name": "Find",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/folder?filter.type=VIRTUAL_MACHINE&filter.names.1=Discovered virtual machine",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"folder"
+							],
+							"query": [
+								{
+									"key": "filter.type",
+									"value": "VIRTUAL_MACHINE"
+								},
+								{
+									"key": "filter.names.1",
+									"value": "Discovered virtual machine"
+								}
+							]
+						},
+						"description": "Find Folders with given filter details"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hosts",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/host",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"host"
+							]
+						},
+						"description": "List all the hosts available."
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"spec\": {\n        \"force_add\": true,\n        \"folder\": \"group-h4\",\n        \"hostname\": \"{{host1}}\",\n        \"user_name\": \"root\",\n        \"password\": \"{{host1pass}}\",\n        \"port\": 443,\n        \"thumbprint_verification\": \"NONE\"\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/host",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"host"
+							]
+						},
+						"description": "Add a new host to the specified folder"
+					},
+					"response": []
+				},
+				{
+					"name": "Connect",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/host/host-10/connect",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"host",
+								"host-10",
+								"connect"
+							]
+						},
+						"description": "Connect a disconnected host"
+					},
+					"response": []
+				},
+				{
+					"name": "Disconnect",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/host/host-10/disconnect",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"host",
+								"host-10",
+								"disconnect"
+							]
+						},
+						"description": "Disconnect a connected host"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/host/host-12",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"host",
+								"host-12"
+							]
+						},
+						"description": "Remove the specified standalone host"
+					},
+					"response": []
+				}
+			],
+			"description": "The requests in this collection can be called independently. Each request may require various bits of data such as the host name."
+		},
+		{
+			"name": "Network",
+			"item": [
+				{
+					"name": "List details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/network",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"network"
+							]
+						},
+						"description": "This request will get the list of all networks available."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resource Pool",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/resource-pool",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"resource-pool"
+							]
+						},
+						"description": "This call will return a list of resource pools"
+					},
+					"response": []
+				},
+				{
+					"name": "Get details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/resource-pool/resgroup-8",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"resource-pool",
+								"resgroup-8"
+							]
+						},
+						"description": "This request will return the details of the specified resource pool."
+					},
+					"response": []
+				},
+				{
+					"name": "Find ResourcePool for host1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/resource-pool?filter.names.1=Resources&filter.hosts.1=",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"resource-pool"
+							],
+							"query": [
+								{
+									"key": "filter.names.1",
+									"value": "Resources"
+								},
+								{
+									"key": "filter.hosts.1",
+									"value": ""
+								}
+							]
+						},
+						"description": "This call will return a list of resource pools"
+					},
+					"response": []
+				}
+			],
+			"description": "Individual requests for the Resource Pool resource"
+		},
+		{
+			"name": "VM",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm"
+							]
+						},
+						"description": "List all available VMs"
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-22",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-22"
+							]
+						},
+						"description": "Get the details for the specified VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm?filter.names.1=MyVM",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm"
+							],
+							"query": [
+								{
+									"key": "filter.names.1",
+									"value": "MyVM"
+								}
+							]
+						},
+						"description": "Find a VM based on the specified filter, in this case the vm name when it was created."
+					},
+					"response": []
+				},
+				{
+					"name": "Create with defaults",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"spec\": {\n        \"guest_OS\": \"RHEL_7_64\",\n        \"placement\" : {\n            \"datastore\": \"datastore-12\",\n            \"folder\": \"group-v7\",\n            \"resource_pool\": \"resgroup-9\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm"
+							]
+						},
+						"description": "Create a new VM with the bare minimum properties. All other properties will use sensible defaults."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-32",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-32"
+							]
+						},
+						"description": "Delete the specified VM"
+					},
+					"response": []
+				}
+			],
+			"description": "The requests in this collection can be called independently. Each request may require various bits of data such as the vm id or name, etc."
+		},
+		{
+			"name": "VM Adapter - SATA",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-19/hardware/adapter/sata",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-19",
+								"hardware",
+								"adapter",
+								"sata"
+							]
+						},
+						"description": "List SATA IDs for a VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-19/hardware/adapter/sata/15000",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-19",
+								"hardware",
+								"adapter",
+								"sata",
+								"15000"
+							]
+						},
+						"description": "Get SATA details for a single VM "
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"spec\": {\r\n        \"type\": \"AHCI\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-19/hardware/adapter/sata",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-19",
+								"hardware",
+								"adapter",
+								"sata"
+							]
+						},
+						"description": "Create SATA on VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/adapter/sata/15001",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"adapter",
+								"sata",
+								"15001"
+							]
+						},
+						"description": "Delete SATA Device on VM"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VM Adapter - SCSI",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/adapter/scsi",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"adapter",
+								"scsi"
+							]
+						},
+						"description": "List SCSI IDs for a VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/adapter/scsi/1000",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"adapter",
+								"scsi",
+								"1000"
+							]
+						},
+						"description": "Get SCSI details for a single VM "
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"spec\": {\r\n        \"type\": \"BUSLOGIC\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/adapter/scsi",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"adapter",
+								"scsi"
+							]
+						},
+						"description": "Create SCSI Device on VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"spec\": {\r\n        \"sharing\": \"NONE\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/adapter/scsi/1001",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"adapter",
+								"scsi",
+								"1001"
+							]
+						},
+						"description": "Update SCSI Device on VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/adapter/scsi/1001",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"adapter",
+								"scsi",
+								"1001"
+							]
+						},
+						"description": "Delete SCSI Device on VM"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VM Add",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5pc3RyYXRvckB2c3BoZXJlLmxvY2FsOkFkbWluITIz"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/com/vmware/cis/session",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"com",
+								"vmware",
+								"cis",
+								"session"
+							]
+						},
+						"description": "Login to vCenter API and retrieve Session using username and password. The environment variables username and password are passed via the "
+					},
+					"response": []
+				},
+				{
+					"name": "Find a resource pool to use",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var resp = JSON.parse(responseBody);",
+									"",
+									"var resource = (undefined !== resp && undefined !== resp.value && resp.value.length > 0) ? resp.value[0].resource_pool : null;",
+									"",
+									"console.log(resource);",
+									"",
+									"if (null !== resource) {",
+									"    postman.setEnvironmentVariable('Testbed-ResourcePool', resource);",
+									"} else {",
+									"    // break out of execution.. host wasnt found, so we cant create a VM",
+									"    postman.setNextRequest(null);",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/resource-pool",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"resource-pool"
+							]
+						},
+						"description": "Grab the first resource pool returned"
+					},
+					"response": []
+				},
+				{
+					"name": "Find folers to create the VM in",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var resp = JSON.parse(responseBody);",
+									"",
+									"var match = _.find(resp.value, function(item) {",
+									"    return item.name === \"datastore\";",
+									"})",
+									"",
+									"if (null !== match && undefined !== match) {",
+									"    postman.setEnvironmentVariable('Testbed-DS', match.folder);",
+									"} else {",
+									"    // break out of execution.. host wasnt found, so we cant create a VM",
+									"    postman.setNextRequest(null);",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/folder",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"folder"
+							]
+						},
+						"description": "This request can be called to get a list of folders. To create a VM, we need the datastore and vm folders. If not previously captured during the /datacenter/<datacenter-name> details, the response can be parsed for the vm and datastore folders."
+					},
+					"response": []
+				},
+				{
+					"name": "Create VM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"spec\": {\n        \"guest_OS\": \"RHEL_7_64\",\n        \"placement\" : {\n            \"datastore\": \"{{datastore}}\",\n            \"folder\": \"{{Testbed-VM-Folder}}\",\n            \"resource_pool\": \"{{Testbed-ResourcePool}}\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm"
+							]
+						},
+						"description": "This request will create a VM using the environment variables for storage, resource pool and folder."
+					},
+					"response": []
+				}
+			],
+			"description": "This set of requests will show how to add a VM to an existing datacenter created in the setup process."
+		},
+		{
+			"name": "VM CD-Rom",
+			"item": [
+				{
+					"name": "CD-Rom: List for a single VM ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-19/hardware/cdrom",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-19",
+								"hardware",
+								"cdrom"
+							]
+						},
+						"description": "List CD-Rom IDs for a VM"
+					},
+					"response": []
+				},
+				{
+					"name": "CD-Rom: Get details for a single VM ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-22/hardware/cdrom/3001",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-22",
+								"hardware",
+								"cdrom",
+								"3001"
+							]
+						},
+						"description": "Get CD-Rom details for a single VM "
+					},
+					"response": []
+				},
+				{
+					"name": "CD-Rom: Create IDE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"spec\": {\n        \"type\": \"IDE\",\n        \"backing\": {\n            \"iso_file\": \"[datastore1] photon-minimal-1.0TP2.iso\",\n            \"type\": \"ISO_FILE\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-19/hardware/cdrom",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-19",
+								"hardware",
+								"cdrom"
+							]
+						},
+						"description": "Create IDE CD-ROM on VM"
+					},
+					"response": []
+				},
+				{
+					"name": "CD-Rom: Create SATA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"spec\": {\n        \"type\": \"SATA\",\n        \"backing\": {\n            \"iso_file\": \"[datastore1] photon-minimal-1.0TP2.iso\",\n            \"type\": \"ISO_FILE\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-19/hardware/cdrom",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-19",
+								"hardware",
+								"cdrom"
+							]
+						},
+						"description": "Create SATA CD-ROM on VM"
+					},
+					"response": []
+				},
+				{
+					"name": "CD-Rom: Connect",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/cdrom/16000/connect",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"cdrom",
+								"16000",
+								"connect"
+							]
+						},
+						"description": "Connect CD-Rom to a VM "
+					},
+					"response": []
+				},
+				{
+					"name": "CD-Rom: Disconnect",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/cdrom/16000/disconnect",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"cdrom",
+								"16000",
+								"disconnect"
+							]
+						},
+						"description": "Disconnect CD-Rom from a VM "
+					},
+					"response": []
+				},
+				{
+					"name": "CD-Rom: Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"spec\": {\n        \"backing\": {\n            \"iso_file\": \"[datastore1] MyOS.iso\",\n            \"type\": \"ISO_FILE\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-19/hardware/cdrom/3000",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-19",
+								"hardware",
+								"cdrom",
+								"3000"
+							]
+						},
+						"description": "Update CD-Rom to remove ISO File"
+					},
+					"response": []
+				},
+				{
+					"name": "CD-Rom: Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/cdrom/3000",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"cdrom",
+								"3000"
+							]
+						},
+						"description": "Create IDE CD-ROM on VM"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VM CPU copy",
+			"item": [
+				{
+					"name": "CPU: Get for a single VM",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-19/hardware/cpu",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-19",
+								"hardware",
+								"cpu"
+							]
+						},
+						"description": "Return the CPU related settings of a virtual machine."
+					},
+					"response": []
+				},
+				{
+					"name": "CPU: Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"spec\": {\n    \"count\": 2,\n    \"hot_remove_enabled\": false,\n    \"cores_per_socket\": 1,\n    \"hot_add_enabled\": false\n  }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/cpu",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"cpu"
+							]
+						},
+						"description": "Update the CPU related settings of a virtual machine."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VM Disk",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-19/hardware/disk",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-19",
+								"hardware",
+								"disk"
+							]
+						},
+						"description": "Return the Disk related settings of a virtual machine."
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-19/hardware/disk/3000",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-19",
+								"hardware",
+								"disk",
+								"3000"
+							]
+						},
+						"description": "Get Disk details for a single VM "
+					},
+					"response": []
+				},
+				{
+					"name": "Create IDE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"spec\": {\r\n        \"new_vmdk\": {\r\n        },\r\n        \"type\": \"IDE\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-19/hardware/disk",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-19",
+								"hardware",
+								"disk"
+							]
+						},
+						"description": "Create IDE Disk with default size."
+					},
+					"response": []
+				},
+				{
+					"name": "Create SATA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"spec\": {\r\n        \"new_vmdk\": {\r\n        },\r\n       \"type\": \"SATA\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-19/hardware/disk",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-19",
+								"hardware",
+								"disk"
+							]
+						},
+						"description": "Create SATA Disk with default size."
+					},
+					"response": []
+				},
+				{
+					"name": "Change VMDK location",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"spec\": {\r\n        \"backing\": {\r\n            \"vmdk_file\": \"[datastore1] vAPIVM/vAPIVM_2.vmdk\",\r\n            \"type\": \"VMDK_FILE\"\r\n        }\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/disk/3002",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"disk",
+								"3002"
+							]
+						},
+						"description": "Change disk VMDK location to new VMDK"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-19/hardware/disk/3002",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-19",
+								"hardware",
+								"disk",
+								"3002"
+							]
+						},
+						"description": "Delete a given disk from a virtual machine."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VM Ethernet",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-20/hardware/ethernet",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-20",
+								"hardware",
+								"ethernet"
+							]
+						},
+						"description": "Return the Ethernet related settings of a virtual machine."
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-20/hardware/ethernet/4000",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-20",
+								"hardware",
+								"ethernet",
+								"4000"
+							]
+						},
+						"description": "Get details for a single Adapter"
+					},
+					"response": []
+				},
+				{
+					"name": "Create E1000",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"spec\": {\r\n        \"type\": \"E1000\",\r\n        \"backing\": {\r\n            \"type\": \"NETWORK\",\r\n            \"network\": \"network-18\"\r\n        }\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-20/hardware/ethernet",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-20",
+								"hardware",
+								"ethernet"
+							]
+						},
+						"description": "Create E1000 Network Adapter"
+					},
+					"response": []
+				},
+				{
+					"name": "Connect",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-19/hardware/ethernet/4000/connect",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-19",
+								"hardware",
+								"ethernet",
+								"4000",
+								"connect"
+							]
+						},
+						"description": "Connect Ethernet device to the virtual machine."
+					},
+					"response": []
+				},
+				{
+					"name": "Disconnect",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/ethernet/4000/disconnect",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"ethernet",
+								"4000",
+								"disconnect"
+							]
+						},
+						"description": "Disconnect Ethernet device to the virtual machine."
+					},
+					"response": []
+				},
+				{
+					"name": "Change Network",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"spec\": {\r\n        \"backing\": {\r\n            \"type\": \"NETWORK\",\r\n            \"network\": \"network-27\"\r\n        }\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-19/hardware/ethernet/4000",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-19",
+								"hardware",
+								"ethernet",
+								"4000"
+							]
+						},
+						"description": "Change Network the VM is attached to"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/ethernet/4000",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"ethernet",
+								"4000"
+							]
+						},
+						"description": "Delete a given ethernet adapter from a virtual machine."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VM Floppy",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/floppy",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"floppy"
+							]
+						},
+						"description": "List Floppy IDs for a VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/floppy/8000",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"floppy",
+								"8000"
+							]
+						},
+						"description": "Get Floppy details for a single VM "
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"spec\": {\n        \"backing\": {\n            \"type\": \"CLIENT_DEVICE\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/floppy",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"floppy"
+							]
+						},
+						"description": "Create Floppy on VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Connect",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/floppy/8001/connect",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"floppy",
+								"8001",
+								"connect"
+							]
+						},
+						"description": "Connect Floppy to a VM "
+					},
+					"response": []
+				},
+				{
+					"name": "Disconnect",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/floppy/8001/disconnect",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"floppy",
+								"8001",
+								"disconnect"
+							]
+						},
+						"description": "Disconnect Floppy from a VM "
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"spec\": {\n        \"backing\": {\n            \"type\": \"IMAGE_FILE\",\n            \"image_file\":  \"[datastore1] test.flp\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/floppy/8001",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"floppy",
+								"8001"
+							]
+						},
+						"description": "Update FLoppy to use flp file"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/floppy/8001",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"floppy",
+								"8001"
+							]
+						},
+						"description": "Delete Floppy on VM"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VM Memory",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/memory",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"memory"
+							]
+						},
+						"description": "Return the Memory related settings of a virtual machine."
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"spec\": {\n    \"size_MiB\": 512\n  }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/memory",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"memory"
+							]
+						},
+						"description": "Update the Memory related settings of a virtual machine."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VM Parallel",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/parallel",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"parallel"
+							]
+						},
+						"description": "List Parallel IDs for a VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/parallel/10000",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"parallel",
+								"10000"
+							]
+						},
+						"description": "Get Parallel details for a single VM "
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"spec\": {\n        \"backing\": {\n            \"file\": \"[datastore1] parallel2\",\n            \"type\": \"FILE\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/parallel/",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"parallel",
+								""
+							]
+						},
+						"description": "Create Parallel device on VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Connect",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/parallel/10000/connect",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"parallel",
+								"10000",
+								"connect"
+							]
+						},
+						"description": "Connect Parallel device to a VM "
+					},
+					"response": []
+				},
+				{
+					"name": "Disconnect",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/parallel/10000/disconnect",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"parallel",
+								"10000",
+								"disconnect"
+							]
+						},
+						"description": "Disconnect Parallel device from a VM "
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"spec\": {\n        \"backing\": {\n            \"file\": \"[datastore1] parallel3\",\n            \"type\": \"FILE\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/parallel/10001",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"parallel",
+								"10001"
+							]
+						},
+						"description": "Update Parallel to use new file"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/parallel/10001",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"parallel",
+								"10001"
+							]
+						},
+						"description": "Delete Parallel device on VM"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VM Power",
+			"item": [
+				{
+					"name": "Power On",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/power/start",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"power",
+								"start"
+							]
+						},
+						"description": "Power On a VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Suspend",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/power/suspend",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"power",
+								"suspend"
+							]
+						},
+						"description": "Suspend a VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Reset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/power/reset",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"power",
+								"reset"
+							]
+						},
+						"description": "Reset a VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Power Off",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/power/stop",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"power",
+								"stop"
+							]
+						},
+						"description": "Power Off a VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/power",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"power"
+							]
+						},
+						"description": "List power details for a VM"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VM Serial",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/serial",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"serial"
+							]
+						},
+						"description": "List Serial IDs for a VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/serial/9000",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"serial",
+								"9000"
+							]
+						},
+						"description": "Get Serial details for a single VM "
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"spec\": {\n        \"backing\": {\n            \"file\": \"[datastore1] serial2\",\n            \"type\": \"FILE\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/serial/",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"serial",
+								""
+							]
+						},
+						"description": "Create Serial device on VM"
+					},
+					"response": []
+				},
+				{
+					"name": "Connect",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/serial/9000/connect",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"serial",
+								"9000",
+								"connect"
+							]
+						},
+						"description": "Connect Serial device to a VM "
+					},
+					"response": []
+				},
+				{
+					"name": "Disconnect",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/serial/9000/disconnect",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"serial",
+								"9000",
+								"disconnect"
+							]
+						},
+						"description": "Disconnect Serial device from a VM "
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"spec\": {\n        \"backing\": {\n            \"file\": \"[datastore1] Serial3\",\n            \"type\": \"FILE\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/serial/9000",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"serial",
+								"9000"
+							]
+						},
+						"description": "Update Serial to use new file"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{vc}}/rest/vcenter/vm/vm-33/hardware/serial/9000",
+							"protocol": "https",
+							"host": [
+								"{{vc}}"
+							],
+							"path": [
+								"rest",
+								"vcenter",
+								"vm",
+								"vm-33",
+								"hardware",
+								"serial",
+								"9000"
+							]
+						},
+						"description": "Delete Serial device on VM"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
