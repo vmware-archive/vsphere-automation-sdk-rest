@@ -379,7 +379,7 @@
 <h3>Request:</h3>
 <h4>HTTP request</h4>
     
-<div class="httpBox">GET  https://{server}/rest/vmc/api/orgs/{org}/storage/cluster-constraints<br/><span class="header-parameters"><span class="url-query-parameters"><br/><span class="pun">?</span><span class="key">num_hosts</span><span class="pun">=</span><span class="val">1</span><br/><span class="pun">&</span><span class="key">provider</span><span class="pun">=</span><span class="val">string</span><br/></span></span></div>
+<div class="httpBox">GET  https://{server}/rest/vmc/api/orgs/{org}/storage/cluster-constraints<br/><span class="header-parameters"><span class="url-query-parameters"><br/><span class="pun">?</span><span class="key">num_hosts</span><span class="pun">=</span><span class="val">1</span><br/><span class="pun">&</span><span class="key">one_node_reduced_capacity</span><span class="pun">=</span><span class="val">true</span><br/><span class="pun">&</span><span class="key">provider</span><span class="pun">=</span><span class="val">string</span><br/></span></span></div>
     
 <h4>Path Parameters</h4>
     
@@ -429,6 +429,12 @@
                 <td><span class="grey"></span><span class="required">num_hosts</span></td>
                 <td>long</td>
                 <td> Number of hosts in cluster (required). </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">one_node_reduced_capacity</span></td>
+                <td>boolean</td>
+                <td> Optional. Whether this sddc is reduced capacity 1NODE. (optional). </td>
             </tr>
 
     </table>

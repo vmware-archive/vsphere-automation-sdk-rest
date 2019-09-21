@@ -102,6 +102,7 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/error_response-structure.html'>error_response</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/esx_config-structure.html'>esx_config</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/esx_host-structure.html'>esx_host</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/esx_host_info-structure.html'>esx_host_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/extended_attribute-structure.html'>extended_attribute</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/feature_capabilities-structure.html'>feature_capabilities</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/feature_capability-structure.html'>feature_capability</a></li>
@@ -258,9 +259,67 @@
     <h3>Representation:</h3>
     <div id="tabsResultRep">
         <ul>
-            <li id="0"><a href="#tabs-1">JSON</a></li>
+            <li id="0"><a id="newMap" href="#tabs-1" onclick="showFields()">JSON</a></li>
+            <li id="1"><a id="oldMap" href="#tabs-2" onclick="showLegacyFields()">LEGACY JSON</a></li>
         </ul>
         <div id="tabs-1">
+            <span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_ami</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"instance_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"metadata</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"cycle_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"timestamp</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ebs_backed_vsan_config</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"instance_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_nsxt_ami</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"instance_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vmc_internal_version</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"glcm_bundle</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"s3_bucket</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vsan_witness_ami</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"instance_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vmc_version</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"pop_info</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"ami_infos</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"&lt;string&gt;</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"region</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"instance_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"manifest_version</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"created_at</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"service_infos</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"&lt;string&gt;</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"cln</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"build</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"service</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"version</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+<span class="pun">}</span>
+        </div>
+        <div id="tabs-2">
             <span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_ami</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
@@ -324,7 +383,289 @@
 <span class="pun">}</span>
         </div>
     </div>
+
     
+    
+    
+    <div id="fields1">
+    <h4>Attributes:</h4>
+    
+    <table class="params">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+
+        <tr class="subheader">
+            <td colspan="3">
+            Required
+            </td>
+        </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.</span><span class="required">ami_infos</span></td>
+                <td>object</td>
+                <td>A map of [region name of PoP / PoP-AMI]:[PopAmiInfo].<p/> Object with  element values of type <a href='../../../../../structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a>.</td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.ami_infos</span><span class="required">.*</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a></td>
+                <td> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.service_infos</span><span class="required">.*</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/pop_service_info-structure.html'>pop_service_info</a></td>
+                <td> </td>
+            </tr>
+
+        <tr class="subheader">
+            <td colspan="3">
+            Optional
+            </td>
+        </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">vmc_version</span></td>
+                <td>string</td>
+                <td>the vmcVersion of the sddc for display<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">glcm_bundle</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/glcm_bundle-structure.html'>glcm_bundle</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.glcm_bundle.</span><span class="optional">s3_bucket</span></td>
+                <td>string</td>
+                <td>the glcmbundle's s3 bucket<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.glcm_bundle.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>the glcmbundle's id<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">pop_info</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/pop_info-structure.html'>pop_info</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.ami_infos.*.</span><span class="optional">instance_type</span></td>
+                <td>string</td>
+                <td>instance type of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.ami_infos.*.</span><span class="optional">region</span></td>
+                <td>string</td>
+                <td>the region of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.ami_infos.*.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>the ami id for the esx<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.ami_infos.*.</span><span class="optional">name</span></td>
+                <td>string</td>
+                <td>the name of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.ami_infos.*.</span><span class="optional">type</span></td>
+                <td>string</td>
+                <td>Possible values are: <ul> <li> TYPE_CENTOS</li>, <li> TYPE_POP</li>, </ul> PoP AMI type. CENTOS: a Centos AMI; POP: a PoP AMI.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.</span><span class="optional">created_at</span></td>
+                <td>date_time</td>
+                <td>The PopInfo (or PoP AMI) created time. Using ISO 8601 date-time pattern. format: date-time<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.</span><span class="optional">service_infos</span></td>
+                <td>object</td>
+                <td>A map of [service type]:[PopServiceInfo]<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.service_infos.*.</span><span class="optional">cln</span></td>
+                <td>string</td>
+                <td>The service change set number.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.service_infos.*.</span><span class="optional">version</span></td>
+                <td>string</td>
+                <td>The service API version.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.service_infos.*.</span><span class="optional">build</span></td>
+                <td>string</td>
+                <td>The service build number.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.service_infos.*.</span><span class="optional">service</span></td>
+                <td>string</td>
+                <td>Possible values are: <ul> <li> SERVICE_OS</li>, <li> SERVICE_AGENT</li>, <li> SERVICE_GLCM</li>, <li> SERVICE_s3_ADAPTER</li>, <li> SERVICE_JRE</li>, <li> SERVICE_DOCKER</li>, <li> SERVICE_AIDE</li>, <li> SERVICE_RTS</li>, <li> SERVICE_FM_LOG_COLLECTOR</li>, <li> SERVICE_FM_METRICS_COLLECTOR</li>, <li> SERVICE_BRE</li>, <li> SERVICE_BRF</li>, <li> SERVICE_REVERSE_PROXY</li>, <li> SERVICE_FORWARD_PROXY</li>, <li> SERVICE_DNS</li>, <li> SERVICE_NTP</li>, <li> SERVICE_LOGZ_LOG_COLLECTOR</li>, </ul> An enum of PoP related services (including os platform and JRE).<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>UUID of the PopInfo format: UUID<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.pop_info.</span><span class="optional">manifest_version</span></td>
+                <td>string</td>
+                <td>version of the manifest.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">vmc_internal_version</span></td>
+                <td>string</td>
+                <td>the vmcInternalVersion of the sddc for internal use<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">ebs_backed_vsan_config</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/ebs_backed_vsan_config-structure.html'>ebs_backed_vsan_config</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.ebs_backed_vsan_config.</span><span class="optional">instance_type</span></td>
+                <td>string</td>
+                <td>instance type for EBS-backed VSAN configuration<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">vsan_witness_ami</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/ami_info-structure.html'>ami_info</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.vsan_witness_ami.</span><span class="optional">instance_type</span></td>
+                <td>string</td>
+                <td>instance type of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.vsan_witness_ami.</span><span class="optional">region</span></td>
+                <td>string</td>
+                <td>the region of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.vsan_witness_ami.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>the ami id for the esx<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.vsan_witness_ami.</span><span class="optional">name</span></td>
+                <td>string</td>
+                <td>the name of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">esx_ami</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/ami_info-structure.html'>ami_info</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.esx_ami.</span><span class="optional">instance_type</span></td>
+                <td>string</td>
+                <td>instance type of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.esx_ami.</span><span class="optional">region</span></td>
+                <td>string</td>
+                <td>the region of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.esx_ami.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>the ami id for the esx<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.esx_ami.</span><span class="optional">name</span></td>
+                <td>string</td>
+                <td>the name of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">esx_nsxt_ami</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/ami_info-structure.html'>ami_info</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.esx_nsxt_ami.</span><span class="optional">instance_type</span></td>
+                <td>string</td>
+                <td>instance type of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.esx_nsxt_ami.</span><span class="optional">region</span></td>
+                <td>string</td>
+                <td>the region of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.esx_nsxt_ami.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>the ami id for the esx<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.esx_nsxt_ami.</span><span class="optional">name</span></td>
+                <td>string</td>
+                <td>the name of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">metadata</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/metadata-structure.html'>metadata</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.metadata.</span><span class="optional">timestamp</span></td>
+                <td>string</td>
+                <td>the timestamp for the bundle<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.metadata.</span><span class="optional">cycle_id</span></td>
+                <td>string</td>
+                <td>the cycle id<p/> Optional. </td>
+            </tr>
+
+    </table>
+
+    </div>
+    
+    <div id="fields2" class="hidden">
     <h4>Attributes:</h4>
     
     <table class="params">
@@ -438,6 +779,7 @@
 
     </table>
 
+    </div>
     
     
 

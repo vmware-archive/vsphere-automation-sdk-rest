@@ -102,6 +102,7 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/error_response-structure.html'>error_response</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/esx_config-structure.html'>esx_config</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/esx_host-structure.html'>esx_host</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/esx_host_info-structure.html'>esx_host_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/extended_attribute-structure.html'>extended_attribute</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/feature_capabilities-structure.html'>feature_capabilities</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/feature_capability-structure.html'>feature_capability</a></li>
@@ -264,6 +265,7 @@
             <span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"num_hosts</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"storage_capacity</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"host_instance_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"I3_METAL</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"host_cpu_cores_count</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><br/>
 <span class="pun">}</span>
         </div>
@@ -300,6 +302,12 @@
                 <td><span class="grey"></span><span class="optional">host_cpu_cores_count</span></td>
                 <td>long</td>
                 <td>Customize CPU cores on hosts in a cluster. Specify number of cores to be enabled on hosts in a cluster. format: int32<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">host_instance_type</span></td>
+                <td>string</td>
+                <td>The instance type for the esx hosts added to this cluster.<p/> Optional. </td>
             </tr>
 
             <tr>
