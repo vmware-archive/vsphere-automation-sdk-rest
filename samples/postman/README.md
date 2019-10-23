@@ -3,7 +3,7 @@
 These three files provide API resources and example end to end scenarios that you
 can import in to Postman to execute.
 
-* [vSphere-Automation-Rest-API-Resources.postman.json](vSphere-Automation-Rest-API-Resources.postman.json) provides the
+* [vSphere-Automation-Rest-Resources.postman_collection.json](vSphere-Automation-Rest-Resources.postman_collection.json) provides the
 individual API resources. They are standalone requests that you can execute or use to build up an end to end workflow.
 * The [vSphere-Automation-Rest-API-Samples.postman.json](vSphere-Automation-Rest-API-Samples.postman.json) do
 exactly that to show some common simple use cases.
