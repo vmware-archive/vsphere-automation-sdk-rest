@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    
+
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="left-tree.js" type="text/javascript"></script>
+    <script>
+        $(function() {
+            $('#leftTree a').click(function() {
+                menu_traverse(document.getElementById('leftTree'), this.getAttribute("href"));
+            });
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(document.getElementById(this.hash.slice(1)));
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 800);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>REST API Reference Documentation</title>
+    <link href="restdoc.css" type="text/css" rel="stylesheet">
+    <link href="left-tree.css" type="text/css" rel="stylesheet">
+</head>
+
+<body onLoad="menu_main('leftTree')">
+    <main>
+    <header>
+        <div class="header">
+            <div class="logo"></div>
+        </div>
+    </header>
+    <nav class="components-index">
+   
+   <div id="leftTree">
+     <ul>
+        <li><a href="./index.html">Operations</a>
+            <ul><li><a href='./index.html#PKG_com.vmware.vmc.draas_partial_vmc'>vmc</a>
+<ul>    <li><a href='./index.html#PKG_com.vmware.vmc.draas'>draas</a>
+    <ul>        <li><a href='./index.html#SVC_com.vmware.vmc.draas.replica_disk_collections'>replica disk collections</a>
+        <ul>            <li><a href='./operations/com/vmware/vmc/draas/replica_disk_collections.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+        <li><a href='./index.html#SVC_com.vmware.vmc.draas.site_recovery'>site recovery</a>
+        <ul>            <li><a href='./operations/com/vmware/vmc/draas/site_recovery.delete-operation.html'>delete</a></li>
+            <li><a href='./operations/com/vmware/vmc/draas/site_recovery.get-operation.html'>get</a></li>
+            <li><a href='./operations/com/vmware/vmc/draas/site_recovery.post-operation.html'>post</a></li>
+        </ul>
+        </li>
+        <li><a href='./index.html#SVC_com.vmware.vmc.draas.site_recovery_srm_nodes'>site recovery srm nodes</a>
+        <ul>            <li><a href='./operations/com/vmware/vmc/draas/site_recovery_srm_nodes.delete-operation.html'>delete</a></li>
+            <li><a href='./operations/com/vmware/vmc/draas/site_recovery_srm_nodes.post-operation.html'>post</a></li>
+        </ul>
+        </li>
+        <li><a href='./index.html#SVC_com.vmware.vmc.draas.site_recovery_versions'>site recovery versions</a>
+        <ul>            <li><a href='./operations/com/vmware/vmc/draas/site_recovery_versions.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+        <li><a href='./index.html#SVC_com.vmware.vmc.draas.task'>task</a>
+        <ul>            <li><a href='./operations/com/vmware/vmc/draas/task.get-operation.html'>get</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+</ul>
+</li>
+
+        </li>
+        <li><br></li>
+        <li><a href="./landing_types.html">Types</a>
+            <ul></ul>
+        </li>
+    </ul>
+   </div>
+</nav>
+
+    <section class="article-main">
+    <!-- List of Service Links -->
+        <h1 class="title">Operations</h1>
+
+        
+        <h4 id="PKG_com.vmware.vmc.draas_partial_vmc" class="hidden"/>
+        
+               <h1 id="PKG_com.vmware.vmc.draas">vmc draas</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.draas.replica_disk_collections">replica disk collections</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/draas/replica_disk_collections.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/draas/api/orgs/{org}/sddcs/{sddc}/site-recovery/replica-disk-collections</td>
+                           <td>Query replica disk collections</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.draas.site_recovery">site recovery</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/draas/site_recovery.delete-operation.html'>delete</a></td>
+                           <td>DELETE  https://{server}/rest/vmc/draas/api/orgs/{org}/sddcs/{sddc}/site-recovery</td>
+                           <td>Deactivate site recovery for the specified sddc</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/draas/site_recovery.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/draas/api/orgs/{org}/sddcs/{sddc}/site-recovery</td>
+                           <td>Query site recovery configuration for the specified sddc</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/draas/site_recovery.post-operation.html'>post</a></td>
+                           <td>POST  https://{server}/rest/vmc/draas/api/orgs/{org}/sddcs/{sddc}/site-recovery</td>
+                           <td>Activate site recovery for the specified sddc</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.draas.site_recovery_srm_nodes">site recovery srm nodes</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/draas/site_recovery_srm_nodes.delete-operation.html'>delete</a></td>
+                           <td>DELETE  https://{server}/rest/vmc/draas/api/orgs/{org}/sddcs/{sddc}/site-recovery/srm-nodes/{srm_node}</td>
+                           <td>Delete a SRM server.</td>
+                       </tr>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/draas/site_recovery_srm_nodes.post-operation.html'>post</a></td>
+                           <td>POST  https://{server}/rest/vmc/draas/api/orgs/{org}/sddcs/{sddc}/site-recovery/srm-nodes</td>
+                           <td>Provision an additional SRM server.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.draas.site_recovery_versions">site recovery versions</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/draas/site_recovery_versions.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/draas/api/orgs/{org}/sddcs/{sddc}/site-recovery/versions</td>
+                           <td>Query site recovery versions for the specified sddc</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.draas.task">task</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/draas/task.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/draas/api/orgs/{org}/tasks/{task}</td>
+                           <td>Retrieve details of a task.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+    <!-- End List of services with operations -->
+    
+    <footer>
+            <div class="footer">
+            Copyright &#169;  2015-2019 VMware, Inc. All rights reserved.<br/>
+            <a href='http://pubs.vmware.com/copyright-trademark.html'>Copyright and trademark information.</a> Any feedback you provide to VMware is subject to the terms at <a href='http://www.vmware.com/community_terms.html'>www.vmware.com/community_terms.html.</a>
+            </div>
+    </footer>
+    </section>
+    </main>
+</body>
+</html>

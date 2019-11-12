@@ -1,0 +1,319 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>REST API - task</title>
+    <script src="../../../../../../dynamic-contents.js" language="javascript" type="text/javascript"></script>
+    <script src="../../../../../../jquery.js" language="javascript" type="text/javascript"></script>
+    <script src="../../../../../../jquery-ui.js" language="javascript" type="text/javascript"></script>
+    <script src="../../../../../../restdocutils.js" language="javascript" type="text/javascript"></script>
+    <link href="../../../../../../jquery-ui.css" rel="stylesheet" />
+    <link href="../../../../../../restdoc.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../../../left-tree.css" type="text/css" rel="stylesheet">
+    <script src="../../../../../../left-tree.js"></script>
+    <script>
+        $(function() {
+            var cookie = get_cookie("com.vmware.vapi.activeTab");
+            var tabs = $( "#tabsResultRep" ).tabs({
+               active: cookie, activate: function(event, ui) {
+                   set_cookie("com.vmware.vapi.activeTab", ui.newTab[0].id, 1);
+               }
+            });
+        });
+    </script>
+</head>
+<body onLoad="menu_main('leftTree')">
+    <main>
+    <header>
+        <div class="header">
+            <div class="logo"></div>
+        </div>
+    </header>
+    <nav class="components-index">
+   
+   <div id="leftTree">
+     <ul>
+        <li><a href="../../../../../../index.html">Operations</a>
+            <ul></ul>
+        </li>
+        <li><br></li>
+        <li><a href="../../../../../../landing_types.html">Types</a>
+            <ul><li><a href='../../../../../../landing_types.html#PKG_com.vmware.vmc.draas.model_partial_vmc'>vmc</a>
+<ul>    <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vmc.draas.model_partial_draas'>draas</a>
+    <ul>        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vmc.draas.model'>model</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/abstract_entity-structure.html'>abstract_entity</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/activate_site_recovery_config-structure.html'>activate_site_recovery_config</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/error_response-structure.html'>error_response</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/provision_srm_config-structure.html'>provision_srm_config</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/replica_disk-structure.html'>replica_disk</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/replica_disk_collection-structure.html'>replica_disk_collection</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/site_recovery-structure.html'>site_recovery</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/site_recovery_node-structure.html'>site_recovery_node</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/site_recovery_node_version-structure.html'>site_recovery_node_version</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/site_recovery_versions-structure.html'>site_recovery_versions</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/task-structure.html'>task</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/task_progress_phase-structure.html'>task_progress_phase</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+</ul>
+</li>
+
+        </li>
+    </ul>
+   </div>
+</nav>
+
+
+    <section class="article-main">
+    <div class='horizontalTopNav'>
+        <ol id='horizontalnav'>
+         
+            <li><a href='../../../../../../landing_types.html'>Types</a></li>
+         
+            <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vmc.draas.model_partial_vmc'>vmc</a></li>
+         
+            <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vmc.draas.model_partial_draas'>draas</a></li>
+         
+            <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vmc.draas.model'>model</a></li>
+         
+         </ol>
+    </div>
+    <h2 class="title">vmc draas model: task</h2>
+    
+    <div></div>
+    
+    <h3>Representation:</h3>
+    <div id="tabsResultRep">
+        <ul>
+            <li id="0"><a href="#tabs-1">JSON</a></li>
+        </ul>
+        <div id="tabs-1">
+            <span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated_by_user_name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"tenant_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"error_message</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"progress_percent</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"parent_task_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated_by_user_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"sub_status</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"created</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"user_name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"end_time</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"resource_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"params</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"@class</span>"<span class="pun"> :&nbsp;</span><span class="str">"dynamic_structure</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"version</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"start_time</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"retries</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"user_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"task_progress_phases</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"progress_percent</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"progress_percent</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"resource_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"task_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"updated</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"task_version</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"estimated_remaining_minutes</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"status</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+<span class="pun">}</span>
+        </div>
+    </div>
+    
+    <h4>Attributes:</h4>
+    
+    <table class="params">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+
+        <tr class="subheader">
+            <td colspan="3">
+            Required
+            </td>
+        </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="required">updated</span></td>
+                <td>date_time</td>
+                <td> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="required">user_id</span></td>
+                <td>string</td>
+                <td>User id that last updated this record<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="required">created</span></td>
+                <td>date_time</td>
+                <td> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="required">updated_by_user_id</span></td>
+                <td>string</td>
+                <td>User id that last updated this record<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="required">version</span></td>
+                <td>long</td>
+                <td>Version of this entity format: int32<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="required">updated_by_user_name</span></td>
+                <td>string</td>
+                <td>User name that last updated this record<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="required">user_name</span></td>
+                <td>string</td>
+                <td>User name that last updated this record<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="required">id</span></td>
+                <td>string</td>
+                <td> </td>
+            </tr>
+
+        <tr class="subheader">
+            <td colspan="3">
+            Optional
+            </td>
+        </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">status</span></td>
+                <td>string</td>
+                <td>Possible values are: <ul> <li> STATUS_STARTED</li>, <li> STATUS_CANCELING</li>, <li> STATUS_FINISHED</li>, <li> STATUS_FAILED</li>, <li> STATUS_CANCELED</li>, </ul><p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">resource_id</span></td>
+                <td>string</td>
+                <td>UUID of resources task is acting upon<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">start_time</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">retries</span></td>
+                <td>long</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">task_type</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">task_progress_phases</span></td>
+                <td><a href='../../../../../../structures/com/vmware/vmc/draas/model/task_progress_phase-structure.html'>task_progress_phase</a>[]</td>
+                <td>Task progress phases involved in current task execution<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">tenant_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">error_message</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">parent_task_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">progress_percent</span></td>
+                <td>long</td>
+                <td>Estimated progress percentage the task executed format: int32<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">estimated_remaining_minutes</span></td>
+                <td>long</td>
+                <td>Estimated remaining time in minute of the task execution, < 0 means no estimation for the task. format: int32<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">params</span></td>
+                <td>object</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">end_time</span></td>
+                <td>date_time</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">task_version</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">resource_type</span></td>
+                <td>string</td>
+                <td>Type of resource being acted upon<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">sub_status</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+    </table>
+
+    
+    
+
+    
+    <footer>
+            <div class="footer">
+            Copyright &#169;  2015-2019 VMware, Inc. All rights reserved.<br/>
+            <a href='http://pubs.vmware.com/copyright-trademark.html'>Copyright and trademark information.</a> Any feedback you provide to VMware is subject to the terms at <a href='http://www.vmware.com/community_terms.html'>www.vmware.com/community_terms.html.</a>
+            </div>
+    </footer>
+    </section>
+</main>
+</body>
+</html>
+

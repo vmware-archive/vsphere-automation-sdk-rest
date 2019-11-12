@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>REST API - replica_disk_collection</title>
+    <script src="../../../../../../dynamic-contents.js" language="javascript" type="text/javascript"></script>
+    <script src="../../../../../../jquery.js" language="javascript" type="text/javascript"></script>
+    <script src="../../../../../../jquery-ui.js" language="javascript" type="text/javascript"></script>
+    <script src="../../../../../../restdocutils.js" language="javascript" type="text/javascript"></script>
+    <link href="../../../../../../jquery-ui.css" rel="stylesheet" />
+    <link href="../../../../../../restdoc.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../../../left-tree.css" type="text/css" rel="stylesheet">
+    <script src="../../../../../../left-tree.js"></script>
+    <script>
+        $(function() {
+            var cookie = get_cookie("com.vmware.vapi.activeTab");
+            var tabs = $( "#tabsResultRep" ).tabs({
+               active: cookie, activate: function(event, ui) {
+                   set_cookie("com.vmware.vapi.activeTab", ui.newTab[0].id, 1);
+               }
+            });
+        });
+    </script>
+</head>
+<body onLoad="menu_main('leftTree')">
+    <main>
+    <header>
+        <div class="header">
+            <div class="logo"></div>
+        </div>
+    </header>
+    <nav class="components-index">
+   
+   <div id="leftTree">
+     <ul>
+        <li><a href="../../../../../../index.html">Operations</a>
+            <ul></ul>
+        </li>
+        <li><br></li>
+        <li><a href="../../../../../../landing_types.html">Types</a>
+            <ul><li><a href='../../../../../../landing_types.html#PKG_com.vmware.vmc.draas.model_partial_vmc'>vmc</a>
+<ul>    <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vmc.draas.model_partial_draas'>draas</a>
+    <ul>        <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vmc.draas.model'>model</a>
+        <ul>            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/abstract_entity-structure.html'>abstract_entity</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/activate_site_recovery_config-structure.html'>activate_site_recovery_config</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/error_response-structure.html'>error_response</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/provision_srm_config-structure.html'>provision_srm_config</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/replica_disk-structure.html'>replica_disk</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/replica_disk_collection-structure.html'>replica_disk_collection</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/site_recovery-structure.html'>site_recovery</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/site_recovery_node-structure.html'>site_recovery_node</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/site_recovery_node_version-structure.html'>site_recovery_node_version</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/site_recovery_versions-structure.html'>site_recovery_versions</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/task-structure.html'>task</a></li>
+            <li><a href='../../../../../../structures/com/vmware/vmc/draas/model/task_progress_phase-structure.html'>task_progress_phase</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+</ul>
+</li>
+
+        </li>
+    </ul>
+   </div>
+</nav>
+
+
+    <section class="article-main">
+    <div class='horizontalTopNav'>
+        <ol id='horizontalnav'>
+         
+            <li><a href='../../../../../../landing_types.html'>Types</a></li>
+         
+            <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vmc.draas.model_partial_vmc'>vmc</a></li>
+         
+            <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vmc.draas.model_partial_draas'>draas</a></li>
+         
+            <li><a href='../../../../../../landing_types.html#PKG_com.vmware.vmc.draas.model'>model</a></li>
+         
+         </ol>
+    </div>
+    <h2 class="title">vmc draas model: replica disk collection</h2>
+    
+    <div></div>
+    
+    <h3>Representation:</h3>
+    <div id="tabsResultRep">
+        <ul>
+            <li id="0"><a href="#tabs-1">JSON</a></li>
+        </ul>
+        <div id="tabs-1">
+            <span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"collection_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"disks</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"collection_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"movable</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"space_requirement</span>"<span class="pun"> :&nbsp;</span><span class="val">1.5</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"datastore_mo_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"datastores_for_single_host_move</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"@class</span>"<span class="pun"> :&nbsp;</span><span class="str">"dynamic_structure</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"@class</span>"<span class="pun"> :&nbsp;</span><span class="str">"dynamic_structure</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"disk_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"collection_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"movable</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"space_requirement</span>"<span class="pun"> :&nbsp;</span><span class="val">1.5</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"datastore_mo_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"datastores_for_single_host_move</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"@class</span>"<span class="pun"> :&nbsp;</span><span class="str">"dynamic_structure</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"@class</span>"<span class="pun"> :&nbsp;</span><span class="str">"dynamic_structure</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"disk_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"generated</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"placeholder_vm_mo_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+<span class="pun">}</span>
+        </div>
+    </div>
+    
+    <h4>Attributes:</h4>
+    
+    <table class="params">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+
+        <tr class="subheader">
+            <td colspan="3">
+            Optional
+            </td>
+        </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">collection_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">generated</span></td>
+                <td>date_time</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">disks</span></td>
+                <td><a href='../../../../../../structures/com/vmware/vmc/draas/model/replica_disk-structure.html'>replica_disk</a>[]</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">disks[].</span><span class="optional">space_requirement</span></td>
+                <td>double</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">disks[].</span><span class="optional">name</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">disks[].</span><span class="optional">collection_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">disks[].</span><span class="optional">datastores_for_single_host_move</span></td>
+                <td>object[]</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">disks[].</span><span class="optional">movable</span></td>
+                <td>boolean</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">disks[].</span><span class="optional">disk_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">disks[].</span><span class="optional">datastore_mo_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">placeholder_vm_mo_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">name</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+    </table>
+
+    
+    
+
+    
+    <footer>
+            <div class="footer">
+            Copyright &#169;  2015-2019 VMware, Inc. All rights reserved.<br/>
+            <a href='http://pubs.vmware.com/copyright-trademark.html'>Copyright and trademark information.</a> Any feedback you provide to VMware is subject to the terms at <a href='http://www.vmware.com/community_terms.html'>www.vmware.com/community_terms.html.</a>
+            </div>
+    </footer>
+    </section>
+</main>
+</body>
+</html>
+

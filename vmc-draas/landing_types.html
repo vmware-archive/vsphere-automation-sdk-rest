@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    
+
+    <script src="jquery.js" language="javascript" type="text/javascript"></script>
+    <script src="left-tree.js" type="text/javascript" ></script>
+    <script>
+        $(function() {
+            $('#leftTree a').click(function() {
+                menu_traverse(document.getElementById('leftTree'), this.getAttribute("href"));
+            });
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(document.getElementById(this.hash.slice(1)));
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 800);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>REST API Reference Documentation</title>
+    <link href="restdoc.css" type="text/css" rel="stylesheet">
+    <link href="left-tree.css" type="text/css" rel="stylesheet">
+</head>
+
+<body onLoad="menu_main('leftTree')">
+    <main>
+    <header>
+        <div class="header">
+            <div class="logo"></div>
+        </div>
+    </header>
+    <nav class="components-index">
+   
+   <div id="leftTree">
+     <ul>
+        <li><a href="./index.html">Operations</a>
+            <ul></ul>
+        </li>
+        <li><br></li>
+        <li><a href="./landing_types.html">Types</a>
+            <ul><li><a href='./landing_types.html#PKG_com.vmware.vmc.draas.model_partial_vmc'>vmc</a>
+<ul>    <li><a href='./landing_types.html#PKG_com.vmware.vmc.draas.model_partial_draas'>draas</a>
+    <ul>        <li><a href='./landing_types.html#PKG_com.vmware.vmc.draas.model'>model</a>
+        <ul>            <li><a href='./structures/com/vmware/vmc/draas/model/abstract_entity-structure.html'>abstract_entity</a></li>
+            <li><a href='./structures/com/vmware/vmc/draas/model/activate_site_recovery_config-structure.html'>activate_site_recovery_config</a></li>
+            <li><a href='./structures/com/vmware/vmc/draas/model/error_response-structure.html'>error_response</a></li>
+            <li><a href='./structures/com/vmware/vmc/draas/model/provision_srm_config-structure.html'>provision_srm_config</a></li>
+            <li><a href='./structures/com/vmware/vmc/draas/model/replica_disk-structure.html'>replica_disk</a></li>
+            <li><a href='./structures/com/vmware/vmc/draas/model/replica_disk_collection-structure.html'>replica_disk_collection</a></li>
+            <li><a href='./structures/com/vmware/vmc/draas/model/site_recovery-structure.html'>site_recovery</a></li>
+            <li><a href='./structures/com/vmware/vmc/draas/model/site_recovery_node-structure.html'>site_recovery_node</a></li>
+            <li><a href='./structures/com/vmware/vmc/draas/model/site_recovery_node_version-structure.html'>site_recovery_node_version</a></li>
+            <li><a href='./structures/com/vmware/vmc/draas/model/site_recovery_versions-structure.html'>site_recovery_versions</a></li>
+            <li><a href='./structures/com/vmware/vmc/draas/model/task-structure.html'>task</a></li>
+            <li><a href='./structures/com/vmware/vmc/draas/model/task_progress_phase-structure.html'>task_progress_phase</a></li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</li>
+</ul>
+</li>
+
+        </li>
+    </ul>
+   </div>
+</nav>
+
+    <section class="article-main">
+        <h1 class="title">Types</h1>
+        
+               <h4 id="PKG_com.vmware.vmc.draas.model_partial_vmc" class="hidden"/>
+        
+               <h4 id="PKG_com.vmware.vmc.draas.model_partial_draas" class="hidden"/>
+        
+           <h1 id="PKG_com.vmware.vmc.draas.model">vmc draas model</h1>
+               
+
+                
+                <table class="reference-types" cellspacing="0" cellpadding="3" border="0"
+                    summary="Package Structures table, listing structures and an explanation">
+                    <tbody>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/draas/model/abstract_entity-structure.html'>vmc.draas.model.abstract_entity</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/draas/model/activate_site_recovery_config-structure.html'>vmc.draas.model.activate_site_recovery_config</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/draas/model/error_response-structure.html'>vmc.draas.model.error_response</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/draas/model/provision_srm_config-structure.html'>vmc.draas.model.provision_srm_config</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/draas/model/replica_disk-structure.html'>vmc.draas.model.replica_disk</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/draas/model/replica_disk_collection-structure.html'>vmc.draas.model.replica_disk_collection</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/draas/model/site_recovery-structure.html'>vmc.draas.model.site_recovery</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/draas/model/site_recovery_node-structure.html'>vmc.draas.model.site_recovery_node</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/draas/model/site_recovery_node_version-structure.html'>vmc.draas.model.site_recovery_node_version</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/draas/model/site_recovery_versions-structure.html'>vmc.draas.model.site_recovery_versions</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/draas/model/task-structure.html'>vmc.draas.model.task</a></td>
+                            <td> </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><a href='./structures/com/vmware/vmc/draas/model/task_progress_phase-structure.html'>vmc.draas.model.task_progress_phase</a></td>
+                            <td>A task progress can be (but does NOT have to be) divided to more meaningful progress phases. </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+         
+        <!-- End List of services with structures -->
+        
+    <footer>
+            <div class="footer">
+            Copyright &#169;  2015-2019 VMware, Inc. All rights reserved.<br/>
+            <a href='http://pubs.vmware.com/copyright-trademark.html'>Copyright and trademark information.</a> Any feedback you provide to VMware is subject to the terms at <a href='http://www.vmware.com/community_terms.html'>www.vmware.com/community_terms.html.</a>
+            </div>
+    </footer>
+    </section>
+    </main>
+</body>
+</html>
