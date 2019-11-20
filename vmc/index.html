@@ -112,9 +112,20 @@
                 </li>
             </ul>
             </li>
-            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.clusters'>clusters</a>
+            <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.clusters'>clusters</a>
             <ul>                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/clusters.create-operation.html'>create</a></li>
                 <li><a href='./operations/com/vmware/vmc/orgs/sddcs/clusters.delete-operation.html'>delete</a></li>
+                <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.clusters.config'>config</a>
+                <ul>                    <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.clusters.config.constraints'>constraints</a>
+                    <ul>                        <li><a href='./operations/com/vmware/vmc/orgs/sddcs/clusters/config/constraints.get-operation.html'>get</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>
+                <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.clusters.reconfigure'>reconfigure</a>
+                <ul>                    <li><a href='./operations/com/vmware/vmc/orgs/sddcs/clusters/reconfigure.cluster_reconfig-operation.html'>cluster_reconfig</a></li>
+                </ul>
+                </li>
             </ul>
             </li>
             <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.convert'>convert</a>
@@ -787,6 +798,9 @@
                   </tbody>
                </table>
         
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.clusters">vmc orgs sddcs clusters</h1>
+               
+        
                <h2 id="SVC_com.vmware.vmc.orgs.sddcs.clusters">clusters</h2>
                
                <table class="reference" cellspacing="0" cellpadding="3" border="0"
@@ -810,6 +824,53 @@
                            <td><a href='operations/com/vmware/vmc/orgs/sddcs/clusters.delete-operation.html'>delete</a></td>
                            <td>DELETE  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/clusters/{cluster}</td>
                            <td>This is a force operation which will delete the cluster even if there can be a data loss. Before calling this operation, all the VMs should be powered off.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h1 id="PKG_com.vmware.vmc.orgs.sddcs.clusters.config">vmc orgs sddcs clusters config</h1>
+               
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.clusters.config.constraints">constraints</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/clusters/config/constraints.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/clusters/{cluster}/config/constraints</td>
+                           <td>This API provides the storage choices available when reconfiguring storage in a cluster. The constraints returned will give vSAN reconfiguration biases and available vSAN capacities per reconfiguration bias. The constraints also indicate the default vSAN capacity per reconfiguration biases as well as the default reconfiguration bias.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.clusters.reconfigure">reconfigure</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/clusters/reconfigure.cluster_reconfig-operation.html'>cluster_reconfig</a></td>
+                           <td>POST  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/clusters/{cluster}/reconfigure</td>
+                           <td>This reconfiguration will handle changing both the number of hosts and the cluster storage capacity.</td>
                        </tr>
         
                   </tbody>

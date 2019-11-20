@@ -68,6 +68,7 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/cloud_provider-structure.html'>cloud_provider</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/cluster-structure.html'>cluster</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/cluster_config-structure.html'>cluster_config</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/cluster_reconfigure_params-structure.html'>cluster_reconfigure_params</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/compute_gateway_template-structure.html'>compute_gateway_template</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/config_spec-structure.html'>config_spec</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/connectivity_agent_validation-structure.html'>connectivity_agent_validation</a></li>
@@ -235,6 +236,9 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/vpn_channel_status-structure.html'>vpn_channel_status</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/vpn_tunnel_status-structure.html'>vpn_tunnel_status</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/vpn_tunnel_traffic_stats-structure.html'>vpn_tunnel_traffic_stats</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/vsan_available_capacity-structure.html'>vsan_available_capacity</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/vsan_cluster_reconfig_bias-structure.html'>vsan_cluster_reconfig_bias</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/vsan_cluster_reconfig_constraints-structure.html'>vsan_cluster_reconfig_constraints</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/vsan_config_constraints-structure.html'>vsan_config_constraints</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/vsan_encryption_config-structure.html'>vsan_encryption_config</a></li>
     </ul>
@@ -281,6 +285,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"auto_renewed_allowed</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"product_name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"offer_name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"billing_frequency</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"csp_subscription_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"product_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"offer_version</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
@@ -325,6 +330,12 @@
                 <td><span class="grey"></span><span class="optional">end_date</span></td>
                 <td>string</td>
                 <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey"></span><span class="optional">billing_frequency</span></td>
+                <td>string</td>
+                <td>The frequency at which the customer is billed. Currently supported values are \"Upfront\" and \"Monthly\"<p/> Optional. </td>
             </tr>
 
             <tr>

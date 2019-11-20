@@ -68,6 +68,7 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/cloud_provider-structure.html'>cloud_provider</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/cluster-structure.html'>cluster</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/cluster_config-structure.html'>cluster_config</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/cluster_reconfigure_params-structure.html'>cluster_reconfigure_params</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/compute_gateway_template-structure.html'>compute_gateway_template</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/config_spec-structure.html'>config_spec</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/connectivity_agent_validation-structure.html'>connectivity_agent_validation</a></li>
@@ -235,6 +236,9 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/vpn_channel_status-structure.html'>vpn_channel_status</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/vpn_tunnel_status-structure.html'>vpn_tunnel_status</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/vpn_tunnel_traffic_stats-structure.html'>vpn_tunnel_traffic_stats</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/vsan_available_capacity-structure.html'>vsan_available_capacity</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/vsan_cluster_reconfig_bias-structure.html'>vsan_cluster_reconfig_bias</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/vsan_cluster_reconfig_constraints-structure.html'>vsan_cluster_reconfig_constraints</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/vsan_config_constraints-structure.html'>vsan_config_constraints</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/vsan_encryption_config-structure.html'>vsan_encryption_config</a></li>
     </ul>
@@ -369,159 +373,21 @@
             </tr>
 
             <tr>
-                <td><span class="grey">on_demand.</span><span class="required">product_type</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">on_demand.</span><span class="required">name</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">on_demand.</span><span class="required">currency</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">on_demand.</span><span class="required">region</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">on_demand.</span><span class="required">unit_price</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">on_demand.</span><span class="required">monthly_cost</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">on_demand.</span><span class="required">version</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">on_demand.</span><span class="required">type</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">on_demand.</span><span class="required">description</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
                 <td><span class="grey"></span><span class="required">offers</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/term_offer_instance-structure.html'>term_offer_instance</a>[]</td>
                 <td> </td>
             </tr>
 
+        <tr class="subheader">
+            <td colspan="3">
+            Optional
+            </td>
+        </tr>
+
             <tr>
-                <td><span class="grey">offers[].</span><span class="required">description</span></td>
+                <td><span class="grey">on_demand.</span><span class="optional">product_type</span></td>
                 <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">offers[].</span><span class="required">product</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">offers[].</span><span class="required">product_type</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">offers[].</span><span class="required">name</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">offers[].</span><span class="required">currency</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">offers[].</span><span class="required">region</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">offers[].</span><span class="required">commitment_term</span></td>
-                <td>long</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">offers[].</span><span class="required">unit_price</span></td>
-                <td>string</td>
-                <td>(deprecated. unit_price is moved into TermBillingOptions. For backward compatibility, this field reflect \"Prepaid\" price at the offer level.)<p/> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">offers[].</span><span class="required">billing_options</span></td>
-                <td><a href='../../../../../structures/com/vmware/vmc/model/term_billing_options-structure.html'>term_billing_options</a>[]</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">offers[].billing_options[].</span><span class="required">unit_price</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">offers[].billing_options[].</span><span class="required">billing_frequency</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">offers[].</span><span class="required">version</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">offers[].</span><span class="required">offer_context_id</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">offers[].</span><span class="required">product_charge_id</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">offers[].</span><span class="required">type</span></td>
-                <td>string</td>
-                <td> </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">offers[].</span><span class="required">product_id</span></td>
-                <td>string</td>
-                <td> </td>
+                <td>Deprecated. Please use product and type fields instead.<p/> Optional. </td>
             </tr>
 
     </table>
