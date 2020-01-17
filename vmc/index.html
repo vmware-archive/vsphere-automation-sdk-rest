@@ -112,6 +112,10 @@
                 </li>
             </ul>
             </li>
+            <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.cluster_provision_spec'>cluster provision spec</a>
+            <ul>                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/cluster_provision_spec.get-operation.html'>get</a></li>
+            </ul>
+            </li>
             <li><a href='./index.html#PKG_com.vmware.vmc.orgs.sddcs.clusters'>clusters</a>
             <ul>                <li><a href='./operations/com/vmware/vmc/orgs/sddcs/clusters.create-operation.html'>create</a></li>
                 <li><a href='./operations/com/vmware/vmc/orgs/sddcs/clusters.delete-operation.html'>delete</a></li>
@@ -120,6 +124,10 @@
                     <ul>                        <li><a href='./operations/com/vmware/vmc/orgs/sddcs/clusters/config/constraints.get-operation.html'>get</a></li>
                     </ul>
                     </li>
+                </ul>
+                </li>
+                <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.clusters.host_provision_spec'>host provision spec</a>
+                <ul>                    <li><a href='./operations/com/vmware/vmc/orgs/sddcs/clusters/host_provision_spec.get-operation.html'>get</a></li>
                 </ul>
                 </li>
                 <li><a href='./index.html#SVC_com.vmware.vmc.orgs.sddcs.clusters.reconfigure'>reconfigure</a>
@@ -798,6 +806,28 @@
                   </tbody>
                </table>
         
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.cluster_provision_spec">cluster provision spec</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/cluster_provision_spec.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/cluster-provision-spec</td>
+                           <td>Get cluster provision spec for a new cluster in an sddc</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
                <h1 id="PKG_com.vmware.vmc.orgs.sddcs.clusters">vmc orgs sddcs clusters</h1>
                
         
@@ -849,6 +879,28 @@
                            <td><a href='operations/com/vmware/vmc/orgs/sddcs/clusters/config/constraints.get-operation.html'>get</a></td>
                            <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/clusters/{cluster}/config/constraints</td>
                            <td>This API provides the storage choices available when reconfiguring storage in a cluster. The constraints returned will give vSAN reconfiguration biases and available vSAN capacities per reconfiguration bias. The constraints also indicate the default vSAN capacity per reconfiguration biases as well as the default reconfiguration bias.</td>
+                       </tr>
+        
+                  </tbody>
+               </table>
+        
+               <h2 id="SVC_com.vmware.vmc.orgs.sddcs.clusters.host_provision_spec">host provision spec</h2>
+               
+               <table class="reference" cellspacing="0" cellpadding="3" border="0"
+                   summary="Operations table, listing operations and an explanation">
+                   <tbody>
+                       <tr>
+                           <th>Operation</th>
+                           <th>HTTP request</th>
+                           <th>Description</th>
+                       </tr>
+                   </tbody>
+                   <tbody>
+        
+                       <tr>
+                           <td><a href='operations/com/vmware/vmc/orgs/sddcs/clusters/host_provision_spec.get-operation.html'>get</a></td>
+                           <td>GET  https://{server}/rest/vmc/api/orgs/{org}/sddcs/{sddc}/clusters/{cluster}/host-provision-spec</td>
+                           <td>Get host provision spec for a new host in a cluster in an sddc</td>
                        </tr>
         
                   </tbody>
@@ -1982,7 +2034,7 @@
     
     <footer>
             <div class="footer">
-            Copyright &#169;  2015-2019 VMware, Inc. All rights reserved.<br/>
+            Copyright &#169;  2015-2020 VMware, Inc. All rights reserved.<br/>
             <a href='http://pubs.vmware.com/copyright-trademark.html'>Copyright and trademark information.</a> Any feedback you provide to VMware is subject to the terms at <a href='http://www.vmware.com/community_terms.html'>www.vmware.com/community_terms.html.</a>
             </div>
     </footer>
