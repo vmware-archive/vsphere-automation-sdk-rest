@@ -178,6 +178,7 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/organization-structure.html'>organization</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paged_edge_list-structure.html'>paged_edge_list</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paging_info-structure.html'>paging_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/payment_method_info-structure.html'>payment_method_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_agent_xeni_connection-structure.html'>pop_agent_xeni_connection</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_info-structure.html'>pop_info</a></li>
@@ -279,7 +280,9 @@
     <div id="tabsResultRep">
         <ul>
             <li id="0"><a id="newMap" href="#tabs-1" onclick="showFields()">JSON</a></li>
+    
             <li id="1"><a id="oldMap" href="#tabs-2" onclick="showLegacyFields()">LEGACY JSON</a></li>
+    
         </ul>
         <div id="tabs-1">
             <span class="pun">{</span><br/>
@@ -299,6 +302,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"start_date</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 <span class="pun">}</span>
         </div>
+    
         <div id="tabs-2">
             <span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"metadata</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
@@ -320,8 +324,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"start_date</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 <span class="pun">}</span>
         </div>
+    
     </div>
-
     
     
     
@@ -458,19 +462,19 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">reservation_state</span></td>
+                <td><span class="optional">reservation_state</span></td>
                 <td>string</td>
                 <td>Possible values are: <ul> <li> RESERVATION_STATE_SCHEDULED</li>, <li> RESERVATION_STATE_RUNNING</li>, <li> RESERVATION_STATE_CANCELED</li>, <li> RESERVATION_STATE_COMPLETED</li>, </ul><p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">emergency</span></td>
+                <td><span class="optional">emergency</span></td>
                 <td>boolean</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">maintenance_properties</span></td>
+                <td><span class="optional">maintenance_properties</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/reservation_window_maintenance_properties-structure.html'>reservation_window_maintenance_properties</a></td>
                 <td> Optional. </td>
             </tr>
@@ -482,43 +486,43 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">reserve_id</span></td>
+                <td><span class="optional">reserve_id</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">start_hour</span></td>
+                <td><span class="optional">start_hour</span></td>
                 <td>long</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">sddc_id</span></td>
+                <td><span class="optional">sddc_id</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">manifest_id</span></td>
+                <td><span class="optional">manifest_id</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">duration_hours</span></td>
+                <td><span class="optional">duration_hours</span></td>
                 <td>long</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">start_date</span></td>
+                <td><span class="optional">start_date</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">metadata</span></td>
+                <td><span class="optional">metadata</span></td>
                 <td>list</td>
                 <td>Metadata for reservation window, in key-value form<p/> Optional. </td>
             </tr>

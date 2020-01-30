@@ -178,6 +178,7 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/organization-structure.html'>organization</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paged_edge_list-structure.html'>paged_edge_list</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paging_info-structure.html'>paging_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/payment_method_info-structure.html'>payment_method_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_agent_xeni_connection-structure.html'>pop_agent_xeni_connection</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_info-structure.html'>pop_info</a></li>
@@ -279,7 +280,9 @@
     <div id="tabsResultRep">
         <ul>
             <li id="0"><a id="newMap" href="#tabs-1" onclick="showFields()">JSON</a></li>
+    
             <li id="1"><a id="oldMap" href="#tabs-2" onclick="showLegacyFields()">LEGACY JSON</a></li>
+    
         </ul>
         <div id="tabs-1">
             <span class="pun">{</span><br/>
@@ -320,6 +323,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 <span class="pun">}</span>
         </div>
+    
         <div id="tabs-2">
             <span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"default_capacities</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
@@ -365,8 +369,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
 <span class="pun">}</span>
         </div>
+    
     </div>
-
     
     
     
@@ -503,7 +507,7 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">reconfig_biases</span></td>
+                <td><span class="required">reconfig_biases</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/vsan_cluster_reconfig_bias-structure.html'>vsan_cluster_reconfig_bias</a>[]</td>
                 <td>Biases to reconfigure vSAN in an existing cluster.<p/> </td>
             </tr>
@@ -527,7 +531,7 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">available_capacities</span></td>
+                <td><span class="required">available_capacities</span></td>
                 <td>list</td>
                 <td>A map of VsanClusterReconfigBias id to the list of VsanAvailableCapacity. It gives all of available vSAN capacities for each of reconfiguration biases.<p/> List of {"key": string, "value": <a href='../../../../../structures/com/vmware/vmc/model/vsan_available_capacity-structure.html'>vsan_available_capacity</a>[]}</td>
             </tr>
@@ -563,7 +567,7 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">default_capacities</span></td>
+                <td><span class="required">default_capacities</span></td>
                 <td>list</td>
                 <td>A map of VsanClusterReconfigBias id to a VsanAvailableCapacity. It gives the default VsanAvailableCapacity for each of reconfiguration biases.<p/> List of {"key": string, "value": <a href='../../../../../structures/com/vmware/vmc/model/vsan_available_capacity-structure.html'>vsan_available_capacity</a>}</td>
             </tr>
@@ -599,13 +603,13 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">hosts</span></td>
+                <td><span class="required">hosts</span></td>
                 <td>long</td>
                 <td>The number of hosts in a cluster for the constraints. format: int32<p/> </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">default_reconfig_bias_id</span></td>
+                <td><span class="required">default_reconfig_bias_id</span></td>
                 <td>string</td>
                 <td>The id of default VsanClusterReconfigBias for this constraints.<p/> </td>
             </tr>

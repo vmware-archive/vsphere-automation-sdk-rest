@@ -178,6 +178,7 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/organization-structure.html'>organization</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paged_edge_list-structure.html'>paged_edge_list</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paging_info-structure.html'>paging_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/payment_method_info-structure.html'>payment_method_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_agent_xeni_connection-structure.html'>pop_agent_xeni_connection</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_info-structure.html'>pop_info</a></li>
@@ -279,7 +280,9 @@
     <div id="tabsResultRep">
         <ul>
             <li id="0"><a id="newMap" href="#tabs-1" onclick="showFields()">JSON</a></li>
+    
             <li id="1"><a id="oldMap" href="#tabs-2" onclick="showLegacyFields()">LEGACY JSON</a></li>
+    
         </ul>
         <div id="tabs-1">
             <span class="pun">{</span><br/>
@@ -338,6 +341,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 <span class="pun">}</span>
         </div>
+    
         <div id="tabs-2">
             <span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_ami</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
@@ -401,8 +405,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 <span class="pun">}</span>
         </div>
+    
     </div>
-
     
     
     
@@ -725,13 +729,13 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">vmc_version</span></td>
+                <td><span class="optional">vmc_version</span></td>
                 <td>string</td>
                 <td>the vmcVersion of the sddc for display<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">glcm_bundle</span></td>
+                <td><span class="optional">glcm_bundle</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/glcm_bundle-structure.html'>glcm_bundle</a></td>
                 <td> Optional. </td>
             </tr>
@@ -749,7 +753,7 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">pop_info</span></td>
+                <td><span class="optional">pop_info</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/pop_info-structure.html'>pop_info</a></td>
                 <td> Optional. </td>
             </tr>
@@ -761,39 +765,153 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">vmc_internal_version</span></td>
+                <td><span class="grey">pop_info.</span><span class="optional">created_at</span></td>
+                <td>date_time</td>
+                <td>The PopInfo (or PoP AMI) created time. Using ISO 8601 date-time pattern. format: date-time<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">pop_info.</span><span class="optional">service_infos</span></td>
+                <td>list</td>
+                <td>A map of [service type]:[PopServiceInfo]<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">pop_info.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>UUID of the PopInfo format: UUID<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">pop_info.</span><span class="optional">manifest_version</span></td>
+                <td>string</td>
+                <td>version of the manifest.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="optional">vmc_internal_version</span></td>
                 <td>string</td>
                 <td>the vmcInternalVersion of the sddc for internal use<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">ebs_backed_vsan_config</span></td>
+                <td><span class="optional">ebs_backed_vsan_config</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/ebs_backed_vsan_config-structure.html'>ebs_backed_vsan_config</a></td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">vsan_witness_ami</span></td>
+                <td><span class="grey">ebs_backed_vsan_config.</span><span class="optional">instance_type</span></td>
+                <td>string</td>
+                <td>instance type for EBS-backed VSAN configuration<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="optional">vsan_witness_ami</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/ami_info-structure.html'>ami_info</a></td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">esx_ami</span></td>
+                <td><span class="grey">vsan_witness_ami.</span><span class="optional">instance_type</span></td>
+                <td>string</td>
+                <td>instance type of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">vsan_witness_ami.</span><span class="optional">region</span></td>
+                <td>string</td>
+                <td>the region of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">vsan_witness_ami.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>the ami id for the esx<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">vsan_witness_ami.</span><span class="optional">name</span></td>
+                <td>string</td>
+                <td>the name of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="optional">esx_ami</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/ami_info-structure.html'>ami_info</a></td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">esx_nsxt_ami</span></td>
+                <td><span class="grey">esx_ami.</span><span class="optional">instance_type</span></td>
+                <td>string</td>
+                <td>instance type of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">esx_ami.</span><span class="optional">region</span></td>
+                <td>string</td>
+                <td>the region of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">esx_ami.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>the ami id for the esx<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">esx_ami.</span><span class="optional">name</span></td>
+                <td>string</td>
+                <td>the name of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="optional">esx_nsxt_ami</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/ami_info-structure.html'>ami_info</a></td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">metadata</span></td>
+                <td><span class="grey">esx_nsxt_ami.</span><span class="optional">instance_type</span></td>
+                <td>string</td>
+                <td>instance type of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">esx_nsxt_ami.</span><span class="optional">region</span></td>
+                <td>string</td>
+                <td>the region of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">esx_nsxt_ami.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>the ami id for the esx<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">esx_nsxt_ami.</span><span class="optional">name</span></td>
+                <td>string</td>
+                <td>the name of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="optional">metadata</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/metadata-structure.html'>metadata</a></td>
                 <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">metadata.</span><span class="optional">timestamp</span></td>
+                <td>string</td>
+                <td>the timestamp for the bundle<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">metadata.</span><span class="optional">cycle_id</span></td>
+                <td>string</td>
+                <td>the cycle id<p/> Optional. </td>
             </tr>
 
     </table>

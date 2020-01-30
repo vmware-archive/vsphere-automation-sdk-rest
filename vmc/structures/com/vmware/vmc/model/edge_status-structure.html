@@ -178,6 +178,7 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/organization-structure.html'>organization</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paged_edge_list-structure.html'>paged_edge_list</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paging_info-structure.html'>paging_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/payment_method_info-structure.html'>payment_method_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_agent_xeni_connection-structure.html'>pop_agent_xeni_connection</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_info-structure.html'>pop_info</a></li>
@@ -345,13 +346,13 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">pre_rules_exists</span></td>
+                <td><span class="optional">pre_rules_exists</span></td>
                 <td>boolean</td>
                 <td>Value is true if pre rules publish is enabled.<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">feature_statuses</span></td>
+                <td><span class="optional">feature_statuses</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/feature_status-structure.html'>feature_status</a>[]</td>
                 <td>Individual feature status.<p/> Optional. </td>
             </tr>
@@ -387,31 +388,31 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">timestamp</span></td>
+                <td><span class="optional">timestamp</span></td>
                 <td>long</td>
                 <td>Timestamp value at which the NSX Edge healthcheck was done. format: int64<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">publish_status</span></td>
+                <td><span class="optional">publish_status</span></td>
                 <td>string</td>
                 <td>Status of the latest configuration change for the NSX Edge. Values are APPLIED or PERSISTED (not published to NSX Edge Appliance yet).<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">last_published_pre_rules_generation_number</span></td>
+                <td><span class="optional">last_published_pre_rules_generation_number</span></td>
                 <td>long</td>
                 <td>Value of the last published pre rules generation number. format: int64<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">version</span></td>
+                <td><span class="optional">version</span></td>
                 <td>long</td>
                 <td>Version number of the current configuration. format: int64<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">edge_vm_status</span></td>
+                <td><span class="optional">edge_vm_status</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/edge_vm_status-structure.html'>edge_vm_status</a>[]</td>
                 <td>Detailed status of each of the deployed NSX Edge appliances.<p/> Optional. </td>
             </tr>
@@ -453,25 +454,25 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">active_vse_ha_index</span></td>
+                <td><span class="optional">active_vse_ha_index</span></td>
                 <td>long</td>
                 <td>Index of the active NSX Edge appliance. Values are 0 and 1. format: int32<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">system_status</span></td>
+                <td><span class="optional">system_status</span></td>
                 <td>string</td>
                 <td>System status of the active NSX Edge appliance.<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">ha_vnic_in_use</span></td>
+                <td><span class="optional">ha_vnic_in_use</span></td>
                 <td>long</td>
                 <td>Index of the vnic consumed for NSX Edge HA. format: int32<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">edge_status</span></td>
+                <td><span class="optional">edge_status</span></td>
                 <td>string</td>
                 <td>NSX Edge appliance health status identified by GREY (unknown status), GREEN (health checks are successful), YELLOW (intermittent health check failure), RED (none of the appliances are in serving state). If health check fails for 5 consecutive times for all appliance (2 for HA else 1) then status will turn from YELLOW to RED.<p/> Optional. </td>
             </tr>

@@ -62,6 +62,10 @@
             </li>
         </ul>
         </li>
+        <li><a href='../../../../../index.html#SVC_com.vmware.vmc.orgs.payment_methods'>payment methods</a>
+        <ul>            <li><a href='../../../../../operations/com/vmware/vmc/orgs/payment_methods.get_org_payment_methods-operation.html'>get_org_payment_methods</a></li>
+        </ul>
+        </li>
         <li><a href='../../../../../index.html#SVC_com.vmware.vmc.orgs.providers'>providers</a>
         <ul>            <li><a href='../../../../../operations/com/vmware/vmc/orgs/providers.list-operation.html'>list</a></li>
         </ul>
@@ -418,13 +422,13 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">org</span></td>
+                <td><span class="required">org</span></td>
                 <td>string</td>
                 <td> Organization identifier. (required). </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">sddc</span></td>
+                <td><span class="required">sddc</span></td>
                 <td>string</td>
                 <td> Sddc Identifier. (required). </td>
             </tr>
@@ -622,11 +626,33 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vpc_info_peered_agent</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"route_table_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vm_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"peering_connection_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"api_association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"provider</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vpc_cidr</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vif_ids</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"tgw_ips</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_public_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"private_subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"private_association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"routetables</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
@@ -636,10 +662,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"route_table_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vm_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"api_subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vgw_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"internet_gateway_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
@@ -720,17 +743,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"peering_connection_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"api_association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"provider</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vpc_cidr</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vif_ids</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"network_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"nsx_controller_ips</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
@@ -941,11 +954,33 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"cloud_user_group</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vpc_info</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"route_table_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vm_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"peering_connection_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"api_association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"provider</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vpc_cidr</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vif_ids</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"tgw_ips</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_public_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"private_subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"private_association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"routetables</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
@@ -955,10 +990,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"route_table_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vm_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"api_subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vgw_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"internet_gateway_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
@@ -1039,17 +1071,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"peering_connection_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"api_association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"provider</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vpc_cidr</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vif_ids</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"network_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vc_url</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
@@ -1126,7 +1148,7 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">value</span></td>
+                <td><span class="required">value</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/sddc-structure.html'>sddc</a></td>
                 <td> com.vmware.vmc.model.Sddc. </td>
             </tr>
@@ -1165,6 +1187,912 @@
                 <td><span class="grey">value.</span><span class="optional">updated_by_user_name</span></td>
                 <td>string</td>
                 <td>User name that last updated this record<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="required">user_name</span></td>
+                <td>string</td>
+                <td>User name that last updated this record<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="required">id</span></td>
+                <td>string</td>
+                <td>Unique ID for this entity<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">name</span></td>
+                <td>string</td>
+                <td>name for SDDC<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">sddc_state</span></td>
+                <td>string</td>
+                <td>Possible values are: <ul> <li> SDDC_STATE_DEPLOYING</li>, <li> SDDC_STATE_READY</li>, <li> SDDC_STATE_DELETING</li>, <li> SDDC_STATE_DELETION_FAILED</li>, <li> SDDC_STATE_DELETED</li>, <li> SDDC_STATE_FAILED</li>, </ul><p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">expiration_date</span></td>
+                <td>date_time</td>
+                <td>Expiration date of a sddc in UTC (will be set if its applicable) format: date-time<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">org_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">sddc_type</span></td>
+                <td>string</td>
+                <td>Type of the sddc<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">one_node_reduced_capacity</span></td>
+                <td>boolean</td>
+                <td>Whether this sddc is reduced capacity 1NODE<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">provider</span></td>
+                <td>string</td>
+                <td>Possible values are: <ul> <li> PROVIDER_AWS</li>, <li> PROVIDER_ZEROCLOUD</li>, </ul><p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">account_link_state</span></td>
+                <td>string</td>
+                <td>Possible values are: <ul> <li> ACCOUNT_LINK_STATE_DELAYED</li>, <li> ACCOUNT_LINK_STATE_LINKED</li>, <li> ACCOUNT_LINK_STATE_UNLINKED</li>, </ul> Account linking state of the sddc<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">sddc_access_state</span></td>
+                <td>string</td>
+                <td>Describes the access state of sddc, valid state is DISABLED or ENABLED<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">resource_config</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/aws_sddc_resource_config-structure.html'>aws_sddc_resource_config</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">backup_restore_bucket</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">public_ip_pool</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/sddc_public_ip-structure.html'>sddc_public_ip</a>[]</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">vpc_info</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/vpc_info-structure.html'>vpc_info</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">vpc_cidr</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">vgw_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">esx_public_security_group_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">vif_ids</span></td>
+                <td>string[]</td>
+                <td>set of virtual interfaces attached to the sddc<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">vm_security_group_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">tgw_ips</span></td>
+                <td>list</td>
+                <td>Mapping from AZ to a list of IP addresses assigned to TGW ENI that's connected with Vpc<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">route_table_id</span></td>
+                <td>string</td>
+                <td>(deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">edge_subnet_id</span></td>
+                <td>string</td>
+                <td>Id of the NSX edge associated with this VPC (deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>vpc id<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">api_association_id</span></td>
+                <td>string</td>
+                <td>Id of the association between subnet and route-table (deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">api_subnet_id</span></td>
+                <td>string</td>
+                <td>Id associated with this VPC (deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">private_subnet_id</span></td>
+                <td>string</td>
+                <td>(deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">private_association_id</span></td>
+                <td>string</td>
+                <td>(deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">esx_security_group_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">subnet_id</span></td>
+                <td>string</td>
+                <td>(deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">internet_gateway_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">security_group_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">association_id</span></td>
+                <td>string</td>
+                <td>(deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">vgw_route_table_id</span></td>
+                <td>string</td>
+                <td>Route table which contains the route to VGW (deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">edge_association_id</span></td>
+                <td>string</td>
+                <td>Id of the association between edge subnet and route-table (deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">provider</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">peering_connection_id</span></td>
+                <td>string</td>
+                <td>(deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">network_type</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">available_zones</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/available_zone_info-structure.html'>available_zone_info</a>[]</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info.</span><span class="optional">routetables</span></td>
+                <td>list</td>
+                <td>map from routeTableName to routeTableInfo<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">kms_vpc_endpoint</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/kms_vpc_endpoint-structure.html'>kms_vpc_endpoint</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.kms_vpc_endpoint.</span><span class="optional">vpc_endpoint_id</span></td>
+                <td>string</td>
+                <td>The identifier of the VPC endpoint created to AWS Key Management Service<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.kms_vpc_endpoint.</span><span class="optional">network_interface_ids</span></td>
+                <td>string[]</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">max_num_public_ip</span></td>
+                <td>long</td>
+                <td>maximum number of public IP that user can allocate.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">account_link_sddc_config</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/sddc_link_config-structure.html'>sddc_link_config</a>[]</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">vsan_encryption_config</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/vsan_encryption_config-structure.html'>vsan_encryption_config</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vsan_encryption_config.</span><span class="optional">port</span></td>
+                <td>long</td>
+                <td>Port to connect to AWS Key Management Service<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vsan_encryption_config.</span><span class="optional">certificate</span></td>
+                <td>string</td>
+                <td>Public certificate used to connect to AWS Key Management Service<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">vpc_info_peered_agent</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/vpc_info-structure.html'>vpc_info</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">vpc_cidr</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">vgw_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">esx_public_security_group_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">vif_ids</span></td>
+                <td>string[]</td>
+                <td>set of virtual interfaces attached to the sddc<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">vm_security_group_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">tgw_ips</span></td>
+                <td>list</td>
+                <td>Mapping from AZ to a list of IP addresses assigned to TGW ENI that's connected with Vpc<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">route_table_id</span></td>
+                <td>string</td>
+                <td>(deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">edge_subnet_id</span></td>
+                <td>string</td>
+                <td>Id of the NSX edge associated with this VPC (deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>vpc id<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">api_association_id</span></td>
+                <td>string</td>
+                <td>Id of the association between subnet and route-table (deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">api_subnet_id</span></td>
+                <td>string</td>
+                <td>Id associated with this VPC (deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">private_subnet_id</span></td>
+                <td>string</td>
+                <td>(deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">private_association_id</span></td>
+                <td>string</td>
+                <td>(deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">esx_security_group_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">subnet_id</span></td>
+                <td>string</td>
+                <td>(deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">internet_gateway_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">security_group_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">association_id</span></td>
+                <td>string</td>
+                <td>(deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">vgw_route_table_id</span></td>
+                <td>string</td>
+                <td>Route table which contains the route to VGW (deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">edge_association_id</span></td>
+                <td>string</td>
+                <td>Id of the association between edge subnet and route-table (deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">provider</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">peering_connection_id</span></td>
+                <td>string</td>
+                <td>(deprecated)<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">network_type</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">available_zones</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/available_zone_info-structure.html'>available_zone_info</a>[]</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.vpc_info_peered_agent.</span><span class="optional">routetables</span></td>
+                <td>list</td>
+                <td>map from routeTableName to routeTableInfo<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">mgmt_appliance_network_name</span></td>
+                <td>string</td>
+                <td>Name for management appliance network.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">nsxt</span></td>
+                <td>boolean</td>
+                <td>if true, NSX-T UI is enabled.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">mgw_id</span></td>
+                <td>string</td>
+                <td>Management Gateway Id<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">nsx_mgr_url</span></td>
+                <td>string</td>
+                <td>URL of the NSX Manager<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">psc_management_ip</span></td>
+                <td>string</td>
+                <td>PSC internal management IP<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">psc_url</span></td>
+                <td>string</td>
+                <td>URL of the PSC server<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">cgws</span></td>
+                <td>string[]</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">availability_zones</span></td>
+                <td>string[]</td>
+                <td>Availability zones over which esx hosts are provisioned. MultiAZ SDDCs will have hosts provisioned over two availability zones while SingleAZ SDDCs will provision over one.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">management_ds</span></td>
+                <td>string</td>
+                <td>The ManagedObjectReference of the management Datastore<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">nsx_api_public_endpoint_url</span></td>
+                <td>string</td>
+                <td>nsx api entire base url<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">custom_properties</span></td>
+                <td>list</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">cloud_password</span></td>
+                <td>string</td>
+                <td>Password for vCenter SDDC administrator<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="required">provider</span></td>
+                <td>string</td>
+                <td>Possible values are: <ul> <li> PROVIDER_AWS</li>, <li> PROVIDER_ZEROCLOUD</li>, </ul> Discriminator for additional properties<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">clusters</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/cluster-structure.html'>cluster</a>[]</td>
+                <td>List of clusters in the SDDC.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">vc_management_ip</span></td>
+                <td>string</td>
+                <td>vCenter internal management IP<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">sddc_networks</span></td>
+                <td>string[]</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">cloud_username</span></td>
+                <td>string</td>
+                <td>Username for vCenter SDDC administrator<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">esx_hosts</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/aws_esx_host-structure.html'>aws_esx_host</a>[]</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">nsx_mgr_management_ip</span></td>
+                <td>string</td>
+                <td>NSX Manager internal management IP<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">vc_instance_id</span></td>
+                <td>string</td>
+                <td>unique id of the vCenter server<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">esx_cluster_id</span></td>
+                <td>string</td>
+                <td>Cluster Id to add ESX workflow<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">vc_public_ip</span></td>
+                <td>string</td>
+                <td>vCenter public IP<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">skip_creating_vxlan</span></td>
+                <td>boolean</td>
+                <td>skip creating vxlan for compute gateway for SDDC provisioning<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">vc_url</span></td>
+                <td>string</td>
+                <td>URL of the vCenter server<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">sddc_manifest</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/sddc_manifest-structure.html'>sddc_manifest</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.</span><span class="optional">vmc_version</span></td>
+                <td>string</td>
+                <td>the vmcVersion of the sddc for display<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.</span><span class="optional">glcm_bundle</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/glcm_bundle-structure.html'>glcm_bundle</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.glcm_bundle.</span><span class="optional">s3_bucket</span></td>
+                <td>string</td>
+                <td>the glcmbundle's s3 bucket<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.glcm_bundle.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>the glcmbundle's id<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.</span><span class="optional">pop_info</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/pop_info-structure.html'>pop_info</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.pop_info.</span><span class="required">ami_infos</span></td>
+                <td>list</td>
+                <td>A map of [region name of PoP / PoP-AMI]:[PopAmiInfo].<p/> List of {"key": string, "value": <a href='../../../../../structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a>}</td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.pop_info.</span><span class="optional">created_at</span></td>
+                <td>date_time</td>
+                <td>The PopInfo (or PoP AMI) created time. Using ISO 8601 date-time pattern. format: date-time<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.pop_info.</span><span class="optional">service_infos</span></td>
+                <td>list</td>
+                <td>A map of [service type]:[PopServiceInfo]<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.pop_info.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>UUID of the PopInfo format: UUID<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.pop_info.</span><span class="optional">manifest_version</span></td>
+                <td>string</td>
+                <td>version of the manifest.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.</span><span class="optional">vmc_internal_version</span></td>
+                <td>string</td>
+                <td>the vmcInternalVersion of the sddc for internal use<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.</span><span class="optional">ebs_backed_vsan_config</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/ebs_backed_vsan_config-structure.html'>ebs_backed_vsan_config</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.ebs_backed_vsan_config.</span><span class="optional">instance_type</span></td>
+                <td>string</td>
+                <td>instance type for EBS-backed VSAN configuration<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.</span><span class="optional">vsan_witness_ami</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/ami_info-structure.html'>ami_info</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.vsan_witness_ami.</span><span class="optional">instance_type</span></td>
+                <td>string</td>
+                <td>instance type of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.vsan_witness_ami.</span><span class="optional">region</span></td>
+                <td>string</td>
+                <td>the region of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.vsan_witness_ami.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>the ami id for the esx<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.vsan_witness_ami.</span><span class="optional">name</span></td>
+                <td>string</td>
+                <td>the name of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.</span><span class="optional">esx_ami</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/ami_info-structure.html'>ami_info</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.esx_ami.</span><span class="optional">instance_type</span></td>
+                <td>string</td>
+                <td>instance type of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.esx_ami.</span><span class="optional">region</span></td>
+                <td>string</td>
+                <td>the region of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.esx_ami.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>the ami id for the esx<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.esx_ami.</span><span class="optional">name</span></td>
+                <td>string</td>
+                <td>the name of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.</span><span class="optional">esx_nsxt_ami</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/ami_info-structure.html'>ami_info</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.esx_nsxt_ami.</span><span class="optional">instance_type</span></td>
+                <td>string</td>
+                <td>instance type of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.esx_nsxt_ami.</span><span class="optional">region</span></td>
+                <td>string</td>
+                <td>the region of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.esx_nsxt_ami.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>the ami id for the esx<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.esx_nsxt_ami.</span><span class="optional">name</span></td>
+                <td>string</td>
+                <td>the name of the esx ami<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.</span><span class="optional">metadata</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/metadata-structure.html'>metadata</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.metadata.</span><span class="optional">timestamp</span></td>
+                <td>string</td>
+                <td>the timestamp for the bundle<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.sddc_manifest.metadata.</span><span class="optional">cycle_id</span></td>
+                <td>string</td>
+                <td>the cycle id<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">vxlan_subnet</span></td>
+                <td>string</td>
+                <td>VXLAN IP subnet<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">cloud_user_group</span></td>
+                <td>string</td>
+                <td>Group name for vCenter SDDC administrator<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">management_rp</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">region</span></td>
+                <td>string</td>
+                <td>region in which sddc is deployed<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">witness_availability_zone</span></td>
+                <td>string</td>
+                <td>Availability zone where the witness node is provisioned for a MultiAZ SDDC. This is null for a SingleAZ SDDC.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">sddc_id</span></td>
+                <td>string</td>
+                <td>sddc identifier<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">pop_agent_xeni_connection</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/pop_agent_xeni_connection-structure.html'>pop_agent_xeni_connection</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.pop_agent_xeni_connection.</span><span class="optional">default_subnet_route</span></td>
+                <td>string</td>
+                <td>The gateway route ip fo the subnet.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.pop_agent_xeni_connection.</span><span class="optional">eni_info</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/eni_info-structure.html'>eni_info</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.pop_agent_xeni_connection.eni_info.</span><span class="optional">subnet_id</span></td>
+                <td>string</td>
+                <td>Subnet it belongs to.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.pop_agent_xeni_connection.eni_info.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td>Interface ID.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.pop_agent_xeni_connection.eni_info.</span><span class="optional">security_group_id</span></td>
+                <td>string</td>
+                <td>Security Group of Eni.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.pop_agent_xeni_connection.eni_info.</span><span class="optional">private_ip</span></td>
+                <td>string</td>
+                <td>Private ip of eni.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.pop_agent_xeni_connection.eni_info.</span><span class="optional">mac_address</span></td>
+                <td>string</td>
+                <td>Mac address of nic.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">nsx_controller_ips</span></td>
+                <td>string[]</td>
+                <td>List of Controller IPs<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">esx_host_subnet</span></td>
+                <td>string</td>
+                <td>ESX host subnet<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">sso_domain</span></td>
+                <td>string</td>
+                <td>The SSO domain name to use for vSphere users<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">deployment_type</span></td>
+                <td>string</td>
+                <td>Possible values are: <ul> <li> DEPLOYMENT_TYPE_SINGLE_AZ</li>, <li> DEPLOYMENT_TYPE_MULTI_AZ</li>, </ul> Denotes if this is a SingleAZ SDDC or a MultiAZ SDDC.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">nsxt_addons</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/nsxt_addons-structure.html'>nsxt_addons</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.nsxt_addons.</span><span class="optional">enable_nsx_advanced_addon</span></td>
+                <td>boolean</td>
+                <td>Indicates whether NSX Advanced addon is enabled or disabled.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.resource_config.</span><span class="optional">dns_with_management_vm_private_ip</span></td>
+                <td>boolean</td>
+                <td>if true, use the private IP addresses to register DNS records for the management VMs<p/> Optional. </td>
             </tr>
 
     </table>

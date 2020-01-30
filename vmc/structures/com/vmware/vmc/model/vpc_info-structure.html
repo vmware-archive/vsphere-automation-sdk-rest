@@ -178,6 +178,7 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/organization-structure.html'>organization</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paged_edge_list-structure.html'>paged_edge_list</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paging_info-structure.html'>paging_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/payment_method_info-structure.html'>payment_method_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_agent_xeni_connection-structure.html'>pop_agent_xeni_connection</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_info-structure.html'>pop_info</a></li>
@@ -279,25 +280,43 @@
     <div id="tabsResultRep">
         <ul>
             <li id="0"><a id="newMap" href="#tabs-1" onclick="showFields()">JSON</a></li>
+    
             <li id="1"><a id="oldMap" href="#tabs-2" onclick="showLegacyFields()">LEGACY JSON</a></li>
+    
         </ul>
         <div id="tabs-1">
             <span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"route_table_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vm_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"peering_connection_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"api_association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"provider</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vpc_cidr</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vif_ids</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"tgw_ips</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"&lt;string&gt;</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_public_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"private_subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"private_association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"routetables</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"&lt;string&gt;</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"name</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"route_table_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vm_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"api_subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vgw_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"internet_gateway_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
@@ -378,27 +397,40 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"network_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+<span class="pun">}</span>
+        </div>
+    
+        <div id="tabs-2">
+            <span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"route_table_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vm_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"peering_connection_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"api_association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"provider</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vpc_cidr</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vif_ids</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"network_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
-<span class="pun">}</span>
-        </div>
-        <div id="tabs-2">
-            <span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"tgw_ips</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_public_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"private_subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"private_association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"esx_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"routetables</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"value</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
@@ -408,10 +440,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"key</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"route_table_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vm_security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"api_subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"security_group_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vgw_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"internet_gateway_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
@@ -492,22 +521,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"peering_connection_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"edge_subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"api_association_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"provider</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vpc_cidr</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"subnet_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"vif_ids</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"string</span>"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"network_type</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
 <span class="pun">}</span>
         </div>
+    
     </div>
-
     
     
     
@@ -526,6 +545,12 @@
             Required
             </td>
         </tr>
+
+            <tr>
+                <td><span class="grey">-.tgw_ips</span><span class="required">.*</span></td>
+                <td>string[]</td>
+                <td> </td>
+            </tr>
 
             <tr>
                 <td><span class="grey">-.routetables</span><span class="required">.*</span></td>
@@ -567,6 +592,12 @@
                 <td><span class="grey">-.</span><span class="optional">vm_security_group_id</span></td>
                 <td>string</td>
                 <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">tgw_ips</span></td>
+                <td>object</td>
+                <td>Mapping from AZ to a list of IP addresses assigned to TGW ENI that's connected with Vpc<p/> Optional. </td>
             </tr>
 
             <tr>
@@ -764,14 +795,14 @@
         </tr>
 
             <tr>
-                <td><span class="grey">routetables[].</span><span class="required">key</span></td>
+                <td><span class="grey">tgw_ips[].</span><span class="required">key</span></td>
                 <td>string</td>
                 <td> </td>
             </tr>
 
             <tr>
-                <td><span class="grey">routetables[].</span><span class="required">value</span></td>
-                <td><a href='../../../../../structures/com/vmware/vmc/model/route_table_info-structure.html'>route_table_info</a></td>
+                <td><span class="grey">tgw_ips[].</span><span class="required">value</span></td>
+                <td>string[]</td>
                 <td> </td>
             </tr>
 
@@ -782,201 +813,153 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">vpc_cidr</span></td>
+                <td><span class="optional">vpc_cidr</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">vgw_id</span></td>
+                <td><span class="optional">vgw_id</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">esx_public_security_group_id</span></td>
+                <td><span class="optional">esx_public_security_group_id</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">vif_ids</span></td>
+                <td><span class="optional">vif_ids</span></td>
                 <td>string[]</td>
                 <td>set of virtual interfaces attached to the sddc<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">vm_security_group_id</span></td>
+                <td><span class="optional">vm_security_group_id</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">route_table_id</span></td>
+                <td><span class="optional">tgw_ips</span></td>
+                <td>list</td>
+                <td>Mapping from AZ to a list of IP addresses assigned to TGW ENI that's connected with Vpc<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="optional">route_table_id</span></td>
                 <td>string</td>
                 <td>(deprecated)<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">edge_subnet_id</span></td>
+                <td><span class="optional">edge_subnet_id</span></td>
                 <td>string</td>
                 <td>Id of the NSX edge associated with this VPC (deprecated)<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">id</span></td>
+                <td><span class="optional">id</span></td>
                 <td>string</td>
                 <td>vpc id<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">api_association_id</span></td>
+                <td><span class="optional">api_association_id</span></td>
                 <td>string</td>
                 <td>Id of the association between subnet and route-table (deprecated)<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">api_subnet_id</span></td>
+                <td><span class="optional">api_subnet_id</span></td>
                 <td>string</td>
                 <td>Id associated with this VPC (deprecated)<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">private_subnet_id</span></td>
+                <td><span class="optional">private_subnet_id</span></td>
                 <td>string</td>
                 <td>(deprecated)<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">private_association_id</span></td>
+                <td><span class="optional">private_association_id</span></td>
                 <td>string</td>
                 <td>(deprecated)<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">esx_security_group_id</span></td>
+                <td><span class="optional">esx_security_group_id</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">subnet_id</span></td>
+                <td><span class="optional">subnet_id</span></td>
                 <td>string</td>
                 <td>(deprecated)<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">internet_gateway_id</span></td>
+                <td><span class="optional">internet_gateway_id</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">security_group_id</span></td>
+                <td><span class="optional">security_group_id</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">association_id</span></td>
+                <td><span class="optional">association_id</span></td>
                 <td>string</td>
                 <td>(deprecated)<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">vgw_route_table_id</span></td>
+                <td><span class="optional">vgw_route_table_id</span></td>
                 <td>string</td>
                 <td>Route table which contains the route to VGW (deprecated)<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">edge_association_id</span></td>
+                <td><span class="optional">edge_association_id</span></td>
                 <td>string</td>
                 <td>Id of the association between edge subnet and route-table (deprecated)<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">provider</span></td>
+                <td><span class="optional">provider</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">peering_connection_id</span></td>
+                <td><span class="optional">peering_connection_id</span></td>
                 <td>string</td>
                 <td>(deprecated)<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">network_type</span></td>
+                <td><span class="optional">network_type</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">available_zones</span></td>
+                <td><span class="optional">available_zones</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/available_zone_info-structure.html'>available_zone_info</a>[]</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey">available_zones[].</span><span class="optional">subnets</span></td>
-                <td><a href='../../../../../structures/com/vmware/vmc/model/subnet-structure.html'>subnet</a>[]</td>
-                <td>null<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">available_zones[].subnets[].</span><span class="optional">subnet_id</span></td>
-                <td>string</td>
-                <td>subnet id<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">available_zones[].subnets[].</span><span class="optional">name</span></td>
-                <td>string</td>
-                <td>subnet name<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">available_zones[].subnets[].</span><span class="optional">route_tables</span></td>
-                <td><a href='../../../../../structures/com/vmware/vmc/model/subnet_route_table_info-structure.html'>subnet_route_table_info</a>[]</td>
-                <td> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">available_zones[].subnets[].route_tables[].</span><span class="optional">subnet_id</span></td>
-                <td>string</td>
-                <td>subnet id<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">available_zones[].subnets[].route_tables[].</span><span class="optional">association_id</span></td>
-                <td>string</td>
-                <td>subnet - route table association id<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">available_zones[].subnets[].route_tables[].</span><span class="optional">routetable_id</span></td>
-                <td>string</td>
-                <td>route table id<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">available_zones[].</span><span class="optional">name</span></td>
-                <td>string</td>
-                <td>available zone name<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">routetables</span></td>
+                <td><span class="optional">routetables</span></td>
                 <td>list</td>
                 <td>map from routeTableName to routeTableInfo<p/> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey">routetables[].value.</span><span class="optional">name</span></td>
-                <td>string</td>
-                <td>route table name<p/> Optional. </td>
             </tr>
 
     </table>

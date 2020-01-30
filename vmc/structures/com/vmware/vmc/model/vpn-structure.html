@@ -178,6 +178,7 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/organization-structure.html'>organization</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paged_edge_list-structure.html'>paged_edge_list</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paging_info-structure.html'>paging_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/payment_method_info-structure.html'>payment_method_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_agent_xeni_connection-structure.html'>pop_agent_xeni_connection</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_info-structure.html'>pop_info</a></li>
@@ -371,37 +372,37 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">version</span></td>
+                <td><span class="optional">version</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">on_prem_gateway_ip</span></td>
+                <td><span class="optional">on_prem_gateway_ip</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">on_prem_network_cidr</span></td>
+                <td><span class="optional">on_prem_network_cidr</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">pfs_enabled</span></td>
+                <td><span class="optional">pfs_enabled</span></td>
                 <td>boolean</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">id</span></td>
+                <td><span class="optional">id</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">channel_status</span></td>
+                <td><span class="optional">channel_status</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/vpn_channel_status-structure.html'>vpn_channel_status</a></td>
                 <td> Optional. </td>
             </tr>
@@ -431,25 +432,25 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">on_prem_nat_ip</span></td>
+                <td><span class="optional">on_prem_nat_ip</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">name</span></td>
+                <td><span class="optional">name</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">internal_network_ids</span></td>
+                <td><span class="optional">internal_network_ids</span></td>
                 <td>string[]</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">tunnel_statuses</span></td>
+                <td><span class="optional">tunnel_statuses</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/vpn_tunnel_status-structure.html'>vpn_tunnel_status</a>[]</td>
                 <td> Optional. </td>
             </tr>
@@ -563,49 +564,49 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">encryption</span></td>
+                <td><span class="optional">encryption</span></td>
                 <td>string</td>
                 <td>Possible values are: <ul> <li> ENCRYPTION_AES</li>, <li> ENCRYPTION_aes256</li>, <li> ENCRYPTION_AES_GCM</li>, <li> ENCRYPTION_TRIPLE_DES</li>, <li> ENCRYPTION_UNKNOWN</li>, </ul><p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">enabled</span></td>
+                <td><span class="optional">enabled</span></td>
                 <td>boolean</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">state</span></td>
+                <td><span class="optional">state</span></td>
                 <td>string</td>
                 <td>Possible values are: <ul> <li> STATE_CONNECTED</li>, <li> STATE_DISCONNECTED</li>, <li> STATE_PARTIALLY_CONNECTED</li>, <li> STATE_UNKNOWN</li>, </ul><p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">dh_group</span></td>
+                <td><span class="optional">dh_group</span></td>
                 <td>string</td>
                 <td>Possible values are: <ul> <li> DH_GROUP_dh2</li>, <li> DH_GROUP_dh5</li>, <li> DH_GROUP_dh14</li>, <li> DH_GROUP_dh15</li>, <li> DH_GROUP_dh16</li>, <li> DH_GROUP_UNKNOWN</li>, </ul><p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">authentication</span></td>
+                <td><span class="optional">authentication</span></td>
                 <td>string</td>
                 <td>Possible values are: <ul> <li> AUTHENTICATION_PSK</li>, <li> AUTHENTICATION_UNKNOWN</li>, </ul><p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">pre_shared_key</span></td>
+                <td><span class="optional">pre_shared_key</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">ike_option</span></td>
+                <td><span class="optional">ike_option</span></td>
                 <td>string</td>
                 <td>Possible values are: <ul> <li> IKE_OPTION_ikev1</li>, <li> IKE_OPTION_ikev2</li>, </ul><p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">digest_algorithm</span></td>
+                <td><span class="optional">digest_algorithm</span></td>
                 <td>string</td>
                 <td>Possible values are: <ul> <li> DIGEST_ALGORITHM_sha1</li>, <li> DIGEST_ALGORITHM_SHA_256</li>, </ul><p/> Optional. </td>
             </tr>

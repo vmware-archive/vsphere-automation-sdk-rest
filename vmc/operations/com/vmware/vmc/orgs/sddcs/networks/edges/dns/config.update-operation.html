@@ -62,6 +62,10 @@
             </li>
         </ul>
         </li>
+        <li><a href='../../../../../../../../../index.html#SVC_com.vmware.vmc.orgs.payment_methods'>payment methods</a>
+        <ul>            <li><a href='../../../../../../../../../operations/com/vmware/vmc/orgs/payment_methods.get_org_payment_methods-operation.html'>get_org_payment_methods</a></li>
+        </ul>
+        </li>
         <li><a href='../../../../../../../../../index.html#SVC_com.vmware.vmc.orgs.providers'>providers</a>
         <ul>            <li><a href='../../../../../../../../../operations/com/vmware/vmc/orgs/providers.list-operation.html'>list</a></li>
         </ul>
@@ -426,19 +430,19 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">org</span></td>
+                <td><span class="required">org</span></td>
                 <td>string</td>
                 <td> Organization identifier. (required). </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">sddc</span></td>
+                <td><span class="required">sddc</span></td>
                 <td>string</td>
                 <td> Sddc Identifier. (required). </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">edge_id</span></td>
+                <td><span class="required">edge_id</span></td>
                 <td>string</td>
                 <td> Edge Identifier. (required). </td>
             </tr>
@@ -553,7 +557,7 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">dns_config</span></td>
+                <td><span class="required">dns_config</span></td>
                 <td><a href='../../../../../../../../../structures/com/vmware/vmc/model/dns_config-structure.html'>dns_config</a></td>
                 <td> (required). </td>
             </tr>
@@ -616,6 +620,60 @@
                 <td><span class="grey">dns_config.dns_views.dns_view[].view_match.</span><span class="optional">vnic</span></td>
                 <td>string[]</td>
                 <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">dns_config.</span><span class="optional">listeners</span></td>
+                <td><a href='../../../../../../../../../structures/com/vmware/vmc/model/dns_listeners-structure.html'>dns_listeners</a></td>
+                <td>List of DNS listeners.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">dns_config.listeners.</span><span class="optional">ip_address</span></td>
+                <td>string[]</td>
+                <td>List of IP addresses.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">dns_config.listeners.</span><span class="optional">vnic</span></td>
+                <td>string[]</td>
+                <td>Vnic for DNS listener.<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">dns_config.listeners.</span><span class="optional">type</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">dns_config.</span><span class="optional">version</span></td>
+                <td>long</td>
+                <td>Version number tracking each configuration change. To avoid problems with overwriting changes, always retrieve and modify the latest configuration to include the current version number in your request. If you provide a version number which is not current, the request is rejected. If you omit the version number, the request is accepted but may overwrite any current changes if your change is not in sync with the latest change. format: int64<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">dns_config.</span><span class="optional">template</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">dns_config.</span><span class="optional">cache_size</span></td>
+                <td>long</td>
+                <td>The cache size of the DNS service. format: int64<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">dns_config.</span><span class="optional">dns_servers</span></td>
+                <td><a href='../../../../../../../../../structures/com/vmware/vmc/model/ip_addresses-structure.html'>ip_addresses</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">dns_config.dns_servers.</span><span class="optional">ip_address</span></td>
+                <td>string[]</td>
+                <td>List of IP addresses.<p/> Optional. </td>
             </tr>
 
     </table>

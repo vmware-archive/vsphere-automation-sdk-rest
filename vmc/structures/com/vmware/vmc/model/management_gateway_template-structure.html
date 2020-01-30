@@ -178,6 +178,7 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/organization-structure.html'>organization</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paged_edge_list-structure.html'>paged_edge_list</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paging_info-structure.html'>paging_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/payment_method_info-structure.html'>payment_method_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_agent_xeni_connection-structure.html'>pop_agent_xeni_connection</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_info-structure.html'>pop_info</a></li>
@@ -571,7 +572,7 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">public_ip</span></td>
+                <td><span class="optional">public_ip</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/sddc_public_ip-structure.html'>sddc_public_ip</a></td>
                 <td> Optional. </td>
             </tr>
@@ -583,31 +584,55 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">primary_dns</span></td>
+                <td><span class="grey">public_ip.</span><span class="optional">allocation_id</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">secondary_dns</span></td>
+                <td><span class="grey">public_ip.</span><span class="optional">dnat_rule_id</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">firewall_rules</span></td>
+                <td><span class="grey">public_ip.</span><span class="optional">associated_private_ip</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">public_ip.</span><span class="optional">snat_rule_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="optional">primary_dns</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="optional">secondary_dns</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="optional">firewall_rules</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/firewall_rule-structure.html'>firewall_rule</a>[]</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">vpns</span></td>
+                <td><span class="optional">vpns</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/vpn-structure.html'>vpn</a>[]</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">subnet_cidr</span></td>
+                <td><span class="optional">subnet_cidr</span></td>
                 <td>string</td>
                 <td>mgw network subnet cidr<p/> Optional. </td>
             </tr>

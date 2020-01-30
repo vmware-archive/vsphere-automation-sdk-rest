@@ -178,6 +178,7 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/organization-structure.html'>organization</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paged_edge_list-structure.html'>paged_edge_list</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paging_info-structure.html'>paging_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/payment_method_info-structure.html'>payment_method_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_agent_xeni_connection-structure.html'>pop_agent_xeni_connection</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_info-structure.html'>pop_info</a></li>
@@ -278,9 +279,65 @@
     <h3>Representation:</h3>
     <div id="tabsResultRep">
         <ul>
-            <li id="0"><a href="#tabs-1">JSON</a></li>
+            <li id="0"><a id="newMap" href="#tabs-1" onclick="showFields()">JSON</a></li>
+    
+            <li id="1"><a id="oldMap" href="#tabs-2" onclick="showLegacyFields()">LEGACY JSON</a></li>
+    
         </ul>
         <div id="tabs-1">
+            <span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"reservation_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"reservation_schedule</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"reservations</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"duration</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"start_time</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"metadata</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"&lt;string&gt;</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"create_time</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"rid</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"duration</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"start_time</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"metadata</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"&lt;string&gt;</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"create_time</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"rid</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"version</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"hour_of_day</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"reservations_mw</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"week_of</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"metadata</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"&lt;string&gt;</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"create_time</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"rid</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"week_of</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"metadata</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"&lt;string&gt;</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"create_time</span>"<span class="pun"> :&nbsp;</span><span class="str">"2015-01-01T22:13:05.651Z</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"rid</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"day_of_week</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"duration_min</span>"<span class="pun"> :&nbsp;</span><span class="val">1</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"in_maintenance_window</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"sddc_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"in_maintenance_mode</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><br/>
+<span class="pun">}</span>
+        </div>
+    
+        <div id="tabs-2">
             <span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"reservation_id</span>"<span class="pun"> :&nbsp;</span><span class="str">"string</span>"<span class="pun">,</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"reservation_schedule</span>"<span class="pun"> :&nbsp;</span><span class="pun">{</span><br/>
@@ -344,8 +401,146 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"in_maintenance_mode</span>"<span class="pun"> :&nbsp;</span><span class="val">true</span><br/>
 <span class="pun">}</span>
         </div>
+    
     </div>
     
+    
+    
+    <div id="fields1">
+    <h4>Attributes:</h4>
+    
+    <table class="params">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+
+        <tr class="subheader">
+            <td colspan="3">
+            Required
+            </td>
+        </tr>
+
+            <tr>
+                <td><span class="grey">-.reservation_schedule.reservations[].metadata</span><span class="required">.*</span></td>
+                <td>string</td>
+                <td> </td>
+            </tr>
+
+        <tr class="subheader">
+            <td colspan="3">
+            Optional
+            </td>
+        </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">in_maintenance_window</span></td>
+                <td>boolean</td>
+                <td>true if the SDDC is in the defined Mainentance Window<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">reservation_schedule</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/reservation_schedule-structure.html'>reservation_schedule</a></td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.reservation_schedule.</span><span class="optional">day_of_week</span></td>
+                <td>string</td>
+                <td>Possible values are: <ul> <li> DAY_OF_WEEK_SUNDAY</li>, <li> DAY_OF_WEEK_MONDAY</li>, <li> DAY_OF_WEEK_TUESDAY</li>, <li> DAY_OF_WEEK_WEDNESDAY</li>, <li> DAY_OF_WEEK_THURSDAY</li>, <li> DAY_OF_WEEK_FRIDAY</li>, <li> DAY_OF_WEEK_SATURDAY</li>, </ul><p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.reservation_schedule.</span><span class="optional">hour_of_day</span></td>
+                <td>long</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.reservation_schedule.</span><span class="optional">duration_min</span></td>
+                <td>long</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.reservation_schedule.</span><span class="optional">version</span></td>
+                <td>long</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.reservation_schedule.</span><span class="optional">reservations</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/reservation-structure.html'>reservation</a>[]</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.reservation_schedule.reservations[].</span><span class="optional">duration</span></td>
+                <td>long</td>
+                <td>Duration - required for reservation in maintenance window format: int64<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.reservation_schedule.reservations[].</span><span class="optional">rid</span></td>
+                <td>string</td>
+                <td>Reservation ID format: uuid<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.reservation_schedule.reservations[].</span><span class="optional">create_time</span></td>
+                <td>string</td>
+                <td>Optional<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.reservation_schedule.reservations[].</span><span class="optional">start_time</span></td>
+                <td>date_time</td>
+                <td>Start time of a reservation format: date-time<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.reservation_schedule.reservations[].</span><span class="optional">metadata</span></td>
+                <td>object</td>
+                <td>Optional<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.reservation_schedule.</span><span class="optional">reservations_mw</span></td>
+                <td><a href='../../../../../structures/com/vmware/vmc/model/reservation_in_mw-structure.html'>reservation_in_mw</a>[]</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.reservation_schedule.reservations_mw[].</span><span class="optional">rid</span></td>
+                <td>string</td>
+                <td>Reservation ID format: uuid<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">reservation_id</span></td>
+                <td>string</td>
+                <td>ID for reservation format: uuid<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">in_maintenance_mode</span></td>
+                <td>boolean</td>
+                <td>true if the SDDC is currently undergoing maintenance<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">-.</span><span class="optional">sddc_id</span></td>
+                <td>string</td>
+                <td>SDDC ID for this reservation format: uuid<p/> Optional. </td>
+            </tr>
+
+    </table>
+
+    </div>
+    
+    <div id="fields2" class="hidden">
     <h4>Attributes:</h4>
     
     <table class="params">
@@ -380,13 +575,13 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">in_maintenance_window</span></td>
+                <td><span class="optional">in_maintenance_window</span></td>
                 <td>boolean</td>
                 <td>true if the SDDC is in the defined Mainentance Window<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">reservation_schedule</span></td>
+                <td><span class="optional">reservation_schedule</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/reservation_schedule-structure.html'>reservation_schedule</a></td>
                 <td> Optional. </td>
             </tr>
@@ -464,25 +659,26 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">reservation_id</span></td>
+                <td><span class="optional">reservation_id</span></td>
                 <td>string</td>
                 <td>ID for reservation format: uuid<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">in_maintenance_mode</span></td>
+                <td><span class="optional">in_maintenance_mode</span></td>
                 <td>boolean</td>
                 <td>true if the SDDC is currently undergoing maintenance<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">sddc_id</span></td>
+                <td><span class="optional">sddc_id</span></td>
                 <td>string</td>
                 <td>SDDC ID for this reservation format: uuid<p/> Optional. </td>
             </tr>
 
     </table>
 
+    </div>
     
     
 

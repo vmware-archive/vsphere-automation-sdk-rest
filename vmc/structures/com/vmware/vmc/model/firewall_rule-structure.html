@@ -178,6 +178,7 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/organization-structure.html'>organization</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paged_edge_list-structure.html'>paged_edge_list</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paging_info-structure.html'>paging_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/payment_method_info-structure.html'>payment_method_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_agent_xeni_connection-structure.html'>pop_agent_xeni_connection</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_info-structure.html'>pop_info</a></li>
@@ -350,43 +351,43 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">rule_type</span></td>
+                <td><span class="optional">rule_type</span></td>
                 <td>string</td>
                 <td>Possible values are: <ul> <li> RULE_TYPE_USER</li>, <li> RULE_TYPE_DEFAULT</li>, </ul><p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">application_ids</span></td>
+                <td><span class="optional">application_ids</span></td>
                 <td>string[]</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">name</span></td>
+                <td><span class="optional">name</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">rule_interface</span></td>
+                <td><span class="optional">rule_interface</span></td>
                 <td>string</td>
                 <td>Deprecated, left for backwards compatibility. Remove once UI stops using it.<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">destination</span></td>
+                <td><span class="optional">destination</span></td>
                 <td>string</td>
                 <td>Optional. Possible formats are IP, IP1-IPn, CIDR or comma separated list of those entries. If not specified, defaults to 'any'.<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">id</span></td>
+                <td><span class="optional">id</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">destination_scope</span></td>
+                <td><span class="optional">destination_scope</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/firewall_rule_scope-structure.html'>firewall_rule_scope</a></td>
                 <td> Optional. </td>
             </tr>
@@ -404,13 +405,13 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">source</span></td>
+                <td><span class="optional">source</span></td>
                 <td>string</td>
                 <td>Optional. Possible formats are IP, IP1-IPn, CIDR or comma separated list of those entries. If not specified, defaults to 'any'.<p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">source_scope</span></td>
+                <td><span class="optional">source_scope</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/firewall_rule_scope-structure.html'>firewall_rule_scope</a></td>
                 <td> Optional. </td>
             </tr>
@@ -428,7 +429,7 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">services</span></td>
+                <td><span class="optional">services</span></td>
                 <td><a href='../../../../../structures/com/vmware/vmc/model/firewall_service-structure.html'>firewall_service</a>[]</td>
                 <td>list of protocols and ports for this firewall rule<p/> Optional. </td>
             </tr>
@@ -446,13 +447,13 @@
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">action</span></td>
+                <td><span class="optional">action</span></td>
                 <td>string</td>
                 <td>Possible values are: <ul> <li> ACTION_ALLOW</li>, <li> ACTION_DENY</li>, </ul><p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">revision</span></td>
+                <td><span class="optional">revision</span></td>
                 <td>long</td>
                 <td>current revision of the list of firewall rules, used to protect against concurrent modification (first writer wins) format: int32<p/> Optional. This <em>field</em> may be present in responses from the server, but if it is present in a request to server it will be ignored.</td>
             </tr>

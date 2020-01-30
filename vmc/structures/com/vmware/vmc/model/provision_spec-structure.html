@@ -178,6 +178,7 @@
         <li><a href='../../../../../structures/com/vmware/vmc/model/organization-structure.html'>organization</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paged_edge_list-structure.html'>paged_edge_list</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/paging_info-structure.html'>paging_info</a></li>
+        <li><a href='../../../../../structures/com/vmware/vmc/model/payment_method_info-structure.html'>payment_method_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_agent_xeni_connection-structure.html'>pop_agent_xeni_connection</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_ami_info-structure.html'>pop_ami_info</a></li>
         <li><a href='../../../../../structures/com/vmware/vmc/model/pop_info-structure.html'>pop_info</a></li>
@@ -279,7 +280,9 @@
     <div id="tabsResultRep">
         <ul>
             <li id="0"><a id="newMap" href="#tabs-1" onclick="showFields()">JSON</a></li>
+    
             <li id="1"><a id="oldMap" href="#tabs-2" onclick="showLegacyFields()">LEGACY JSON</a></li>
+    
         </ul>
         <div id="tabs-1">
             <span class="pun">{</span><br/>
@@ -333,6 +336,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">}</span><br/>
 <span class="pun">}</span>
         </div>
+    
         <div id="tabs-2">
             <span class="pun">{</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"provider</span>"<span class="pun"> :&nbsp;</span><span class="pun">[</span><br/>
@@ -397,8 +401,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="pun">]</span><br/>
 <span class="pun">}</span>
         </div>
+    
     </div>
-
     
     
     
@@ -601,7 +605,7 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">provider</span></td>
+                <td><span class="optional">provider</span></td>
                 <td>list</td>
                 <td>Map of provider to sddc config spec<p/> Optional. </td>
             </tr>

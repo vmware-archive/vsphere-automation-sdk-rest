@@ -62,6 +62,10 @@
             </li>
         </ul>
         </li>
+        <li><a href='../../../../../../index.html#SVC_com.vmware.vmc.orgs.payment_methods'>payment methods</a>
+        <ul>            <li><a href='../../../../../../operations/com/vmware/vmc/orgs/payment_methods.get_org_payment_methods-operation.html'>get_org_payment_methods</a></li>
+        </ul>
+        </li>
         <li><a href='../../../../../../index.html#SVC_com.vmware.vmc.orgs.providers'>providers</a>
         <ul>            <li><a href='../../../../../../operations/com/vmware/vmc/orgs/providers.list-operation.html'>list</a></li>
         </ul>
@@ -420,13 +424,13 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">org</span></td>
+                <td><span class="required">org</span></td>
                 <td>string</td>
                 <td> Organization identifier. (required). </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">linked_account_path_id</span></td>
+                <td><span class="required">linked_account_path_id</span></td>
                 <td>string</td>
                 <td> The linked connected account identifier (required). </td>
             </tr>
@@ -449,7 +453,7 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">force_even_when_sddc_present</span></td>
+                <td><span class="optional">force_even_when_sddc_present</span></td>
                 <td>boolean</td>
                 <td> Optional. When true, forcibly removes a connected account even when SDDC's are still linked to it. (optional). </td>
             </tr>
@@ -512,7 +516,7 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">value</span></td>
+                <td><span class="required">value</span></td>
                 <td><a href='../../../../../../structures/com/vmware/vmc/model/aws_customer_connected_account-structure.html'>aws_customer_connected_account</a></td>
                 <td> com.vmware.vmc.model.AwsCustomerConnectedAccount. </td>
             </tr>
@@ -551,6 +555,72 @@
                 <td><span class="grey">value.</span><span class="optional">updated_by_user_name</span></td>
                 <td>string</td>
                 <td>User name that last updated this record<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="required">user_name</span></td>
+                <td>string</td>
+                <td>User name that last updated this record<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="required">id</span></td>
+                <td>string</td>
+                <td>Unique ID for this entity<p/> </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">policy_payer_arn</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">region_to_az_to_shadow_mapping</span></td>
+                <td>list</td>
+                <td>Provides a map of regions to availability zones from the shadow account's perspective<p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">org_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">cf_stack_name</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">state</span></td>
+                <td>string</td>
+                <td>Possible values are: <ul> <li> STATE_ACTIVE</li>, <li> STATE_BROKEN</li>, <li> STATE_DELETED</li>, </ul><p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">account_number</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">policy_service_arn</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">policy_external_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">value.</span><span class="optional">policy_payer_linked_arn</span></td>
+                <td>string</td>
+                <td> Optional. </td>
             </tr>
 
     </table>
