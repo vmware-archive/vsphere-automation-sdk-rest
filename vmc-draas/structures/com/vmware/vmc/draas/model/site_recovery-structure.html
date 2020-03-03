@@ -151,49 +151,49 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">updated</span></td>
+                <td><span class="required">updated</span></td>
                 <td>date_time</td>
                 <td> </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">user_id</span></td>
+                <td><span class="required">user_id</span></td>
                 <td>string</td>
                 <td>User id that last updated this record<p/> </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">created</span></td>
+                <td><span class="required">created</span></td>
                 <td>date_time</td>
                 <td> </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">updated_by_user_id</span></td>
+                <td><span class="required">updated_by_user_id</span></td>
                 <td>string</td>
                 <td>User id that last updated this record<p/> </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">version</span></td>
+                <td><span class="required">version</span></td>
                 <td>long</td>
                 <td>Version of this entity format: int32<p/> </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">updated_by_user_name</span></td>
+                <td><span class="required">updated_by_user_name</span></td>
                 <td>string</td>
                 <td>User name that last updated this record<p/> </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">user_name</span></td>
+                <td><span class="required">user_name</span></td>
                 <td>string</td>
                 <td>User name that last updated this record<p/> </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="required">id</span></td>
+                <td><span class="required">id</span></td>
                 <td>string</td>
                 <td> </td>
             </tr>
@@ -205,31 +205,67 @@
         </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">site_recovery_state</span></td>
+                <td><span class="optional">site_recovery_state</span></td>
                 <td>string</td>
                 <td>Possible values are: <ul> <li> SITE_RECOVERY_STATE_ACTIVATING</li>, <li> SITE_RECOVERY_STATE_ACTIVATED</li>, <li> SITE_RECOVERY_STATE_DEACTIVATING</li>, <li> SITE_RECOVERY_STATE_DEACTIVATED</li>, <li> SITE_RECOVERY_STATE_FAILED</li>, <li> SITE_RECOVERY_STATE_CANCELED</li>, <li> SITE_RECOVERY_STATE_DELETED</li>, </ul><p/> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">vr_node</span></td>
+                <td><span class="optional">vr_node</span></td>
                 <td><a href='../../../../../../structures/com/vmware/vmc/draas/model/site_recovery_node-structure.html'>site_recovery_node</a></td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">srm_nodes</span></td>
-                <td><a href='../../../../../../structures/com/vmware/vmc/draas/model/site_recovery_node-structure.html'>site_recovery_node</a>[]</td>
-                <td> Optional. </td>
-            </tr>
-
-            <tr>
-                <td><span class="grey"></span><span class="optional">sddc_id</span></td>
+                <td><span class="grey">vr_node.</span><span class="optional">vm_moref_id</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
 
             <tr>
-                <td><span class="grey"></span><span class="optional">draas_h5_url</span></td>
+                <td><span class="grey">vr_node.</span><span class="optional">ip_address</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">vr_node.</span><span class="optional">hostname</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">vr_node.</span><span class="optional">id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">vr_node.</span><span class="optional">state</span></td>
+                <td>string</td>
+                <td>Possible values are: <ul> <li> STATE_DEPLOYING</li>, <li> STATE_PROVISIONED</li>, <li> STATE_READY</li>, <li> STATE_DELETING</li>, <li> STATE_FAILED</li>, <li> STATE_CANCELED</li>, </ul><p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="grey">vr_node.</span><span class="optional">type</span></td>
+                <td>string</td>
+                <td>Possible values are: <ul> <li> TYPE_VRMS</li>, <li> TYPE_SRM</li>, <li> TYPE_VRS</li>, </ul><p/> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="optional">srm_nodes</span></td>
+                <td><a href='../../../../../../structures/com/vmware/vmc/draas/model/site_recovery_node-structure.html'>site_recovery_node</a>[]</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="optional">sddc_id</span></td>
+                <td>string</td>
+                <td> Optional. </td>
+            </tr>
+
+            <tr>
+                <td><span class="optional">draas_h5_url</span></td>
                 <td>string</td>
                 <td> Optional. </td>
             </tr>
@@ -242,7 +278,7 @@
     
     <footer>
             <div class="footer">
-            Copyright &#169;  2015-2019 VMware, Inc. All rights reserved.<br/>
+            Copyright &#169;  2015-2020 VMware, Inc. All rights reserved.<br/>
             <a href='http://pubs.vmware.com/copyright-trademark.html'>Copyright and trademark information.</a> Any feedback you provide to VMware is subject to the terms at <a href='http://www.vmware.com/community_terms.html'>www.vmware.com/community_terms.html.</a>
             </div>
     </footer>

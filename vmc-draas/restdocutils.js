@@ -30,10 +30,12 @@ $(function() {
 });
 
 function showFields() {
+    document.getElementById( "statusCode" ).className = '';
     document.getElementById( "fields1" ).className = '';
     document.getElementById( "fields2" ).className = 'hidden';
 }
 function showLegacyFields() {
     document.getElementById( "fields2" ).className = '';
     document.getElementById( "fields1" ).className = 'hidden';
+    document.getElementById( "statusCode" ).className = 'hidden';
 }
