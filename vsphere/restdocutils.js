@@ -29,14 +29,13 @@ $(function() {
     });
 });
 
-function setMaxHeight(ids) {
-    var divHeight = -1;
-    for (i = 0; i < ids.length; ++i) {
-        if ($(ids[i]).height() > divHeight) {
-            divHeight = $(ids[i]).height();
-        }
-    }
-    for (i = 0; i < ids.length; ++i) {
-        $(ids[i]).height(divHeight);
-    }
+function showFields() {
+    document.getElementById( "statusCode" ).className = '';
+    document.getElementById( "fields1" ).className = '';
+    document.getElementById( "fields2" ).className = 'hidden';
+}
+function showLegacyFields() {
+    document.getElementById( "fields2" ).className = '';
+    document.getElementById( "fields1" ).className = 'hidden';
+    document.getElementById( "statusCode" ).className = 'hidden';
 }
