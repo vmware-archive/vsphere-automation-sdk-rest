@@ -4,10 +4,6 @@
 - [Abstract](#abstract)
 - [Intended Audience](#intended-audience)
 - [What’s in the SDK?](#whats-in-the-sdk)
-- [Quick Start Guide for JavaScript Samples Using NodeJS](#quick-start-guide-for-javascript-samples-using-nodejs)
-  - [Requirements](#requirements)
-  - [Samples Setup](#samples-setup)
-  - [Running JavaScript Samples](#running-javascript-samples)
 - [Submitting samples](#submitting-samples)
   - [Required Information](#required-information)
   - [Suggested Information](#suggested-information)
@@ -24,17 +20,17 @@
 - [VMware Resources](#vmware-resources)
 
 ## Abstract
-The VMware vSphere Automation SDK for REST enables programmatic access to vSphere. The SDK includes JavaScript samples to demonstrate how to invoke APIs for Tagging and Virtual Machine Operations as well as [Postman](https://www.getpostman.com/) examples.
+The VMware vSphere Automation SDK for REST enables programmatic access to vSphere. The SDK includes [Postman](https://www.getpostman.com/) examples.
 
 ## Supported vCenter Releases:
 
-All samples support vCenter 6.5. Tagging samples also support vCenter 6.0.
+All samples support vCenter 6.7. Tagging samples also support vCenter 6.0.
 
 ## Intended Audience
 
 The VMware vSphere Automation SDK for REST is intended for the following audiences:
 
-* Developers who create clients that connect to the vAPI endpoint to use VMware vSphere Automation SDK for REST Services.
+* Developers looking for REST samples for the REST APIs
 
 ## What’s in the SDK?
 
@@ -42,42 +38,9 @@ The VMware vSphere Automation SDK for REST provides a client SDK that contains s
 
 Directory structure (under VMware-vSphere-Automation-SDK-REST):
 
-|Directory	                      |Contents                                                                            |
-|---------------------------------|------------------------------------------------------------------------------------|
-|[samples/javascript/tagging](samples/javascript/tagging)|	Javascript samples that demonstrate how to construct REST API requests for Tagging.|
-|[samples/javascript/vcenter](samples/javascript/vcenter)|	Javascript samples that demonstrate how to construct REST API requests for Virtual Machine Operations |
-|[samples/postman](samples/postman)	          | Postman samples that demonstrate how to construct REST API requests for Virtual Machine Operations. |
-
-## Quick Start Guide for JavaScript Samples Using NodeJS
-These steps will walk you through getting the NodeJS-based JavaScript samples running.
-
-### Requirements
-* [Node 4+](https://nodejs.org/)
-* [NPM 3+](https://www.npmjs.com/)
-
-If you don't already have NodeJS installed you will need to download and install it from [here](https://nodejs.org/en/). Additionally, the samples leverage various Open Source NodeJS which must be installed using the Node Package Manager (npm) which you can install from [here](https://www.npmjs.com/).
-
-### Samples Setup
-To run the JavaScript samples you must first install the required node packages referenced in javascript/vcenter/package.json using *npm* file as follows:
-
-    cd samples/javascript/vcenter
-    npm install
-
-You may also use the ./build.sh script included at the root of the SDK. This script will run npm install on both
-tagging and vcenter samples so as well as execute any tests specified in the respective package.json files.
-
-### Running JavaScript Samples
-For a complete list of included samples refer to the "scripts" section of the javascript/vcenter/package.json file. To run a sample use npm as follows:
-
-    npm run <sample_name>
-
-Ex:
-
-    npm run host-connect
-
-For a list of samples run:
-
-    npm run
+|Directory	                        |Contents                                                                                             |
+|-----------------------------------|-----------------------------------------------------------------------------------------------------|
+|[samples/postman](samples/postman)	| Postman samples that demonstrate how to construct REST API requests for Virtual Machine Operations. |
 
 ## Submitting samples
 
@@ -130,8 +93,8 @@ Sample Exchange can be allowed to access your GitHub resources, by way of a link
 Board members are volunteers from the SDK community and VMware staff members, board members are not held responsible for any issues which may occur from running of samples from this repository.
 
 Members:
-* Steve Trefethen (VMware)
-* Alan Renouf (VMware)
+* Ravi Chadalawada (VMware)
+* J.R. Garcia (VMware)
 
 ### Approval of Additions
 Items added to the repository, including items from the Board members, require 2 votes from the board members before being added to the repository. The approving members will have ideally downloaded and tested the item. When two “Approved for Merge” comments are added from board members, the pull can then be committed to the repository.
