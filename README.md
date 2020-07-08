@@ -1,3 +1,11 @@
+# Discontinued!
+
+The vsphere-automation-sdk-rest has been discontinued. This repo is a READ ONLY repo. Refer below links for REST API documentation and Postman samples.
+
+[REST API Documentation](https://code.vmware.com/home)
+
+[vSphere Automation REST API Postman Resources and Samples](https://code.vmware.com/samples/2562)
+
 # VMware vSphere Automation SDK for REST
 
 ## Table of Contents
