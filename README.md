@@ -2,7 +2,7 @@
 
 The vsphere-automation-sdk-rest has been discontinued. This repo is a READ ONLY repo. Refer below links for REST API documentation and Postman samples.
 
-[REST API Documentation](https://code.vmware.com/home)
+[REST API Documentation](https://developer.vmware.com/docs/vsphere-automation/latest/)
 
 [vSphere Automation REST API Postman Resources and Samples](https://code.vmware.com/samples/2562)
 
@@ -113,6 +113,6 @@ Items added to the repository, including items from the Board members, require 2
 * [Getting Started Blog post](https://blogs.vmware.com/code/2017/02/02/getting-started-vsphere-automation-sdk-rest/)
 * [VMware Code](https://code.vmware.com/home)
 * [VMware Developer Community](https://communities.vmware.com/community/vmtn/developer)
-* VMware vSphere [REST API Reference documentation](https://vmware.github.io/vsphere-automation-sdk-rest/vsphere/).
-* VMware VMC [REST API Reference documentation](https://vmware.github.io/vsphere-automation-sdk-rest/vmc/).
+* VMware vSphere [REST API Reference documentation](https://developer.vmware.com/docs/vsphere-automation/latest/).
+* VMware VMC [REST API Reference documentation](https://developer.vmware.com/docs/vmc/latest/).
 * [VMware REST forum](https://code.vmware.com/forums/7506/vsphere-automation-sdk-for-rest)
